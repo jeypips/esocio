@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>E-Socio | Dashboard</title>
+        <title>E-Socio | Profile</title>
 
         <!--Morris Chart CSS -->
 		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
@@ -98,8 +98,8 @@
                         <ul>
 						<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
-							<li><a href="index.php" class="waves-effect active"><i class="ti-home"></i><span> Dashboard </span></a></li>
-							<li><a href="profile.php" class="waves-effect"><i class="ti-desktop"></i><span> Profile </span></a></li>
+							<li><a href="index.php" class="waves-effect"><i class="ti-home"></i><span> Dashboard </span></a></li>
+							<li><a href="profile.php" class="waves-effect active"><i class="ti-desktop"></i><span> Profile </span></a></li>
                         </li>
 						</ul>
                         <div class="clearfix"></div>
@@ -118,7 +118,7 @@
                         <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-4">
-                                <h4 class="page-title">Dashboard</h4>
+                                <h4 class="page-title">Profile</h4>
                             </div>
 							<hr>
                         </div>
@@ -127,10 +127,31 @@
 							<div class="col-lg-12">
 								<div class="panel panel-border panel-inverse">
 									<div class="panel-heading">
-										<h3 class="panel-title">WELCOME!</h3>
+									<i class="ion-android-social-user"></i> Tasks
 									</div>
 									<div class="panel-body">
-										<p>E-Socio Economic Profiling in La Union</p>
+										<div class="form-group">
+	                                                <div class="col-sm-3">
+	                                                    <select class="form-control">
+															<option>-</option>
+	                                                        <option>1</option>
+	                                                        <option>2</option>
+	                                                        <option>3</option>
+	                                                        <option>4</option>
+	                                                        <option>5</option>
+	                                                    </select>
+	                                                </div>
+													<div class="col-sm-3">
+	                                                    <select class="form-control">
+															<option>-</option>
+	                                                        <option>1</option>
+	                                                        <option>2</option>
+	                                                        <option>3</option>
+	                                                        <option>4</option>
+	                                                        <option>5</option>
+	                                                    </select>
+	                                                </div>
+	                                            </div>
 									</div>
 								</div>
 							</div>
