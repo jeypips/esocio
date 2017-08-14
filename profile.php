@@ -131,8 +131,8 @@
 						</div>
 						<div class="panel-body">
 							<div class="row">
-								<div class="col-lg-4">
-									<div class="input-group col-lg-12 col-sm-8">
+								<div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
+									<div class="input-group">
 									<div class="input-group-btn">
 										<button type="button" class="btn waves-effect waves-light btn-info" data-toggle="dropdown" style="overflow: hidden; position: relative;">Filter</button>
 									</div>
@@ -148,8 +148,8 @@
 								</div>
 								
 								<!-- hide -->
-								<div class="col-lg-4">
-									<div class="input-group col-lg-12 col-sm-8">
+								<div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
+									<div class="input-group">
 										<div class="input-group-btn">
 											<button type="button" class="btn waves-effect waves-light btn-info" data-toggle="dropdown" style="overflow: hidden; position: relative;">TBD</button>
 										</div>
@@ -163,7 +163,7 @@
 										</select>
 									</div>
 								</div>
-								<div class="input-group col-lg-1 col-md-2 col-sm-2">
+								<div class="col-lg-1 col-md-2 col-sm-2">
 									<button type="submit" class="btn btn-primary">Go!</button>
 								</div>
 							</div> <!-- /row -->
