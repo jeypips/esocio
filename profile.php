@@ -110,45 +110,69 @@
             <!-- Left Sidebar End -->
 
 
-            <div class="content-page">
-                <!-- Start content -->
-                <div class="content">
-                    <div class="container">
+<div class="content-page">
+	<!-- Start content -->
+	<div class="content">
+		<div class="container">
 
-                        <!-- Page-Title -->
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h4 class="page-title">Profile</h4>
-                            </div>
-							<hr>
-                        </div>
-						
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="panel panel-border panel-inverse">
-									<div class="panel-heading">
-									<i class="ion-android-social-user"></i> Tasks
+			<!-- Page-Title -->
+			<div class="row">
+				<div class="col-sm-4">
+					<h4 class="page-title">Profile</h4>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-border panel-inverse">
+						<div class="panel-heading">
+						<i class="ion-android-social-user"></i> Tasks
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="input-group col-lg-12 col-sm-8">
+									<div class="input-group-btn">
+										<button type="button" class="btn waves-effect waves-light btn-info" data-toggle="dropdown" style="overflow: hidden; position: relative;">Filter</button>
 									</div>
-									<div class="panel-body">
-										<div class="input-group col-sm-4">
-											<div class="input-group-btn">
-												<button type="button" class="btn waves-effect waves-light btn-primary" data-toggle="dropdown" style="overflow: hidden; position: relative;">Filter</button>
-											</div>
-											<select class="form-control">
-												<option>-</option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-											</select>
-										</div>
+									<select class="form-control">
+										<option>-</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
 									</div>
 								</div>
-							</div>
-						</div>
-                    </div> <!-- container -->
-                </div> <!-- content -->
+								
+								<!-- hide -->
+								<div class="col-lg-4">
+									<div class="input-group col-lg-12 col-sm-8">
+										<div class="input-group-btn">
+											<button type="button" class="btn waves-effect waves-light btn-info" data-toggle="dropdown" style="overflow: hidden; position: relative;">TBD</button>
+										</div>
+										<select class="form-control">
+											<option>-</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+								<div class="input-group col-lg-1 col-md-2 col-sm-2">
+									<button type="submit" class="btn btn-primary">Go!</button>
+								</div>
+							</div> <!-- /row -->
+						</div> <!-- /panel-body -->
+					</div> <!-- /panel-invers -->
+				</div> <!-- /col-lg-12 -->
+			</div> <!-- /row -->
+		</div> <!-- container -->
+	</div> <!-- content -->
 
                 <footer class="footer text-right">
                    <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
