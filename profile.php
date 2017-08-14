@@ -98,8 +98,8 @@
                         <ul>
 						<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
-							<li><a href="index.php" class="waves-effect"><i class="ti-home"></i><span> Dashboard </span></a></li>
-							<li><a href="profile.php" class="waves-effect active"><i class="ti-desktop"></i><span> Profile </span></a></li>
+							<li><a href="index.php"><i class="ti-home"></i><span> Dashboard </span></a></li>
+							<li><a href="profile.php" class="active"><i class="ti-desktop"></i><span> Profile </span></a></li>
                         </li>
 						</ul>
                         <div class="clearfix"></div>
@@ -130,28 +130,19 @@
 									<i class="ion-android-social-user"></i> Tasks
 									</div>
 									<div class="panel-body">
-										<div class="form-group">
-	                                                <div class="col-sm-3">
-	                                                    <select class="form-control">
-															<option>-</option>
-	                                                        <option>1</option>
-	                                                        <option>2</option>
-	                                                        <option>3</option>
-	                                                        <option>4</option>
-	                                                        <option>5</option>
-	                                                    </select>
-	                                                </div>
-													<div class="col-sm-3">
-	                                                    <select class="form-control">
-															<option>-</option>
-	                                                        <option>1</option>
-	                                                        <option>2</option>
-	                                                        <option>3</option>
-	                                                        <option>4</option>
-	                                                        <option>5</option>
-	                                                    </select>
-	                                                </div>
-	                                            </div>
+										<div class="input-group col-sm-4">
+											<div class="input-group-btn">
+												<button type="button" class="btn waves-effect waves-light btn-primary" data-toggle="dropdown" style="overflow: hidden; position: relative;">Filter</button>
+											</div>
+											<select class="form-control">
+												<option>-</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</div>
