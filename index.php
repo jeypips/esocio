@@ -98,8 +98,8 @@
                         <ul>
 						<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
-							<li><a href="index.php" class="waves-effect active"><i class="ti-home"></i><span> Dashboard </span></a></li>
-							<li><a href="profile.php" class="waves-effect"><i class="ti-desktop"></i><span> Profile </span></a></li>
+							<li><a href="index.php" class="active"><i class="ti-home"></i><span> Dashboard </span></a></li>
+							<li><a href="profile.php"><i class="ti-desktop"></i><span> Profile </span></a></li>
                         </li>
 						</ul>
                         <div class="clearfix"></div>
