@@ -7,7 +7,7 @@
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
 
-        <link rel="shortcut icon" href="assets/images/favicon_1.ico">
+        <link rel="shortcut icon" href="images/lu_seal.png">
 
         <title>E-Socio | Dashboard</title>
 
@@ -31,8 +31,7 @@
         <script src="assets/js/modernizr.min.js"></script>
 		<style type="text/css">
         .img-circle {
-			width: 50px;
-						
+			width: 50px;			
 		}
 		
 		</style>
@@ -49,7 +48,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.php" class="logo"><img class="img-circle" src="images/lu_seal.png" alt="PLGU Logo"><span>E-Socio</span></a>
+                        <a href="index.php" class="logo"><img class="img-circle" src="images/lu_seal.png" alt="PLGU Logo"><span> E-Socio</span></a>
                     </div>
                 </div>
 
@@ -90,19 +89,20 @@
 
 
             <!-- ========== Left Sidebar Start ========== -->
-
             <div class="left side-menu">
                 <div class="sidebar-inner slimscrollleft">
                     <!--- Divider -->
+					
                     <div id="sidebar-menu">
-                        <ul>
-						<li class="text-muted menu-title">Navigation</li>
+					<ul>
+					<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
-							<li><a href="index.php" class="active"><i class="ti-home"></i><span> Dashboard </span></a></li>
-							<li><a href="profile.php"><i class="ti-desktop"></i><span> Profile </span></a></li>
-                        </li>
-						</ul>
-                        <div class="clearfix"></div>
+							<li><a href="index.php" class="active"><i class="icon-home"></i><span> Dashboard </span></a></li>
+							<li><a href="profile.php"><i class="icon-screen-desktop"></i><span> Profile </span></a></li>
+							<li><a href="#"><i class="icon-settings"></i><span> Maintenance</span></a></li>
+						</li>
+					</ul>
+					<div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -130,7 +130,7 @@
 										<h3 class="panel-title">WELCOME!</h3>
 									</div>
 									<div class="panel-body">
-										<p>E-Socio Economic Profiling in La Union</p>
+										<p>Introducing E-Socio Economic Profiling in La Union v.1.0 </p>
 									</div>
 								</div>
 							</div>

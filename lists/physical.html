@@ -1,0 +1,27 @@
+<table class="table table-striped m-0">
+  <thead>
+	<tr>
+			  <th>#</th>
+			  <th>Municipality</th>
+			  <th>Land Area</th>
+			  <th>Terrian</th>
+			  <th>Climate</th>
+			  <th>No. of brgy</th>
+			  <th>&nbsp;</th>
+	</tr>
+  </thead>
+  <tbody>
+	<tr ng-repeat="physical in physicals">
+	  <td>{{pc_id}}</td>
+	  <td>{{pc_land_area}}</td>
+	  <td>{{pc_land_area}}</td>
+	  <td>{{pc_terrian}}</td>
+	  <td>{{pc_climate}}</td>
+	  <td>{{pc_no_barangay}}</td>
+	  <td>
+	  <button class="btn btn-sm btn-default" style="margin-right: 5px;"><i class="fa fa-search" style="cursor: pointer;"></i></button>
+	  <button class="btn btn-sm btn-default" ><i class="fa fa-close" style="cursor: pointer;"></i></button>
+	  </td>
+	</tr>
+  </tbody>
+</table>
