@@ -175,14 +175,8 @@
 			</div> <!-- /row -->
 			
 			<div class="row">
-				<div class="col-lg-10">
-					<div class="panel panel-border panel-info">
-						<div class="panel-heading">
-						</div>
-						<div class="panel-body">
-							<div id="x_content" class="x_content"></div>
-						</div>
-					</div>
+				<div class="col-lg-12">
+					<div id="x_content" class="x_content"></div>
 				</div>
 			</div>
 			
