@@ -181,27 +181,20 @@
 						</div>
 						<div class="panel-body">
 							<div id="x_content" class="x_content"></div>
-						</div> <!-- /panel-body -->
-					</div> <!-- /panel-info -->
-				</div> <!-- /col-lg-12 -->
-			</div> <!-- /row -->
+						</div>
+					</div>
+				</div>
+			</div>
 			
 		</div> <!-- container -->
 	</div> <!-- content -->
 
-                <footer class="footer text-right">
-                   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
-                </footer>
-
-            </div>
-
-
-           
-
-        </div>
-        <!-- END wrapper -->
-
-
+			<footer class="footer text-right">
+			   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
+			</footer>
+		</div>
+	</div>
+	<!-- END wrapper -->
 
         <script>
             var resizefunc = [];
