@@ -7,7 +7,7 @@
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
 
-        <link rel="shortcut icon" href="assets/images/favicon_1.ico">
+        <link rel="shortcut icon" href="images/lu_seal.png">
 
         <title>E-Socio | Profile</title>
 
@@ -38,7 +38,7 @@
 		</style>
     </head>
 
-    <body class="fixed-left" ng-app="dashboard" ng-controller="dashboardCtrl" account-profile>
+    <body class="fixed-left" ng-app="physicals" ng-controller="physicalCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -49,7 +49,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.php" class="logo"><img class="img-circle" src="images/lu_seal.png" alt="PLGU Logo"><span>E-Socio</span></a>
+                        <a href="index.php" class="logo"><img class="img-circle" src="images/lu_seal.png" alt="PLGU Logo"><span> E-Socio</span></a>
                     </div>
                 </div>
 
@@ -94,14 +94,16 @@
             <div class="left side-menu">
                 <div class="sidebar-inner slimscrollleft">
                     <!--- Divider -->
+					
                     <div id="sidebar-menu">
-                        <ul>
-						<li class="text-muted menu-title">Navigation</li>
+					<ul>
+					<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
-							<li><a href="index.php"><i class="ti-home"></i><span> Dashboard </span></a></li>
-							<li><a href="profile.php" class="active"><i class="ti-desktop"></i><span> Profile </span></a></li>
-                        </li>
-						</ul>
+							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard </span></a></li>
+							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile </span></a></li>
+							<li><a href="#"><i class="icon-settings"></i><span> Maintenance</span></a></li>
+						</li>
+					</ul>
                         <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>
@@ -164,13 +166,26 @@
 									</div>
 								</div>
 								<div class="col-lg-1 col-md-2 col-sm-2">
-									<button type="submit" class="btn btn-primary">Go!</button>
+									<button type="submit" class="waves-effect waves-light btn btn-primary">Go!</button>
 								</div>
 							</div> <!-- /row -->
 						</div> <!-- /panel-body -->
 					</div> <!-- /panel-invers -->
 				</div> <!-- /col-lg-12 -->
 			</div> <!-- /row -->
+			
+			<div class="row">
+				<div class="col-lg-10">
+					<div class="panel panel-border panel-info">
+						<div class="panel-heading">
+						</div>
+						<div class="panel-body">
+							<div id="x_content" class="x_content"></div>
+						</div> <!-- /panel-body -->
+					</div> <!-- /panel-info -->
+				</div> <!-- /col-lg-12 -->
+			</div> <!-- /row -->
+			
 		</div> <!-- container -->
 	</div> <!-- content -->
 
@@ -222,7 +237,8 @@
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/account.js"></script>
-		<script src="controllers/dashboard.js"></script>
+		<script src="modules/physical-character.js"></script>
+		<script src="controllers/physical-character.js"></script>
 
 
 
