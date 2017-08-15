@@ -9,7 +9,7 @@ session_start();
 $con = new pdo_db();
 
 $profile = [];
-$sql = "SELECT account_id, CONCAT(accunt_username, ' ', accunt_username) fullname FROM account_info WHERE account_id = $_SESSION[accunt_id]";
+$sql = "SELECT account_id, CONCAT(account_firstname, ' ', account_lastname) fullname FROM account_info WHERE account_id = $_SESSION[account_id]";
 $staff = $con->getData($sql);
 
 $profile['fullname'] = $staff[0]['fullname'];
