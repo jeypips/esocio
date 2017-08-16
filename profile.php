@@ -133,16 +133,16 @@
 						</div>
 						<div class="panel-body">
 							<div class="row">
-								<div class="col-lg-6 col-md-6">
+								<div class="col-lg-8 col-md-11 col-sm-12">
 									<div class="row">
 										<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
 										  <div class="input-group input-group-md">
 											<div class="input-group-btn">
-											  <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="dropdown">Filter
+											  <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="dropdown">Sector
 												<span class="fa fa-caret-down"></span></button>
 											  <ul class="dropdown-menu">
 												<li><a href="javascript:;">All</a></li>
-												<li><a href="javascript:;">Macro Sector</a></li>
+												<li><a href="javascript:;">Trade, Industry and Tourism Sector</a></li>
 												
 											  </ul>
 											</div>
