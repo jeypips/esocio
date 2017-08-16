@@ -109,6 +109,7 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 		
 		self.list = function(scope) {
 			
+			// load list
 			scope.physical = {};
 			scope.physical.pc_id = 0;			
 			$http({
@@ -123,10 +124,18 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			  // error
 				
 			});
+			//
 
 			$('#x_content').html('Loading...');
 			$('#x_content').load('lists/physical.html', function() {
-				$timeout(function() { $compile($('#x_content')[0])(scope); },100);				
+				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
+				// instantiate datable
+				// $timeout(function() {
+					// $('#physical').DataTable({
+						// "ordering": false
+					// });	
+				// },200);
+				//
 			});				
 			
 		};
