@@ -133,42 +133,29 @@
 						</div>
 						<div class="panel-body">
 							<div class="row">
-								<div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
-									<div class="input-group">
-									<div class="input-group-btn">
-										<button type="button" class="btn waves-effect waves-light btn-info" data-toggle="dropdown" style="overflow: hidden; position: relative;">Filter</button>
-									</div>
-									<select class="form-control">
-										<option>-</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
-									</div>
-								</div>
-								
-								<!-- hide -->
-								<div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
-									<div class="input-group">
-										<div class="input-group-btn">
-											<button type="button" class="btn waves-effect waves-light btn-info" data-toggle="dropdown" style="overflow: hidden; position: relative;">TBD</button>
+								<div class="col-lg-6 col-md-6">
+									<div class="row">
+										<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+										  <div class="input-group input-group-md">
+											<div class="input-group-btn">
+											  <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="dropdown">Filter
+												<span class="fa fa-caret-down"></span></button>
+											  <ul class="dropdown-menu">
+												<li><a href="javascript:;">All</a></li>
+												<li><a href="javascript:;">Macro Sector</a></li>
+												
+											  </ul>
+											</div>
+											<!-- /btn-group -->
+											<select class="form-control"></select>
+												<span class="input-group-btn">
+												  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
+												</span>				
+										  </div>
 										</div>
-										<select class="form-control">
-											<option>-</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-										</select>
 									</div>
-								</div>
-								<div class="col-lg-1 col-md-2 col-sm-2">
-									<button type="submit" class="waves-effect waves-light btn btn-primary">Go!</button>
-								</div>
-							</div> <!-- /row -->
+								</div>		
+						</div>
 						</div> <!-- /panel-body -->
 					</div> <!-- /panel-invers -->
 				</div> <!-- /col-lg-12 -->
