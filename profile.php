@@ -179,6 +179,7 @@
 			
 			<div class="row">
 				<div class="col-lg-12">
+<<<<<<< HEAD
 					<div class="panel panel-border panel-inverse">
 						<div class="panel-heading">
 						</div>
@@ -188,23 +189,21 @@
 					</div> <!-- /panel-info -->
 				</div> <!-- /col-lg-12 -->
 			</div> <!-- /row -->
+=======
+					<div id="x_content" class="x_content"></div>
+				</div>
+			</div>
+>>>>>>> refs/remotes/origin/jp
 			
 		</div> <!-- container -->
 	</div> <!-- content -->
 
-                <footer class="footer text-right">
-                   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
-                </footer>
-
-            </div>
-
-
-           
-
-        </div>
-        <!-- END wrapper -->
-
-
+			<footer class="footer text-right">
+			   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
+			</footer>
+		</div>
+	</div>
+	<!-- END wrapper -->
 
         <script>
             var resizefunc = [];

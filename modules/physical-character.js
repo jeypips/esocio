@@ -65,7 +65,7 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			scope.macro_physical.pc_code = 0;
 
 			$('#x_content').html('Loading...');
-			$('#x_content').load('forms/physical-character.html',function() {
+			$('#x_content').load('forms/physical.html',function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
 			
