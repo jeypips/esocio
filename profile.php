@@ -133,9 +133,7 @@
 						</div>
 						<div class="panel-body">
 							<div class="row">
-<<<<<<< HEAD
-								 
-								
+						
 								<div class="box box-primary">
 	
 		<div class="box-body pad">
@@ -167,37 +165,7 @@
 		</div>
 	</div>
 
-
-								
-								
-								
-	
 							</div> <!-- /row -->
-=======
-								<div class="col-lg-8 col-md-11 col-sm-12">
-									<div class="row">
-										<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
-										  <div class="input-group input-group-md">
-											<div class="input-group-btn">
-											  <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="dropdown">Sector
-												<span class="fa fa-caret-down"></span></button>
-											  <ul class="dropdown-menu">
-												<li><a href="javascript:;">All</a></li>
-												<li><a href="javascript:;">Trade, Industry and Tourism Sector</a></li>
-												
-											  </ul>
-											</div>
-											<!-- /btn-group -->
-											<select class="form-control"></select>
-												<span class="input-group-btn">
-												  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
-												</span>				
-										  </div>
-										</div>
-									</div>
-								</div>		
-						</div>
->>>>>>> refs/remotes/origin/jp
 						</div> <!-- /panel-body -->
 					</div> <!-- /panel-invers -->
 				</div> <!-- /col-lg-12 -->
@@ -205,21 +173,14 @@
 			
 			<div class="row">
 				<div class="col-lg-12">
-<<<<<<< HEAD
+
 					<div id="x_content" class="x_content"></div>
 				</div>
 			</div>
-=======
-					<div class="panel panel-border panel-inverse">
-						<div class="panel-heading">
-						</div>
-						<div class="panel-body">
-							<div id="x_content" class="x_content"></div>
-						</div> <!-- /panel-body -->
-					</div> <!-- /panel-info -->
+
 				</div> <!-- /col-lg-12 -->
 			</div> <!-- /row -->
->>>>>>> refs/remotes/origin/sha
+
 			
 		</div> <!-- container -->
 	</div> <!-- content -->
