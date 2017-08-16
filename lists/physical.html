@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="panel panel-border panel-primary">
 		<div class="panel-heading">
 			<h4><i class="icon-layers"></i> Physical Characteristics<button class="btn btn-primary waves-effect waves-light pull-right" ng-click="form.physical(this,physical)">Add</button></h4>
@@ -33,3 +34,34 @@
 		</table>
 	</div>
 </div>
+=======
+<div class="nav navbar-right panel_toolbox">
+								<button type="button" class="btn btn-primary btn-flat" ng-click="add()">Add</button>
+							</div>
+<table class="table table-striped m-0">
+  <thead>
+	<tr>
+			  <th>#</th>
+			  <th>Municipality</th>
+			  <th>Land Area</th>
+			  <th>Terrian</th>
+			  <th>Climate</th>
+			  <th>No. of brgy</th>
+			  <th>&nbsp;</th>
+	</tr>
+  </thead>
+  <tbody>
+	<tr ng-repeat="physical in physicals">
+	  <td>{{physical.p_code}}</td>
+	  <td>{{physical.pc_terrain}}</td>
+	  <td>{{physical.pc_climate}}</td>
+	  <td>{{physical.pc_no_barangay}}</td>
+	  <td>{{physical.m_no}}</td>
+	  <td>
+	  <button class="btn btn-sm btn-default" style="margin-right: 5px;"><i class="fa fa-search" style="cursor: pointer;"></i></button>
+	  <button class="btn btn-sm btn-default" ><i class="fa fa-close" style="cursor: pointer;"></i></button>
+	  </td>
+	</tr>
+  </tbody>
+</table>
+>>>>>>> refs/remotes/origin/sha
