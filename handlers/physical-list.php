@@ -8,7 +8,7 @@ session_start();
 
 $con = new pdo_db();
 
-$physicals = $con->getData("SELECT * FROM physical_characteristics");
+$physicals = $con->getData("SELECT * FROM macro_physical");
 
 echo json_encode($physicals);
 

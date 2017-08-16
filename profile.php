@@ -133,41 +133,44 @@
 						</div>
 						<div class="panel-body">
 							<div class="row">
-								<div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
-									<div class="input-group">
-									<div class="input-group-btn">
-										<button type="button" class="btn waves-effect waves-light btn-info" data-toggle="dropdown" style="overflow: hidden; position: relative;">Filter</button>
-									</div>
-									<select class="form-control">
-										<option>-</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
-									</div>
-								</div>
+								 
 								
-								<!-- hide -->
-								<div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
-									<div class="input-group">
-										<div class="input-group-btn">
-											<button type="button" class="btn waves-effect waves-light btn-info" data-toggle="dropdown" style="overflow: hidden; position: relative;">TBD</button>
-										</div>
-										<select class="form-control">
-											<option>-</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-										</select>
-									</div>
+								<div class="box box-primary">
+	
+		<div class="box-body pad">
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<div class="row">
+							
+							<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+							  <div class="input-group input-group-md">
+								<div class="input-group-btn">
+								  <button type="button" class="btn btn-primary btn-flat dropdown-toggle" data-toggle="dropdown">Filter
+									<span class="fa fa-caret-down"></span></button>
+								  <ul class="dropdown-menu">
+									<li><a href="javascript:;" ng-click="form.filter(this,'All')">All</a></li>
+									<li><a href="javascript:;" ng-click="form.filter(this,'Macro Sector')">Macro Sector</a></li>
+									
+								  </ul>
 								</div>
-								<div class="col-lg-1 col-md-2 col-sm-2">
-									<button type="submit" class="waves-effect waves-light btn btn-primary">Go!</button>
-								</div>
+								<!-- /btn-group -->
+								<select class="form-control" ng-disabled="filter.by == 'All'" ng-model="filter.label" ng-options="f.label for f in filter.filters track by f.id"></select>
+									<span class="input-group-btn">
+									  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
+									</span>				
+							  </div>
+							</div>
+						</div>
+					</div>		
+				</div>					
+		</div>
+	</div>
+
+
+								
+								
+								
+	
 							</div> <!-- /row -->
 						</div> <!-- /panel-body -->
 					</div> <!-- /panel-invers -->
@@ -175,8 +178,8 @@
 			</div> <!-- /row -->
 			
 			<div class="row">
-				<div class="col-lg-10">
-					<div class="panel panel-border panel-info">
+				<div class="col-lg-12">
+					<div class="panel panel-border panel-inverse">
 						<div class="panel-heading">
 						</div>
 						<div class="panel-body">
