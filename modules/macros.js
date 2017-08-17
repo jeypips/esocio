@@ -8,13 +8,8 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			
 			scope.formHolder = {};		
 
-<<<<<<< HEAD:modules/physical-character.js
-			scope.macro_physical = {};
-			scope.macro_physical.p_code = 0;
-=======
 			scope.macros = {};
 			scope.macros.macros_id = 0;
->>>>>>> refs/remotes/origin/master:modules/macros.js
 
 			scope.macros = []; // list
 
@@ -22,11 +17,7 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 
 		function validate(scope) {
 			
-<<<<<<< HEAD:modules/physical-character.js
-			var controls = scope.formHolder.macro_physical.$$controls;
-=======
 			var controls = scope.formHolder.macros.$$controls;
->>>>>>> refs/remotes/origin/master:modules/macros.js
 			
 			angular.forEach(controls,function(elem,i) {
 				
@@ -34,16 +25,12 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 									
 			});
 
-<<<<<<< HEAD:modules/physical-character.js
-			return scope.formHolder.macro_physical.$invalid;
-=======
 			return scope.formHolder.macros.$invalid;
->>>>>>> refs/remotes/origin/master:modules/macros.js
 			
 		};
 		
 		
-				self.filter = function(scope,filter) {				
+		/* self.filter = function(scope,filter) {				
 			
 			blockUI.show('Please wait');			
 			
@@ -65,7 +52,7 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 				
 			});				
 			
-		};
+		}; */
 		
 		
 		
@@ -74,13 +61,8 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 
 		self.physical = function(scope,row) {			
 			
-<<<<<<< HEAD:modules/physical-character.js
-			scope.macro_physical = {};
-			scope.macro_physical.pc_code = 0;
-=======
 			scope.macros = {};
 			scope.macros.macros_id = 0;
->>>>>>> refs/remotes/origin/master:modules/macros.js
 
 			$('#x_content').html('Loading...');
 			$('#x_content').load('forms/physical.html',function() {
@@ -93,17 +75,10 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 				$http({
 				  method: 'POST',
 				  url: 'handlers/physical-view.php',
-<<<<<<< HEAD:modules/physical-character.js
-				  data: {p_id: row.p_id}
-				}).then(function mySucces(response) {
-					
-					angular.copy(response.data, scope.macro_physical);
-=======
 				  data: {macros_id: row.macros_id}
 				}).then(function mySucces(response) {
 					
 					angular.copy(response.data, scope.macros);
->>>>>>> refs/remotes/origin/master:modules/macros.js
 					
 				}, function myError(response) {
 					 
@@ -121,17 +96,11 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			$http({
 			  method: 'POST',
 			  url: 'handlers/physical-save.php',
-<<<<<<< HEAD:modules/physical-character.js
-			data: {macro_physical: scope.macro_physical}
-			}).then(function mySucces(response) {
-				
-				if (scope.macro_physical.pc_code == 0) scope.macro_physical.pc_code = response.data;
-=======
-			data: {macros: scope.macros}
+			  data: {macros: scope.macros}
 			}).then(function mySucces(response) {
 				
 				if (scope.macros.macros_id == 0) scope.macros.macros_id = response.data;
->>>>>>> refs/remotes/origin/master:modules/macros.js
+
 				
 				$timeout(function() { self.list(scope); },200);
 				
@@ -172,13 +141,8 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 		self.list = function(scope) {
 			
 			// load list
-<<<<<<< HEAD:modules/physical-character.js
-			scope.physical = {};
-			scope.physical.pc_code = 0;			
-=======
 			scope.macro = {};
 			scope.macro.macros_id = 0;			
->>>>>>> refs/remotes/origin/master:modules/macros.js
 			$http({
 			  method: 'POST',
 			  url: 'handlers/physical-list.php',

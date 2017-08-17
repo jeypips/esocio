@@ -176,32 +176,9 @@
 			
 			<div class="row">
 				<div class="col-lg-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
-					<div class="panel panel-border panel-inverse">
-						<div class="panel-heading">
-						</div>
-						<div class="panel-body">
-							<div id="x_content" class="x_content"></div>
-						</div> <!-- /panel-body -->
-					</div> <!-- /panel-info -->
-				</div> <!-- /col-lg-12 -->
-			</div> <!-- /row -->
-=======
 					<div id="x_content" class="x_content"></div>
 				</div>
 			</div>
->>>>>>> refs/remotes/origin/jp
-=======
-
-					<div id="x_content" class="x_content"></div>
-				</div>
-			</div>
-
-				</div> <!-- /col-lg-12 -->
-			</div> <!-- /row -->
-
->>>>>>> refs/remotes/origin/jp
 			
 		</div> <!-- container -->
 	</div> <!-- content -->
