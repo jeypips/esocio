@@ -9,10 +9,13 @@
 
         <link rel="shortcut icon" href="images/lu_seal.png">
 
-        <title>E-Socio | Dashboard</title>
+        <title>E-Socio | Profile</title>
 
         <!--Morris Chart CSS -->
 		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+		 
+		 <!-- DataTables -->
+        <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -31,13 +34,14 @@
         <script src="assets/js/modernizr.min.js"></script>
 		<style type="text/css">
         .img-circle {
-			width: 50px;			
+			width: 50px;
+						
 		}
 		
 		</style>
     </head>
 
-    <body class="fixed-left" ng-app="dashboard" ng-controller="dashboardCtrl" account-profile>
+    <body class="fixed-left" ng-app="physicals" ng-controller="physicalCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -89,6 +93,7 @@
 
 
             <!-- ========== Left Sidebar Start ========== -->
+
             <div class="left side-menu">
                 <div class="sidebar-inner slimscrollleft">
                     <!--- Divider -->
@@ -97,12 +102,12 @@
 					<ul>
 					<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
-							<li><a href="index.php" class="active"><i class="icon-home"></i><span> Dashboard </span></a></li>
-							<li><a href="profile.php"><i class="icon-screen-desktop"></i><span> Profile </span></a></li>
+							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard </span></a></li>
+							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile </span></a></li>
 							<li><a href="#"><i class="icon-settings"></i><span> Maintenance</span></a></li>
 						</li>
 					</ul>
-					<div class="clearfix"></div>
+                        <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -110,47 +115,70 @@
             <!-- Left Sidebar End -->
 
 
-            <div class="content-page">
-                <!-- Start content -->
-                <div class="content">
-                    <div class="container">
+<div class="content-page">
+	<!-- Start content -->
+	<div class="content">
+		<div class="container">
 
-                        <!-- Page-Title -->
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h4 class="page-title">Dashboard</h4>
-                            </div>
-							<hr>
-                        </div>
-						
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="panel panel-border panel-inverse">
-									<div class="panel-heading">
-										<h3 class="panel-title">WELCOME!</h3>
-									</div>
-									<div class="panel-body">
-										<p>Introducing E-Socio Economic Profiling in La Union v.1.0 </p>
-									</div>
-								</div>
-							</div>
+			<!-- Page-Title -->
+			<div class="row">
+				<div class="col-sm-4">
+					<h4 class="page-title">Profile</h4>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-border panel-inverse">
+						<div class="panel-heading">
+						<i class="ion-android-social-user"></i> Tasks
 						</div>
-                    </div> <!-- container -->
-                </div> <!-- content -->
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-lg-8 col-md-11 col-sm-12">
+									<div class="row">
+										<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+										  <div class="input-group input-group-md">
+											<div class="input-group-btn">
+											  <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="dropdown">Sector
+												<span class="fa fa-caret-down"></span></button>
+											  <ul class="dropdown-menu">
+												<li><a href="javascript:;">All</a></li>
+												<li><a href="javascript:;">Trade, Industry and Tourism Sector</a></li>
+												
+											  </ul>
+											</div>
+											<!-- /btn-group -->
+											<select class="form-control"></select>
+												<span class="input-group-btn">
+												  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
+												</span>				
+										  </div>
+										</div>
+									</div>
+								</div>		
+						</div>
+						</div> <!-- /panel-body -->
+					</div> <!-- /panel-invers -->
+				</div> <!-- /col-lg-12 -->
+			</div> <!-- /row -->
+			
+			<div class="row">
+				<div class="col-lg-12">
+					<div id="x_content" class="x_content"></div>
+				</div>
+			</div>
+			
+		</div> <!-- container -->
+	</div> <!-- content -->
 
-                <footer class="footer text-right">
-                   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
-                </footer>
-
-            </div>
-
-
-           
-
-        </div>
-        <!-- END wrapper -->
-
-
+			<footer class="footer text-right">
+			   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
+			</footer>
+		</div>
+	</div>
+	<!-- END wrapper -->
 
         <script>
             var resizefunc = [];
@@ -168,6 +196,8 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
@@ -186,9 +216,8 @@
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/account.js"></script>
-		<script src="controllers/dashboard.js"></script>
-
-
+		<script src="modules/physical-character.js"></script>
+		<script src="controllers/physical-character.js"></script>
 
     </body>
 </html>
