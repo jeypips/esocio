@@ -13,6 +13,9 @@
 
         <!--Morris Chart CSS -->
 		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+		 
+		 <!-- DataTables -->
+        <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -193,6 +196,8 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
@@ -213,8 +218,6 @@
 		<script src="modules/account.js"></script>
 		<script src="modules/physical-character.js"></script>
 		<script src="controllers/physical-character.js"></script>
-
-
 
     </body>
 </html>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 14, 2017 at 01:05 AM
+-- Generation Time: Aug 16, 2017 at 05:28 AM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -44,6 +44,100 @@ CREATE TABLE `account_info` (
 INSERT INTO `account_info` (`account_id`, `account_firstname`, `account_middlename`, `account_lastname`, `account_name_municipality`, `account_username`, `account_password`, `account_email`) VALUES
 (1, 'John Paul', 'Garcia', 'Balanon', 'sample', 'admin', 'admin', 'jp@gmail.com');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `macros`
+--
+
+CREATE TABLE `macros` (
+  `macros_id` int(11) NOT NULL,
+  `municipal_no` int(11) DEFAULT NULL,
+  `pc_land_area` varchar(100) DEFAULT NULL,
+  `pc_terrain` varchar(100) DEFAULT NULL,
+  `pc_climate` varchar(100) DEFAULT NULL,
+  `pc_no_barangay` int(11) DEFAULT NULL,
+  `md_population` int(11) DEFAULT NULL,
+  `md_growth_rate` varchar(20) DEFAULT NULL,
+  `md_population_density` int(11) DEFAULT NULL,
+  `md_no_of_households` int(11) DEFAULT NULL,
+  `md_no_of_families` int(11) DEFAULT NULL,
+  `md_languages` varchar(100) DEFAULT NULL,
+  `md_religion` varchar(100) DEFAULT NULL,
+  `md_literacy_rate` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `municipality`
+--
+
+CREATE TABLE `municipality` (
+  `municipal_id` int(11) NOT NULL,
+  `municipal_no` int(11) NOT NULL,
+  `municipal_name` varchar(150) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `parameters`
+--
+
+CREATE TABLE `parameters` (
+  `parameter_id` int(11) NOT NULL,
+  `parameter_no` int(11) DEFAULT NULL,
+  `parameter_name` varchar(50) DEFAULT NULL,
+  `parameter_short_name` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `parameters`
+--
+
+INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `parameter_short_name`) VALUES
+(1, 1, 'Physical Characteristics', 'PC'),
+(2, 1, 'Demographics', 'DEMO'),
+(3, 2, 'Employment and Development Finance', 'EDF'),
+(4, 3, 'Existing Land User Distribution', 'ELUD'),
+(5, 3, 'Land Classication', 'LC'),
+(6, 4, 'Food Sufficiency', 'FS'),
+(7, 5, 'Road Network', 'RN'),
+(8, 5, 'Bridges', 'BR'),
+(9, 6, 'Social Welfare', 'SW'),
+(10, 7, 'Health Sector', 'HS'),
+(11, 8, 'Education Sector', 'ES'),
+(12, 9, 'Development Administration Sector', 'DAS'),
+(13, 10, 'Trade, Industry and Tourism Sector', 'TITS');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sector`
+--
+
+CREATE TABLE `sector` (
+  `sector_id` int(11) NOT NULL,
+  `sector_name` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sector`
+--
+
+INSERT INTO `sector` (`sector_id`, `sector_name`) VALUES
+(1, 'Macro Sector'),
+(2, 'Employment and Development Finance Sector'),
+(3, 'Environmental Sector'),
+(4, 'Agriculture and Utilities Sector'),
+(5, 'Infrastructure and Utilities Sector'),
+(6, 'Social Welfare Sector'),
+(7, 'Health Sector'),
+(8, 'Education Sector'),
+(9, 'Development Administration Sector'),
+(10, 'Trade, Industry and Tourism Sector');
+
 --
 -- Indexes for dumped tables
 --
@@ -55,6 +149,30 @@ ALTER TABLE `account_info`
   ADD PRIMARY KEY (`account_id`);
 
 --
+-- Indexes for table `macros`
+--
+ALTER TABLE `macros`
+  ADD PRIMARY KEY (`macros_id`);
+
+--
+-- Indexes for table `municipality`
+--
+ALTER TABLE `municipality`
+  ADD PRIMARY KEY (`municipal_id`);
+
+--
+-- Indexes for table `parameters`
+--
+ALTER TABLE `parameters`
+  ADD PRIMARY KEY (`parameter_id`);
+
+--
+-- Indexes for table `sector`
+--
+ALTER TABLE `sector`
+  ADD PRIMARY KEY (`sector_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -63,6 +181,26 @@ ALTER TABLE `account_info`
 --
 ALTER TABLE `account_info`
   MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `macros`
+--
+ALTER TABLE `macros`
+  MODIFY `macros_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `municipality`
+--
+ALTER TABLE `municipality`
+  MODIFY `municipal_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `parameters`
+--
+ALTER TABLE `parameters`
+  MODIFY `parameter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT for table `sector`
+--
+ALTER TABLE `sector`
+  MODIFY `sector_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

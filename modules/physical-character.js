@@ -130,12 +130,12 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			$('#x_content').load('lists/physical.html', function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
 				// instantiate datable
-				// $timeout(function() {
-					// $('#physical').DataTable({
-						// "ordering": false
-					// });	
-				// },200);
-				//
+				$timeout(function() {
+					$('#physical').DataTable({
+						"ordering": false
+					});	
+				},200);
+				
 			});				
 			
 		};
