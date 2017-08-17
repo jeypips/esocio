@@ -5,7 +5,7 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 		var self = this;
 		
 		self.data = function(scope) { // initialize data			
-			
+
 			scope.formHolder = {};		
 
 			scope.macros = {};
@@ -69,7 +69,9 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
 			
+			
 			if (row != null) {		
+
 				
 				if (scope.$id > 2) scope = scope.$parent;				
 				$http({
@@ -86,7 +88,7 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 					
 				});					
 			};
-			
+			scope.mode = 'form';
 		};
 		
 		self.save = function(scope) {

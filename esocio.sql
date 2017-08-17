@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 16, 2017 at 05:28 AM
+-- Generation Time: Aug 17, 2017 at 03:28 AM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -47,6 +47,26 @@ INSERT INTO `account_info` (`account_id`, `account_firstname`, `account_middlena
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `employments`
+--
+
+CREATE TABLE `employments` (
+  `emp_id` int(11) NOT NULL,
+  `emp_labor_force` varchar(50) DEFAULT NULL,
+  `emp_rate` varchar(11) DEFAULT NULL,
+  `emp_dist_agriculture` varchar(50) DEFAULT NULL,
+  `emp_dist_industry` varchar(50) DEFAULT NULL,
+  `emp_dist_services` varchar(50) DEFAULT NULL,
+  `emp_pov_poor_family` varchar(50) DEFAULT NULL,
+  `emp_pov_poor_population` varchar(50) DEFAULT NULL,
+  `emp_pov_classification` varchar(50) DEFAULT NULL,
+  `emp_pov_revenue` varchar(50) DEFAULT NULL,
+  `emp_pov_expend` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `macros`
 --
 
@@ -57,15 +77,22 @@ CREATE TABLE `macros` (
   `pc_terrain` varchar(100) DEFAULT NULL,
   `pc_climate` varchar(100) DEFAULT NULL,
   `pc_no_barangay` int(11) DEFAULT NULL,
-  `md_population` int(11) DEFAULT NULL,
+  `md_population` varchar(11) DEFAULT NULL,
   `md_growth_rate` varchar(20) DEFAULT NULL,
-  `md_population_density` int(11) DEFAULT NULL,
-  `md_no_of_households` int(11) DEFAULT NULL,
-  `md_no_of_families` int(11) DEFAULT NULL,
+  `md_population_density` varchar(11) DEFAULT NULL,
+  `md_no_of_households` varchar(11) DEFAULT NULL,
+  `md_no_of_families` varchar(11) DEFAULT NULL,
   `md_languages` varchar(100) DEFAULT NULL,
   `md_religion` varchar(100) DEFAULT NULL,
   `md_literacy_rate` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `macros`
+--
+
+INSERT INTO `macros` (`macros_id`, `municipal_no`, `pc_land_area`, `pc_terrain`, `pc_climate`, `pc_no_barangay`, `md_population`, `md_growth_rate`, `md_population_density`, `md_no_of_households`, `md_no_of_families`, `md_languages`, `md_religion`, `md_literacy_rate`) VALUES
+(1, NULL, '76.5477', 'Moonsoon', 'Tropical', 47, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -149,6 +176,12 @@ ALTER TABLE `account_info`
   ADD PRIMARY KEY (`account_id`);
 
 --
+-- Indexes for table `employments`
+--
+ALTER TABLE `employments`
+  ADD PRIMARY KEY (`emp_id`);
+
+--
 -- Indexes for table `macros`
 --
 ALTER TABLE `macros`
@@ -182,10 +215,15 @@ ALTER TABLE `sector`
 ALTER TABLE `account_info`
   MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `employments`
+--
+ALTER TABLE `employments`
+  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `macros`
 --
 ALTER TABLE `macros`
-  MODIFY `macros_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `macros_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `municipality`
 --
@@ -200,7 +238,7 @@ ALTER TABLE `parameters`
 -- AUTO_INCREMENT for table `sector`
 --
 ALTER TABLE `sector`
-  MODIFY `sector_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `sector_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
