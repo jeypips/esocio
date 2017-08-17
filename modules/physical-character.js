@@ -8,8 +8,8 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			
 			scope.formHolder = {};		
 
-			scope.physical_characteristics = {};
-			scope.physical_characteristics.pc_id = 0;
+			scope.macro_physical = {};
+			scope.macro_physical.p_code = 0;
 
 			scope.physicals = []; // list
 
@@ -17,7 +17,7 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 
 		function validate(scope) {
 			
-			var controls = scope.formHolder.physical_characteristics.$$controls;
+			var controls = scope.formHolder.macro_physical.$$controls;
 			
 			angular.forEach(controls,function(elem,i) {
 				
@@ -25,14 +25,44 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 									
 			});
 
-			return scope.formHolder.physical_characteristics.$invalid;
+			return scope.formHolder.macro_physical.$invalid;
 			
 		};
+		
+		
+				self.filter = function(scope,filter) {				
+			
+			blockUI.show('Please wait');			
+			
+			scope.filter.by = filter;
+			
+			$http({
+			  method: 'POST',
+			  url: 'handlers/profile-filter.php',
+			  data: {filter: scope.filter.by}
+			}).then(function mySucces(response) {
+				
+				scope.filter.filters = response.data;
+				scope.filter.label = response.data[0];
+				self.filterGo(scope);
+				
+			}, function myError(response) {
+				 
+			  // error
+				
+			});				
+			
+		};
+		
+		
+		
+		
+		
 
 		self.physical = function(scope,row) {			
 			
-			scope.physical_characteristics = {};
-			scope.physical_characteristics.pc_id = 0;
+			scope.macro_physical = {};
+			scope.macro_physical.pc_code = 0;
 
 			$('#x_content').html('Loading...');
 			$('#x_content').load('forms/physical.html',function() {
@@ -45,10 +75,10 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 				$http({
 				  method: 'POST',
 				  url: 'handlers/physical-view.php',
-				  data: {pc_id: row.pc_id}
+				  data: {p_id: row.p_id}
 				}).then(function mySucces(response) {
 					
-					angular.copy(response.data, scope.physical_characteristics);
+					angular.copy(response.data, scope.macro_physical);
 					
 				}, function myError(response) {
 					 
@@ -66,10 +96,10 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			$http({
 			  method: 'POST',
 			  url: 'handlers/physical-save.php',
-			data: {physical_characteristics: scope.physical_characteristics}
+			data: {macro_physical: scope.macro_physical}
 			}).then(function mySucces(response) {
 				
-				if (scope.physical_characteristics.pc_id == 0) scope.physical_characteristics.pc_id = response.data;
+				if (scope.macro_physical.pc_code == 0) scope.macro_physical.pc_code = response.data;
 				
 				$timeout(function() { self.list(scope); },200);
 				
@@ -111,7 +141,7 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			
 			// load list
 			scope.physical = {};
-			scope.physical.pc_id = 0;			
+			scope.physical.pc_code = 0;			
 			$http({
 			  method: 'POST',
 			  url: 'handlers/physical-list.php',

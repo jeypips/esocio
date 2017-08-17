@@ -133,29 +133,39 @@
 						</div>
 						<div class="panel-body">
 							<div class="row">
-								<div class="col-lg-8 col-md-11 col-sm-12">
-									<div class="row">
-										<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
-										  <div class="input-group input-group-md">
-											<div class="input-group-btn">
-											  <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="dropdown">Sector
-												<span class="fa fa-caret-down"></span></button>
-											  <ul class="dropdown-menu">
-												<li><a href="javascript:;">All</a></li>
-												<li><a href="javascript:;">Trade, Industry and Tourism Sector</a></li>
-												
-											  </ul>
-											</div>
-											<!-- /btn-group -->
-											<select class="form-control"></select>
-												<span class="input-group-btn">
-												  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
-												</span>				
-										  </div>
-										</div>
-									</div>
-								</div>		
+						
+								<div class="box box-primary">
+	
+		<div class="box-body pad">
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<div class="row">
+							
+							<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+							  <div class="input-group input-group-md">
+								<div class="input-group-btn">
+								  <button type="button" class="btn btn-primary btn-flat dropdown-toggle" data-toggle="dropdown">Filter
+									<span class="fa fa-caret-down"></span></button>
+								  <ul class="dropdown-menu">
+									<li><a href="javascript:;" ng-click="form.filter(this,'All')">All</a></li>
+									<li><a href="javascript:;" ng-click="form.filter(this,'Macro Sector')">Macro Sector</a></li>
+									
+								  </ul>
+								</div>
+								<!-- /btn-group -->
+								<select class="form-control" ng-disabled="filter.by == 'All'" ng-model="filter.label" ng-options="f.label for f in filter.filters track by f.id"></select>
+									<span class="input-group-btn">
+									  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
+									</span>				
+							  </div>
+							</div>
 						</div>
+					</div>		
+				</div>					
+		</div>
+	</div>
+
+							</div> <!-- /row -->
 						</div> <!-- /panel-body -->
 					</div> <!-- /panel-invers -->
 				</div> <!-- /col-lg-12 -->
@@ -163,9 +173,14 @@
 			
 			<div class="row">
 				<div class="col-lg-12">
+
 					<div id="x_content" class="x_content"></div>
 				</div>
 			</div>
+
+				</div> <!-- /col-lg-12 -->
+			</div> <!-- /row -->
+
 			
 		</div> <!-- container -->
 	</div> <!-- content -->
