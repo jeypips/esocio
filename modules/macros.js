@@ -1,4 +1,4 @@
-angular.module('physicals-module',['bootstrap-modal']).factory('form', function($compile,$timeout,$http,bootstrapModal) {
+angular.module('macros-module',['bootstrap-modal']).factory('form', function($compile,$timeout,$http,bootstrapModal) {
 	
 	function form() {
 		
@@ -8,16 +8,25 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			
 			scope.formHolder = {};		
 
+<<<<<<< HEAD:modules/physical-character.js
 			scope.macro_physical = {};
 			scope.macro_physical.p_code = 0;
+=======
+			scope.macros = {};
+			scope.macros.macros_id = 0;
+>>>>>>> refs/remotes/origin/master:modules/macros.js
 
-			scope.physicals = []; // list
+			scope.macros = []; // list
 
 		};
 
 		function validate(scope) {
 			
+<<<<<<< HEAD:modules/physical-character.js
 			var controls = scope.formHolder.macro_physical.$$controls;
+=======
+			var controls = scope.formHolder.macros.$$controls;
+>>>>>>> refs/remotes/origin/master:modules/macros.js
 			
 			angular.forEach(controls,function(elem,i) {
 				
@@ -25,7 +34,11 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 									
 			});
 
+<<<<<<< HEAD:modules/physical-character.js
 			return scope.formHolder.macro_physical.$invalid;
+=======
+			return scope.formHolder.macros.$invalid;
+>>>>>>> refs/remotes/origin/master:modules/macros.js
 			
 		};
 		
@@ -61,8 +74,13 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 
 		self.physical = function(scope,row) {			
 			
+<<<<<<< HEAD:modules/physical-character.js
 			scope.macro_physical = {};
 			scope.macro_physical.pc_code = 0;
+=======
+			scope.macros = {};
+			scope.macros.macros_id = 0;
+>>>>>>> refs/remotes/origin/master:modules/macros.js
 
 			$('#x_content').html('Loading...');
 			$('#x_content').load('forms/physical.html',function() {
@@ -75,10 +93,17 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 				$http({
 				  method: 'POST',
 				  url: 'handlers/physical-view.php',
+<<<<<<< HEAD:modules/physical-character.js
 				  data: {p_id: row.p_id}
 				}).then(function mySucces(response) {
 					
 					angular.copy(response.data, scope.macro_physical);
+=======
+				  data: {macros_id: row.macros_id}
+				}).then(function mySucces(response) {
+					
+					angular.copy(response.data, scope.macros);
+>>>>>>> refs/remotes/origin/master:modules/macros.js
 					
 				}, function myError(response) {
 					 
@@ -96,10 +121,17 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			$http({
 			  method: 'POST',
 			  url: 'handlers/physical-save.php',
+<<<<<<< HEAD:modules/physical-character.js
 			data: {macro_physical: scope.macro_physical}
 			}).then(function mySucces(response) {
 				
 				if (scope.macro_physical.pc_code == 0) scope.macro_physical.pc_code = response.data;
+=======
+			data: {macros: scope.macros}
+			}).then(function mySucces(response) {
+				
+				if (scope.macros.macros_id == 0) scope.macros.macros_id = response.data;
+>>>>>>> refs/remotes/origin/master:modules/macros.js
 				
 				$timeout(function() { self.list(scope); },200);
 				
@@ -120,7 +152,7 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			$http({
 			  method: 'POST',
 			  url: 'handlers/physical-delete.php',
-			  data: {pc_id: [row.pc_id]}
+			  data: {macros_id: [row.macros_id]}
 			}).then(function mySucces(response) {
 
 				self.list(scope);
@@ -140,14 +172,19 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 		self.list = function(scope) {
 			
 			// load list
+<<<<<<< HEAD:modules/physical-character.js
 			scope.physical = {};
 			scope.physical.pc_code = 0;			
+=======
+			scope.macro = {};
+			scope.macro.macros_id = 0;			
+>>>>>>> refs/remotes/origin/master:modules/macros.js
 			$http({
 			  method: 'POST',
 			  url: 'handlers/physical-list.php',
 			}).then(function mySucces(response) {
 				
-				scope.physicals = response.data;
+				scope.macros = response.data;
 				
 			}, function myError(response) {
 				 
