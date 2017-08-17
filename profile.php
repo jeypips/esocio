@@ -41,7 +41,7 @@
 		</style>
     </head>
 
-    <body class="fixed-left" ng-app="physicals" ng-controller="physicalCtrl" account-profile>
+    <body class="fixed-left" ng-app="macros" ng-controller="macrosCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -216,8 +216,8 @@
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/account.js"></script>
-		<script src="modules/physical-character.js"></script>
-		<script src="controllers/physical-character.js"></script>
+		<script src="modules/macros.js"></script>
+		<script src="controllers/macros.js"></script>
 
     </body>
 </html>
