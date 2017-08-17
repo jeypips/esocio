@@ -13,6 +13,9 @@
 
         <!--Morris Chart CSS -->
 		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+		 
+		 <!-- DataTables -->
+        <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -133,8 +136,7 @@
 						</div>
 						<div class="panel-body">
 							<div class="row">
-								 
-								
+						
 								<div class="box box-primary">
 	
 		<div class="box-body pad">
@@ -166,11 +168,6 @@
 		</div>
 	</div>
 
-
-								
-								
-								
-	
 							</div> <!-- /row -->
 						</div> <!-- /panel-body -->
 					</div> <!-- /panel-invers -->
@@ -179,6 +176,7 @@
 			
 			<div class="row">
 				<div class="col-lg-12">
+<<<<<<< HEAD
 <<<<<<< HEAD
 					<div class="panel panel-border panel-inverse">
 						<div class="panel-heading">
@@ -193,6 +191,16 @@
 					<div id="x_content" class="x_content"></div>
 				</div>
 			</div>
+>>>>>>> refs/remotes/origin/jp
+=======
+
+					<div id="x_content" class="x_content"></div>
+				</div>
+			</div>
+
+				</div> <!-- /col-lg-12 -->
+			</div> <!-- /row -->
+
 >>>>>>> refs/remotes/origin/jp
 			
 		</div> <!-- container -->
@@ -221,6 +229,8 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
@@ -241,8 +251,6 @@
 		<script src="modules/account.js"></script>
 		<script src="modules/physical-character.js"></script>
 		<script src="controllers/physical-character.js"></script>
-
-
 
     </body>
 </html>
