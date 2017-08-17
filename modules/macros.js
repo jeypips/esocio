@@ -1,4 +1,4 @@
-angular.module('physicals-module',['bootstrap-modal']).factory('form', function($compile,$timeout,$http,bootstrapModal) {
+angular.module('macros-module',['bootstrap-modal']).factory('form', function($compile,$timeout,$http,bootstrapModal) {
 	
 	function form() {
 		
@@ -8,16 +8,16 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			
 			scope.formHolder = {};		
 
-			scope.physical_characteristics = {};
-			scope.physical_characteristics.pc_id = 0;
+			scope.macros = {};
+			scope.macros.macros_id = 0;
 
-			scope.physicals = []; // list
+			scope.macros = []; // list
 
 		};
 
 		function validate(scope) {
 			
-			var controls = scope.formHolder.physical_characteristics.$$controls;
+			var controls = scope.formHolder.macros.$$controls;
 			
 			angular.forEach(controls,function(elem,i) {
 				
@@ -25,14 +25,14 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 									
 			});
 
-			return scope.formHolder.physical_characteristics.$invalid;
+			return scope.formHolder.macros.$invalid;
 			
 		};
 
 		self.physical = function(scope,row) {			
 			
-			scope.physical_characteristics = {};
-			scope.physical_characteristics.pc_id = 0;
+			scope.macros = {};
+			scope.macros.macros_id = 0;
 
 			$('#x_content').html('Loading...');
 			$('#x_content').load('forms/physical.html',function() {
@@ -45,10 +45,10 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 				$http({
 				  method: 'POST',
 				  url: 'handlers/physical-view.php',
-				  data: {pc_id: row.pc_id}
+				  data: {macros_id: row.macros_id}
 				}).then(function mySucces(response) {
 					
-					angular.copy(response.data, scope.physical_characteristics);
+					angular.copy(response.data, scope.macros);
 					
 				}, function myError(response) {
 					 
@@ -66,10 +66,10 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			$http({
 			  method: 'POST',
 			  url: 'handlers/physical-save.php',
-			data: {physical_characteristics: scope.physical_characteristics}
+			data: {macros: scope.macros}
 			}).then(function mySucces(response) {
 				
-				if (scope.physical_characteristics.pc_id == 0) scope.physical_characteristics.pc_id = response.data;
+				if (scope.macros.macros_id == 0) scope.macros.macros_id = response.data;
 				
 				$timeout(function() { self.list(scope); },200);
 				
@@ -90,7 +90,7 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 			$http({
 			  method: 'POST',
 			  url: 'handlers/physical-delete.php',
-			  data: {pc_id: [row.pc_id]}
+			  data: {macros_id: [row.macros_id]}
 			}).then(function mySucces(response) {
 
 				self.list(scope);
@@ -110,14 +110,14 @@ angular.module('physicals-module',['bootstrap-modal']).factory('form', function(
 		self.list = function(scope) {
 			
 			// load list
-			scope.physical = {};
-			scope.physical.pc_id = 0;			
+			scope.macro = {};
+			scope.macro.macros_id = 0;			
 			$http({
 			  method: 'POST',
 			  url: 'handlers/physical-list.php',
 			}).then(function mySucces(response) {
 				
-				scope.physicals = response.data;
+				scope.macros = response.data;
 				
 			}, function myError(response) {
 				 
