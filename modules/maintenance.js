@@ -1,10 +1,8 @@
-angular.module('macros-module',['bootstrap-modal']).factory('form', function($compile,$timeout,$http,bootstrapModal) {
+angular.module('maintenance-module',['bootstrap-modal']).factory('manage', function($compile,$timeout,$http,bootstrapModal) {
 	
-	function form() {
+	function manage() {
 		
 		var self = this;
-		
-		var loading = '<div class="col-sm-offset-4 col-sm-8"><button type="button" class="btn btn-inverse" title="Loading" disabled><i class="fa fa-spin fa-refresh"></i>&nbsp; Please wait...</button></div>';
 		
 		self.data = function(scope) { // initialize data	
 		
@@ -25,16 +23,16 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			
 			scope.formHolder = {};		
 
-			scope.macros = {};
-			scope.macros.macros_id = 0;
+			scope.sectors = {};
+			scope.sectors.sector_id = 0;
 
-			scope.macros = []; // list
+			scope.sectors = []; // list
 
 		};
 
 		function validate(scope) {
 			
-			var controls = scope.formHolder.macros.$$controls;
+			var controls = scope.formHolder.sectors.$$controls;
 			
 			angular.forEach(controls,function(elem,i) {
 				
@@ -42,7 +40,7 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 									
 			});
 
-			return scope.formHolder.macros.$invalid;
+			return scope.formHolder.sectors.$invalid;
 			
 		};
 		
@@ -72,16 +70,15 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 		}; */
 		
 
-		self.physical = function(scope,row) {			
+		self.sector = function(scope,row) {			
 			
-			scope.controls.add.label = 'List';	// changed value
-			scope.controls.add.btn = true;
 			
-			scope.macros = {};
-			scope.macros.macros_id = 0;
+			
+			scope.sectors = {};
+			scope.sectors.sector_id = 0;
 
 			$('#x_content').html('Loading...');
-			$('#x_content').load('forms/physical.html',function() {
+			$('#x_content').load('forms/sector.html',function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
 			
@@ -96,16 +93,15 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 				scope.controls.ok.btn = true;
 				scope.controls.cancel.label = 'Close';
 				scope.controls.cancel.btn = false;
-
-				if (scope.$macros_id> 2) scope = scope.$parent;				
-
+				
+				if (scope.$sector_id > 2) scope = scope.$parent;				
 				$http({
 				  method: 'POST',
-				  url: 'handlers/physical-view.php',
-				  data: {macros_id: row.macros_id}
+				  url: 'handlers/sector-view.php',
+				  data: {sector_id: row.sector_id}
 				}).then(function mySucces(response) {
 					
-					angular.copy(response.data, scope.macros);
+					angular.copy(response.data, scope.sectors);
 					
 				}, function myError(response) {
 					 
@@ -128,11 +124,11 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			
 			$http({
 			  method: 'POST',
-			  url: 'handlers/physical-save.php',
-			  data: {macros: scope.macros}
+			  url: 'handlers/sector-save.php',
+			  data: {sectors: scope.sectors}
 			}).then(function mySucces(response) {
 				
-				if (scope.macros.macros_id == 0) scope.macros.macros_id = response.data;
+				if (scope.sectors.sector_id == 0) scope.sectors.sector_id = response.data;
 
 				
 				$timeout(function() { self.list(scope); },200);
@@ -153,8 +149,8 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			
 			$http({
 			  method: 'POST',
-			  url: 'handlers/physical-delete.php',
-			  data: {macros_id: [row.macros_id]}
+			  url: 'handlers/sector-delete.php',
+			  data: {sector_id: [row.sector_id]}
 			}).then(function mySucces(response) {
 
 				self.list(scope);
@@ -174,15 +170,15 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 		self.list = function(scope) {
 			
 			// load list
-			scope.mode = 'list';
-			scope.macro = {};
-			scope.macro.macros_id = 0;			
+			
+			scope.sector = {};
+			scope.sector.sector_id = 0;			
 			$http({
 			  method: 'POST',
-			  url: 'handlers/physical-list.php',
+			  url: 'handlers/sector-list.php',
 			}).then(function mySucces(response) {
 				
-				scope.macros = response.data;
+				scope.sectors = response.data;
 				
 			}, function myError(response) {
 				 
@@ -191,12 +187,12 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			});
 			//
 
-			$('#x_content').html(loading);
-			$('#x_content').load('lists/physical.html', function() {
+			$('#x_content').html('Loading...');
+			$('#x_content').load('lists/maintenance.html', function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
 				// instantiate datable
 				$timeout(function() {
-					$('#physical').DataTable({
+					$('#maintenance').DataTable({
 						"ordering": false
 					});	
 				},200);
@@ -207,6 +203,6 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 		
 	};
 	
-	return new form();
+	return new manage();
 	
 });

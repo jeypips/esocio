@@ -1,0 +1,82 @@
+                            <div class="col-lg-12"> 
+                                <ul class="nav nav-tabs tabs">
+                                    <li class="active tab">
+                                        <a href="#home-2" data-toggle="tab" aria-expanded="false"> 
+                                            <span class="visible-xs"><i class="fa fa-home"></i></span> 
+                                            <span class="hidden-xs">Sector</span> 
+                                        </a> 
+                                    </li> 
+                                    <li class="tab"> 
+                                        <a href="#profile-2" data-toggle="tab" aria-expanded="false"> 
+                                            <span class="visible-xs"><i class="fa fa-user"></i></span> 
+                                            <span class="hidden-xs">Parameter</span> 
+                                        </a> 
+                                    </li> 
+                                    
+                                </ul> 
+                                <div class="tab-content"> 
+                                    <div class="tab-pane active" id="home-2"> 
+                                        <div class="panel panel-border panel-primary">
+											<div class="panel-heading">
+												<h4><i class="icon-layers"></i> Sector list<button class="btn btn-primary waves-effect waves-light pull-right" ng-click="form.physical(this,physical)">Add</button></h4>
+												<hr>
+											</div>
+										<div class="panel-body">
+											<table id="maintenance" class="table table-striped m-0">
+											  <thead>
+												<tr>
+														  <th>Sector ID</th>
+														  <th>Sector Name</th>
+														 
+												</tr>
+											  </thead>
+											  <tbody>
+												<tr ng-repeat="sector in sectors">
+												  <td>{{sector.sector_id}}</td>
+												  <td>{{sector.sector_name}}</td>
+												  <td>
+												   <button class="btn btn-sm btn-default" style="margin-right: 5px;" ng-click="manage.sector(this,sector)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
+												  <button class="btn btn-sm btn-default" ng-click="manage.delete(this,sector)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
+												  </td>
+												</tr>
+											  </tbody>
+											</table>
+										</div>
+									</div> 
+                                    </div> 
+                                    <div class="tab-pane" id="profile-2">
+                                        <div class="panel panel-border panel-primary">
+											<div class="panel-heading">
+												<h4><i class="icon-layers"></i> Parameter list<button class="btn btn-primary waves-effect waves-light pull-right" ng-click="form.physical(this,physical)">Add</button></h4>
+												<hr>
+											</div>
+										<div class="panel-body">
+											<table id="parameter" class="table table-striped m-0">
+											  <thead>
+												<tr>
+														  <th>Parameter ID</th>
+														  <th>Parameter Name</th>
+														 
+												</tr>
+											  </thead>
+											  <tbody>
+												<tr ng-repeat="parameter in parameters">
+												  <td>{{parameter.parameter_id}}</td>
+												  <td>{{parameter.parameter_name}}</td>
+												  <td>
+												   <button class="btn btn-sm btn-default" style="margin-right: 5px;" ng-click="manage.sector(this,sector)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
+												  <button class="btn btn-sm btn-default" ng-click="manage.delete(this,sector)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
+												  </td>
+												</tr>
+											  </tbody>
+											</table>
+										</div>
+									</div> 
+                                    </div> 
+                                    
+                                    
+                                </div> 
+                            </div> 
+							
+							
+
