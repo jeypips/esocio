@@ -4,8 +4,10 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 		
 		var self = this;
 		
+		var loading = '<div class="col-sm-offset-4 col-sm-8"><button type="button" class="btn btn-inverse" title="Loading" disabled><i class="fa fa-spin fa-refresh"></i>&nbsp; Please wait...</button></div>';
+		
 		self.data = function(scope) { // initialize data	
-
+		
 			scope.controls = {
 				ok: {
 					btn: false,
@@ -20,7 +22,7 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 					label: 'Add'
 				},
 			};
-
+			
 			scope.formHolder = {};		
 
 			scope.macros = {};
@@ -69,10 +71,6 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			
 		}; */
 		
-		
-		
-		
-		
 
 		self.physical = function(scope,row) {			
 			
@@ -99,7 +97,7 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 				scope.controls.cancel.label = 'Close';
 				scope.controls.cancel.btn = false;
 				
-				if (scope.$id > 2) scope = scope.$parent;				
+				if (scope.$macros_id> 2) scope = scope.$parent;				
 				$http({
 				  method: 'POST',
 				  url: 'handlers/physical-view.php',
@@ -114,7 +112,6 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 					
 				});					
 			};
-			scope.mode = 'form';
 		};
 		
 		
@@ -192,7 +189,7 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			});
 			//
 
-			$('#x_content').html('Loading...');
+			$('#x_content').html(loading);
 			$('#x_content').load('lists/physical.html', function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
 				// instantiate datable
