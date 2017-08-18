@@ -41,7 +41,9 @@
 		</style>
     </head>
 
+
     <body class="fixed-left" ng-app="maintenance" ng-controller="maintenanceCtrl" account-profile>
+
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -128,6 +130,7 @@
 				<hr>
 			</div>
 			
+
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="panel panel-border panel-inverse">
@@ -180,6 +183,8 @@
 				</div>
 			</div>
 			
+
+
 		</div> <!-- container -->
 	</div> <!-- content -->
 
@@ -228,6 +233,7 @@
 		<script src="modules/account.js"></script>
 		<script src="modules/maintenance.js"></script>
 		<script src="controllers/maintenance.js"></script>
+
 
     </body>
 </html>
