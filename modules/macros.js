@@ -4,7 +4,22 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 		
 		var self = this;
 		
-		self.data = function(scope) { // initialize data			
+		self.data = function(scope) { // initialize data	
+
+			scope.controls = {
+				ok: {
+					btn: false,
+					label: 'Save'
+				},
+				cancel: {
+					btn: false,
+					label: 'Cancel'
+				},
+				add: {
+					btn: false,
+					label: 'Add'
+				},
+			};
 
 			scope.formHolder = {};		
 
@@ -28,8 +43,41 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			return scope.formHolder.macros.$invalid;
 			
 		};
+		
+		
+		/* self.filter = function(scope,filter) {				
+			
+			blockUI.show('Please wait');			
+			
+			scope.filter.by = filter;
+			
+			$http({
+			  method: 'POST',
+			  url: 'handlers/profile-filter.php',
+			  data: {filter: scope.filter.by}
+			}).then(function mySucces(response) {
+				
+				scope.filter.filters = response.data;
+				scope.filter.label = response.data[0];
+				self.filterGo(scope);
+				
+			}, function myError(response) {
+				 
+			  // error
+				
+			});				
+			
+		}; */
+		
+		
+		
+		
+		
 
 		self.physical = function(scope,row) {			
+			
+			scope.controls.add.label = 'List';	// changed value
+			scope.controls.add.btn = true;
 			
 			scope.macros = {};
 			scope.macros.macros_id = 0;
@@ -39,9 +87,17 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
 			
+			scope.controls.ok.label = 'Save';
+			scope.controls.ok.btn = false;
+			scope.controls.cancel.label = 'Cancel';
+			scope.controls.cancel.btn = false;
 			
 			if (row != null) {		
-
+				
+				scope.controls.ok.label = 'Update';
+				scope.controls.ok.btn = true;
+				scope.controls.cancel.label = 'Close';
+				scope.controls.cancel.btn = false;
 				
 				if (scope.$id > 2) scope = scope.$parent;				
 				$http({
@@ -61,6 +117,13 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			scope.mode = 'form';
 		};
 		
+		
+		self.edit = function(scope) {
+			
+			scope.controls.ok.btn = !scope.controls.ok.btn;
+			
+		};
+		
 		self.save = function(scope) {
 			
 			if (validate(scope)) return;
@@ -68,10 +131,11 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			$http({
 			  method: 'POST',
 			  url: 'handlers/physical-save.php',
-			data: {macros: scope.macros}
+			  data: {macros: scope.macros}
 			}).then(function mySucces(response) {
 				
 				if (scope.macros.macros_id == 0) scope.macros.macros_id = response.data;
+
 				
 				$timeout(function() { self.list(scope); },200);
 				
