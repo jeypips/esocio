@@ -2,6 +2,8 @@ var app = angular.module('maintenance',['toggle-fullscreen','account-module','ma
 
 app.controller('maintenanceCtrl',function($scope,fullscreen,manage) {
 	
+	$scope.formHolder = {};
+	
 	$scope.views = {};
 
 	manage.data($scope);

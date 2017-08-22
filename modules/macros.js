@@ -29,6 +29,10 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			scope.macros.macros_id = 0;
 
 			scope.macros = []; // list
+	
+			scope.sector_filters = [];
+			scope.sector_parameter = {};
+			scope.sector_parameters = [];			
 
 		};
 
@@ -44,32 +48,7 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 
 			return scope.formHolder.macros.$invalid;
 			
-		};
-		
-		
-		/* self.filter = function(scope,filter) {				
-			
-			blockUI.show('Please wait');			
-			
-			scope.filter.by = filter;
-			
-			$http({
-			  method: 'POST',
-			  url: 'handlers/profile-filter.php',
-			  data: {filter: scope.filter.by}
-			}).then(function mySucces(response) {
-				
-				scope.filter.filters = response.data;
-				scope.filter.label = response.data[0];
-				self.filterGo(scope);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});				
-			
-		}; */
+		};			
 		
 
 		self.physical = function(scope,row) {			
@@ -171,6 +150,65 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			
 		};
 		
+		function filter(scope) {
+	
+			$http({
+			  method: 'POST',
+			  url: 'handlers/sector-filter-list.php',
+			}).then(function mySucces(response) {
+				
+				angular.copy(response.data, scope.sector_filters);
+				
+			}, function myError(response) {
+				 
+			  // error
+				
+			});		
+			
+		};
+		
+		self.filter_sector_parameters = function(scope,sector_id) {
+			console.log(sector_id);
+			$http({
+			  method: 'POST',
+			  url: 'handlers/sector-parameters.php',
+			  data: {sector_id: sector_id}
+			}).then(function mySucces(response) {
+				
+				angular.copy(response.data, scope.sector_parameters);
+				
+			}, function myError(response) {
+				 
+			  // error
+				
+			});				
+			
+		};		
+		
+		/* self.filterGo = function(scope,filter) {				
+			
+			blockUI.show('Please wait');			
+			
+			scope.filter.by = filter;
+			
+			$http({
+			  method: 'POST',
+			  url: 'handlers/profile-filter.php',
+			  data: {filter: scope.filter.by}
+			}).then(function mySucces(response) {
+				
+				scope.filter.filters = response.data;
+				scope.filter.label = response.data[0];
+				self.filterGo(scope);
+				
+			}, function myError(response) {
+				 
+			  // error
+				
+			});				
+			
+		}; */		
+		
 		self.list = function(scope) {
 			
 			// load list
@@ -201,7 +239,10 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 					});	
 				},200);
 				
-			});				
+			});
+
+			filter(scope);
+			self.filter_sector_parameters(scope,0);			
 			
 		};
 		

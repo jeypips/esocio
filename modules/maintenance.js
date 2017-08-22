@@ -17,9 +17,7 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 					btn: false,
 					label: 'Cancel'
 				},
-			};
-			
-			scope.formHolder = {};		
+			};			
 
 			scope.sectors = {};
 			scope.sectors.sector_id = 0;
@@ -99,7 +97,7 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 			}).then(function mySucces(response) {
 				
 				if (scope.sectors.sector_id == 0) scope.sectors.sector_id = response.data;
-
+	
 				
 				$timeout(function() { self.list(scope); },200);
 				
@@ -135,7 +133,7 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 
 		bootstrapModal.confirm(scope,'Confirmation','Are you sure you want to delete this record?',onOk,function() {});
 			
-		};
+		};		
 		
 		/* self.filter = function(scope,filter) {				
 					
@@ -190,7 +188,7 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 					});	
 				},200);
 				
-			});				
+			});
 			
 		};
 		

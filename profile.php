@@ -150,13 +150,11 @@
 								  <button type="button" class="btn btn-primary btn-flat dropdown-toggle" data-toggle="dropdown">Filter
 									<span class="fa fa-caret-down"></span></button>
 								  <ul class="dropdown-menu">
-									<li><a href="javascript:;" ng-click="form.filter(this,'All')">All</a></li>
-									<li><a href="javascript:;" ng-click="form.filter(this,'Macro Sector')">Macro Sector</a></li>
-									
+									<li ng-repeat="sf in sector_filters"><a href="javascript:;" ng-click="form.filter_sector_parameters(this,sf.sector_id)">{{sf.sector_description}}</a></li>
 								  </ul>
 								</div>
 								<!-- /btn-group -->
-								<select class="form-control" ng-disabled="filter.by == 'All'" ng-model="filter.label" ng-options="f.label for f in filter.filters track by f.id"></select>
+								<select class="form-control" ng-model="filter.sector_parameter" ng-options="p.parameter_description for p in sector_parameters track by p.parameter_id"></select>
 									<span class="input-group-btn">
 									  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
 									</span>				
