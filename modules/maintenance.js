@@ -4,6 +4,8 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 		
 		var self = this;
 		
+		var loading = '<div class="col-sm-offset-4 col-sm-8"><button type="button" class="btn btn-inverse" title="Loading" disabled><i class="fa fa-spin fa-refresh"></i>&nbsp; Please wait...</button></div>';
+		
 		self.data = function(scope) { // initialize data	
 		
 			scope.controls = {
@@ -14,10 +16,6 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 				cancel: {
 					btn: false,
 					label: 'Cancel'
-				},
-				add: {
-					btn: false,
-					label: 'Add'
 				},
 			};
 			
@@ -39,7 +37,6 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 				if (elem.$$attr.$attr.required) elem.$touched = elem.$invalid;
 									
 			});
-
 			return scope.formHolder.sectors.$invalid;
 			
 		};
@@ -71,13 +68,11 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 		
 
 		self.sector = function(scope,row) {			
-			
-			
-			
+		
 			scope.sectors = {};
 			scope.sectors.sector_id = 0;
 
-			$('#x_content').html('Loading...');
+			$('#x_content').html(loading);
 			$('#x_content').load('forms/sector.html',function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
@@ -187,7 +182,7 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 			});
 			//
 
-			$('#x_content').html('Loading...');
+			$('#x_content').html(loading);
 			$('#x_content').load('lists/maintenance.html', function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
 				// instantiate datable

@@ -80,7 +80,7 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			scope.macros = {};
 			scope.macros.macros_id = 0;
 
-			$('#x_content').html('Loading...');
+			$('#x_content').html(loading);
 			$('#x_content').load('forms/physical.html',function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
