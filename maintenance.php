@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="images/lu_seal.png">
 
-        <title>E-Socio | Profile</title>
+        <title>E-Socio | Maintenance</title>
 
         <!--Morris Chart CSS -->
 		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">

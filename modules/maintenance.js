@@ -41,31 +41,6 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 			
 		};
 		
-		
-		/* self.filter = function(scope,filter) {				
-			
-			blockUI.show('Please wait');			
-			
-			scope.filter.by = filter;
-			
-			$http({
-			  method: 'POST',
-			  url: 'handlers/profile-filter.php',
-			  data: {filter: scope.filter.by}
-			}).then(function mySucces(response) {
-				
-				scope.filter.filters = response.data;
-				scope.filter.label = response.data[0];
-				self.filterGo(scope);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});				
-			
-		}; */
-		
 
 		self.sector = function(scope,row) {			
 		
@@ -161,6 +136,29 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 		bootstrapModal.confirm(scope,'Confirmation','Are you sure you want to delete this record?',onOk,function() {});
 			
 		};
+		
+		/* self.filter = function(scope,filter) {				
+					
+			scope.filter.by = filter;
+			
+			$http({
+			  method: 'POST',
+			  url: 'handlers/filter.php',
+			  data: {filter: scope.filter.by}
+			}).then(function mySucces(response) {
+				
+				scope.filter.filters = response.data;
+				scope.filter.label = response.data[0];
+				self.filterGo(scope);
+				
+			}, function myError(response) {
+				 
+			  // error
+				
+			});				
+			
+		}; */
+		
 		
 		self.list = function(scope) {
 			
