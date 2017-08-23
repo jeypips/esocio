@@ -189,9 +189,7 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 				},200);
 				
 			});
-			
 		};
-		
 	};
 	
 	return new manage();
