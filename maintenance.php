@@ -146,7 +146,7 @@
 							</a> 
 						</li> 
 						<li class="tab"> 
-							<a href="#paramterItem" data-toggle="tab" aria-expanded="true"> 
+							<a href="#item" data-toggle="tab" aria-expanded="true"> 
 								<span class="visible-xs"><i class="fa fa-envelope-o"></i></span> 
 								<span class="hidden-xs">Parameter Item</span> 
 							</a> 
@@ -159,6 +159,10 @@
 						<div class="tab-pane active" id="parameter">
 							<!-- display parameter list-->
 							<div id="parameter-list" class="parameter-list"></div>
+						</div>
+						<div class="tab-pane active" id="item">
+							<!-- display parameter-item list-->
+							<div id="parameter-item" class="parameter-item"></div>
 						</div>
 					</div> 
 				</div>
@@ -211,6 +215,7 @@
 		<script src="modules/account.js"></script>
 		<script src="modules/maintenance.js"></script>
 		<script src="modules/parameter.js"></script>
+		<script src="modules/parameter-item.js"></script>
 		<script src="controllers/maintenance.js"></script>
 
 

@@ -155,7 +155,7 @@
 								  </ul>
 								</div>
 								<!-- /btn-group -->
-								<select class="form-control" ng-model="filter.sector_parameter" ng-options="p.parameter_description for p in sector_parameters track by p.parameter_id"></select>
+								<select class="form-control" ng-model="filter.sector_parameter" ng-options="p.parameter_name for p in sector_parameters track by p.parameter_id"></select>
 									<span class="input-group-btn">
 									  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
 									</span>				
