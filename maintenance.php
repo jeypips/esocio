@@ -125,45 +125,46 @@
 			<!-- Page-Title -->
 			<div class="row">
 				<div class="col-sm-4">
-					<h4 class="page-title">Sectors</h4>
+					<h4 class="page-title">Maintenance</h4>
 				</div>
 				<hr>
 			</div>
 			
 			<div class="row">
-                            <div class="col-lg-12"> 
-                                <ul class="nav nav-tabs tabs">
-                                    <li class="active tab">
-                                        <a href="#sector" data-toggle="tab" aria-expanded="false"> 
-                                            <span class="visible-xs"><i class="fa fa-home"></i></span> 
-                                            <span class="hidden-xs">Sectors</span> 
-                                        </a> 
-                                    </li> 
-                                    <li class="tab"> 
-                                        <a href="#parameter" data-toggle="tab" aria-expanded="false"> 
-                                            <span class="visible-xs"><i class="fa fa-user"></i></span> 
-                                            <span class="hidden-xs">Parameter</span> 
-                                        </a> 
-                                    </li> 
-                                    <li class="tab"> 
-                                        <a href="#paramterItem" data-toggle="tab" aria-expanded="true"> 
-                                            <span class="visible-xs"><i class="fa fa-envelope-o"></i></span> 
-                                            <span class="hidden-xs">Parameter Item</span> 
-                                        </a> 
-                                    </li>
-                                </ul> 
-                                <div class="tab-content"> 
-                                    <div class="tab-pane active" id="sector"> 
-										<div id="x_content" class="x_content"></div>
-                                    </div>
-									<div class="tab-pane active" id="parameter">
-										<div id="parameter-list" class="parameter-list"></div>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div> <!-- end row -->
-					</div> <!-- container -->
-				</div> <!-- content -->
+				<div class="col-lg-12"> 
+					<ul class="nav nav-tabs tabs">
+						<li class="active tab">
+							<a href="#sector" data-toggle="tab" aria-expanded="false"> 
+								<span class="visible-xs"><i class="fa fa-home"></i></span> 
+								<span class="hidden-xs">Sectors</span> 
+							</a> 
+						</li> 
+						<li class="tab"> 
+							<a href="#parameter" data-toggle="tab" aria-expanded="false"> 
+								<span class="visible-xs"><i class="fa fa-user"></i></span> 
+								<span class="hidden-xs">Parameter</span> 
+							</a> 
+						</li> 
+						<li class="tab"> 
+							<a href="#paramterItem" data-toggle="tab" aria-expanded="true"> 
+								<span class="visible-xs"><i class="fa fa-envelope-o"></i></span> 
+								<span class="hidden-xs">Parameter Item</span> 
+							</a> 
+						</li>
+					</ul> 
+					<div class="tab-content"> 
+						<div class="tab-pane active" id="sector"> 
+							<div id="x_content" class="x_content"></div>
+						</div>
+						<div class="tab-pane active" id="parameter">
+							<!-- display parameter list-->
+							<div id="parameter-list" class="parameter-list"></div>
+						</div>
+					</div> 
+				</div>
+			</div> <!-- end row -->
+		</div> <!-- container -->
+	</div> <!-- content -->
 
 			<footer class="footer text-right">
 			   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
