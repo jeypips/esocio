@@ -19,8 +19,8 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 				},
 			};			
 
-			scope.parameters = {};
-			scope.parameters.parameter_id = 0;
+			scope.parameter = {};
+			scope.parameter.parameter_id = 0;
 
 			scope.parameters = []; // list
 
@@ -28,22 +28,38 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 
 		function validate(scope) {
 			
-			var controls = scope.formHolder.parameters.$$controls;
+			var controls = scope.formHolder.parameter.$$controls;
 			
 			angular.forEach(controls,function(elem,i) {
 				
 				if (elem.$$attr.$attr.required) elem.$touched = elem.$invalid;
 									
 			});
-			return scope.formHolder.parameters.$invalid;
+			return scope.formHolder.parameter.$invalid;
 			
 		};
 		
+		function sectors(scope) {
 
+			$http({
+			  method: 'POST',
+			  url: 'handlers/sector-form-add.php'
+			}).then(function mySucces(response) {					
+				
+				scope.sectors_add = response.data;
+				
+			}, function myError(response) {
+				 
+			  // error
+				
+			});				
+		
+		}
+		
 		self.parameter = function(scope,row) {			
 		
-			scope.parameters = {};
-			scope.parameters.parameter_id = 0;
+			scope.parameter = {};
+			scope.parameter.parameter_id = 0;
 
 			$('#parameter-list').html(loading);
 			$('#parameter-list').load('forms/parameter.html',function() {
@@ -69,7 +85,7 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 				  data: {parameter_id: row.parameter_id}
 				}).then(function mySucces(response) {
 					
-					angular.copy(response.data, scope.parameters);
+					angular.copy(response.data, scope.parameter);
 					
 				}, function myError(response) {
 					 
@@ -77,6 +93,9 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 					
 				});					
 			};
+			
+			sectors(scope);
+			
 		};
 		
 		
@@ -93,11 +112,8 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 			$http({
 			  method: 'POST',
 			  url: 'handlers/parameter-save.php',
-			  data: {parameter_id: scope.parameter_id}
-			}).then(function mySucces(response) {
-				
-				if (scope.parameters.parameter_id == 0) scope.parameters.parameter_id = response.data;
-	
+			  data: scope.parameter
+			}).then(function mySucces(response) {					
 				
 				$timeout(function() { self.list(scope); },200);
 				

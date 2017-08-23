@@ -183,7 +183,7 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 				$timeout(function() { $compile($('#parameter-item')[0])(scope); },100);								
 				// instantiate datable
 				$timeout(function() {
-					$('#parameterItem').DataTable({
+					$('#parameter-item-list').DataTable({
 						"ordering": false
 					});	
 				},200);
