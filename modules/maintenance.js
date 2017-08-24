@@ -1,6 +1,6 @@
-angular.module('macros-module',['bootstrap-modal']).factory('form', function($compile,$timeout,$http,bootstrapModal) {
+angular.module('maintenance-module',['bootstrap-modal']).factory('manage', function($compile,$timeout,$http,bootstrapModal) {
 	
-	function form() {
+	function manage() {
 		
 		var self = this;
 		
@@ -17,48 +17,36 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 					btn: false,
 					label: 'Cancel'
 				},
-				add: {
-					btn: false,
-					label: 'Add'
-				},
-			};
+			};			
 
-			scope.macros = {};
-			scope.macros.macros_id = 0;
+			scope.sectors = {};
+			scope.sectors.sector_id = 0;
 
-			scope.macros = []; // list
-	
-			scope.sector_filters = [];
-			scope.sector_parameter = {};
-			scope.sector_parameters = [];			
+			scope.sectors = []; // list
 
 		};
 
 		function validate(scope) {
 			
-			var controls = scope.formHolder.macros.$$controls;
+			var controls = scope.formHolder.sectors.$$controls;
 			
 			angular.forEach(controls,function(elem,i) {
 				
 				if (elem.$$attr.$attr.required) elem.$touched = elem.$invalid;
 									
 			});
-
-			return scope.formHolder.macros.$invalid;
+			return scope.formHolder.sectors.$invalid;
 			
-		};			
+		};
 		
 
-		self.physical = function(scope,row) {			
-			
-			scope.controls.add.label = 'List';	// changed value
-			scope.controls.add.btn = true;
-			
-			scope.macros = {};
-			scope.macros.macros_id = 0;
+		self.sector = function(scope,row) {			
+		
+			scope.sectors = {};
+			scope.sectors.sector_id = 0;
 
 			$('#x_content').html(loading);
-			$('#x_content').load('forms/physical.html',function() {
+			$('#x_content').load('forms/sector.html',function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
 			
@@ -73,16 +61,15 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 				scope.controls.ok.btn = true;
 				scope.controls.cancel.label = 'Close';
 				scope.controls.cancel.btn = false;
-
-				if (scope.$macros_id> 2) scope = scope.$parent;				
-
+				
+				if (scope.$sector_id > 2) scope = scope.$parent;				
 				$http({
 				  method: 'POST',
-				  url: 'handlers/physical-view.php',
-				  data: {macros_id: row.macros_id}
+				  url: 'handlers/sector-view.php',
+				  data: {sector_id: row.sector_id}
 				}).then(function mySucces(response) {
 					
-					angular.copy(response.data, scope.macros);
+					angular.copy(response.data, scope.sectors);
 					
 				}, function myError(response) {
 					 
@@ -105,12 +92,12 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			
 			$http({
 			  method: 'POST',
-			  url: 'handlers/physical-save.php',
-			  data: {macros: scope.macros}
+			  url: 'handlers/sector-save.php',
+			  data: {sectors: scope.sectors}
 			}).then(function mySucces(response) {
 				
-				if (scope.macros.macros_id == 0) scope.macros.macros_id = response.data;
-
+				if (scope.sectors.sector_id == 0) scope.sectors.sector_id = response.data;
+	
 				
 				$timeout(function() { self.list(scope); },200);
 				
@@ -130,8 +117,8 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			
 			$http({
 			  method: 'POST',
-			  url: 'handlers/physical-delete.php',
-			  data: {macros_id: [row.macros_id]}
+			  url: 'handlers/sector-delete.php',
+			  data: {sector_id: [row.sector_id]}
 			}).then(function mySucces(response) {
 
 				self.list(scope);
@@ -146,52 +133,15 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 
 		bootstrapModal.confirm(scope,'Confirmation','Are you sure you want to delete this record?',onOk,function() {});
 			
-		};
-		
-		function filter(scope) {
-	
-			$http({
-			  method: 'POST',
-			  url: 'handlers/sector-filter-list.php',
-			}).then(function mySucces(response) {
-				
-				angular.copy(response.data, scope.sector_filters);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});		
-			
-		};
-		
-		self.filter_sector_parameters = function(scope,sector_id) {
-			console.log(sector_id);
-			$http({
-			  method: 'POST',
-			  url: 'handlers/sector-parameters.php',
-			  data: {sector_id: sector_id}
-			}).then(function mySucces(response) {
-				
-				angular.copy(response.data, scope.sector_parameters);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});				
-			
 		};		
 		
-		/* self.filterGo = function(scope,filter) {				
-			
-			blockUI.show('Please wait');			
-			
+		/* self.filter = function(scope,filter) {				
+					
 			scope.filter.by = filter;
 			
 			$http({
 			  method: 'POST',
-			  url: 'handlers/profile-filter.php',
+			  url: 'handlers/filter.php',
 			  data: {filter: scope.filter.by}
 			}).then(function mySucces(response) {
 				
@@ -205,20 +155,21 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 				
 			});				
 			
-		}; */		
+		}; */
+		
 		
 		self.list = function(scope) {
 			
 			// load list
-			scope.mode = 'list';
-			scope.macro = {};
-			scope.macro.macros_id = 0;			
+			
+			scope.sector = {};
+			scope.sector.sector_id = 0;			
 			$http({
 			  method: 'POST',
-			  url: 'handlers/physical-list.php',
+			  url: 'handlers/sector-list.php',
 			}).then(function mySucces(response) {
 				
-				scope.macros = response.data;
+				scope.sectors = response.data;
 				
 			}, function myError(response) {
 				 
@@ -228,24 +179,19 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			//
 
 			$('#x_content').html(loading);
-			$('#x_content').load('lists/physical.html', function() {
+			$('#x_content').load('lists/maintenance.html', function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
 				// instantiate datable
 				$timeout(function() {
-					$('#physical').DataTable({
+					$('#maintenance').DataTable({
 						"ordering": false
 					});	
 				},200);
 				
 			});
-
-			filter(scope);
-			self.filter_sector_parameters(scope,0);			
-			
 		};
-		
 	};
 	
-	return new form();
+	return new manage();
 	
 });
