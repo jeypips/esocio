@@ -187,7 +187,7 @@
 		</div>
 	
 	<div>
-		<div style="position: absolute; top: 65px; right: 240px;">
+		<div id="sub-menu" style="position: fixed; top: 65px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
 			<button href="javascript:;" class="btn btn-danger right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>	
 		<div class="side-bar right-bar nicescroll">

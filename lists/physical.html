@@ -17,7 +17,7 @@
 			</tr>
 		  </thead>
 		  <tbody>
-			<tr ng-repeat="macro in macros">
+			<tr ng-repeat="macro in macros track by $index">
 			  <td>{{macro.macros_id}}</td>
 			  <td>{{macro.municipal_name}}</td>
 			  <td>{{macro.pc_land_area}}</td>
