@@ -4,6 +4,8 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 		
 		var self = this;
 		
+		var loading = '<div class="col-sm-offset-4 col-sm-8"><button type="button" class="btn btn-inverse" title="Loading" disabled><i class="fa fa-spin fa-refresh"></i>&nbsp; Please wait...</button></div>';
+		
 		self.data = function(scope) { // initialize data	
 		
 			scope.controls = {
@@ -15,13 +17,7 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 					btn: false,
 					label: 'Cancel'
 				},
-				add: {
-					btn: false,
-					label: 'Add'
-				},
-			};
-			
-			scope.formHolder = {};		
+			};			
 
 			scope.sectors = {};
 			scope.sectors.sector_id = 0;
@@ -39,45 +35,17 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 				if (elem.$$attr.$attr.required) elem.$touched = elem.$invalid;
 									
 			});
-
 			return scope.formHolder.sectors.$invalid;
 			
 		};
 		
-		
-		/* self.filter = function(scope,filter) {				
-			
-			blockUI.show('Please wait');			
-			
-			scope.filter.by = filter;
-			
-			$http({
-			  method: 'POST',
-			  url: 'handlers/profile-filter.php',
-			  data: {filter: scope.filter.by}
-			}).then(function mySucces(response) {
-				
-				scope.filter.filters = response.data;
-				scope.filter.label = response.data[0];
-				self.filterGo(scope);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});				
-			
-		}; */
-		
 
 		self.sector = function(scope,row) {			
-			
-			
-			
+		
 			scope.sectors = {};
 			scope.sectors.sector_id = 0;
 
-			$('#x_content').html('Loading...');
+			$('#x_content').html(loading);
 			$('#x_content').load('forms/sector.html',function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
@@ -129,7 +97,7 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 			}).then(function mySucces(response) {
 				
 				if (scope.sectors.sector_id == 0) scope.sectors.sector_id = response.data;
-
+	
 				
 				$timeout(function() { self.list(scope); },200);
 				
@@ -165,7 +133,30 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 
 		bootstrapModal.confirm(scope,'Confirmation','Are you sure you want to delete this record?',onOk,function() {});
 			
-		};
+		};		
+		
+		/* self.filter = function(scope,filter) {				
+					
+			scope.filter.by = filter;
+			
+			$http({
+			  method: 'POST',
+			  url: 'handlers/filter.php',
+			  data: {filter: scope.filter.by}
+			}).then(function mySucces(response) {
+				
+				scope.filter.filters = response.data;
+				scope.filter.label = response.data[0];
+				self.filterGo(scope);
+				
+			}, function myError(response) {
+				 
+			  // error
+				
+			});				
+			
+		}; */
+		
 		
 		self.list = function(scope) {
 			
@@ -187,7 +178,7 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 			});
 			//
 
-			$('#x_content').html('Loading...');
+			$('#x_content').html(loading);
 			$('#x_content').load('lists/maintenance.html', function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
 				// instantiate datable
@@ -197,10 +188,8 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 					});	
 				},200);
 				
-			});				
-			
+			});
 		};
-		
 	};
 	
 	return new manage();
