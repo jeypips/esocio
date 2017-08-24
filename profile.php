@@ -161,12 +161,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- /Sidebar -->
-				<ul class="nav navbar-nav navbar-right pull-right">
-					<li class="hidden-xs">
-							<button href="#" class="btn btn-danger right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
-					</li>
-				</ul>				
+				<!-- /Sidebar -->				
 			</div>	
 		</div>
 	</div>
@@ -190,32 +185,26 @@
 			   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
 			</footer>
 		</div>
-		
-	<div class="side-bar right-bar nicescroll">
-			<h4 class="text-center">
-			<!-- /Sidebar -->
-				<ul class="nav navbar-nav navbar-left pull-left">
-					<li class="hidden-xs">
-							<button href="#" class="btn btn-danger right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
-					</li>
-				</ul>
-			Sectors
-			</h4>
+	
+	<div>
+		<div style="position: absolute; top: 65px; right: 240px;">
+			<button href="javascript:;" class="btn btn-danger right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
+		</div>	
+		<div class="side-bar right-bar nicescroll">
 			<div class="contact-list nicescroll">
 				<ul class="list-group contacts-list">
 					<li class="list-group-item">
-						<a href="#">
-							<div class="avatar">
-								<img src="assets/images/users/avatar-1.jpg" alt="">
-							</div>
-							<span class="name">Chadengle</span>
-							<i class="fa fa-circle online"></i>
-						</a>
+						<a href="javascript:;">Sector</a>
 						<span class="clearfix"></span>
 					</li>
+					<li class="list-group-item">
+						<a href="javascript:;">Agriculture</a>
+						<span class="clearfix"></span>
+					</li>					
 				</ul>
 			</div>
 		</div>
+	</div>
 	</div>
 	<!-- END wrapper -->
 	
