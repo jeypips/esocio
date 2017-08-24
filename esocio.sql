@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 23, 2017 at 04:55 AM
+-- Generation Time: Aug 24, 2017 at 08:52 AM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -479,6 +479,19 @@ CREATE TABLE `profile` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `profile_items`
+--
+
+CREATE TABLE `profile_items` (
+  `profile_items_id` int(11) NOT NULL,
+  `profile_items_no` int(11) NOT NULL,
+  `profile_attribute` int(11) NOT NULL,
+  `attribute_value` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `recreation_centre`
 --
 
@@ -528,14 +541,14 @@ INSERT INTO `rest_areas` (`area_id`, `area_no`, `area_item`) VALUES
 
 CREATE TABLE `sectors` (
   `sector_id` int(11) NOT NULL,
-  `sector_name` varchar(50) DEFAULT NULL
+  `sector_description` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sectors`
 --
 
-INSERT INTO `sectors` (`sector_id`, `sector_name`) VALUES
+INSERT INTO `sectors` (`sector_id`, `sector_description`) VALUES
 (1, 'Macro Sector'),
 (2, 'Employment and Development Finance Sector'),
 (3, 'Environmental Sector'),
@@ -685,7 +698,8 @@ INSERT INTO `water_bodies` (`water_id`, `water_no`, `water_item`) VALUES
 -- Indexes for table `accomodation_establishments`
 --
 ALTER TABLE `accomodation_establishments`
-  ADD PRIMARY KEY (`accomodation_id`);
+  ADD PRIMARY KEY (`accomodation_id`),
+  ADD KEY `accomodation_no` (`accomodation_no`);
 
 --
 -- Indexes for table `account_info`
@@ -697,55 +711,64 @@ ALTER TABLE `account_info`
 -- Indexes for table `agriculture_animals`
 --
 ALTER TABLE `agriculture_animals`
-  ADD PRIMARY KEY (`animal_id`);
+  ADD PRIMARY KEY (`animal_id`),
+  ADD KEY `animal_no` (`animal_no`);
 
 --
 -- Indexes for table `agriculture_plants`
 --
 ALTER TABLE `agriculture_plants`
-  ADD PRIMARY KEY (`plant_id`);
+  ADD PRIMARY KEY (`plant_id`),
+  ADD KEY `plant_no` (`plant_no`);
 
 --
 -- Indexes for table `agri_tourism_sites`
 --
 ALTER TABLE `agri_tourism_sites`
-  ADD PRIMARY KEY (`agri_tourism_id`);
+  ADD PRIMARY KEY (`agri_tourism_id`),
+  ADD KEY `agri_tourism_no` (`agri_tourism_no`);
 
 --
 -- Indexes for table `convention_facilities`
 --
 ALTER TABLE `convention_facilities`
-  ADD PRIMARY KEY (`convention_id`);
+  ADD PRIMARY KEY (`convention_id`),
+  ADD KEY `convention_no` (`convention_no`);
 
 --
 -- Indexes for table `employment_income`
 --
 ALTER TABLE `employment_income`
-  ADD PRIMARY KEY (`ei_id`);
+  ADD PRIMARY KEY (`ei_id`),
+  ADD KEY `ei_no` (`ei_no`);
 
 --
 -- Indexes for table `enterprises`
 --
 ALTER TABLE `enterprises`
-  ADD PRIMARY KEY (`enterprise_id`);
+  ADD PRIMARY KEY (`enterprise_id`),
+  ADD KEY `enterprise_no` (`enterprise_no`);
 
 --
 -- Indexes for table `existing_potential_industries`
 --
 ALTER TABLE `existing_potential_industries`
-  ADD PRIMARY KEY (`epi_id`);
+  ADD PRIMARY KEY (`epi_id`),
+  ADD KEY `epi_no` (`epi_no`);
 
 --
 -- Indexes for table `investible_areas`
 --
 ALTER TABLE `investible_areas`
-  ADD PRIMARY KEY (`ia_id`);
+  ADD PRIMARY KEY (`ia_id`),
+  ADD KEY `ia_no` (`ia_no`);
 
 --
 -- Indexes for table `parameters`
 --
 ALTER TABLE `parameters`
-  ADD PRIMARY KEY (`parameter_id`);
+  ADD PRIMARY KEY (`parameter_id`),
+  ADD KEY `parameter_no` (`parameter_no`);
 
 --
 -- Indexes for table `parameter_items`
@@ -761,16 +784,26 @@ ALTER TABLE `profile`
   ADD PRIMARY KEY (`profile_id`);
 
 --
+-- Indexes for table `profile_items`
+--
+ALTER TABLE `profile_items`
+  ADD PRIMARY KEY (`profile_items_id`),
+  ADD KEY `profile_items_no` (`profile_items_no`),
+  ADD KEY `profile_attribute` (`profile_attribute`);
+
+--
 -- Indexes for table `recreation_centre`
 --
 ALTER TABLE `recreation_centre`
-  ADD PRIMARY KEY (`recreation_id`);
+  ADD PRIMARY KEY (`recreation_id`),
+  ADD KEY `recreation_no` (`recreation_no`);
 
 --
 -- Indexes for table `rest_areas`
 --
 ALTER TABLE `rest_areas`
-  ADD PRIMARY KEY (`area_id`);
+  ADD PRIMARY KEY (`area_id`),
+  ADD KEY `area_no` (`area_no`);
 
 --
 -- Indexes for table `sectors`
@@ -782,37 +815,43 @@ ALTER TABLE `sectors`
 -- Indexes for table `shopping_centers`
 --
 ALTER TABLE `shopping_centers`
-  ADD PRIMARY KEY (`shopping_id`);
+  ADD PRIMARY KEY (`shopping_id`),
+  ADD KEY `shopping_no` (`shopping_no`);
 
 --
 -- Indexes for table `tourist_destination`
 --
 ALTER TABLE `tourist_destination`
-  ADD PRIMARY KEY (`destination_id`);
+  ADD PRIMARY KEY (`destination_id`),
+  ADD KEY `destination_no` (`destination_no`);
 
 --
 -- Indexes for table `tour_guides`
 --
 ALTER TABLE `tour_guides`
-  ADD PRIMARY KEY (`tour_id`);
+  ADD PRIMARY KEY (`tour_id`),
+  ADD KEY `tour_no` (`tour_no`);
 
 --
 -- Indexes for table `transport_groups`
 --
 ALTER TABLE `transport_groups`
-  ADD PRIMARY KEY (`transport_id`);
+  ADD PRIMARY KEY (`transport_id`),
+  ADD KEY `transport_no` (`transport_no`);
 
 --
 -- Indexes for table `travel_operator`
 --
 ALTER TABLE `travel_operator`
-  ADD PRIMARY KEY (`travel_id`);
+  ADD PRIMARY KEY (`travel_id`),
+  ADD KEY `travel_no` (`travel_no`);
 
 --
 -- Indexes for table `water_bodies`
 --
 ALTER TABLE `water_bodies`
-  ADD PRIMARY KEY (`water_id`);
+  ADD PRIMARY KEY (`water_id`),
+  ADD KEY `water_no` (`water_no`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -884,6 +923,11 @@ ALTER TABLE `parameter_items`
 ALTER TABLE `profile`
   MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `profile_items`
+--
+ALTER TABLE `profile_items`
+  MODIFY `profile_items_id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `recreation_centre`
 --
 ALTER TABLE `recreation_centre`
@@ -933,10 +977,125 @@ ALTER TABLE `water_bodies`
 --
 
 --
+-- Constraints for table `accomodation_establishments`
+--
+ALTER TABLE `accomodation_establishments`
+  ADD CONSTRAINT `accomodation_establishments_ibfk_1` FOREIGN KEY (`accomodation_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `agriculture_animals`
+--
+ALTER TABLE `agriculture_animals`
+  ADD CONSTRAINT `agriculture_animals_ibfk_1` FOREIGN KEY (`animal_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `agriculture_plants`
+--
+ALTER TABLE `agriculture_plants`
+  ADD CONSTRAINT `agriculture_plants_ibfk_1` FOREIGN KEY (`plant_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `agri_tourism_sites`
+--
+ALTER TABLE `agri_tourism_sites`
+  ADD CONSTRAINT `agri_tourism_sites_ibfk_1` FOREIGN KEY (`agri_tourism_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `convention_facilities`
+--
+ALTER TABLE `convention_facilities`
+  ADD CONSTRAINT `convention_facilities_ibfk_1` FOREIGN KEY (`convention_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `employment_income`
+--
+ALTER TABLE `employment_income`
+  ADD CONSTRAINT `employment_income_ibfk_1` FOREIGN KEY (`ei_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `enterprises`
+--
+ALTER TABLE `enterprises`
+  ADD CONSTRAINT `enterprises_ibfk_1` FOREIGN KEY (`enterprise_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `existing_potential_industries`
+--
+ALTER TABLE `existing_potential_industries`
+  ADD CONSTRAINT `existing_potential_industries_ibfk_1` FOREIGN KEY (`epi_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `investible_areas`
+--
+ALTER TABLE `investible_areas`
+  ADD CONSTRAINT `investible_areas_ibfk_1` FOREIGN KEY (`ia_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `parameters`
+--
+ALTER TABLE `parameters`
+  ADD CONSTRAINT `parameters_ibfk_1` FOREIGN KEY (`parameter_no`) REFERENCES `sectors` (`sector_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
 -- Constraints for table `parameter_items`
 --
 ALTER TABLE `parameter_items`
   ADD CONSTRAINT `parameter_items_ibfk_1` FOREIGN KEY (`item_parameter`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `profile_items`
+--
+ALTER TABLE `profile_items`
+  ADD CONSTRAINT `profile_items_ibfk_1` FOREIGN KEY (`profile_items_no`) REFERENCES `profile` (`profile_id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `profile_items_ibfk_2` FOREIGN KEY (`profile_attribute`) REFERENCES `parameter_items` (`item_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `recreation_centre`
+--
+ALTER TABLE `recreation_centre`
+  ADD CONSTRAINT `recreation_centre_ibfk_1` FOREIGN KEY (`recreation_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `rest_areas`
+--
+ALTER TABLE `rest_areas`
+  ADD CONSTRAINT `rest_areas_ibfk_1` FOREIGN KEY (`area_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `shopping_centers`
+--
+ALTER TABLE `shopping_centers`
+  ADD CONSTRAINT `shopping_centers_ibfk_1` FOREIGN KEY (`shopping_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `tourist_destination`
+--
+ALTER TABLE `tourist_destination`
+  ADD CONSTRAINT `tourist_destination_ibfk_1` FOREIGN KEY (`destination_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `tour_guides`
+--
+ALTER TABLE `tour_guides`
+  ADD CONSTRAINT `tour_guides_ibfk_1` FOREIGN KEY (`tour_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `transport_groups`
+--
+ALTER TABLE `transport_groups`
+  ADD CONSTRAINT `transport_groups_ibfk_1` FOREIGN KEY (`transport_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `travel_operator`
+--
+ALTER TABLE `travel_operator`
+  ADD CONSTRAINT `travel_operator_ibfk_1` FOREIGN KEY (`travel_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `water_bodies`
+--
+ALTER TABLE `water_bodies`
+  ADD CONSTRAINT `water_bodies_ibfk_1` FOREIGN KEY (`water_no`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
