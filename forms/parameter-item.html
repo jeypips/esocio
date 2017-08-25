@@ -6,14 +6,17 @@
 	<div class="col-lg-12">
 		<div class="card-box">
 			<form name="formHolder.parameter_items" id="formHolder.parameter_items">
+			<div class="checkbox checkbox-primary">
+		    <input id="checkbox2" type="checkbox" checked>
+		    <label for="checkbox2">
+		     Table
+		    </label>
+		    </div>
 			<div class="row">
 				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid}">
 					<label class="label-control">Parameter Description</label>
-<<<<<<< HEAD
-					<select class="form-control" name="parameters_items.item_parameter" ng-model="parameter_items.item_parameter" ng-options="par.parameter_name for par in parameters_add track by par.parameter_id" required ng-disabled="controls.ok.btn"></select>
-=======
-					<select class="form-control" name="item_parameter" ng-model="parameter_items.item_parameter" ng-options="par.parameter_name for par in parameters_add track by par.parameter_no" required ng-disabled="controls.ok.btn"></select>
->>>>>>> origin/jp
+
+					<select class="form-control" name="item_parameter" ng-model="parameter_items.item_parameter" ng-options="par.parameter_name for par in parameters_add track by par.parameter_id" required ng-disabled="controls.ok.btn"></select>
 					<span class="help-block" ng-show="formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid">Parameter Name is required</span>
 				</div>
 				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_attribute.$touched && formHolder.parameter_items.item_attribute.$invalid}">
