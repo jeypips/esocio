@@ -14,7 +14,7 @@
 	  <tbody>
 		<tr ng-repeat="sector in sectors">
 		  <td>{{sector.sector_id}}</td>
-		  <td>{{sector.sector_name}}</td>
+		  <td>{{sector.sector_description}}</td>
 		  <td>
 		  <button class="btn btn-sm btn-default" style="margin-right: 5px;" ng-click="manage.sector(this,sector)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
 		  <button class="btn btn-sm btn-default" ng-click="manage.delete(this,sector)"><i class="fa fa-close" style="cursor: pointer;"></i></button>

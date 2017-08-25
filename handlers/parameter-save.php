@@ -6,14 +6,15 @@ include_once '../db.php';
 
 $con = new pdo_db("parameters");
 
-if ($_POST['parameters']['parameter_id']) {
+if ($_POST['parameter_id']) {
 	
-	$parameters = $con->updateData($_POST['parameters'],'parameter_id');
+	$parameter = $con->updateData($_POST,'parameter_id');
 	
 } else {
 	
-	$parameters = $con->insertData($_POST['parameters']);
-	echo $con->insertId;
+	$sector_id = $_POST['parameter_no']['sector_id'];
+	$_POST['parameter_no'] = $sector_id;
+	$parameter = $con->insertData($_POST);
 
 }
 

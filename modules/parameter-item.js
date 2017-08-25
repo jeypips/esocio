@@ -39,6 +39,24 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 			
 		};
 		
+		
+		
+			function parameters(scope) {
+
+			$http({
+			  method: 'POST',
+			  url: 'handlers/parameter-form-add.php'
+			}).then(function mySucces(response) {					
+				
+				scope.parameters_add = response.data;
+				
+			}, function myError(response) {
+				 
+			  // error
+				
+			});				
+		
+		}
 
 		self.parameter_item = function(scope,row) {			
 		
@@ -77,6 +95,8 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 					
 				});					
 			};
+			
+			parameters(scope);
 		};
 		
 		
@@ -183,7 +203,7 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 				$timeout(function() { $compile($('#parameter-item')[0])(scope); },100);								
 				// instantiate datable
 				$timeout(function() {
-					$('#parameterItem').DataTable({
+					$('#parameter-item-list').DataTable({
 						"ordering": false
 					});	
 				},200);
