@@ -11,7 +11,7 @@ $con = new pdo_db();
 $sectors = $con->getData("SELECT sector_id, sector_description FROM sectors");
 $_sectors = [];
 
-$_sectors[] = array("sector_id"=>0,"sector_description"=>"");
+$_sectors[] = array("sector_id"=>0,"sector_description"=>"All");
 foreach ($sectors as $sector) {
 	$_sectors[] = $sector;
 }

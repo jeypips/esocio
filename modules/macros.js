@@ -29,8 +29,6 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			scope.macros = []; // list
 	
 			scope.sector_filters = [];
-			scope.sector_smenu = [];
-	
 			scope.sector_parameter = {};
 			scope.sector_parameters = [];
 
@@ -169,14 +167,6 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			
 		};
 		
-		
-		
-		
-		
-		
-		
-
-		
 		self.filter_sector_parameters = function(scope,sector_id) {
 
 			$http({
@@ -252,7 +242,6 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 			});
 
 			filter(scope);
-			
 			self.filter_sector_parameters(scope,0);			
 			
 		};

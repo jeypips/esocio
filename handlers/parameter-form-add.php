@@ -8,10 +8,10 @@ session_start();
 
 $con = new pdo_db();
 
-$parameters = $con->getData("SELECT parameter_id, parameter_name FROM parameters");
+$parameters = $con->getData("SELECT parameter_no, parameter_name FROM parameters");
 $_parameters = [];
 
-$_parameters[] = array("parameter_id"=>0,"parameter_name"=>"");
+$_parameters[] = array("parameter_no"=>0,"parameter_name"=>"");
 foreach ($parameters as $parameter) {
 	$_parameters[] = $parameter;
 }
