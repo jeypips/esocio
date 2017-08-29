@@ -15,6 +15,7 @@
 		  <thead>
 			<tr>
 					  <th>No.</th>
+					  <th>Parameter Description</th>
 					  <th>Attribute Name</th>
 					  <th>&nbsp;</th>
 			</tr>
@@ -22,6 +23,7 @@
 		  <tbody>
 			<tr ng-repeat="parameter_item in parameter_items">
 			  <td>{{parameter_item.item_id}}</td>
+			  <td>{{parameter_item.parameter_name}}</td>
 			  <td>{{parameter_item.item_attribute}}</td>
 			  <td>
 			  <button class="btn btn-sm btn-default" style="margin-right: 5px;" ng-click="paramItem.parameter_item(this,parameter_item)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
