@@ -128,16 +128,14 @@
 				</div>
 				<hr>
 			</div>
-			
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="panel panel-border panel-inverse">
 						<div class="panel-heading">
-						<i class="ion-android-social-user"></i> Tasks
+							<i class="ion-android-social-user"></i> Tasks
 						</div>
 						<div class="panel-body">
 							<div class="row">
-						
 								<div class="box box-primary">
 	
 		<div class="box-body pad">
@@ -150,20 +148,21 @@
 								<div class="input-group-btn">
 								  <button type="button" class="btn btn-primary btn-flat dropdown-toggle" data-toggle="dropdown">Filter
 									<span class="fa fa-caret-down"></span></button>
-								  <ul class="dropdown-menu">
+								<ul class="dropdown-menu">
 									<li ng-repeat="sf in sector_filters"><a href="javascript:;" ng-click="form.filter_sector_parameters(this,sf.sector_id)">{{sf.sector_description}}</a></li>
-								  </ul>
+								</ul>
 								</div>
 								<!-- /btn-group -->
 								<select class="form-control" ng-model="filter.sector_parameter" ng-options="p.parameter_name for p in sector_parameters track by p.parameter_id"></select>
-									<span class="input-group-btn">
-									  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
-									</span>				
-							  </div>
+								<span class="input-group-btn">
+								  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
+								</span>
 							</div>
 						</div>
-					</div>		
-				</div>					
+					</div>
+				</div>
+				<!-- /Sidebar -->				
+			</div>	
 		</div>
 	</div>
 
@@ -186,8 +185,29 @@
 			   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
 			</footer>
 		</div>
+	
+	<div>
+		<div id="sub-menu" style="position: fixed; top: 65px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
+			<button href="javascript:;" class="btn btn-danger right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
+		</div>	
+		<div class="side-bar right-bar nicescroll">
+			<div class="contact-list nicescroll">
+				<ul class="list-group contacts-list">
+					<li class="list-group-item">
+						<a href="javascript:;">Sector</a>
+						<span class="clearfix"></span>
+					</li>
+					<li class="list-group-item">
+						<a href="javascript:;">Agriculture</a>
+						<span class="clearfix"></span>
+					</li>					
+				</ul>
+			</div>
+		</div>
+	</div>
 	</div>
 	<!-- END wrapper -->
+	
 
         <script>
             var resizefunc = [];

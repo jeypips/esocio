@@ -30,7 +30,9 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 	
 			scope.sector_filters = [];
 			scope.sector_parameter = {};
-			scope.sector_parameters = [];			
+			scope.sector_parameters = [];
+
+			scope.views.subMenu = 0;
 
 		};
 
@@ -166,7 +168,7 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 		};
 		
 		self.filter_sector_parameters = function(scope,sector_id) {
-			console.log(sector_id);
+
 			$http({
 			  method: 'POST',
 			  url: 'handlers/sector-parameters.php',
@@ -241,6 +243,18 @@ angular.module('macros-module',['bootstrap-modal']).factory('form', function($co
 
 			filter(scope);
 			self.filter_sector_parameters(scope,0);			
+			
+		};
+		
+		self.subMenu = function(scope) {			
+				
+			var off = '0px';
+			var on = '240px';
+			
+			var tog = (scope.views.subMenu == 0)?on:off;
+			scope.views.subMenu = (scope.views.subMenu == 0)?240:0;
+
+			$("#sub-menu").animate({right: tog}, "fast");
 			
 		};
 		

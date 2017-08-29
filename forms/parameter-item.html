@@ -7,10 +7,10 @@
 		<div class="card-box">
 			<form name="formHolder.parameter_items" id="formHolder.parameter_items">
 			<div class="row">
-				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.parameter_name.$touched && formHolder.parameter_items.parameter_name.$invalid}">
+				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid}">
 					<label class="label-control">Parameter Description</label>
-					<input type="text" class="form-control" name="parameter_name" ng-model="parameter_items.parameter_name" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.parameter_items.parameter_name.$touched && formHolder.parameter_items.parameter_name.$invalid">Parameter Name is required</span>
+					<select class="form-control" name="parameters_items.item_parameter" ng-model="parameter_items.item_parameter" ng-options="par.parameter_name for par in parameters_add track by par.parameter_id" required ng-disabled="controls.ok.btn"></select>
+					<span class="help-block" ng-show="formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid">Parameter Name is required</span>
 				</div>
 				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_attribute.$touched && formHolder.parameter_items.item_attribute.$invalid}">
 					<label class="label-control">Name of Attribute</label>
