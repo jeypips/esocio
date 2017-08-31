@@ -197,11 +197,12 @@
 						<a href="javascript:;">Sector</a>
 						<span class="clearfix"></span>
 					</li>
-					<li class="list-group-item">
-						<a href="javascript:;">Agriculture</a>
+					<li class="list-group-item" ng-repeat="sf in sector_filters">
+						<a href="javascript:;">{{sf.sector_description}}</a>
 						<span class="clearfix"></span>
 					</li>					
 				</ul>
+				
 			</div>
 		</div>
 	</div>
