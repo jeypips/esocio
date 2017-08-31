@@ -10,14 +10,7 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid}">
 					<label class="label-control">Parameter Description</label>
-<<<<<<< HEAD
 					<select class="form-control" name="parameters_items.item_parameter" ng-model="parameter_items.item_parameter" ng-options="par.parameter_name for par in parameters_add track by par.parameter_id" required ng-disabled="controls.ok.btn"></select>
-=======
-
-
-					<select class="form-control" name="item_parameter" ng-model="parameter_items.item_parameter" ng-options="par.parameter_name for par in parameters_add track by par.parameter_id" required ng-disabled="controls.ok.btn"></select>
-
->>>>>>> refs/remotes/origin/sha
 					<span class="help-block" ng-show="formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid">Parameter Name is required</span>
 				</div>
 				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_attribute.$touched && formHolder.parameter_items.item_attribute.$invalid}">
@@ -34,23 +27,6 @@
 					</label>
 				</div>
 			</div>
-			<hr>
-			<div class="form-group text-left m-b-0">
-				<button class="btn btn-primary waves-effect waves-light" type="submit" ng-click="addNewChoice()" ng-show="add" required ng-disabled="controls.ok.btn">add</button>
-				
-			</div>
-			<br>
-				<div style="margin:10px;" data-ng-repeat="choice in choices">
-				    
-				      <input type="text" ng-show="add" ng-model="" name="" >
-				      <button class="remove" ng-show="add" ng-click="removeChoice()">-</button>
-				   </div>
-				   
-
-				   
-				   
-				   
-			<br>
 			<div class="form-group text-left m-b-0">
 				<button class="btn btn-primary waves-effect waves-light" type="submit" ng-click="paramItem.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
 				<button class="btn btn-default waves-effect waves-light m-l-5" ng-click="paramItem.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
