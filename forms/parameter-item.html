@@ -15,14 +15,26 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid}">
 					<label class="label-control">Parameter Description</label>
+<<<<<<< HEAD
 
 					<select class="form-control" name="item_parameter" ng-model="parameter_items.item_parameter" ng-options="par.parameter_name for par in parameters_add track by par.parameter_id" required ng-disabled="controls.ok.btn"></select>
+=======
+					<select class="form-control" name="parameters_items.item_parameter" ng-model="parameter_items.item_parameter" ng-options="par.parameter_name for par in parameters_add track by par.parameter_id" required ng-disabled="controls.ok.btn"></select>
+>>>>>>> refs/remotes/origin/master
 					<span class="help-block" ng-show="formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid">Parameter Name is required</span>
 				</div>
 				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_attribute.$touched && formHolder.parameter_items.item_attribute.$invalid}">
 					<label class="label-control">Name of Attribute</label>
 					<input type="text" class="form-control" name="item_attribute" ng-model="parameter_items.item_attribute" required ng-disabled="controls.ok.btn">
 					<span class="help-block" ng-show="formHolder.parameter_items.item_attribute.$touched && formHolder.parameter_items.item_attribute.$invalid">Name is required</span>
+				</div>
+			</div>
+			<div class="row">
+			 <div class="checkbox checkbox-custom" style="margin-left: 11px;">
+					<input id="checkbox11" type="checkbox" checked>
+					<label for="checkbox11">
+						Does item have group?
+					</label>
 				</div>
 			</div>
 			<div class="form-group text-left m-b-0">
