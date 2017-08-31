@@ -178,6 +178,7 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 		}; */
 		
 		
+		
 		self.list = function(scope) {
 			
 			// load list

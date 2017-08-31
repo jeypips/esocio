@@ -17,5 +17,16 @@ app.controller('maintenanceCtrl',function($scope,fullscreen,manage,param,paramIt
 	$scope.manage = manage;
 	$scope.param = param;
 	$scope.paramItem = paramItem;
+	 $scope.choices = [];
+  
+  $scope.addNewChoice = function() {
+    var newItemNo = $scope.choices.length+1;
+    $scope.choices.push({'id':'choice'+newItemNo});
+  };
+    
+  $scope.removeChoice = function() {
+    var lastItem = $scope.choices.length-1;
+    $scope.choices.splice(lastItem);
+  };
 
 });
