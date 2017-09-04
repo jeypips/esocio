@@ -34,8 +34,7 @@
         <script src="assets/js/modernizr.min.js"></script>
 		<style type="text/css">
         .img-circle {
-			width: 50px;
-						
+			width: 50px;			
 		}
 		
 		</style>
@@ -209,7 +208,6 @@
 	</div>
 	<!-- END wrapper -->
 	
-
         <script>
             var resizefunc = [];
         </script>
