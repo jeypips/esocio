@@ -26,6 +26,7 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 
 		};
 
+  
 		function validate(scope) {
 			
 			var controls = scope.formHolder.parameter.$$controls;
@@ -206,6 +207,7 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 				
 			});
 		};
+		
 	};
 	
 	return new param();

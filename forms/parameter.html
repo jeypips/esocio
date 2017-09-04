@@ -32,21 +32,29 @@
 				</div>
 			</div>
 			<hr>
-			<div class="form-group text-left m-b-0">
-				<button class="btn btn-primary waves-effect waves-light" type="submit" ng-click="addNewChoice()" ng-show="add" required ng-disabled="controls.ok.btn">add</button>
-				
+			<div class="row">
+			<div class="col-lg-12">
+				<div class="form-group text-left m-b-0">
+					<button class="btn btn-primary waves-effect waves-light pull-right" type="submit" ng-click="addNewChoice()" ng-show="add" required ng-disabled="controls.ok.btn">Add</button>
+				</div>
+				<div class="p-20">
+					<table class="table table m-0" data-ng-repeat="choice in choices">
+						<thead>
+							<tr>
+								<td><input type="text" class="form-control" ng-show="add" name=""></td>
+								<td><button style="margin-right: 5px;" class="btn btn-primary waves-effect waves-light" ng-show="add"><i class="ti ti-check"></button></i><button class="btn btn-primary waves-effect waves-light" ng-show="add" ng-click="removeChoice()"><i class="ti ti-close"></button></i></td>
+							</tr>
+						</thead>
+					</table>
+				</div>
 			</div>
-			<br>
-				<div style="margin:10px;" data-ng-repeat="choice in choices">
-				    
-				      <input type="text" ng-show="add" ng-model="" name="" >
-				      <button class="remove" ng-show="add" ng-click="removeChoice()">-</button>
-				   </div>
-				   
+			</div>
+			<div class="row"> 
 				<div class="form-group text-left m-b-0">
 					<button class="btn btn-primary waves-effect waves-light" type="submit" ng-click="param.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
 					<button class="btn btn-default waves-effect waves-light m-l-5" ng-click="param.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 				</div>
+			</div>
 			</form>
 		</div>
 	</div>
