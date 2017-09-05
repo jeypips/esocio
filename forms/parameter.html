@@ -1,5 +1,5 @@
 <div class="row">
-<button class="btn btn-primary pull-right" ng-click="param.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+<button class="btn btn-default pull-right waves-effect waves-light" ng-click="param.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
 </div>
 <hr>
 <div class="row">
@@ -23,10 +23,38 @@
 					<span class="help-block" ng-show="formHolder.parameter.parameter_short_name.$touched && formHolder.parameter.parameter_short_name.$invalid">Name is required</span>
 				</div>
 			</div>
-				<div class="form-group text-left m-b-0">
-					<button class="btn btn-primary waves-effect waves-light" type="submit" ng-click="param.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-					<button class="btn btn-default waves-effect waves-light m-l-5" ng-click="param.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+			<div class="row">
+			 <div class="checkbox checkbox-custom" style="margin-left: 11px;">
+					<input id="checkbox11" type="checkbox" ng-model="add" ng-disabled="controls.ok.btn">
+					<label for="checkbox11">
+						Does item have group?
+					</label>
 				</div>
+			</div>
+			<hr>
+			<div class="row">
+			<div class="col-lg-12">
+				<div class="form-group text-left m-b-0">
+					<button class="btn btn-default waves-effect waves-light pull-right" type="submit" ng-click="addNewChoice()" ng-show="add" ng-disabled="controls.ok.btn">Add <i class="fa fa-plus"></i></button>
+				</div>
+				<div class="p-20">
+					<table class="table table m-0" data-ng-repeat="choice in choices">
+						<tbody>
+							<tr>
+								<td><input type="text" class="form-control" ng-show="add" name=""></td>
+								<td><button style="margin-right: 5px;" class="btn btn-default waves-effect waves-light" ng-show="add"><i class="ti ti-check"></button></i><button class="btn btn-default waves-effect waves-light" ng-show="add" ng-click="removeChoice()"><i class="ti ti-close"></button></i></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			</div>
+			<div class="row"> 
+				<div class="form-group text-left m-b-0">
+					<button class="btn btn-default waves-effect waves-light" type="submit" ng-click="param.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+					<button class="btn btn-primary waves-effect waves-light m-l-5" ng-click="param.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+				</div>
+			</div>
 			</form>
 		</div>
 	</div>

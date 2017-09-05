@@ -34,8 +34,7 @@
         <script src="assets/js/modernizr.min.js"></script>
 		<style type="text/css">
         .img-circle {
-			width: 50px;
-						
+			width: 50px;			
 		}
 		
 		</style>
@@ -197,18 +196,18 @@
 						<a href="javascript:;">Sector</a>
 						<span class="clearfix"></span>
 					</li>
-					<li class="list-group-item">
-						<a href="javascript:;">Agriculture</a>
+					<li class="list-group-item" ng-repeat="sf in sector_filters">
+						<a href="javascript:;">{{sf.sector_description}}</a>
 						<span class="clearfix"></span>
 					</li>					
 				</ul>
+				
 			</div>
 		</div>
 	</div>
 	</div>
 	<!-- END wrapper -->
 	
-
         <script>
             var resizefunc = [];
         </script>
