@@ -21,12 +21,11 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 
 			scope.parameter = {};
 			scope.parameter.parameter_id = 0;
-
+			
 			scope.parameters = []; // list
 
 		};
-
-  
+		
 		function validate(scope) {
 			
 			var controls = scope.formHolder.parameter.$$controls;

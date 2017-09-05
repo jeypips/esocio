@@ -135,19 +135,20 @@
 					<ul class="nav nav-tabs tabs">
 						<li class="active tab">
 							<a href="#sector" data-toggle="tab" aria-expanded="false"> 
-								<span class="visible-xs"><i class="fa fa-home"></i></span> 
+								<span class="visible-xs"><i class="icon icon-book-open"></i></span> 
 								<span class="hidden-xs">Sectors</span> 
 							</a> 
 						</li> 
 						<li class="tab"> 
 							<a href="#parameter" data-toggle="tab" aria-expanded="false"> 
-								<span class="visible-xs"><i class="fa fa-user"></i></span> 
+								<span class="visible-xs"><i class="icon icon-notebook"></i></span> 
 								<span class="hidden-xs">Parameter</span> 
 							</a> 
 						</li> 
 						<li class="tab"> 
 							<a href="#item" data-toggle="tab" aria-expanded="true"> 
-								<span class="visible-xs"><i class="fa fa-envelope-o"></i></span> 
+								<span class="visible-xs"><i class="icon icon-notebook"></i></span> 
+								
 								<span class="hidden-xs">Parameter Item</span> 
 							</a> 
 						</li>
@@ -215,7 +216,7 @@
 		<script src="modules/account.js"></script>
 		<script src="modules/maintenance.js"></script>
 		<script src="modules/parameter.js"></script>
-		<script src="modules/parameter-item.js"></script>
+		<script src="modules/parameter-items.js"></script>
 		<script src="controllers/maintenance.js"></script>
 
 

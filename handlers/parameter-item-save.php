@@ -10,14 +10,14 @@ if ($_POST['item_id']) {
 		
 	$parameter_id = $_POST['item_parameter']['parameter_id'];
 	$_POST['item_parameter'] = $parameter_id;
-	$parameter_items = $con->updateData($_POST,'item_id');
+	$parameter_item = $con->updateData($_POST,'item_id');
 	
 } else {
 	
 	unset($_POST['item_id']);
 	$parameter_id = $_POST['item_parameter']['parameter_id'];
 	$_POST['item_parameter'] = $parameter_id;
-	$parameter_items = $con->insertData($_POST,'item_id');
+	$parameter_item = $con->insertData($_POST);
 
 }
 
