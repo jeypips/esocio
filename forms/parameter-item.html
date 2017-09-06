@@ -18,10 +18,11 @@
 					<span class="help-block" ng-show="formHolder.parameter_item.item_attribute.$touched && formHolder.parameter_item.item_attribute.$invalid">Name is required</span>
 				</div>
 			</div>
-			<div class="row">
+		</div>
+		<div class="row">
 			<button ng-show="parameter_item.is_group_item > 0" class="btn btn-default waves-effect waves-light pull-right" type="submit" ng-click="paramItem.addNewChoice(this)" ng-disabled="controls.ok.btn">Add</button>
-			</div>
-			<br>
+		</div>
+		<br>
 		<div class="card-box" ng-show="parameter_item.is_group_item > 0">
 		<label class="label-control">Name of Item</label>
 			<div class="row">
@@ -39,6 +40,5 @@
 			<button class="btn btn-primary waves-effect waves-light m-l-5" ng-click="paramItem.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 		</div>
 		</form>
-	</div>
 </div>
 </div>
