@@ -22,7 +22,7 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 			scope.parameter = {};
 			scope.parameter.parameter_id = 0;
 			
-			scope.parameters = []; // list
+			scope.parameters = []; // list		
 
 		};
 		
@@ -205,7 +205,7 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 				},200);
 				
 			});
-		};
+		};		
 		
 	};
 	

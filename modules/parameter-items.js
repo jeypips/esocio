@@ -21,6 +21,8 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 
 			scope.parameter_item = {};
 			scope.parameter_item.item_id = 0;
+			scope.parameter_item.item_groups = [];
+			scope.parameter_item.dels = [];
 
 			scope.parameter_items = []; // list
 
@@ -29,7 +31,7 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 		function validate(scope) {
 			
 			var controls = scope.formHolder.parameter_item.$$controls;
-			
+
 			angular.forEach(controls,function(elem,i) {
 				
 				if (elem.$$attr.$attr.required) elem.$touched = elem.$invalid;
@@ -38,8 +40,7 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 			return scope.formHolder.parameter_item.$invalid;
 			
 		};
-		
-		
+
 		
 			function parameters(scope) {
 
@@ -58,10 +59,12 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 		
 		}
 
-		self.parameter_item = function(scope,row) {			
+		self.parameter_item = function(scope,row) {	
 		
 			scope.parameter_item = {};
 			scope.parameter_item.item_id = 0;
+			scope.parameter_item.item_groups = [];
+			scope.parameter_item.dels = [];
 
 			$('#parameter-item').html(loading);
 			$('#parameter-item').load('forms/parameter-item.html',function() {
@@ -184,6 +187,37 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 				
 			});
 		};
+		
+	  self.addNewChoice = function(scope) {
+		scope.parameter_item.item_groups.push({item_group_id:0,item_group_description:''});
+	  };
+		
+	  self.removeChoice = function(scope,row) {
+
+		if (row.item_group_id > 0) {
+			scope.parameter_item.dels.push(row.item_group_id);
+		}
+		
+		var item_groups = scope.parameter_item.item_groups;
+		
+		var index = scope.parameter_item.item_groups.indexOf(row);
+		
+		scope.parameter_item.item_groups = [];		
+		// scope.parameter_item.item_groups.splice(index, 1);
+		
+		angular.forEach(item_groups, function(d,i) {
+		
+			if (index != i) {
+				
+				delete d['$$hashKey'];
+				scope.parameter_item.item_groups.push(d);
+				
+			};
+		
+		});
+	  
+	  };		
+		
 	};
 	
 	return new paramItem();
