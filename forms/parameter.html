@@ -24,6 +24,7 @@
 				</div>
 			</div>
 			<div class="row">
+<<<<<<< HEAD
 				 <div class="checkbox checkbox-custom" style="margin-left: 11px;">
 						<input id="checkbox11" type="checkbox" ng-model="add" required ng-disabled="controls.ok.btn">
 						<label for="checkbox11">
@@ -64,6 +65,28 @@
 			</div>
 			</div> -->
 				<div class="col-lg-12 col-md-9 col-sm-12 form-group">
+=======
+			 <div class="checkbox checkbox-custom" style="margin-left: 11px;">
+					<input id="checkbox11" type="checkbox" ng-model="add" required ng-disabled="controls.ok.btn">
+					<label for="checkbox11">
+						Does item have group?
+					</label>
+				</div>
+			</div>
+			<hr>
+			<div class="form-group text-left m-b-0">
+				<button class="btn btn-primary waves-effect waves-light" type="submit" ng-click="addNewChoice()" ng-show="add" required ng-disabled="controls.ok.btn">add</button>
+				
+			</div>
+			<br>
+				<div style="margin:10px;" data-ng-repeat="choice in choices">
+				    
+				      <input type="text" ng-show="add" ng-model="" name="" >
+				      <button class="remove" ng-show="add" ng-click="removeChoice()">-</button>
+				   </div>
+				   
+				<div class="form-group text-left m-b-0">
+>>>>>>> refs/remotes/origin/jp
 					<button class="btn btn-primary waves-effect waves-light" type="submit" ng-click="param.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
 					<button class="btn btn-default waves-effect waves-light m-l-5" ng-click="param.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 				</div>
