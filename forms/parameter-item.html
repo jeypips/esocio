@@ -31,9 +31,9 @@
 			<button ng-show="parameter_item.is_group_item > 0" class="btn btn-default waves-effect waves-light pull-right" type="submit" ng-click="paramItem.addNewChoice(this)" ng-disabled="controls.ok.btn">Add</button>
 			</div>
 			<br>
-		<div class="card-box">
+		<div class="card-box" ng-show="parameter_item.is_group_item > 0">
 		<label class="label-control">Name of Item</label>
-		<div class="row" ng-show="parameter_item.is_group_item > 0">
+		<div class="row">
 			<div class="col-lg-12" ng-repeat="ig in parameter_item.item_groups">
 				<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 form-group" class="form-group" ng-class="{'has-error': formHolder.parameter_item.item_group_description{{$index}}['$touched'] && formHolder.parameter_item.item_group_description{{$index}}['$invalid']}">
 					<input type="text" class="form-control" name="item_group_description{{$index}}" ng-model="ig.item_group_description" ng-disabled="controls.ok.btn" required>

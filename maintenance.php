@@ -142,14 +142,14 @@
 						<li class="tab"> 
 							<a href="#parameter" data-toggle="tab" aria-expanded="false"> 
 								<span class="visible-xs"><i class="icon icon-notebook"></i></span> 
-								<span class="hidden-xs">Parameter</span> 
+								<span class="hidden-xs">Parameters</span> 
 							</a> 
 						</li> 
 						<li class="tab"> 
 							<a href="#item" data-toggle="tab" aria-expanded="true"> 
 								<span class="visible-xs"><i class="icon icon-notebook"></i></span> 
 								
-								<span class="hidden-xs">Parameter Item</span> 
+								<span class="hidden-xs">Parameter Items</span> 
 							</a> 
 						</li>
 					</ul> 
