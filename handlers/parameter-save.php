@@ -6,6 +6,8 @@ include_once '../db.php';
 
 $con = new pdo_db("parameters");
 
+$_POST['is_tabular'] = ($_POST['is_tabular'])?1:0;
+
 if ($_POST['parameter_id']) {
 		
 	$sector_id = $_POST['parameter_no']['sector_id'];
