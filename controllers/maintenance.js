@@ -16,21 +16,6 @@ app.controller('maintenanceCtrl',function($scope,fullscreen,manage,param,paramIt
 	
 	$scope.manage = manage;
 	$scope.param = param;
-<<<<<<< HEAD
-	$scope.paramItem = paramItem;
-	 $scope.attributes = [];
-  
-  $scope.addNewAttribute = function() {
-    var newItemNo = $scope.attributes.length+1;
-    $scope.attributes.push({'id':'choice'+newItemNo});
-  };
-    
-  $scope.removeAttribute = function() {
-    var lastItem = $scope.attributes.length-1;
-    $scope.attributes.splice(lastItem);
-  };
-=======
 	$scope.paramItem = paramItem;	
->>>>>>> refs/remotes/origin/jp
 
 });
