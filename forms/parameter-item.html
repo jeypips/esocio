@@ -1,22 +1,21 @@
 <div class="row">
-<button class="btn btn-primary pull-right" ng-click="paramItem.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+<button class="btn btn-default pull-right waves-effect waves-light" ng-click="paramItem.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
 </div>
 <hr>
 <div class="row">
 	<div class="col-lg-12">
 		<div class="card-box">
-			<form name="formHolder.parameter_items" id="formHolder.parameter_items">
-			
+			<form name="formHolder.parameter_item" id="formHolder.parameter_item" novalidate>
 			<div class="row">
-				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid}">
+				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_item.item_parameter.$touched && formHolder.parameter_item.item_parameter.$invalid}">
 					<label class="label-control">Parameter Description</label>
-					<select class="form-control" name="parameters_items.item_parameter" ng-model="parameter_items.item_parameter" ng-options="par.parameter_name for par in parameters_add track by par.parameter_id" required ng-disabled="controls.ok.btn"></select>
-					<span class="help-block" ng-show="formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid">Parameter Name is required</span>
+					<select class="form-control" name="item_parameter" ng-model="parameter_item.item_parameter" ng-options="par.parameter_name for par in parameters_add track by par.parameter_id" required ng-disabled="controls.ok.btn"></select>
+					<span class="help-block" ng-show="formHolder.parameter_item.item_parameter.$touched && formHolder.parameter_item.item_parameter.$invalid">Parameter Name is required</span>
 				</div>
-				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_attribute.$touched && formHolder.parameter_items.item_attribute.$invalid}">
+				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_item.item_attribute.$touched && formHolder.parameter_item.item_attribute.$invalid}">
 					<label class="label-control">Name of Attribute</label>
-					<input type="text" class="form-control" name="item_attribute" ng-model="parameter_items.item_attribute" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.parameter_items.item_attribute.$touched && formHolder.parameter_items.item_attribute.$invalid">Name is required</span>
+					<input type="text" class="form-control" name="item_attribute" ng-model="parameter_item.item_attribute" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.parameter_item.item_attribute.$touched && formHolder.parameter_item.item_attribute.$invalid">Name is required</span>
 				</div>
 			</div>
 <<<<<<< HEAD
@@ -25,18 +24,40 @@
 =======
 			<div class="row">
 			 <div class="checkbox checkbox-custom" style="margin-left: 11px;">
-					<input id="checkbox11" type="checkbox" ng-model="add" required ng-disabled="controls.ok.btn">
+					<input id="checkbox11" type="checkbox" ng-model="parameter_item.is_group_item" ng-disabled="controls.ok.btn">
 					<label for="checkbox11">
 						Does item have group?
 					</label>
 				</div>
 			</div>
+<<<<<<< HEAD
 >>>>>>> refs/remotes/origin/jp
 			<div class="form-group text-left m-b-0">
 				<button class="btn btn-primary waves-effect waves-light" type="submit" ng-click="paramItem.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
 				<button class="btn btn-default waves-effect waves-light m-l-5" ng-click="paramItem.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+=======
+>>>>>>> refs/remotes/origin/jp
 			</div>
-			</form>
+			<div class="row">
+			<button ng-show="parameter_item.is_group_item > 0" class="btn btn-default waves-effect waves-light pull-right" type="submit" ng-click="paramItem.addNewChoice(this)" ng-disabled="controls.ok.btn">Add</button>
+			</div>
+			<br>
+		<div class="card-box" ng-show="parameter_item.is_group_item > 0">
+		<label class="label-control">Name of Item</label>
+		<div class="row">
+			<div class="col-lg-12" ng-repeat="ig in parameter_item.item_groups">
+				<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 form-group" class="form-group" ng-class="{'has-error': formHolder.parameter_item.item_group_description{{$index}}['$touched'] && formHolder.parameter_item.item_group_description{{$index}}['$invalid']}">
+					<input type="text" class="form-control" name="item_group_description{{$index}}" ng-model="ig.item_group_description" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.parameter_item.item_group_description{{$index}}['$touched'] && formHolder.parameter_item.item_group_description{{$index}}['$invalid']">Item Name is required</span>
+				</div>
+				<button class="btn btn-danger waves-effect waves-light" ng-click="paramItem.removeChoice(this,ig)" ng-disabled="controls.ok.btn"><i class="fa fa-close"></button></i>
+			</div>
 		</div>
+		</div>
+		<div class="form-group text-left m-b-0">
+			<button class="btn btn-default waves-effect waves-light" type="submit" ng-click="paramItem.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+			<button class="btn btn-primary waves-effect waves-light m-l-5" ng-click="paramItem.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+		</div>
+		</form>
 	</div>
 </div>
