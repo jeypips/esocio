@@ -3,15 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
-<<<<<<< HEAD
-<<<<<<< HEAD
--- Generation Time: Sep 04, 2017 at 08:19 AM
-=======
--- Generation Time: Sep 06, 2017 at 04:46 PM
->>>>>>> refs/remotes/origin/jp
-=======
--- Generation Time: Sep 11, 2017 at 08:23 AM
->>>>>>> refs/remotes/origin/jp
+-- Generation Time: Sep 11, 2017 at 02:36 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -71,7 +63,29 @@ CREATE TABLE `items_groups` (
 INSERT INTO `items_groups` (`item_group_id`, `item_group_item`, `item_group_description`) VALUES
 (1, 15, 'Agriculture'),
 (2, 15, 'Industry'),
-(3, 15, 'Services');
+(3, 15, 'Services'),
+(4, 21, 'Food'),
+(5, 21, 'Non Food'),
+(6, 168, 'Proprietorship'),
+(7, 168, 'Corporate'),
+(8, 170, 'YES'),
+(9, 170, 'NO'),
+(10, 174, 'YES'),
+(11, 174, 'NO'),
+(12, 178, 'YES'),
+(13, 178, 'NO'),
+(14, 206, 'YES'),
+(15, 206, 'NO'),
+(16, 229, 'Domestic'),
+(17, 229, 'Foreign'),
+(18, 233, 'Private'),
+(19, 233, 'Government'),
+(20, 234, 'Agriculture'),
+(21, 234, 'Industry'),
+(22, 234, 'Services'),
+(23, 235, 'No. of Employed'),
+(24, 235, 'No. of Unemployed'),
+(25, 235, 'No. of Underemployment');
 
 -- --------------------------------------------------------
 
@@ -97,7 +111,7 @@ INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `is_
 (3, 2, 'Employment and Development Finance', 0, 0),
 (4, 3, 'Existing Land User Distribution', 0, 0),
 (5, 3, 'Land Classication', 0, 0),
-(6, 4, 'Food Sufficiency', 0, 0),
+(6, 4, 'Food Sufficiency', 0, 1),
 (7, 5, 'Road Network', 0, 0),
 (8, 5, 'Bridges', 0, 0),
 (9, 6, 'Social Welfare', 0, 0),
@@ -105,7 +119,23 @@ INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `is_
 (11, 8, 'Education Sector', 0, 0),
 (12, 9, 'Development Administration Sector', 0, 0),
 (13, 10, 'Trade, Industry and Tourism Sector', 0, 0),
-(14, 3, 'LIST OF WATER BODIES', 0, 0);
+(14, 3, 'LIST OF WATER BODIES', 0, 0),
+(15, 4, 'Employment Income', 0, 0),
+(16, 10, 'Investible Areas', 0, 0),
+(17, 10, 'Existing and Potential Industries', 0, 0),
+(18, 10, 'Enterprises', 0, 0),
+(19, 10, 'Tour Guides', 0, 0),
+(20, 10, 'Transport Groups', 0, 0),
+(21, 10, 'Travel Operator', 0, 0),
+(22, 10, 'Tourist Destinations', 0, 0),
+(23, 10, 'Convention Facilities', 0, 0),
+(24, 10, 'Shopping Centers', 0, 0),
+(25, 10, 'Accommodation Establishments', 0, 0),
+(26, 10, 'Agri-Tourism Sites', 0, 0),
+(27, 10, 'Dining, Entertainment and Rest Areas', 0, 0),
+(28, 10, 'Recreation Centre', 0, 0),
+(29, 10, 'Convention Facilities', 0, 0),
+(31, 10, 'Industry and Tourism', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -143,7 +173,7 @@ INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `i
 (18, 3, 'Poverty Incidence', 0),
 (19, 3, 'Magnitude of Poor Families', 0),
 (20, 3, 'Magnitude of Poor Population', 0),
-(21, 3, 'Classification', 0),
+(21, 3, 'Classification', 1),
 (22, 3, 'Municipal Govt Revenue', 0),
 (23, 3, 'Municipal Govt Expenditures', 0),
 (24, 4, 'Agricultural Areas', 0),
@@ -267,10 +297,91 @@ INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `i
 (147, 13, 'No of Water Stations', 0),
 (148, 13, 'No of Resorts', 0),
 (149, 13, 'Others', 0),
-(150, NULL, NULL, 0),
 (151, 14, 'RIVERS', 0),
 (152, 14, 'ESTEROS/CREEKS', 0),
-(153, 14, 'CANALS', 0);
+(153, 14, 'CANALS', 0),
+(154, 15, 'Commodity', 0),
+(155, 15, 'Employment Generated', 0),
+(156, 15, 'Income Generated (Php)', 0),
+(157, 16, 'Location', 0),
+(158, 16, 'Projects', 0),
+(159, 17, 'Location', 0),
+(160, 17, 'Major Resources', 0),
+(161, 17, 'Potential Industry', 0),
+(162, 18, 'Name of Enterprise', 0),
+(163, 18, 'Product', 0),
+(164, 18, 'Classification', 0),
+(165, 18, 'Volume', 0),
+(166, 18, 'Address', 0),
+(167, 18, 'Name of Owner', 0),
+(168, 18, 'Ownership', 1),
+(169, 19, 'Name', 0),
+(170, 19, 'Dot Accreditation', 1),
+(171, 19, 'Address', 0),
+(172, 19, 'Contact Number', 0),
+(173, 20, 'Name', 0),
+(174, 20, 'Dot Accreditation', 1),
+(175, 20, 'Address', 0),
+(176, 20, 'Contact Number', 0),
+(177, 21, 'Name', 0),
+(178, 21, 'Dot Accreditation', 1),
+(179, 21, 'Address', 0),
+(180, 20, 'Contact Number', 0),
+(181, 22, 'Name of Site', 0),
+(182, 22, 'Description', 0),
+(183, 22, 'Status', 0),
+(184, 22, 'Type', 0),
+(185, 23, 'Name of Establishment', 0),
+(186, 23, 'Type', 0),
+(187, 23, 'Category', 0),
+(188, 23, 'Address', 0),
+(189, 23, 'Contact Person', 0),
+(190, 23, 'Telephone Number', 0),
+(191, 23, 'FAX Number', 0),
+(192, 23, 'E-mail Address', 0),
+(193, 23, 'No. of Rooms', 0),
+(194, 23, 'Meeting Facilities', 0),
+(195, 23, 'Maximum Capacity', 0),
+(196, 24, 'Name of Establishment', 0),
+(197, 24, 'Address', 0),
+(198, 24, 'Telephone Number', 0),
+(199, 24, 'Type of Merchandize', 0),
+(200, 24, 'Facilities', 0),
+(201, 25, 'Name of Establishment', 0),
+(202, 25, 'Address', 0),
+(203, 25, 'Type', 0),
+(204, 25, 'No. of Rooms', 0),
+(205, 25, 'Classification', 0),
+(206, 25, 'Dot Accredited', 1),
+(207, 26, 'Name of Site', 0),
+(208, 26, 'Description', 0),
+(209, 26, 'Location', 0),
+(210, 27, 'Name of Establishment', 0),
+(211, 27, 'Contact Person', 0),
+(212, 27, 'Type of Establishment', 0),
+(213, 27, 'Type of Food/Specialty', 0),
+(214, 28, 'Recreation Centre', 0),
+(215, 28, 'Telephone Number', 0),
+(216, 28, 'Equipment/Facilities', 0),
+(217, 28, 'Rates', 0),
+(218, 29, 'Name of Establishment', 0),
+(219, 29, 'Type', 0),
+(220, 29, 'Category', 0),
+(221, 29, 'Address', 0),
+(222, 29, 'Contact Person', 0),
+(223, 29, 'Telephone Number', 0),
+(224, 29, 'FAX Number', 0),
+(225, 29, 'E-mail Address', 0),
+(226, 29, 'No. of Rooms', 0),
+(227, 29, 'Meeting Facilities', 0),
+(228, 29, 'Maximum Capacity', 0),
+(229, 31, 'Number of Tourist Arrivals', 1),
+(230, 31, 'Average Occupancy rate', 0),
+(231, 31, 'Average Length of stay', 0),
+(232, 31, 'No. of Tourist Destination', 0),
+(233, 31, 'Job Generated', 1),
+(234, 31, 'No. of Establishments', 1),
+(235, 31, 'Employment', 1);
 
 -- --------------------------------------------------------
 
@@ -283,6 +394,14 @@ CREATE TABLE `parameter_table_row` (
   `table_row_item` int(11) NOT NULL,
   `table_row_description` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `parameter_table_row`
+--
+
+INSERT INTO `parameter_table_row` (`table_row_id`, `table_row_item`, `table_row_description`) VALUES
+(1, 6, 'Palay/Rice'),
+(2, 6, 'Corn');
 
 -- --------------------------------------------------------
 
@@ -418,22 +537,22 @@ ALTER TABLE `account_info`
 -- AUTO_INCREMENT for table `items_groups`
 --
 ALTER TABLE `items_groups`
-  MODIFY `item_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `item_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `parameters`
 --
 ALTER TABLE `parameters`
-  MODIFY `parameter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `parameter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT for table `parameter_items`
 --
 ALTER TABLE `parameter_items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
 --
 -- AUTO_INCREMENT for table `parameter_table_row`
 --
 ALTER TABLE `parameter_table_row`
-  MODIFY `table_row_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `table_row_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `profile`
 --
@@ -464,7 +583,7 @@ ALTER TABLE `parameters`
 -- Constraints for table `parameter_items`
 --
 ALTER TABLE `parameter_items`
-  ADD CONSTRAINT `parameter_items_ibfk_1` FOREIGN KEY (`item_parameter`) REFERENCES `parameters` (`parameter_id`);
+  ADD CONSTRAINT `parameter_items_ibfk_1` FOREIGN KEY (`item_parameter`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `parameter_table_row`
