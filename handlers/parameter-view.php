@@ -14,9 +14,15 @@ $sector = $con->getData("SELECT sector_id, sector_description FROM sectors WHERE
 $parameter[0]['is_tabular'] = ($parameter[0]['is_tabular'])?true:false;
 $parameter[0]['parameter_no'] = $sector[0];
 
+<<<<<<< HEAD
 $parameter_table_row = $con->getData("SELECT * FROM parameter_table_row WHERE table_row_item = ".$parameter[0]['parameter_id']);
 
 $parameter[0]['parameter_table_row'] = $parameter_table_row;
+=======
+$table_rows = $con->getData("SELECT * FROM parameter_table_row WHERE table_row_item = ".$parameter[0]['parameter_id']);
+
+$parameter[0]['table_rows'] = $table_rows;
+>>>>>>> refs/remotes/origin/sha
 $parameter[0]['dels'] = [];
 
 echo json_encode($parameter[0]);

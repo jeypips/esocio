@@ -3,7 +3,15 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
+<<<<<<< HEAD
+<<<<<<< HEAD
+-- Generation Time: Sep 04, 2017 at 08:19 AM
+=======
+-- Generation Time: Sep 06, 2017 at 04:46 PM
+>>>>>>> refs/remotes/origin/jp
+=======
 -- Generation Time: Sep 11, 2017 at 08:23 AM
+>>>>>>> refs/remotes/origin/jp
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 

@@ -21,9 +21,14 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 
 			scope.parameter = {};
 			scope.parameter.parameter_id = 0;
+<<<<<<< HEAD
 			scope.parameter.parameter_table_row = [];
 			scope.parameter.dels = [];
 					
+=======
+			scope.parameter.table_rows = [];
+			scope.parameter.dels = [];
+>>>>>>> refs/remotes/origin/sha
 			scope.parameters = []; // list		
 
 		};
@@ -62,7 +67,11 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 		
 			scope.parameter = {};
 			scope.parameter.parameter_id = 0;
+<<<<<<< HEAD
 				scope.parameter.parameter_table_row = [];
+=======
+			scope.parameter.table_rows = [];
+>>>>>>> refs/remotes/origin/sha
 			scope.parameter.dels = [];
 
 			$('#parameter-list').html(loading);
@@ -211,8 +220,13 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 			});
 		};		
 		
+<<<<<<< HEAD
 		self.addNewChoice = function(scope) {
 		scope.parameter.parameter_table_row.push({table_row_id:0,table_row_description:''});
+=======
+	  self.addNewChoice = function(scope) {
+		scope.parameter.table_rows.push({table_row_id:0,table_row_description:''});
+>>>>>>> refs/remotes/origin/sha
 	  };
 		
 	  self.removeChoice = function(scope,row) {
@@ -221,6 +235,7 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 			scope.parameter.dels.push(row.table_row_id);
 		}
 		
+<<<<<<< HEAD
 		var parameter_table_row = scope.parameter.parameter_table_row;
 		
 		var index = scope.parameter.parameter_table_row.indexOf(row);
@@ -229,17 +244,36 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 		// scope.parameter_item.item_groups.splice(index, 1);
 		
 		angular.forEach(parameter_table_row, function(d,i) {
+=======
+		var table_rows = scope.parameter.table_rows;
+		
+		var index = scope.parameter.table_rows.indexOf(row);
+		
+		scope.parameter.table_rows = [];		
+		// scope.parameter.table_rows.splice(index, 1);
+		
+		angular.forEach(table_rows, function(d,i) {
+>>>>>>> refs/remotes/origin/sha
 		
 			if (index != i) {
 				
 				delete d['$$hashKey'];
+<<<<<<< HEAD
 				scope.parameter.parameter_table_row.push(d);
+=======
+				scope.parameter.table_rows.push(d);
+>>>>>>> refs/remotes/origin/sha
 				
 			};
 		
 		});
 	  
+<<<<<<< HEAD
 	  };		
+=======
+	  };
+		
+>>>>>>> refs/remotes/origin/sha
 	};
 	
 	
