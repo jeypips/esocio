@@ -13,6 +13,7 @@ $dels = $_POST['dels'];
 unset($_POST['dels']);
 
 $_POST['is_tabular'] = ($_POST['is_tabular'])?1:0;
+$_POST['is_tabular_multiple'] = ($_POST['is_tabular_multiple'])?1:0;
 
 if ($_POST['parameter_id']) {
 		
