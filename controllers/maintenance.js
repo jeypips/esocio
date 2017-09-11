@@ -16,6 +16,6 @@ app.controller('maintenanceCtrl',function($scope,fullscreen,manage,param,paramIt
 	
 	$scope.manage = manage;
 	$scope.param = param;
-	$scope.paramItem = paramItem;
+	$scope.paramItem = paramItem;	
 
 });

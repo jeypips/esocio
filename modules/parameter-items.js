@@ -19,8 +19,10 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 				},
 			};			
 
-			scope.parameter_items = {};
-			scope.parameter_items.item_id = 0;
+			scope.parameter_item = {};
+			scope.parameter_item.item_id = 0;
+			scope.parameter_item.item_groups = [];
+			scope.parameter_item.dels = [];
 
 			scope.parameter_items = []; // list
 
@@ -28,18 +30,17 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 
 		function validate(scope) {
 			
-			var controls = scope.formHolder.parameter_items.$$controls;
-			
+			var controls = scope.formHolder.parameter_item.$$controls;
+
 			angular.forEach(controls,function(elem,i) {
 				
 				if (elem.$$attr.$attr.required) elem.$touched = elem.$invalid;
 									
 			});
-			return scope.formHolder.parameter_items.$invalid;
+			return scope.formHolder.parameter_item.$invalid;
 			
 		};
-		
-		
+
 		
 			function parameters(scope) {
 
@@ -58,10 +59,12 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 		
 		}
 
-		self.parameter_item = function(scope,row) {			
+		self.parameter_item = function(scope,row) {	
 		
-			scope.parameter_items = {};
-			scope.parameter_items.item_id = 0;
+			scope.parameter_item = {};
+			scope.parameter_item.item_id = 0;
+			scope.parameter_item.item_groups = [];
+			scope.parameter_item.dels = [];
 
 			$('#parameter-item').html(loading);
 			$('#parameter-item').load('forms/parameter-item.html',function() {
@@ -87,7 +90,7 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 				  data: {item_id: row.item_id}
 				}).then(function mySucces(response) {
 					
-					angular.copy(response.data, scope.parameter_items);
+					angular.copy(response.data, scope.parameter_item);
 					
 				}, function myError(response) {
 					 
@@ -113,11 +116,8 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 			$http({
 			  method: 'POST',
 			  url: 'handlers/parameter-item-save.php',
-			  data: {item_id: scope.item_id}
+			  data: scope.parameter_item
 			}).then(function mySucces(response) {
-				
-				if (scope.parameter_items.item_id == 0) scope.parameter_items.item_id = response.data;
-	
 				
 				$timeout(function() { self.list(scope); },200);
 				
@@ -155,29 +155,6 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 			
 		};		
 		
-		/* self.filter = function(scope,filter) {				
-					
-			scope.filter.by = filter;
-			
-			$http({
-			  method: 'POST',
-			  url: 'handlers/filter.php',
-			  data: {filter: scope.filter.by}
-			}).then(function mySucces(response) {
-				
-				scope.filter.filters = response.data;
-				scope.filter.label = response.data[0];
-				self.filterGo(scope);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});				
-			
-		}; */
-		
-		
 		self.list = function(scope) {
 			
 			// load list
@@ -210,6 +187,37 @@ angular.module('parameterItem-module',['bootstrap-modal']).factory('paramItem', 
 				
 			});
 		};
+		
+	  self.addNewChoice = function(scope) {
+		scope.parameter_item.item_groups.push({item_group_id:0,item_group_description:''});
+	  };
+		
+	  self.removeChoice = function(scope,row) {
+
+		if (row.item_group_id > 0) {
+			scope.parameter_item.dels.push(row.item_group_id);
+		}
+		
+		var item_groups = scope.parameter_item.item_groups;
+		
+		var index = scope.parameter_item.item_groups.indexOf(row);
+		
+		scope.parameter_item.item_groups = [];		
+		// scope.parameter_item.item_groups.splice(index, 1);
+		
+		angular.forEach(item_groups, function(d,i) {
+		
+			if (index != i) {
+				
+				delete d['$$hashKey'];
+				scope.parameter_item.item_groups.push(d);
+				
+			};
+		
+		});
+	  
+	  };		
+		
 	};
 	
 	return new paramItem();
