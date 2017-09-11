@@ -209,7 +209,7 @@
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/account.js"></script>
 		<script src="modules/maintenance.js"></script>
-		<script src="modules/parameter.js"></script>
+		<script src="modules/parameters.js"></script>
 		<script src="modules/parameter-items.js"></script>
 		<script src="controllers/maintenance.js"></script>
 
