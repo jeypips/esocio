@@ -21,7 +21,9 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 
 			scope.parameter = {};
 			scope.parameter.parameter_id = 0;
-			
+			scope.parameter.parameter_table_row = [];
+			scope.parameter.dels = [];
+
 			scope.parameters = []; // list		
 
 		};
@@ -60,6 +62,8 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 		
 			scope.parameter = {};
 			scope.parameter.parameter_id = 0;
+			scope.parameter.parameter_table_row = [];
+			scope.parameter.dels = [];
 
 			$('#parameter-list').html(loading);
 			$('#parameter-list').load('forms/parameter.html',function() {
@@ -206,6 +210,37 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 				
 			});
 		};		
+		
+	  self.addNewChoice = function(scope) {
+		scope.parameter.parameter_table_row.push({table_row_id:0,table_row_description:''});
+	  };
+		
+	  self.removeChoice = function(scope,row) {
+
+		if (row.table_row_id > 0) {
+			scope.parameter.dels.push(row.table_row_id);
+		}
+		
+		var parameter_table_row = scope.parameter.parameter_table_row;
+		
+		var index = scope.parameter.parameter_table_row.indexOf(row);
+		
+		scope.parameter.parameter_table_row = [];		
+		// scope.parameter.parameter_table_row.splice(index, 1);
+		
+		angular.forEach(parameter_table_row, function(d,i) {
+
+		
+			if (index != i) {
+				
+				delete d['$$hashKey'];
+			scope.parameter.parameter_table_row.push(d);
+				
+			};
+		
+		});
+	  
+	  };
 		
 	};
 	

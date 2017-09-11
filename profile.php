@@ -40,7 +40,7 @@
 		</style>
     </head>
 
-    <body class="fixed-left" ng-app="macros" ng-controller="macrosCtrl" account-profile>
+    <body class="fixed-left" ng-app="profile" ng-controller="profileCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -65,7 +65,9 @@
                                 </button>
                                 <span class="clearfix"></span>
                             </div>
-
+							<div class="navbar-left app-search pull-left hidden-xs">
+			                     <h5 class="portlet-title" style="color:white;">Profile</h5>
+			                </div>
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
@@ -119,58 +121,7 @@
 	<!-- Start content -->
 	<div class="content">
 		<div class="container">
-
-			<!-- Page-Title -->
-			<div class="row">
-				<div class="col-sm-4">
-					<h4 class="page-title">Profile</h4>
-				</div>
-				<hr>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="panel panel-border panel-inverse">
-						<div class="panel-heading">
-							<i class="ion-android-social-user"></i> Tasks
-						</div>
-						<div class="panel-body">
-							<div class="row">
-								<div class="box box-primary">
-	
-		<div class="box-body pad">
-				<div class="row">
-					<div class="col-lg-6 col-md-6">
-						<div class="row">
-							
-							<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
-							  <div class="input-group input-group-md">
-								<div class="input-group-btn">
-								  <button type="button" class="btn btn-primary btn-flat dropdown-toggle" data-toggle="dropdown">Filter
-									<span class="fa fa-caret-down"></span></button>
-								<ul class="dropdown-menu">
-									<li ng-repeat="sf in sector_filters"><a href="javascript:;" ng-click="form.filter_sector_parameters(this,sf.sector_id)">{{sf.sector_description}}</a></li>
-								</ul>
-								</div>
-								<!-- /btn-group -->
-								<select class="form-control" ng-model="filter.sector_parameter" ng-options="p.parameter_name for p in sector_parameters track by p.parameter_id"></select>
-								<span class="input-group-btn">
-								  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Sidebar -->				
-			</div>	
-		</div>
-	</div>
-
-							</div> <!-- /row -->
-						</div> <!-- /panel-body -->
-					</div> <!-- /panel-invers -->
-				</div> <!-- /col-lg-12 -->
-			</div> <!-- /row -->
-			
+		
 			<div class="row">
 				<div class="col-lg-12">
 					<div id="x_content" class="x_content"></div>
@@ -186,7 +137,7 @@
 		</div>
 	
 	<div>
-		<div id="sub-menu" style="position: fixed; top: 65px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
+		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
 			<button href="javascript:;" class="btn btn-danger right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>	
 		<div class="side-bar right-bar nicescroll">
@@ -244,8 +195,8 @@
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/account.js"></script>
-		<script src="modules/macros.js"></script>
-		<script src="controllers/macros.js"></script>
+		<script src="modules/profile.js"></script>
+		<script src="controllers/profile.js"></script>
 
     </body>
 </html>

@@ -33,7 +33,7 @@ if ($_POST['item_id']) {
 
 if (count($dels)) {
 
-	$con->table = "items_groups";
+	$con->table = "parameter_table_row";
 	$delete = $con->deleteData(array("item_group_id"=>implode(",",$dels)));		
 	
 }

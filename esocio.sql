@@ -3,7 +3,15 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 29, 2017 at 09:23 AM
+<<<<<<< HEAD
+<<<<<<< HEAD
+-- Generation Time: Sep 04, 2017 at 08:19 AM
+=======
+-- Generation Time: Sep 06, 2017 at 04:46 PM
+>>>>>>> refs/remotes/origin/jp
+=======
+-- Generation Time: Sep 11, 2017 at 08:23 AM
+>>>>>>> refs/remotes/origin/jp
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -56,6 +64,15 @@ CREATE TABLE `items_groups` (
   `item_group_description` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `items_groups`
+--
+
+INSERT INTO `items_groups` (`item_group_id`, `item_group_item`, `item_group_description`) VALUES
+(1, 15, 'Agriculture'),
+(2, 15, 'Industry'),
+(3, 15, 'Services');
+
 -- --------------------------------------------------------
 
 --
@@ -66,7 +83,6 @@ CREATE TABLE `parameters` (
   `parameter_id` int(11) NOT NULL,
   `parameter_no` int(11) DEFAULT NULL,
   `parameter_name` varchar(50) DEFAULT NULL,
-  `parameter_short_name` varchar(50) DEFAULT NULL,
   `is_tabular` tinyint(4) NOT NULL DEFAULT '0',
   `is_tabular_multiple` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -75,20 +91,21 @@ CREATE TABLE `parameters` (
 -- Dumping data for table `parameters`
 --
 
-INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `parameter_short_name`, `is_tabular`, `is_tabular_multiple`) VALUES
-(1, 1, 'Physical Characteristics', 'PC', 0, 0),
-(2, 1, 'Demographics', 'DEMO', 0, 0),
-(3, 2, 'Employment and Development Finance', 'EDF', 0, 0),
-(4, 3, 'Existing Land User Distribution', 'ELUD', 0, 0),
-(5, 3, 'Land Classication', 'LC', 0, 0),
-(6, 4, 'Food Sufficiency', 'FS', 0, 0),
-(7, 5, 'Road Network', 'RN', 0, 0),
-(8, 5, 'Bridges', 'BR', 0, 0),
-(9, 6, 'Social Welfare', 'SW', 0, 0),
-(10, 7, 'Health Sector', 'HS', 0, 0),
-(11, 8, 'Education Sector', 'ES', 0, 0),
-(12, 9, 'Development Administration Sector', 'DAS', 0, 0),
-(13, 10, 'Trade, Industry and Tourism Sector', 'TITS', 0, 0);
+INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `is_tabular`, `is_tabular_multiple`) VALUES
+(1, 1, 'Physical Characteristics', 1, 0),
+(2, 1, 'Demographics', 0, 0),
+(3, 2, 'Employment and Development Finance', 0, 0),
+(4, 3, 'Existing Land User Distribution', 0, 0),
+(5, 3, 'Land Classication', 0, 0),
+(6, 4, 'Food Sufficiency', 0, 0),
+(7, 5, 'Road Network', 0, 0),
+(8, 5, 'Bridges', 0, 0),
+(9, 6, 'Social Welfare', 0, 0),
+(10, 7, 'Health Sector', 0, 0),
+(11, 8, 'Education Sector', 0, 0),
+(12, 9, 'Development Administration Sector', 0, 0),
+(13, 10, 'Trade, Industry and Tourism Sector', 0, 0),
+(14, 3, 'LIST OF WATER BODIES', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -108,7 +125,7 @@ CREATE TABLE `parameter_items` (
 --
 
 INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `is_group_item`) VALUES
-(1, 1, 'Land Area', 0),
+(1, 1, 'Land Area', 1),
 (2, 1, 'Terrain', 0),
 (3, 1, 'Climate', 0),
 (4, 1, 'Number of Barangays', 0),
@@ -122,9 +139,7 @@ INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `i
 (12, 2, 'Literacy Rate', 0),
 (13, 3, 'Labor Force No', 0),
 (14, 3, 'Employment Rate', 0),
-(15, 3, 'ED Agriculture', 0),
-(16, 3, 'ED Industry', 0),
-(17, 3, 'ED Services', 0),
+(15, 3, 'Employment Distribution', 1),
 (18, 3, 'Poverty Incidence', 0),
 (19, 3, 'Magnitude of Poor Families', 0),
 (20, 3, 'Magnitude of Poor Population', 0),
@@ -132,11 +147,6 @@ INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `i
 (22, 3, 'Municipal Govt Revenue', 0),
 (23, 3, 'Municipal Govt Expenditures', 0),
 (24, 4, 'Agricultural Areas', 0),
-(25, 4, 'Grassland Areas', 0),
-(26, 4, 'Wooded Areas', 0),
-(27, 4, 'Bareland Areas', 0),
-(28, 4, 'Wetland Areas', 0),
-(29, 4, 'Builtup Areas', 0),
 (30, 5, 'Certified A&D', 0),
 (31, 5, 'Public Forest Land', 0),
 (32, 5, 'Number of Barangays ', 0),
@@ -256,7 +266,11 @@ INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `i
 (146, 13, 'No of Gasoline Stations', 0),
 (147, 13, 'No of Water Stations', 0),
 (148, 13, 'No of Resorts', 0),
-(149, 13, 'Others', 0);
+(149, 13, 'Others', 0),
+(150, NULL, NULL, 0),
+(151, 14, 'RIVERS', 0),
+(152, 14, 'ESTEROS/CREEKS', 0),
+(153, 14, 'CANALS', 0);
 
 -- --------------------------------------------------------
 
@@ -286,6 +300,33 @@ CREATE TABLE `profile` (
   `pb_east` varchar(50) DEFAULT NULL,
   `pb_west` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profile`
+--
+
+INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`, `pb_north`, `pb_south`, `pb_east`, `pb_west`) VALUES
+(1, NULL, 'Agoo', NULL, NULL, NULL, NULL, NULL),
+(2, NULL, 'Aringay', NULL, NULL, NULL, NULL, NULL),
+(3, NULL, 'Bacnotan', NULL, NULL, NULL, NULL, NULL),
+(4, NULL, 'Bagulin', NULL, NULL, NULL, NULL, NULL),
+(5, NULL, 'Balaoan ', NULL, NULL, NULL, NULL, NULL),
+(6, NULL, 'Bangar', NULL, NULL, NULL, NULL, NULL),
+(7, NULL, 'Bauang', NULL, NULL, NULL, NULL, NULL),
+(8, NULL, 'Burgos', NULL, NULL, NULL, NULL, NULL),
+(9, NULL, 'Caba', NULL, NULL, NULL, NULL, NULL),
+(10, NULL, 'Damortis', NULL, NULL, NULL, NULL, NULL),
+(11, NULL, 'Luna', NULL, NULL, NULL, NULL, NULL),
+(12, NULL, 'Naguilian ', NULL, NULL, NULL, NULL, NULL),
+(13, NULL, 'Pugo', NULL, NULL, NULL, NULL, NULL),
+(14, NULL, 'Rosario', NULL, NULL, NULL, NULL, NULL),
+(15, NULL, 'San Fernando', NULL, NULL, NULL, NULL, NULL),
+(16, NULL, 'San Gabriel', NULL, NULL, NULL, NULL, NULL),
+(17, NULL, 'San Juan', NULL, NULL, NULL, NULL, NULL),
+(18, NULL, 'Santol', NULL, NULL, NULL, NULL, NULL),
+(19, NULL, 'Sto. Tomas', NULL, NULL, NULL, NULL, NULL),
+(20, NULL, 'Sudipen', NULL, NULL, NULL, NULL, NULL),
+(21, NULL, 'Tubao', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -335,7 +376,8 @@ ALTER TABLE `items_groups`
 -- Indexes for table `parameters`
 --
 ALTER TABLE `parameters`
-  ADD PRIMARY KEY (`parameter_id`);
+  ADD PRIMARY KEY (`parameter_id`),
+  ADD KEY `parameter_no` (`parameter_no`);
 
 --
 -- Indexes for table `parameter_items`
@@ -376,17 +418,17 @@ ALTER TABLE `account_info`
 -- AUTO_INCREMENT for table `items_groups`
 --
 ALTER TABLE `items_groups`
-  MODIFY `item_group_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `item_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `parameters`
 --
 ALTER TABLE `parameters`
-  MODIFY `parameter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `parameter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `parameter_items`
 --
 ALTER TABLE `parameter_items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
 --
 -- AUTO_INCREMENT for table `parameter_table_row`
 --
@@ -396,7 +438,7 @@ ALTER TABLE `parameter_table_row`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `sectors`
 --
@@ -413,6 +455,12 @@ ALTER TABLE `items_groups`
   ADD CONSTRAINT `items_groups_ibfk_1` FOREIGN KEY (`item_group_item`) REFERENCES `parameter_items` (`item_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
+-- Constraints for table `parameters`
+--
+ALTER TABLE `parameters`
+  ADD CONSTRAINT `parameters_ibfk_1` FOREIGN KEY (`parameter_no`) REFERENCES `sectors` (`sector_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
 -- Constraints for table `parameter_items`
 --
 ALTER TABLE `parameter_items`
@@ -422,7 +470,7 @@ ALTER TABLE `parameter_items`
 -- Constraints for table `parameter_table_row`
 --
 ALTER TABLE `parameter_table_row`
-  ADD CONSTRAINT `parameter_table_row_ibfk_1` FOREIGN KEY (`table_row_item`) REFERENCES `parameter_items` (`item_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `parameter_table_row_ibfk_1` FOREIGN KEY (`table_row_item`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

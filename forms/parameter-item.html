@@ -4,8 +4,8 @@
 <hr>
 <div class="row">
 	<div class="col-lg-12">
-		<div class="card-box">
-			<form name="formHolder.parameter_item" id="formHolder.parameter_item" novalidate>
+			<form name="formHolder.parameter_item" id="formHolder.parameter_item" novalidate>	
+			<div class="card-box">
 			<div class="row">
 				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_item.item_parameter.$touched && formHolder.parameter_item.item_parameter.$invalid}">
 					<label class="label-control">Parameter Description</label>
@@ -24,29 +24,34 @@
 					<label for="checkbox11">
 						Does item have group?
 					</label>
-				</div>
+			</div>
 			</div>
 			</div>
 			<div class="row">
 			<button ng-show="parameter_item.is_group_item > 0" class="btn btn-default waves-effect waves-light pull-right" type="submit" ng-click="paramItem.addNewChoice(this)" ng-disabled="controls.ok.btn">Add</button>
 			</div>
 			<br>
-		<div class="card-box">
-		<label class="label-control">Name of Item</label>
-		<div class="row" ng-show="parameter_item.is_group_item > 0">
-			<div class="col-lg-12" ng-repeat="ig in parameter_item.item_groups">
-				<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 form-group" class="form-group" ng-class="{'has-error': formHolder.parameter_item.item_group_description{{$index}}['$touched'] && formHolder.parameter_item.item_group_description{{$index}}['$invalid']}">
-					<input type="text" class="form-control" name="item_group_description{{$index}}" ng-model="ig.item_group_description" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.parameter_item.item_group_description{{$index}}['$touched'] && formHolder.parameter_item.item_group_description{{$index}}['$invalid']">Item Name is required</span>
+			<div class="card-box" ng-show="parameter_item.is_group_item > 0">
+			<label class="label-control">*Name of Item</label>
+			<div class="row">
+				<div class="col-lg-12" ng-repeat="ig in parameter_item.item_groups">
+					<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 form-group" ng-class="{'has-error': formHolder.parameter_item.item_group_description{{$index}}['$touched'] && formHolder.parameter_item.item_group_description{{$index}}['$invalid']}">
+
+						<input type="text" class="form-control" name="item_group_description{{$index}}" ng-model="ig.item_group_description" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.parameter_item.item_group_description{{$index}}['$touched'] && formHolder.parameter_item.item_group_description{{$index}}['$invalid']">Item Name is required</span>
+					</div>
+					<button class="btn btn-danger waves-effect waves-light" ng-click="paramItem.removeChoice(this,ig)" ng-disabled="controls.ok.btn"><i class="fa fa-close"></button></i>
 				</div>
-				<button class="btn btn-danger waves-effect waves-light" ng-click="paramItem.removeChoice(this,ig)" ng-disabled="controls.ok.btn"><i class="fa fa-close"></button></i>
 			</div>
+
 		</div>
-		</div>
+
+			</div>
+
 		<div class="form-group text-left m-b-0">
 			<button class="btn btn-default waves-effect waves-light" type="submit" ng-click="paramItem.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
 			<button class="btn btn-primary waves-effect waves-light m-l-5" ng-click="paramItem.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 		</div>
 		</form>
-	</div>
+</div>
 </div>
