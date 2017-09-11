@@ -123,12 +123,11 @@
 	<!-- Start content -->
 	<div class="content">
 		<div class="container">
-
 			<div class="row">
 				<div class="col-lg-12"> 
 					<ul class="nav nav-tabs tabs">
 						<li class="active tab">
-							<a href="#sector" data-toggle="tab" aria-expanded="false"> 
+							<a href="#sector" data-toggle="tab" aria-expanded="true"> 
 								<span class="visible-xs"><i class="icon icon-book-open"></i></span> 
 								<span class="hidden-xs">Sectors</span> 
 							</a> 
@@ -140,9 +139,8 @@
 							</a> 
 						</li> 
 						<li class="tab"> 
-							<a href="#item" data-toggle="tab" aria-expanded="true"> 
+							<a href="#item" data-toggle="tab" aria-expanded="false"> 
 								<span class="visible-xs"><i class="icon icon-notebook"></i></span> 
-								
 								<span class="hidden-xs">Parameter Items</span> 
 							</a> 
 						</li>
@@ -209,7 +207,7 @@
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/account.js"></script>
 		<script src="modules/maintenance.js"></script>
-		<script src="modules/parameter.js"></script>
+		<script src="modules/parameters.js"></script>
 		<script src="modules/parameter-items.js"></script>
 		<script src="controllers/maintenance.js"></script>
 
