@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 06, 2017 at 04:46 PM
+-- Generation Time: Sep 11, 2017 at 08:23 AM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -75,7 +75,6 @@ CREATE TABLE `parameters` (
   `parameter_id` int(11) NOT NULL,
   `parameter_no` int(11) DEFAULT NULL,
   `parameter_name` varchar(50) DEFAULT NULL,
-  `parameter_short_name` varchar(50) DEFAULT NULL,
   `is_tabular` tinyint(4) NOT NULL DEFAULT '0',
   `is_tabular_multiple` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -84,21 +83,21 @@ CREATE TABLE `parameters` (
 -- Dumping data for table `parameters`
 --
 
-INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `parameter_short_name`, `is_tabular`, `is_tabular_multiple`) VALUES
-(1, 1, 'Physical Characteristics', 'PC', 1, 0),
-(2, 1, 'Demographics', 'DEMO', 0, 0),
-(3, 2, 'Employment and Development Finance', 'EDF', 0, 0),
-(4, 3, 'Existing Land User Distribution', 'ELUD', 0, 0),
-(5, 3, 'Land Classication', 'LC', 0, 0),
-(6, 4, 'Food Sufficiency', 'FS', 0, 0),
-(7, 5, 'Road Network', 'RN', 0, 0),
-(8, 5, 'Bridges', 'BR', 0, 0),
-(9, 6, 'Social Welfare', 'SW', 0, 0),
-(10, 7, 'Health Sector', 'HS', 0, 0),
-(11, 8, 'Education Sector', 'ES', 0, 0),
-(12, 9, 'Development Administration Sector', 'DAS', 0, 0),
-(13, 10, 'Trade, Industry and Tourism Sector', 'TITS', 0, 0),
-(14, 3, 'LIST OF WATER BODIES', 'LWB', 0, 0);
+INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `is_tabular`, `is_tabular_multiple`) VALUES
+(1, 1, 'Physical Characteristics', 1, 0),
+(2, 1, 'Demographics', 0, 0),
+(3, 2, 'Employment and Development Finance', 0, 0),
+(4, 3, 'Existing Land User Distribution', 0, 0),
+(5, 3, 'Land Classication', 0, 0),
+(6, 4, 'Food Sufficiency', 0, 0),
+(7, 5, 'Road Network', 0, 0),
+(8, 5, 'Bridges', 0, 0),
+(9, 6, 'Social Welfare', 0, 0),
+(10, 7, 'Health Sector', 0, 0),
+(11, 8, 'Education Sector', 0, 0),
+(12, 9, 'Development Administration Sector', 0, 0),
+(13, 10, 'Trade, Industry and Tourism Sector', 0, 0),
+(14, 3, 'LIST OF WATER BODIES', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -411,12 +410,12 @@ ALTER TABLE `account_info`
 -- AUTO_INCREMENT for table `items_groups`
 --
 ALTER TABLE `items_groups`
-  MODIFY `item_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `item_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `parameters`
 --
 ALTER TABLE `parameters`
-  MODIFY `parameter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `parameter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `parameter_items`
 --
