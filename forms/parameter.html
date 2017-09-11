@@ -38,7 +38,7 @@
 						<input type="text" class="form-control" name="table_row_description{{$index}}" ng-model="ni.table_row_description" ng-disabled="controls.ok.btn" required>
 						<span class="help-block" ng-show="formHolder.parameter.table_row_description{{$index}}['$touched'] && formHolder.parameter.table_row_description{{$index}}['$invalid']">Item Name is required</span>
 					</div>
-					<button class="btn btn-danger waves-effect waves-light" ng-click="paramItem.removeChoice(this,ig)" ng-disabled="controls.ok.btn"><i class="fa fa-close"></button></i>
+					<button class="btn btn-danger waves-effect waves-light" ng-click="param.removeChoice(this,ig)" ng-disabled="controls.ok.btn"><i class="fa fa-close"></button></i>
 				</div>
 			</div>
 			</div>
