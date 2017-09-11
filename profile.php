@@ -65,7 +65,9 @@
                                 </button>
                                 <span class="clearfix"></span>
                             </div>
-
+							<div class="navbar-left app-search pull-left hidden-xs">
+			                     <h5 class="portlet-title" style="color:white;">Profile</h5>
+			                </div>
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
@@ -119,16 +121,7 @@
 	<!-- Start content -->
 	<div class="content">
 		<div class="container">
-
-			<!-- Page-Title -->
-			<div class="row">
-				<div class="col-sm-4">
-					<h4 class="page-title">Profile</h4>
-				</div>
-				<hr>
-			</div>
-	
-			
+		
 			<div class="row">
 				<div class="col-lg-12">
 					<div id="x_content" class="x_content"></div>
@@ -144,7 +137,7 @@
 		</div>
 	
 	<div>
-		<div id="sub-menu" style="position: fixed; top: 65px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
+		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
 			<button href="javascript:;" class="btn btn-danger right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>	
 		<div class="side-bar right-bar nicescroll">
