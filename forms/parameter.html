@@ -17,11 +17,18 @@
 					<input type="text" class="form-control" name="parameter_name" ng-model="parameter.parameter_name" required ng-disabled="controls.ok.btn">
 					<span class="help-block" ng-show="formHolder.parameter.parameter_name.$touched && formHolder.parameter.parameter_name.$invalid">Parameter Description is required</span>
 				</div>
-				<div class="col-lg-2 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter.parameter_short_name.$touched && formHolder.parameter.parameter_short_name.$invalid}">
+				<div class="col-lg-2 col-md-9 col-sm-12 form-group">
 					<label class="label-control">Short Name</label>
-					<input type="text" class="form-control" name="parameter_short_name" ng-model="parameter.parameter_short_name" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.parameter.parameter_short_name.$touched && formHolder.parameter.parameter_short_name.$invalid">Name is required</span>
+					<input type="text" class="form-control" name="parameter_short_name" ng-model="parameter.parameter_short_name" ng-disabled="controls.ok.btn">
 				</div>
+			</div>
+			<div class="row">
+			 <div class="checkbox checkbox-custom" style="margin-left: 11px;">
+					<input id="checkbox11" type="checkbox" ng-model="parameter.is_tabular" ng-disabled="controls.ok.btn">
+					<label for="checkbox11">
+						is Tabular?
+					</label>
+			</div>
 			</div>
 			<div class="row"> 
 				<div class="form-group text-left m-b-0">
