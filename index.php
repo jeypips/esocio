@@ -62,7 +62,9 @@
                                 </button>
                                 <span class="clearfix"></span>
                             </div>
-
+							<div class="navbar-left app-search pull-left hidden-xs">
+			                     <h5 class="portlet-title" style="color:white;">Dashboard</h5>
+			                </div>
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
@@ -99,7 +101,7 @@
 						<li class="has_sub">
 							<li><a href="index.php" class="active"><i class="icon-home"></i><span> Dashboard </span></a></li>
 							<li><a href="profile.php"><i class="icon-screen-desktop"></i><span> Profile </span></a></li>
-							<li><a href="#"><i class="icon-settings"></i><span> Maintenance</span></a></li>
+							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
 						</li>
 					</ul>
 					<div class="clearfix"></div>
@@ -114,15 +116,6 @@
                 <!-- Start content -->
                 <div class="content">
                     <div class="container">
-
-                        <!-- Page-Title -->
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h4 class="page-title">Dashboard</h4>
-                            </div>
-							<hr>
-                        </div>
-						
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="panel panel-border panel-inverse">
@@ -143,9 +136,6 @@
                 </footer>
 
             </div>
-
-
-           
 
         </div>
         <!-- END wrapper -->

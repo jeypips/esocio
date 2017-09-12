@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="images/lu_seal.png">
 
-        <title>E-Socio | Profile</title>
+        <title>E-Socio | Maintenance</title>
 
         <!--Morris Chart CSS -->
 		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
@@ -34,13 +34,16 @@
         <script src="assets/js/modernizr.min.js"></script>
 		<style type="text/css">
         .img-circle {
-			width: 50px;			
+			width: 50px;
+						
 		}
 		
 		</style>
     </head>
 
-    <body class="fixed-left" ng-app="profile" ng-controller="profileCtrl" account-profile>
+
+    <body class="fixed-left" ng-app="maintenance" ng-controller="maintenanceCtrl" account-profile>
+
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -66,7 +69,7 @@
                                 <span class="clearfix"></span>
                             </div>
 							<div class="navbar-left app-search pull-left hidden-xs">
-			                     <h5 class="portlet-title" style="color:white;">Profile</h5>
+			                     <h5 class="portlet-title" style="color:white;">Maintenance</h5>
 			                </div>
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
@@ -103,10 +106,9 @@
 					<ul>
 					<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
-							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
-							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
-							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
-                            </li>
+							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard </span></a></li>
+							<li><a href="profile.php"><i class="icon-screen-desktop"></i><span> Profile </span></a></li>
+							<li><a href="maintenance.php" class="active"><i class="icon-settings"></i><span> Maintenance </span></a></li>
 						</li>
 					</ul>
                         <div class="clearfix"></div>
@@ -121,13 +123,43 @@
 	<!-- Start content -->
 	<div class="content">
 		<div class="container">
-		
 			<div class="row">
-				<div class="col-lg-12">
-					<div id="x_content" class="x_content"></div>
+				<div class="col-lg-12"> 
+					<ul class="nav nav-tabs tabs">
+						<li class="active tab">
+							<a href="#sector" data-toggle="tab" aria-expanded="true"> 
+								<span class="visible-xs"><i class="icon icon-book-open"></i></span> 
+								<span class="hidden-xs">Sectors</span> 
+							</a> 
+						</li> 
+						<li class="tab"> 
+							<a href="#parameter" data-toggle="tab" aria-expanded="false"> 
+								<span class="visible-xs"><i class="icon icon-notebook"></i></span> 
+								<span class="hidden-xs">Parameters</span> 
+							</a> 
+						</li> 
+						<li class="tab"> 
+							<a href="#item" data-toggle="tab" aria-expanded="false"> 
+								<span class="visible-xs"><i class="icon icon-notebook"></i></span> 
+								<span class="hidden-xs">Parameter Items</span> 
+							</a> 
+						</li>
+					</ul> 
+					<div class="tab-content"> 
+						<div class="tab-pane active" id="sector"> 
+							<div id="x_content" class="x_content"></div>
+						</div>
+						<div class="tab-pane active" id="parameter">
+							<!-- display parameter list-->
+							<div id="parameter-list" class="parameter-list"></div>
+						</div>
+						<div class="tab-pane active" id="item">
+							<!-- display parameter-item list-->
+							<div id="parameter-item" class="parameter-item"></div>
+						</div>
+					</div> 
 				</div>
-			</div>
-			
+			</div> <!-- end row -->
 		</div> <!-- container -->
 	</div> <!-- content -->
 
@@ -135,30 +167,9 @@
 			   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
 			</footer>
 		</div>
-	
-	<div>
-		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
-			<button href="javascript:;" class="btn btn-danger right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
-		</div>	
-		<div class="side-bar right-bar nicescroll">
-			<div class="contact-list nicescroll">
-				<ul class="list-group contacts-list">
-					<li class="list-group-item">
-						<a href="javascript:;">Sector</a>
-						<span class="clearfix"></span>
-					</li>
-					<li class="list-group-item" ng-repeat="sf in sector_filters">
-						<a href="javascript:;">{{sf.sector_description}}</a>
-						<span class="clearfix"></span>
-					</li>					
-				</ul>
-				
-			</div>
-		</div>
-	</div>
 	</div>
 	<!-- END wrapper -->
-	
+
         <script>
             var resizefunc = [];
         </script>
@@ -195,8 +206,11 @@
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/account.js"></script>
-		<script src="modules/profile.js"></script>
-		<script src="controllers/profile.js"></script>
+		<script src="modules/maintenance.js"></script>
+		<script src="modules/parameters.js"></script>
+		<script src="modules/parameter-items.js"></script>
+		<script src="controllers/maintenance.js"></script>
+
 
     </body>
 </html>
