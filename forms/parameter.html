@@ -1,5 +1,5 @@
 <div class="row">
-<button class="btn btn-default pull-right waves-effect waves-light" ng-click="param.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="param.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
 </div>
 <hr>
 <div class="row">
@@ -36,12 +36,9 @@
 			</div>
 			</div>
 			</div>
-			<div class="row">
-			<button ng-show="parameter.is_tabular_multiple > 0" class="btn btn-default waves-effect waves-light pull-right" type="submit" ng-click="param.addNewChoice(this)" ng-disabled="controls.ok.btn">Add</button>
-			</div>
-			<br>
 			<div class="card-box" ng-show="parameter.is_tabular_multiple > 0">
-			<label class="label-control">*Name</label>
+			<label class="label-control">*Name of Item</label><button ng-show="parameter.is_tabular_multiple > 0" class="btn btn-linkedin waves-effect waves-light pull-right" type="submit" ng-click="param.addNewChoice(this)" ng-disabled="controls.ok.btn">Add</button>
+			<hr>
 			<div class="row">
 				<div class="col-lg-12" ng-repeat="tr in parameter.parameter_table_row">
 					<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 form-group" ng-class="{'has-error': formHolder.parameter.table_row_description{{$index}}['$touched'] && formHolder.parameter.table_row_description{{$index}}['$invalid']}">
@@ -54,7 +51,7 @@
 			</div>
 			</div>
 				<div class="form-group text-left m-b-0">
-					<button class="btn btn-default waves-effect waves-light" type="submit" ng-click="param.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+					<button class="btn btn-white waves-effect waves-light" type="submit" ng-click="param.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
 					<button class="btn btn-primary waves-effect waves-light m-l-5" ng-click="param.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 				</div>
 		</form>

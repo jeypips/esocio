@@ -8,6 +8,8 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 		
 		self.data = function(scope) { // initialize data	
 		
+			scope.views.menu = false;		
+		
 			scope.controls = {
 				ok: {
 					btn: false,
@@ -31,9 +33,9 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 
 		};
 
-		function validate(scope) {
+		function validate(scope,form) {
 			
-			var controls = scope.formHolder.profile.$$controls;
+			var controls = scope.formHolder[form]['$$controls'];
 			
 			angular.forEach(controls,function(elem,i) {
 				
@@ -41,15 +43,12 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 									
 			});
 
-			return scope.formHolder.profile.$invalid;
+			return scope.formHolder[form]['$invalid'];
 			
 		};			
 		
 
-		self.profile = function(scope,row) {			
-			
-			scope.controls.add.label = 'List';	// changed value
-			scope.controls.add.btn = true;
+		self.profile = function(scope,row) {		
 			
 			scope.profile = {};
 			scope.profile.profile_id = 0;
@@ -108,7 +107,6 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 				
 				if (scope.profile.profile_id == 0) scope.profile.profile_id = response.data;
 
-				
 				$timeout(function() { self.list(scope); },200);
 				
 			}, function myError(response) {

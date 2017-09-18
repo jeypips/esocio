@@ -155,29 +155,6 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 			
 		};		
 		
-		/* self.filter = function(scope,filter) {				
-					
-			scope.filter.by = filter;
-			
-			$http({
-			  method: 'POST',
-			  url: 'handlers/filter.php',
-			  data: {filter: scope.filter.by}
-			}).then(function mySucces(response) {
-				
-				scope.filter.filters = response.data;
-				scope.filter.label = response.data[0];
-				self.filterGo(scope);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});				
-			
-		}; */
-		
-		
 		self.list = function(scope) {
 			
 			// load list
