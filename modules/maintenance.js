@@ -100,7 +100,7 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 				
 				$timeout(function() { self.list(scope); },200);
 				
-				growl.show('btn btn-success',{from: 'top', amount: 55},scope.profile+' successfully updated.');
+				growl.show('btn btn-success',{from: 'top', amount: 55},'Sector successfully updated.');
 				
 			}, function myError(response) {
 				 

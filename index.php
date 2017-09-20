@@ -44,7 +44,7 @@
     <body class="fixed-left" ng-app="dashboard" ng-controller="dashboardCtrl" account-profile>
 
         <!-- Begin page -->
-        <div id="wrapper">
+        <div id="wrapper" class="enlarged forced">
 
             <!-- Top Bar Start -->
             <div class="topbar">
@@ -100,7 +100,6 @@
             <div class="left side-menu">
                 <div class="sidebar-inner slimscrollleft">
                     <!--- Divider -->
-					
                     <div id="sidebar-menu">
 					<ul>
 					<li class="text-muted menu-title">Navigation</li>
