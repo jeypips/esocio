@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 11, 2017 at 03:48 PM
+-- Generation Time: Sep 21, 2017 at 12:45 AM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -472,6 +472,7 @@ INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`,
 
 CREATE TABLE `sectors` (
   `sector_id` int(11) NOT NULL,
+  `sector_shortname` varchar(50) DEFAULT NULL,
   `sector_description` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -479,17 +480,17 @@ CREATE TABLE `sectors` (
 -- Dumping data for table `sectors`
 --
 
-INSERT INTO `sectors` (`sector_id`, `sector_description`) VALUES
-(1, 'Macro Sector'),
-(2, 'Employment and Development Finance Sector'),
-(3, 'Environmental Sector'),
-(4, 'Agriculture and Utilities Sector'),
-(5, 'Infrastructure and Utilities Sector'),
-(6, 'Social Welfare Sector'),
-(7, 'Health Sector'),
-(8, 'Education Sector'),
-(9, 'Development Administration Sector'),
-(10, 'Trade, Industry and Tourism Sector');
+INSERT INTO `sectors` (`sector_id`, `sector_shortname`, `sector_description`) VALUES
+(1, 'macro', 'Macro Sector'),
+(2, 'employment', 'Employment and Development Finance Sector'),
+(3, 'enviromental', 'Environmental Sector'),
+(4, 'agriculture', 'Agriculture and Utilities Sector'),
+(5, 'infra', 'Infrastructure and Utilities Sector'),
+(6, 'social', 'Social Welfare Sector'),
+(7, 'health', 'Health Sector'),
+(8, 'education', 'Education Sector'),
+(9, 'development', 'Development Administration Sector'),
+(10, 'trade', 'Trade, Industry and Tourism Sector');
 
 --
 -- Indexes for dumped tables
@@ -574,7 +575,7 @@ ALTER TABLE `parameter_table_row`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `sectors`
 --
