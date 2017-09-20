@@ -13,6 +13,9 @@
 
         <!--Morris Chart CSS -->
 		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+		 
+		 <!-- DataTables -->
+        <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -31,14 +34,17 @@
         <script src="assets/js/modernizr.min.js"></script>
 		<style type="text/css">
         .img-circle {
-			width: 50px;
-						
+			width: 50px;			
+		}
+		.not-active {
+			pointer-events: none;
+			cursor: default;
 		}
 		
 		</style>
     </head>
 
-    <body class="fixed-left" ng-app="physicals" ng-controller="physicalCtrl" account-profile>
+    <body class="fixed-left" ng-app="profile" ng-controller="profileCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -63,7 +69,9 @@
                                 </button>
                                 <span class="clearfix"></span>
                             </div>
-
+							<div class="navbar-left app-search pull-left hidden-xs">
+			                     <h5 class="portlet-title" style="color:white;">Profile</h5>
+			                </div>
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
@@ -75,9 +83,11 @@
                                 </li>
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
-                                    <ul class="dropdown-menu">
+                                     <ul class="dropdown-menu">
+                                        <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.account_username}}</b></a></li>
+										<hr>
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
-                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -99,9 +109,10 @@
 					<ul>
 					<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
-							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard </span></a></li>
-							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile </span></a></li>
-							<li><a href="#"><i class="icon-settings"></i><span> Maintenance</span></a></li>
+							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
+							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
+							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
+                            </li>
 						</li>
 					</ul>
                         <div class="clearfix"></div>
@@ -116,51 +127,7 @@
 	<!-- Start content -->
 	<div class="content">
 		<div class="container">
-
-			<!-- Page-Title -->
-			<div class="row">
-				<div class="col-sm-4">
-					<h4 class="page-title">Profile</h4>
-				</div>
-				<hr>
-			</div>
-			
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="panel panel-border panel-inverse">
-						<div class="panel-heading">
-						<i class="ion-android-social-user"></i> Tasks
-						</div>
-						<div class="panel-body">
-							<div class="row">
-								<div class="col-lg-8 col-md-11 col-sm-12">
-									<div class="row">
-										<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
-										  <div class="input-group input-group-md">
-											<div class="input-group-btn">
-											  <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="dropdown">Sector
-												<span class="fa fa-caret-down"></span></button>
-											  <ul class="dropdown-menu">
-												<li><a href="javascript:;">All</a></li>
-												<li><a href="javascript:;">Trade, Industry and Tourism Sector</a></li>
-												
-											  </ul>
-											</div>
-											<!-- /btn-group -->
-											<select class="form-control"></select>
-												<span class="input-group-btn">
-												  <button type="button" class="waves-effect waves-light btn btn-primary" ng-click="form.filterGo(this)">Go!</button>
-												</span>				
-										  </div>
-										</div>
-									</div>
-								</div>		
-						</div>
-						</div> <!-- /panel-body -->
-					</div> <!-- /panel-invers -->
-				</div> <!-- /col-lg-12 -->
-			</div> <!-- /row -->
-			
+		
 			<div class="row">
 				<div class="col-lg-12">
 					<div id="x_content" class="x_content"></div>
@@ -174,9 +141,30 @@
 			   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
 			</footer>
 		</div>
+	
+	<div>
+		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
+			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
+		</div>	
+		<div class="side-bar right-bar nicescroll">
+			<div class="contact-list nicescroll">
+				<ul class="list-group contacts-list">
+					<li class="list-group-item">
+						<a href="javascript:;">Sector</a>
+						<span class="clearfix"></span>
+					</li>
+					<li class="list-group-item" ng-repeat="sf in sector_filters">
+						<a href="javascript:;">{{sf.sector_description}}</a>
+						<span class="clearfix"></span>
+					</li>					
+				</ul>
+				
+			</div>
+		</div>
+	</div>
 	</div>
 	<!-- END wrapper -->
-
+	
         <script>
             var resizefunc = [];
         </script>
@@ -193,6 +181,8 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
@@ -211,10 +201,8 @@
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/account.js"></script>
-		<script src="modules/physical-character.js"></script>
-		<script src="controllers/physical-character.js"></script>
-
-
+		<script src="modules/profile.js"></script>
+		<script src="controllers/profile.js"></script>
 
     </body>
 </html>

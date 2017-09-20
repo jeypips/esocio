@@ -1,0 +1,59 @@
+<div class="row">
+<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="param.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+</div>
+<hr>
+<div class="row">
+	<div class="col-lg-12">
+			<form name="formHolder.parameter" id="formHolder.parameter" novalidate>
+			<div class="card-box">
+
+			<div class="row">
+				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter.parameter_no.$touched && formHolder.parameter.parameter_no.$invalid}">
+					<label class="label-control">Sector Description</label>
+					<select class="form-control" name="parameter_no" ng-model="parameter.parameter_no" ng-options="sec.sector_description for sec in sectors_add track by sec.sector_id" required ng-disabled="controls.ok.btn"></select>					
+					<span class="help-block" ng-show="formHolder.parameter.parameter_no.$touched && formHolder.parameter.parameter_no.$invalid">Sector Description is required</span>
+				</div>
+				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter.parameter_name.$touched && formHolder.parameter.parameter_name.$invalid}">
+					<label class="label-control">Parameter Description</label>
+					<input type="text" class="form-control" name="parameter_name" ng-model="parameter.parameter_name" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.parameter.parameter_name.$touched && formHolder.parameter.parameter_name.$invalid">Parameter Description is required</span>
+				</div>
+			</div>
+			<div class="row">
+			 <div class="checkbox checkbox-custom" style="margin-left: 11px;">
+					<input id="checkbox1" type="checkbox" ng-model="parameter.is_tabular" ng-disabled="controls.ok.btn">
+					<label for="checkbox1">
+						is Tabular?
+					</label>
+			</div>
+			</div>
+			<div class="row">
+			 <div class="checkbox checkbox-custom" style="margin-left: 11px;">
+					<input id="checkbox2" type="checkbox" ng-model="parameter.is_tabular_multiple" ng-disabled="controls.ok.btn">
+					<label for="checkbox2">
+						is Tabular Multiple?
+					</label>
+			</div>
+			</div>
+			</div>
+			<div class="card-box" ng-show="parameter.is_tabular_multiple > 0">
+			<label class="label-control">*Name of Item</label><button ng-show="parameter.is_tabular_multiple > 0" class="btn btn-linkedin waves-effect waves-light pull-right" type="submit" ng-click="param.addNewChoice(this)" ng-disabled="controls.ok.btn">Add</button>
+			<hr>
+			<div class="row">
+				<div class="col-lg-12" ng-repeat="tr in parameter.parameter_table_row">
+					<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 form-group" ng-class="{'has-error': formHolder.parameter.table_row_description{{$index}}['$touched'] && formHolder.parameter.table_row_description{{$index}}['$invalid']}">
+						<input type="text" class="form-control" name="table_row_description{{$index}}" ng-model="tr.table_row_description" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.parameter.table_row_description{{$index}}['$touched'] && formHolder.parameter.table_row_description{{$index}}['$invalid']">Name is required</span>
+					</div>
+					<button class="btn btn-danger waves-effect waves-light" ng-click="param.removeChoice(this,tr)" ng-disabled="controls.ok.btn"><i class="fa fa-close"></button></i>
+				</div>
+			</div>
+			</div>
+			</div>
+				<div class="form-group text-left m-b-0">
+					<button class="btn btn-white waves-effect waves-light" type="submit" ng-click="param.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+					<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="param.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+				</div>
+		</form>
+	
+</div>
