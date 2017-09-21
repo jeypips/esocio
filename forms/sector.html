@@ -14,10 +14,10 @@
 				</div>
 		
 
-				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.sectors.short_name.$touched && formHolder.sectors.short_name.$invalid}">
+				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.sectors.sector_shortname.$touched && formHolder.sectors.sector_shortname.$invalid}">
 					<label class="label-control">Short Name</label>
-					<input type="text" class="form-control" name="short_name" ng-model="sectors.short_name" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.sectors.short_name.$touched && formHolder.sectors.short_name.$invalid">Short Name is required</span>
+					<input type="text" class="form-control" name="sector_shortname" ng-model="sectors.sector_shortname" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.sectors.sector_shortname.$touched && formHolder.sectors.sector_shortname.$invalid">Short Name is required</span>
 				</div>
 			</div>
 			</form>
