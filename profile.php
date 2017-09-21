@@ -142,11 +142,12 @@
 			</footer>
 		</div>
 	
-	<div>
+	<div ng-show="views.menu">
 		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
 			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>	
 		<div class="side-bar right-bar nicescroll">
+<<<<<<< HEAD
 		 <h4 class="text-center">Sector</h4>
 			<div class="contact-list nicescroll">
 				<ul class="list-group contacts-list">
@@ -160,6 +161,20 @@
 					<a href="javascript:;">Sector</a>
 					<span class="clearfix"></span>
 				</li>				
+=======
+		<h4 class="text-center">Sector</h4>
+			<div class="contact-list nicescroll">
+				<ul class="list-group contacts-list">
+
+					<li class="list-group-item" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile')">
+						<a href="javascript:;">Basic Info</a>
+						<span class="clearfix"></span>
+					</li>
+					<li class="list-group-item" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname)">
+						<a href="javascript:;">{{s.sector_description}}</a>
+						<span class="clearfix"></span>
+					</li>					
+>>>>>>> origin/jp
 				</ul>
 				
 			</div>
