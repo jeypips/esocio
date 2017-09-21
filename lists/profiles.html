@@ -1,15 +1,15 @@
 <div class="panel panel-border panel-primary">
 		<div class="panel-heading">
-			<h4><i class="icon-layers"></i> Profile List<button class="btn btn-linkedin waves-effect waves-light pull-right" ng-click="form.profile(this)">Add <i class="fa fa-plus"></i></button></h4>
+			<h4><i class="icon-layers"></i> Profile List<button class="btn btn-linkedin waves-effect waves-light pull-right" ng-click="form.activateForm(this,'profile',null)">Add <i class="fa fa-plus"></i></button></h4>
 			<hr>
 		</div>
 	<div class="panel-body">
 		<table id="profile" class="table table-striped m-0">
 		  <thead>
 			<tr>
-					  <th>No.</th>
-					  <th>Municipal</th>
-					  <th>&nbsp;</th>
+			  <th>No.</th>
+			  <th>Municipal</th>
+			  <th>&nbsp;</th>
 			</tr>
 		  </thead>
 		  <tbody>
@@ -17,7 +17,7 @@
 			  <td>{{profile.profile_id}}</td>
 			  <td>{{profile.municipality}}</td>
 			  <td>
-			  <button class="btn btn-sm btn-white" style="margin-right: 5px;" ng-click="form.profile(this,profile)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
+			  <button class="btn btn-sm btn-white" style="margin-right: 5px;" ng-click="form.activateForm(this,'profile',profile)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
 			  <button class="btn btn-sm btn-white" ng-click="form.delete(this,profile)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
 			  </td>
 			</tr>
