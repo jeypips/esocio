@@ -147,8 +147,10 @@
 			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>	
 		<div class="side-bar right-bar nicescroll">
+		<h4 class="text-center">Sector</h4>
 			<div class="contact-list nicescroll">
 				<ul class="list-group contacts-list">
+
 					<li class="list-group-item" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile')">
 						<a href="javascript:;">Basic Info</a>
 						<span class="clearfix"></span>
