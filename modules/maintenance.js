@@ -1,4 +1,4 @@
-angular.module('maintenance-module',['bootstrap-modal']).factory('manage', function($compile,$timeout,$http,bootstrapModal) {
+angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).factory('manage', function($compile,$timeout,$http,bootstrapModal,growl) {
 	
 	function manage() {
 		
@@ -97,9 +97,10 @@ angular.module('maintenance-module',['bootstrap-modal']).factory('manage', funct
 			}).then(function mySucces(response) {
 				
 				if (scope.sectors.sector_id == 0) scope.sectors.sector_id = response.data;
-	
 				
 				$timeout(function() { self.list(scope); },200);
+				
+				growl.show('btn btn-success',{from: 'top', amount: 55},'Sector successfully updated.');
 				
 			}, function myError(response) {
 				 

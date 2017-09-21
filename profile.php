@@ -36,6 +36,10 @@
         .img-circle {
 			width: 50px;			
 		}
+		.not-active {
+			pointer-events: none;
+			cursor: default;
+		}
 		
 		</style>
     </head>
@@ -79,9 +83,11 @@
                                 </li>
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
-                                    <ul class="dropdown-menu">
+                                     <ul class="dropdown-menu">
+                                        <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.account_username}}</b></a></li>
+										<hr>
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
-                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -136,19 +142,21 @@
 			</footer>
 		</div>
 	
-	<div>
+	<div ng-show="views.menu">
 		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
-			<button href="javascript:;" class="btn btn-danger right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
+			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>	
 		<div class="side-bar right-bar nicescroll">
+		<h4 class="text-center">Sector</h4>
 			<div class="contact-list nicescroll">
 				<ul class="list-group contacts-list">
-					<li class="list-group-item">
-						<a href="javascript:;">Sector</a>
+
+					<li class="list-group-item" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile')">
+						<a href="javascript:;">Basic Info</a>
 						<span class="clearfix"></span>
 					</li>
-					<li class="list-group-item" ng-repeat="sf in sector_filters">
-						<a href="javascript:;">{{sf.sector_description}}</a>
+					<li class="list-group-item" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname)">
+						<a href="javascript:;">{{s.sector_description}}</a>
 						<span class="clearfix"></span>
 					</li>					
 				</ul>

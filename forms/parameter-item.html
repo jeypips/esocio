@@ -1,7 +1,7 @@
 <div class="row">
-<button class="btn btn-default pull-right waves-effect waves-light" ng-click="paramItem.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="paramItem.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
 </div>
-<hr>
+<br>
 <div class="row">
 	<div class="col-lg-12">
 			<form name="formHolder.parameter_item" id="formHolder.parameter_item" novalidate>	
@@ -27,12 +27,9 @@
 			</div>
 			</div>
 			</div>
-			<div class="row">
-			<button ng-show="parameter_item.is_group_item > 0" class="btn btn-default waves-effect waves-light pull-right" type="submit" ng-click="paramItem.addNewChoice(this)" ng-disabled="controls.ok.btn">Add</button>
-			</div>
-			<br>
 			<div class="card-box" ng-show="parameter_item.is_group_item > 0">
-			<label class="label-control">*Name of Item</label>
+			<label class="label-control">*Name of Item</label><button ng-show="parameter_item.is_group_item > 0" class="btn btn-linkedin waves-effect waves-light pull-right" type="submit" ng-click="paramItem.addNewChoice(this)" ng-disabled="controls.ok.btn">Add</button>
+			<hr>
 			<div class="row">
 				<div class="col-lg-12" ng-repeat="ig in parameter_item.item_groups">
 					<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 form-group" ng-class="{'has-error': formHolder.parameter_item.item_group_description{{$index}}['$touched'] && formHolder.parameter_item.item_group_description{{$index}}['$invalid']}">
@@ -49,8 +46,8 @@
 			</div>
 
 		<div class="form-group text-left m-b-0">
-			<button class="btn btn-default waves-effect waves-light" type="submit" ng-click="paramItem.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-			<button class="btn btn-primary waves-effect waves-light m-l-5" ng-click="paramItem.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+			<button class="btn btn-white waves-effect waves-light" type="submit" ng-click="paramItem.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="paramItem.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 		</div>
 		</form>
 </div>
