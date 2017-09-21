@@ -44,7 +44,7 @@
     <body class="fixed-left" ng-app="dashboard" ng-controller="dashboardCtrl" account-profile>
 
         <!-- Begin page -->
-        <div id="wrapper" class="enlarged forced">
+        <div id="wrapper">
 
             <!-- Top Bar Start -->
             <div class="topbar">
