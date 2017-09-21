@@ -35,7 +35,10 @@
 		<style type="text/css">
         .img-circle {
 			width: 50px;
-						
+		}
+		.not-active {
+			pointer-events: none;
+			cursor: default;
 		}
 		
 		</style>
@@ -83,8 +86,10 @@
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
+                                        <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.account_username}}</b></a></li>
+										<hr>
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
-                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -192,14 +197,16 @@
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
         <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
-
+		
         <script src="assets/plugins/morris/morris.min.js"></script>
         <script src="assets/plugins/raphael/raphael-min.js"></script>
         <script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
         <script src="assets/pages/jquery.dashboard.js"></script>
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
-		<script src="assets/js/bootbox.min.js"></script>
+		<script src="assets/js/bootbox.min.js"></script> 
+		<script src="assets/js/jquery.bootstrap-growl.min.js"></script> 
+		
 		
 		<!-- Angular  -->
 		<script src="angular/angular.min.js"></script>
@@ -208,6 +215,7 @@
 		<script src="modules/account.js"></script>
 		<script src="modules/maintenance.js"></script>
 		<script src="modules/parameters.js"></script>
+		<script src="modules/growl.js"></script>
 		<script src="modules/parameter-items.js"></script>
 		<script src="controllers/maintenance.js"></script>
 

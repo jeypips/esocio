@@ -10,11 +10,12 @@ $con = new pdo_db();
 
 $profile = [];
 
-$sql = "SELECT account_id, CONCAT(account_firstname, ' ', account_lastname) fullname FROM account_info WHERE account_id = $_SESSION[account_id]";
+$sql = "SELECT account_id, CONCAT(account_firstname, ' ', account_lastname) fullname, account_username FROM account_info WHERE account_id = $_SESSION[account_id]";
 
 $staff = $con->getData($sql);
 
 $profile['fullname'] = $staff[0]['fullname'];
+$profile['account_username'] = $staff[0]['account_username'];
 
 $dir = "pictures/";
 $avatar = $dir."avatar.png";

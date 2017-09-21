@@ -1,4 +1,4 @@
-angular.module('parameter-module',['bootstrap-modal']).factory('param', function($compile,$timeout,$http,bootstrapModal) {
+angular.module('parameter-module',['bootstrap-modal','bootstrap-growl']).factory('param', function($compile,$timeout,$http,bootstrapModal,growl) {
 	
 	function param() {
 		
@@ -120,6 +120,8 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 			}).then(function mySucces(response) {					
 				
 				$timeout(function() { self.list(scope); },200);
+				
+				growl.show('btn btn-success',{from: 'top', amount: 55},'Parameter successfully updated.');
 				
 			}, function myError(response) {
 				 

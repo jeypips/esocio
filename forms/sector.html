@@ -12,12 +12,19 @@
 					<input type="text" class="form-control" name="sector_description" ng-model="sectors.sector_description" required ng-disabled="controls.ok.btn">
 					<span class="help-block" ng-show="formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid">Sector Description is required</span>
 				</div>
+		
+
+				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.sectors.sector_shortname.$touched && formHolder.sectors.sector_shortname.$invalid}">
+					<label class="label-control">Short Name</label>
+					<input type="text" class="form-control" name="sector_shortname" ng-model="sectors.sector_shortname" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.sectors.sector_shortname.$touched && formHolder.sectors.sector_shortname.$invalid">Short Name is required</span>
+				</div>
 			</div>
 			</form>
 		</div>
 		<div class="form-group text-left m-b-0">
 				<button class="btn btn-white waves-effect waves-light" type="submit" ng-click="manage.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-				<button class="btn btn-primary waves-effect waves-light m-l-5" ng-click="manage.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+				<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="manage.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 		</div>
 	</div>
 </div>

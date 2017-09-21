@@ -8,8 +8,8 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 		
 		self.data = function(scope) { // initialize data	
 		
-			scope.views.menu = false;		
-		
+			scope.views.menu = false;			
+			
 			scope.controls = {
 				ok: {
 					btn: false,
@@ -25,11 +25,27 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 			scope.profile.profile_id = 0;
 
 			scope.profiles = []; // list
-			
-			scope.sector_parameter = {};
-			scope.sector_parameters = [];
 
 			scope.views.subMenu = 0;
+			
+			scope.subMenuList = {
+				profile: false
+			};	
+			
+			$http({
+				method: 'POST',
+				url: 'handlers/sector-list.php'
+			}).then(function mySucces(response) {
+				
+				scope.sectors = response.data;
+				
+				angular.forEach(response.data, function(item,i) {
+					scope.subMenuList[item.short_name] = false;
+				});
+				
+			}, function myError(response) {
+				
+			});
 
 		};
 
@@ -47,8 +63,76 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 			
 		};			
 		
+		function mode(scope,row) {
+			
+			if (row == null) {
+				scope.controls.ok.label = 'Save';
+				scope.controls.ok.btn = false;
+				scope.controls.cancel.label = 'Cancel';
+				scope.controls.cancel.btn = false;
+			} else {
+				scope.controls.ok.label = 'Update';
+				scope.controls.ok.btn = true;
+				scope.controls.cancel.label = 'Close';
+				scope.controls.cancel.btn = false;				
+			}
+			
+		};
+		
+		self.activateForm = function(scope,form,row) {
 
-		self.profile = function(scope,row) {		
+			angular.forEach(scope.subMenuList, function(item,i) {
+				scope.subMenuList[i] = false;
+			});
+			
+			scope.subMenuList[form] = true;
+
+			scope.views.menu = true;			
+			
+			mode(scope,row);
+			
+			/*
+			** data structures
+			*/
+			
+			scope.profile = {};
+			scope.profile.profile_id = 0;
+
+			/*
+			**
+			*/
+			
+			$('#x_content').html(loading);
+			$('#x_content').load('forms/'+form+'.html',function() {
+				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
+			});
+			
+			if (row != null) {
+
+				if (scope.$profile_id> 2) scope = scope.$parent;				
+
+				$http({
+				  method: 'POST',
+				  url: 'handlers/'+form+'-view.php',
+				  data: {profile_id: row.profile_id}
+				}).then(function mySucces(response) {
+					
+					angular.copy(response.data, scope[form]);
+					
+				}, function myError(response) {
+					 
+				  // error
+					
+				});					
+			};			
+			
+		};
+		
+/* 		self.profile = function(scope,row) {
+			
+			scope.views.menu = true;
+			
+			mode(scope,row);
 			
 			scope.profile = {};
 			scope.profile.profile_id = 0;
@@ -58,17 +142,7 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
 			
-			scope.controls.ok.label = 'Save';
-			scope.controls.ok.btn = false;
-			scope.controls.cancel.label = 'Cancel';
-			scope.controls.cancel.btn = false;
-			
-			if (row != null) {		
-				
-				scope.controls.ok.label = 'Update';
-				scope.controls.ok.btn = true;
-				scope.controls.cancel.label = 'Close';
-				scope.controls.cancel.btn = false;
+			if (row != null) {
 
 				if (scope.$profile_id> 2) scope = scope.$parent;				
 
@@ -86,8 +160,8 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 					
 				});					
 			};
-		};
-		
+			
+		}; */
 		
 		self.edit = function(scope) {
 			
@@ -97,7 +171,7 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 		
 		self.save = function(scope) {
 			
-			if (validate(scope)) return;
+			if (validate(scope,'profile')) return;
 			
 			$http({
 			  method: 'POST',
@@ -106,8 +180,7 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 			}).then(function mySucces(response) {
 				
 				if (scope.profile.profile_id == 0) scope.profile.profile_id = response.data;
-
-				$timeout(function() { self.list(scope); },200);
+				mode(scope,scope.profile);
 				
 			}, function myError(response) {
 				 
@@ -119,90 +192,31 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 		
 		self.delete = function(scope,row) {
 			
-		var onOk = function() {
-			
-			if (scope.$id > 2) scope = scope.$parent;			
-			
-			$http({
-			  method: 'POST',
-			  url: 'handlers/profile-delete.php',
-			  data: {profile_id: [row.profile_id]}
-			}).then(function mySucces(response) {
+			var onOk = function() {							
+				
+				$http({
+				  method: 'POST',
+				  url: 'handlers/profile-delete.php',
+				  data: {profile_id: [row.profile_id]}
+				}).then(function mySucces(response) {
 
-				self.list(scope);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});
+					self.list(scope);
+					
+				}, function myError(response) {
+					 
+				  // error
+					
+				});
 
-		};
+			};
 
-		bootstrapModal.confirm(scope,'Confirmation','Are you sure you want to delete this record?',onOk,function() {});
+			bootstrapModal.confirm(scope,'Confirmation','Are you sure you want to delete this record?',onOk,function() {});
 			
-		};
-		
-		function filter(scope) {
-	
-			$http({
-			  method: 'POST',
-			  url: 'handlers/sector-filter-list.php',
-			}).then(function mySucces(response) {
-				
-				angular.copy(response.data, scope.sector_filters);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});		
-			
-		};
-		
-		self.filter_sector_parameters = function(scope,sector_id) {
-
-			$http({
-			  method: 'POST',
-			  url: 'handlers/sector-parameters.php',
-			  data: {sector_id: sector_id}
-			}).then(function mySucces(response) {
-				
-				angular.copy(response.data, scope.sector_parameters);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});				
-			
-		};		
-		
-		/* self.filterGo = function(scope,filter) {				
-			
-			blockUI.show('Please wait');			
-			
-			scope.filter.by = filter;
-			
-			$http({
-			  method: 'POST',
-			  url: 'handlers/profile-filter.php',
-			  data: {filter: scope.filter.by}
-			}).then(function mySucces(response) {
-				
-				scope.filter.filters = response.data;
-				scope.filter.label = response.data[0];
-				self.filterGo(scope);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});				
-			
-		}; */		
+		};	
 		
 		self.list = function(scope) {
+			
+			scope.views.menu = false;			
 			
 			// load list
 			scope.mode = 'list';
@@ -232,10 +246,7 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 					});	
 				},200);
 				
-			});
-
-			filter(scope);
-			self.filter_sector_parameters(scope,0);			
+			});		
 			
 		};
 		
