@@ -147,21 +147,8 @@
 			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>	
 		<div class="side-bar right-bar nicescroll">
-<<<<<<< HEAD
-		 <h4 class="text-center">Sector</h4>
-			<div class="contact-list nicescroll">
-				<ul class="list-group contacts-list">
-				<li class="list-group-item">
-					<a href="javascript:;">
-						<span class="name">Physical Characteristics</span>
-					</a>
-					<span class="clearfix"></span>
-				</li>
-				<li class="list-group-item">
-					<a href="javascript:;">Sector</a>
-					<span class="clearfix"></span>
-				</li>				
-=======
+
+		 				
 		<h4 class="text-center">Sector</h4>
 			<div class="contact-list nicescroll">
 				<ul class="list-group contacts-list">
@@ -174,7 +161,7 @@
 						<a href="javascript:;">{{s.sector_description}}</a>
 						<span class="clearfix"></span>
 					</li>					
->>>>>>> origin/jp
+
 				</ul>
 				
 			</div>
