@@ -112,8 +112,7 @@
 							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
 							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
 							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
-                            </li>
-						</li>
+                        </li>
 					</ul>
                         <div class="clearfix"></div>
                     </div>
@@ -145,23 +144,27 @@
 	<div ng-show="views.menu">
 		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
 			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
-		</div>	
+		</div>
+			
 		<div class="side-bar right-bar nicescroll">
-		<h4 class="text-center">Sector</h4>
 			<div class="contact-list nicescroll">
-				<ul class="list-group contacts-list">
-
+				<div id="sidebar-menu">
+				<h4 class="text-center">Sector</h4>
+					<ul>
+					<li class="has_sub">
 					<li class="list-group-item" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile')">
-						<a href="javascript:;">Basic Info</a>
+						<a href="javascript:;">Basic Information</a>
 						<span class="clearfix"></span>
 					</li>
 					<li class="list-group-item" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname)">
 						<a href="javascript:;">{{s.sector_description}}</a>
 						<span class="clearfix"></span>
-					</li>					
-				</ul>
-				
-			</div>
+					</li>
+					</li>
+					</ul>
+                        <div class="clearfix"></div>
+                 </div>
+              </div>
 		</div>
 	</div>
 	</div>
