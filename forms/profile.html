@@ -7,6 +7,9 @@
 <hr>
 <div class="panel-body">
 	<form name="formHolder.profile" id="formHolder.profile">
+	<div class="panel panel-border panel-inverse">
+	<div class="panel-heading">
+	</div>
 		<div class="row">
 			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
 				<label class="label-control">Municipality</label>
@@ -19,11 +22,8 @@
 				<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Location name is required</span>
 			</div>
 		</div>
-	<br>
-	<div class="panel panel-border panel-inverse">
-	<div class="panel-heading">
-		<h5>Political Boundaries</h5>
 		<hr>
+		<h5>*Political Boundaries</h5>
 			<div class="row">
 				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.pb_north.$touched && formHolder.profile.pb_north.$invalid}">
 					<label class="label-control">North</label>
@@ -47,8 +47,7 @@
 					<input type="text" class="form-control" name="pb_west" ng-model="profile.pb_west" required ng-disabled="controls.ok.btn">
 					<span class="help-block" ng-show="formHolder.profile.pb_west.$touched && formHolder.profile.pb_west.$invalid">Name is required</span>
 				</div>
-			</div>	
-		</div>
+			</div>
 	</div>
 	</form>
 		<div class="form-group text-left m-b-0">

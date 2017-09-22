@@ -47,7 +47,7 @@
     <body class="fixed-left" ng-app="profile" ng-controller="profileCtrl" account-profile>
 
         <!-- Begin page -->
-        <div id="wrapper">
+        <div id="wrapper" class="forced enlarged">
 
             <!-- Top Bar Start -->
             <div class="topbar">
@@ -147,22 +147,24 @@
 		</div>
 		
 		<div class="side-bar right-bar nicescroll">
+		<h4 class="text-center">Sector</h4>
 		  <div class="contact-list nicescroll">
-			<div id="sidebar-menu">
-				<h4 class="text-center">Sector</h4>
-					<ul>
-					
-						<li class="list-group-item" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile')">
-							<a href="javascript:;">Basic Information</a>
-							<span class="clearfix"></span>
-						</li>
-						<li class="list-group-item" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname)">
-							<a href="javascript:;">{{s.sector_description}}</a>
-							<span class="clearfix"></span>
-						</li>
-					</ul>
-                    <div class="clearfix"></div>
-			</div>
+		  <ul class="list-group contacts-list">
+		   <li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile')">
+				<a href="javascript:;">
+					<span class="text text-inverse">Basic Information</span>
+					<i class="icon icon-pin online"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname)">
+				<a href="javascript:;">
+					<span class="text text-inverse">{{s.sector_description}}</span>
+					<i class="icon icon-pin online"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			</ul>
 		  </div>
 		</div>
 	</div>
