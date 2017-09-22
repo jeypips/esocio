@@ -1,13 +1,14 @@
 <div class="panel panel-border panel-primary">
 <div class="panel-heading">
-Infrastracture and Utilities Sector
+<h4><i class="icon icon-note"></i> Infrastracture and Utilities Sector
 <button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+</h4>
 </div>
 <br>
 <div class="panel-body">
 	<form name="formHolder.profile" id="formHolder.profile">
 		<div class="heading">
-				<h5>Road Network (Total Linear Meter)</h5>
+		<h5>*Road Network (Total Linear Meter)</h5>
 			</div>	
 		<div class="card-box col-lg-12">
 		
@@ -101,10 +102,10 @@ Infrastracture and Utilities Sector
 			</div>
 		</div>
 		<div class="heading">
-				<h5>Bridges</h5>
+				<h5>*Bridges</h5>
 			</div>
 		<div class="card-box col-lg-12">
-			<h5>Barangay Bridges</h5>	
+			<h5>(Barangay Bridges)</h5>	
 			<div class="row">
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
 					<label class="label-control">No. of Span: Steel</label>
@@ -138,7 +139,6 @@ Infrastracture and Utilities Sector
 				</div>
 			</div>
 			<div class="row">
-	
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
 					<label class="label-control">Total Length: Steel</label>
 					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
@@ -170,8 +170,9 @@ Infrastracture and Utilities Sector
 					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
 				</div>
 			</div>
-			<div class="row">
-				<h5>Municipal Bridges</h5>			
+		<hr>
+		<h5>(Municipal Bridges)</h5>	
+			<div class="row">		
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
 					<label class="label-control">No. of Span: Steel</label>
 					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
@@ -236,8 +237,9 @@ Infrastracture and Utilities Sector
 					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
 				</div>
 			</div>
+		<hr>
+		<h5>(Provincial Bridges)</h5>
 			<div class="row">
-				<h5>Provincial Bridges</h5>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
 					<label class="label-control">No. of Span: Steel</label>
 					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
@@ -302,8 +304,9 @@ Infrastracture and Utilities Sector
 					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
 				</div>
 			</div>
+			<hr>
+			<h5>(National Bridges)</h5>
 			<div class="row">
-				<i><h5>National Bridges</h5></i>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
 					<label class="label-control">No. of Span: Steel</label>
 					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
