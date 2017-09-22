@@ -146,9 +146,7 @@
 		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
 			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>	
-		<div class="side-bar right-bar nicescroll">
-
-		 				
+		<div class="side-bar right-bar nicescroll">				
 		<h4 class="text-center">Sector</h4>
 			<div class="contact-list nicescroll">
 				<ul class="list-group contacts-list">
@@ -161,7 +159,6 @@
 						<a href="javascript:;">{{s.sector_description}}</a>
 						<span class="clearfix"></span>
 					</li>					
-
 				</ul>
 				
 			</div>
