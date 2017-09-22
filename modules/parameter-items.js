@@ -40,7 +40,22 @@ angular.module('parameterItem-module',['bootstrap-modal','bootstrap-growl']).fac
 			return scope.formHolder.parameter_item.$invalid;
 			
 		};
-
+		
+		function mode(scope,row) {
+			
+			if (row == null) {
+				scope.controls.ok.label = 'Save';
+				scope.controls.ok.btn = false;
+				scope.controls.cancel.label = 'Cancel';
+				scope.controls.cancel.btn = false;
+			} else {
+				scope.controls.ok.label = 'Update';
+				scope.controls.ok.btn = true;
+				scope.controls.cancel.label = 'Close';
+				scope.controls.cancel.btn = false;				
+			}
+			
+		};
 		
 			function parameters(scope) {
 
@@ -71,17 +86,8 @@ angular.module('parameterItem-module',['bootstrap-modal','bootstrap-growl']).fac
 				$timeout(function() { $compile($('#parameter-item')[0])(scope); },200);
 			});
 			
-			scope.controls.ok.label = 'Save';
-			scope.controls.ok.btn = false;
-			scope.controls.cancel.label = 'Cancel';
-			scope.controls.cancel.btn = false;
-			
 			if (row != null) {		
 				
-				scope.controls.ok.label = 'Update';
-				scope.controls.ok.btn = true;
-				scope.controls.cancel.label = 'Close';
-				scope.controls.cancel.btn = false;
 				
 				if (scope.$item_id > 2) scope = scope.$parent;				
 				$http({
@@ -119,8 +125,7 @@ angular.module('parameterItem-module',['bootstrap-modal','bootstrap-growl']).fac
 			  data: scope.parameter_item
 			}).then(function mySucces(response) {
 				
-				$timeout(function() { self.list(scope); },200);
-				
+				mode(scope,scope.parameter_item);
 				growl.show('btn btn-success',{from: 'top', amount: 55},'Parameter item successfully updated.');
 				
 			}, function myError(response) {
@@ -160,7 +165,7 @@ angular.module('parameterItem-module',['bootstrap-modal','bootstrap-growl']).fac
 		self.list = function(scope) {
 			
 			// load list
-			
+			scope.mode = 'list';
 			scope.parameter_item = {};
 			scope.parameter_item.item_id = 0;			
 			$http({

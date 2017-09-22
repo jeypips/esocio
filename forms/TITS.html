@@ -1,0 +1,109 @@
+<div class="panel panel-border panel-primary">
+<div class="panel-heading">
+<h4><i class="icon icon-note"></i> Trade, Industry And Tourism Sector
+<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+</h4>
+</div>
+<hr>
+<div class="panel-body">
+	<form name="formHolder.profile" id="formHolder.profile">
+		<div class="card-box col-lg-12">
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Date of Parochial Fiesta</label>
+					<input type="date" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Name of Patron</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Date of Town Fiesta</label>
+					<input type="date" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Market Days</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+		</div>
+		<h5>*Trade and Industry</h5>
+		<div class="card-box col-lg-12">
+			<h5>(Number of Business Establishments)</h5>
+			<div class="row">
+					<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+							<label class="label-control">Trading</label>
+						<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+							<label class="label-control">Services</label>
+						<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+							<label class="label-control">Manufacturing</label>
+						<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Number of Beauty Parlor</label>
+					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Number of Barber Shops</label>
+					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Number of Photo Studios/Video Shops</label>
+					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Number of Tailoring/Dress Shop</label>
+					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Number of Restaurants</label>
+					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Number of Eateries/Canteen</label>
+					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Number of Funeral Parlor</label>
+					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Number of Gasoline Stations</label>
+					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Number of Water Stations</label>
+					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Number of Resorts</label>
+					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">Others</label>
+					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+		</div>
+	</form>
+		<div class="form-group text-left m-b-0">
+			<button class="btn btn-white waves-light waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+		</div>
+	</div>
+</div>
