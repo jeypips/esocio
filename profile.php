@@ -147,7 +147,7 @@
 		</div>
 		
 		<div class="side-bar right-bar nicescroll">
-		<h4 class="text-center">Sector</h4>
+		<h4 class="text-center" style="margin-top: 20px;">Sector Description</h4>
 		  <div class="contact-list nicescroll">
 		  <ul class="list-group contacts-list">
 		   <li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile')">
