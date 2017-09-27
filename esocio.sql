@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 21, 2017 at 12:45 AM
+<<<<<<< HEAD
+-- Generation Time: Sep 22, 2017 at 03:13 PM
+=======
+-- Generation Time: Sep 22, 2017 at 08:24 AM
+>>>>>>> origin/dex
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -230,7 +234,7 @@ CREATE TABLE `parameter_items` (
 --
 
 INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `is_group_item`) VALUES
-(1, 1, 'Land Area', 1),
+(1, 1, 'Land Area', 0),
 (2, 1, 'Terrain', 0),
 (3, 1, 'Climate', 0),
 (4, 1, 'Number of Barangays', 0),
@@ -265,7 +269,7 @@ INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `i
 (43, 7, 'Municipal Road', 1),
 (47, 7, 'Provincial Road', 1),
 (51, 7, 'National Road', 1),
-(55, 8, 'Barangay Bridges (No. of Span)', 1),
+(55, 8, 'Barangay Bridges (Total No. of Span)', 1),
 (61, 8, 'Barangay Bridges (Total Length)', 1),
 (67, 8, 'Municipal Bridges (Total No. of Span)', 1),
 (73, 8, 'Municipal Bridges (Total Length)', 1),
@@ -442,27 +446,81 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`, `pb_north`, `pb_south`, `pb_east`, `pb_west`) VALUES
-(1, NULL, 'Agoo', NULL, NULL, NULL, NULL, NULL),
-(2, NULL, 'Aringay', NULL, NULL, NULL, NULL, NULL),
-(3, NULL, 'Bacnotan', NULL, NULL, NULL, NULL, NULL),
-(4, NULL, 'Bagulin', NULL, NULL, NULL, NULL, NULL),
-(5, NULL, 'Balaoan ', NULL, NULL, NULL, NULL, NULL),
-(6, NULL, 'Bangar', NULL, NULL, NULL, NULL, NULL),
-(7, NULL, 'Bauang', NULL, NULL, NULL, NULL, NULL),
-(8, NULL, 'Burgos', NULL, NULL, NULL, NULL, NULL),
-(9, NULL, 'Caba', NULL, NULL, NULL, NULL, NULL),
-(10, NULL, 'Damortis', NULL, NULL, NULL, NULL, NULL),
-(11, NULL, 'Luna', NULL, NULL, NULL, NULL, NULL),
-(12, NULL, 'Naguilian ', NULL, NULL, NULL, NULL, NULL),
-(13, NULL, 'Pugo', NULL, NULL, NULL, NULL, NULL),
-(14, NULL, 'Rosario', NULL, NULL, NULL, NULL, NULL),
-(15, NULL, 'San Fernando', NULL, NULL, NULL, NULL, NULL),
-(16, NULL, 'San Gabriel', NULL, NULL, NULL, NULL, NULL),
-(17, NULL, 'San Juan', NULL, NULL, NULL, NULL, NULL),
-(18, NULL, 'Santol', NULL, NULL, NULL, NULL, NULL),
-(19, NULL, 'Sto. Tomas', NULL, NULL, NULL, NULL, NULL),
-(20, NULL, 'Sudipen', NULL, NULL, NULL, NULL, NULL),
-(21, NULL, 'Tubao', NULL, NULL, NULL, NULL, NULL);
+(4, NULL, 'Bagulin', NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile_sector`
+--
+
+CREATE TABLE `profile_sector` (
+  `id` int(11) NOT NULL,
+  `profile_id` int(11) NOT NULL,
+  `sector_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile_sector_parameters`
+--
+
+CREATE TABLE `profile_sector_parameters` (
+  `id` int(11) NOT NULL,
+  `profile_sector_id` int(11) NOT NULL,
+  `parameter_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile_item_groups`
+--
+
+CREATE TABLE `profile_item_groups` (
+  `id` int(11) NOT NULL,
+  `profile_parameter_item_id` int(11) NOT NULL,
+  `item_group_id` int(11) NOT NULL,
+  `item_group_value` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile_parameter_items`
+--
+
+CREATE TABLE `profile_parameter_items` (
+  `id` int(11) NOT NULL,
+  `profile_sector_parameter_id` int(11) NOT NULL,
+  `item_id` int(11) NOT NULL,
+  `item_value` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile_sectors`
+--
+
+CREATE TABLE `profile_sectors` (
+  `id` int(11) NOT NULL,
+  `profile_id` int(11) NOT NULL,
+  `sector_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile_sector_parameters`
+--
+
+CREATE TABLE `profile_sector_parameters` (
+  `id` int(11) NOT NULL,
+  `profile_sector_id` int(11) NOT NULL,
+  `parameter_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -472,25 +530,39 @@ INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`,
 
 CREATE TABLE `sectors` (
   `sector_id` int(11) NOT NULL,
-  `sector_shortname` varchar(50) DEFAULT NULL,
-  `sector_description` varchar(50) DEFAULT NULL
+  `sector_description` varchar(50) DEFAULT NULL,
+  `sector_shortname` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sectors`
 --
 
+<<<<<<< HEAD
+INSERT INTO `sectors` (`sector_id`, `sector_description`, `sector_shortname`) VALUES
+(1, 'Macro Sector', 'MS'),
+(2, 'Employment and Development Finance Sector', NULL),
+(3, 'Environmental Sector', NULL),
+(4, 'Agriculture and Utilities Sector', NULL),
+(5, 'Infrastructure and Utilities Sector', NULL),
+(6, 'Social Welfare Sector', NULL),
+(7, 'Health Sector', NULL),
+(8, 'Education Sector', NULL),
+(9, 'Development Administration Sector', NULL),
+(10, 'Trade, Industry and Tourism Sector', NULL);
+=======
 INSERT INTO `sectors` (`sector_id`, `sector_shortname`, `sector_description`) VALUES
-(1, 'macro', 'Macro Sector'),
-(2, 'employment', 'Employment and Development Finance Sector'),
-(3, 'enviromental', 'Environmental Sector'),
-(4, 'agriculture', 'Agriculture and Utilities Sector'),
-(5, 'infra', 'Infrastructure and Utilities Sector'),
-(6, 'social', 'Social Welfare Sector'),
-(7, 'health', 'Health Sector'),
-(8, 'education', 'Education Sector'),
-(9, 'development', 'Development Administration Sector'),
-(10, 'trade', 'Trade, Industry and Tourism Sector');
+(1, 'MS', 'Macro Sector'),
+(2, 'EDFS', 'Employment and Development Finance Sector'),
+(3, 'ES', 'Environmental Sector'),
+(4, 'AUS', 'Agriculture and Utilities Sector'),
+(5, 'IUS', 'Infrastructure and Utilities Sector'),
+(6, 'SWS', 'Social Welfare Sector'),
+(7, 'HS', 'Health Sector'),
+(8, 'ES', 'Education Sector'),
+(9, 'DAS', 'Development Administration Sector'),
+(10, 'TITS', 'Trade, Industry and Tourism Sector');
+>>>>>>> origin/dex
 
 --
 -- Indexes for dumped tables
@@ -537,6 +609,45 @@ ALTER TABLE `profile`
   ADD PRIMARY KEY (`profile_id`);
 
 --
+<<<<<<< HEAD
+-- Indexes for table `profile_sector`
+--
+ALTER TABLE `profile_sector`
+  ADD PRIMARY KEY (`id`);
+=======
+-- Indexes for table `profile_item_groups`
+--
+ALTER TABLE `profile_item_groups`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `profile_parameter_item_id` (`profile_parameter_item_id`);
+
+--
+-- Indexes for table `profile_parameter_items`
+--
+ALTER TABLE `profile_parameter_items`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `item_id` (`profile_sector_parameter_id`);
+
+--
+-- Indexes for table `profile_sectors`
+--
+ALTER TABLE `profile_sectors`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `profile_id` (`profile_id`);
+>>>>>>> origin/dex
+
+--
+-- Indexes for table `profile_sector_parameters`
+--
+ALTER TABLE `profile_sector_parameters`
+<<<<<<< HEAD
+  ADD PRIMARY KEY (`id`);
+=======
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `profile_sector_id` (`profile_sector_id`);
+>>>>>>> origin/dex
+
+--
 -- Indexes for table `sectors`
 --
 ALTER TABLE `sectors`
@@ -560,7 +671,7 @@ ALTER TABLE `items_groups`
 -- AUTO_INCREMENT for table `parameters`
 --
 ALTER TABLE `parameters`
-  MODIFY `parameter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `parameter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `parameter_items`
 --
@@ -575,7 +686,37 @@ ALTER TABLE `parameter_table_row`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `profile_sector`
+--
+ALTER TABLE `profile_sector`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `profile_sector_parameters`
+--
+ALTER TABLE `profile_sector_parameters`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `profile_item_groups`
+--
+ALTER TABLE `profile_item_groups`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `profile_parameter_items`
+--
+ALTER TABLE `profile_parameter_items`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `profile_sectors`
+--
+ALTER TABLE `profile_sectors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `profile_sector_parameters`
+--
+ALTER TABLE `profile_sector_parameters`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `sectors`
 --
@@ -608,6 +749,30 @@ ALTER TABLE `parameter_items`
 --
 ALTER TABLE `parameter_table_row`
   ADD CONSTRAINT `parameter_table_row_ibfk_1` FOREIGN KEY (`table_row_item`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `profile_item_groups`
+--
+ALTER TABLE `profile_item_groups`
+  ADD CONSTRAINT `profile_item_groups_ibfk_1` FOREIGN KEY (`profile_parameter_item_id`) REFERENCES `profile_parameter_items` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `profile_parameter_items`
+--
+ALTER TABLE `profile_parameter_items`
+  ADD CONSTRAINT `profile_parameter_items_ibfk_1` FOREIGN KEY (`profile_sector_parameter_id`) REFERENCES `profile_sector_parameters` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `profile_sectors`
+--
+ALTER TABLE `profile_sectors`
+  ADD CONSTRAINT `profile_sectors_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `sectors` (`sector_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `profile_sector_parameters`
+--
+ALTER TABLE `profile_sector_parameters`
+  ADD CONSTRAINT `profile_sector_parameters_ibfk_1` FOREIGN KEY (`profile_sector_id`) REFERENCES `profile_sectors` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
