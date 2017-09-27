@@ -21,7 +21,7 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 
 			scope.parameter = {};
 			scope.parameter.parameter_id = 0;
-			scope.parameter.table_rows = [];
+			scope.parameter.parameter_table_row = [];
 			scope.parameter.dels = [];
 			scope.parameters = []; // list		
 
@@ -61,7 +61,7 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 		
 			scope.parameter = {};
 			scope.parameter.parameter_id = 0;
-			scope.parameter.table_rows = [];
+			scope.parameter.parameter_table_row = [];
 			scope.parameter.dels = [];
 
 			$('#parameter-list').html(loading);
@@ -212,7 +212,7 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 		
 
 	  self.addNewChoice = function(scope) {
-		scope.parameter.table_rows.push({table_row_id:0,table_row_description:''});
+		scope.parameter.parameter_table_row.push({table_row_id:0,table_row_description:''});
 	  };
 		
 	  self.removeChoice = function(scope,row) {
@@ -222,19 +222,19 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 		}
 		
 
-		var table_rows = scope.parameter.table_rows;
+		var parameter_table_row = scope.parameter.parameter_table_row;
 		
-		var index = scope.parameter.table_rows.indexOf(row);
+		var index = scope.parameter.parameter_table_row.indexOf(row);
 		
-		scope.parameter.table_rows = [];		
-		// scope.parameter.table_rows.splice(index, 1);
+		scope.parameter.parameter_table_row = [];		
+		// scope.parameter.parameter_table_row.splice(index, 1);
 		
-		angular.forEach(table_rows, function(d,i) {
+		angular.forEach(parameter_table_row, function(d,i) {
 
 			if (index != i) {
 				
 				delete d['$$hashKey'];
-				scope.parameter.table_rows.push(d);
+				scope.parameter.parameter_table_row.push(d);
 
 			};
 		

@@ -6,8 +6,8 @@ include_once '../db.php';
 
 $con = new pdo_db("parameters");
 
-$table_rows = $_POST['table_rows'];
-unset($_POST['table_rows']);
+$parameter_table_row = $_POST['parameter_table_row'];
+unset($_POST['parameter_table_row']);
 
 $dels = $_POST['dels'];
 unset($_POST['dels']);
@@ -38,26 +38,26 @@ if (count($dels)) {
 	
 }
 
-if (count($table_rows)) {
+if (count($parameter_table_row)) {
 
 	$con->table = "parameter_table_row";
 	
-	foreach ($table_rows as $index => $value) {
+	foreach ($parameter_table_row as $index => $value) {
 		
-		$table_rows[$index]['table_row_item'] = $parameter_id ;		
+		$parameter_table_row[$index]['table_row_item'] = $parameter_id ;		
 		
 	}
 	
-	foreach ($table_rows as $index => $value) {
+	foreach ($parameter_table_row as $index => $value) {
 
 		if ($value['table_row_id']) {
 			
-			$table_row = $con->updateData($table_rows[$index],'table_row_id');
+			$table_row = $con->updateData($parameter_table_row[$index],'table_row_id');
 			
 		} else {
 			
-			unset($table_rows[$index]['table_row_id']);
-			$table_row = $con->insertData($table_rows[$index]);
+			unset($parameter_table_row[$index]['table_row_id']);
+			$table_row = $con->insertData($parameter_table_row[$index]);
 			
 		}
 	
