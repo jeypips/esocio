@@ -149,6 +149,7 @@ angular.module('parameterItem-module',['bootstrap-modal','bootstrap-growl']).fac
 			}).then(function mySucces(response) {
 
 				self.list(scope);
+				growl.show('btn btn-danger',{from: 'top', amount: 55},'Parameter item successfully deleted.');
 				
 			}, function myError(response) {
 				 

@@ -150,6 +150,7 @@ angular.module('parameter-module',['bootstrap-modal','bootstrap-growl']).factory
 			}).then(function mySucces(response) {
 
 				self.list(scope);
+				growl.show('btn btn-danger',{from: 'top', amount: 55},'Parameter successfully deleted.');
 				
 			}, function myError(response) {
 				 
