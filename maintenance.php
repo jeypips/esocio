@@ -11,9 +11,6 @@
 
         <title>E-Socio | Maintenance</title>
 
-        <!--Morris Chart CSS -->
-		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
-		 
 		 <!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 
@@ -197,11 +194,9 @@
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
         <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
-		
-        <script src="assets/plugins/morris/morris.min.js"></script>
+
         <script src="assets/plugins/raphael/raphael-min.js"></script>
         <script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
-        <script src="assets/pages/jquery.dashboard.js"></script>
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
 		<script src="assets/js/bootbox.min.js"></script> 
