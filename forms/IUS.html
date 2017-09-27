@@ -1,0 +1,379 @@
+<div class="panel panel-border panel-primary">
+<div class="panel-heading">
+Infrastracture and Utilities Sector
+<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+</div>
+<br>
+<div class="panel-body">
+	<form name="formHolder.profile" id="formHolder.profile">
+		<div class="heading">
+				<h5>Road Network (Total Linear Meter)</h5>
+			</div>	
+		<div class="card-box col-lg-12">
+		
+			<div class="row">
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">Barangay Road: Concrete</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Asphalt</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Gravel</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Earthfill</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">Municipal Road: Concrete</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Asphalt</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Gravel</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Earthfill</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">Provincial Road: Concrete</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Asphalt</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Gravel</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Earthfill</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">National Road: Concrete</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Asphalt</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Gravel</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Earthfill</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+		</div>
+		<div class="heading">
+				<h5>Bridges</h5>
+			</div>
+		<div class="card-box col-lg-12">
+			<h5>Barangay Bridges</h5>	
+			<div class="row">
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">No. of Span: Steel</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Concrete</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Composite</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Jumbo</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Bailey</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Footbridge</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+			<div class="row">
+	
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">Total Length: Steel</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Concrete</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Composite</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Jumbo</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Bailey</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Footbridge</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+			<div class="row">
+				<h5>Municipal Bridges</h5>			
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">No. of Span: Steel</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Concrete</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Composite</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Jumbo</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Bailey</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Footbridge</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+			<div class="row">
+		
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">Total Length: Steel</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Concrete</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Composite</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Jumbo</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Bailey</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Footbridge</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+			<div class="row">
+				<h5>Provincial Bridges</h5>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">No. of Span: Steel</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Concrete</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Composite</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Jumbo</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Bailey</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Footbridge</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">Total Length: Steel</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Concrete</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Composite</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Jumbo</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Bailey</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Footbridge</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+			<div class="row">
+				<h5>National Bridges</h5>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">No. of Span: Steel</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Concrete</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Composite</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Jumbo</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Bailey</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Footbridge</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+					<label class="label-control">Total Length: Steel</label>
+					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Concrete</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Composite</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Jumbo</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Bailey</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+					<label class="label-control">Footbridge</label>
+					<input type="text" class="form-control" name="location" ng-model="profile.location" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Climate is required</span>
+				</div>
+			</div>
+		</div>
+		
+	</form>
+		<div class="form-group text-left m-b-0">
+			<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+		</div>
+	</div>
+</div>
