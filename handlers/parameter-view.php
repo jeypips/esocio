@@ -12,6 +12,7 @@ $parameter = $con->getData("SELECT * FROM parameters WHERE parameter_id = $_POST
 $sector = $con->getData("SELECT sector_id, sector_description FROM sectors WHERE sector_id = ".$parameter[0]['parameter_no']);
 
 $parameter[0]['is_tabular'] = ($parameter[0]['is_tabular'])?true:false;
+$parameter[0]['is_tabular_multiple'] = ($parameter[0]['is_tabular_multiple'])?true:false;
 $parameter[0]['parameter_no'] = $sector[0];
 
 

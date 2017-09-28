@@ -33,6 +33,10 @@
         .img-circle {
 			width: 50px;			
 		}
+		.not-active {
+			pointer-events: none;
+			cursor: default;
+		}
 		
 		</style>
     </head>
@@ -77,8 +81,10 @@
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
+                                        <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.account_username}}</b></a></li>
+										<hr>
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
-                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -94,7 +100,6 @@
             <div class="left side-menu">
                 <div class="sidebar-inner slimscrollleft">
                     <!--- Divider -->
-					
                     <div id="sidebar-menu">
 					<ul>
 					<li class="text-muted menu-title">Navigation</li>

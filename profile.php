@@ -10,9 +10,6 @@
         <link rel="shortcut icon" href="images/lu_seal.png">
 
         <title>E-Socio | Profile</title>
-
-        <!--Morris Chart CSS -->
-		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
 		 
 		 <!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
@@ -36,6 +33,10 @@
         .img-circle {
 			width: 50px;			
 		}
+		.not-active {
+			pointer-events: none;
+			cursor: default;
+		}
 		
 		</style>
     </head>
@@ -43,7 +44,7 @@
     <body class="fixed-left" ng-app="profile" ng-controller="profileCtrl" account-profile>
 
         <!-- Begin page -->
-        <div id="wrapper">
+        <div id="wrapper" class="forced enlarged">
 
             <!-- Top Bar Start -->
             <div class="topbar">
@@ -79,9 +80,11 @@
                                 </li>
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
-                                    <ul class="dropdown-menu">
+                                     <ul class="dropdown-menu">
+                                        <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.account_username}}</b></a></li>
+										<hr>
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
-                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -106,8 +109,7 @@
 							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
 							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
 							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
-                            </li>
-						</li>
+                        </li>
 					</ul>
                         <div class="clearfix"></div>
                     </div>
@@ -136,26 +138,32 @@
 			</footer>
 		</div>
 	
-	<div>
+	<div ng-show="views.menu">
 		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
-			<button href="javascript:;" class="btn btn-danger right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
-		</div>	
-		<div class="side-bar right-bar nicescroll">
-			<div class="contact-list nicescroll">
-				<ul class="list-group contacts-list">
-					<li class="list-group-item">
-						<a href="javascript:;">Sector</a>
-						<span class="clearfix"></span>
-					</li>
-					<li class="list-group-item" ng-repeat="sf in sector_filters">
-						<a href="javascript:;">{{sf.sector_description}}</a>
-						<span class="clearfix"></span>
-					</li>					
-				</ul>
-				
-			</div>
+			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>
-	</div>
+		
+		<div class="side-bar right-bar nicescroll">
+		<h4 class="text-center" style="margin-top: 20px;">Sector Description</h4>
+		  <div class="contact-list nicescroll">
+		  <ul class="list-group contacts-list">
+		   <li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile')">
+				<a href="javascript:;">
+					<span class="text text-inverse">Basic Information</span>
+					<i class="icon icon-pin online"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname)">
+				<a href="javascript:;">
+					<span class="text text-inverse">{{s.sector_description}}</span>
+					<i class="icon icon-pin online"></i>
+				</a>
+				<span class="clearfix"></span>
+			</li>
+			</ul>
+		  </div>
+		</div>
 	</div>
 	<!-- END wrapper -->
 	
@@ -181,11 +189,9 @@
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
         <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
-
-        <script src="assets/plugins/morris/morris.min.js"></script>
+		
         <script src="assets/plugins/raphael/raphael-min.js"></script>
         <script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
-        <script src="assets/pages/jquery.dashboard.js"></script>
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
 		<script src="assets/js/bootbox.min.js"></script>

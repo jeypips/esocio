@@ -1,4 +1,4 @@
-angular.module('parameter-module',['bootstrap-modal']).factory('param', function($compile,$timeout,$http,bootstrapModal) {
+angular.module('parameter-module',['bootstrap-modal','bootstrap-growl']).factory('param', function($compile,$timeout,$http,bootstrapModal,growl) {
 	
 	function param() {
 		
@@ -41,6 +41,22 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 			
 		};
 		
+		function mode(scope,row) {
+			
+			if (row == null) {
+				scope.controls.ok.label = 'Save';
+				scope.controls.ok.btn = false;
+				scope.controls.cancel.label = 'Cancel';
+				scope.controls.cancel.btn = false;
+			} else {
+				scope.controls.ok.label = 'Update';
+				scope.controls.ok.btn = true;
+				scope.controls.cancel.label = 'Close';
+				scope.controls.cancel.btn = false;				
+			}
+			
+		};
+		
 		function sectors(scope) {
 
 			$http({
@@ -64,23 +80,15 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 			scope.parameter.parameter_id = 0;
 			scope.parameter.parameter_table_row = [];
 			scope.parameter.dels = [];
-
+			
+			mode(scope,row);
+			
 			$('#parameter-list').html(loading);
 			$('#parameter-list').load('forms/parameter.html',function() {
 				$timeout(function() { $compile($('#parameter-list')[0])(scope); },200);
 			});
 			
-			scope.controls.ok.label = 'Save';
-			scope.controls.ok.btn = false;
-			scope.controls.cancel.label = 'Cancel';
-			scope.controls.cancel.btn = false;
-			
 			if (row != null) {		
-				
-				scope.controls.ok.label = 'Update';
-				scope.controls.ok.btn = true;
-				scope.controls.cancel.label = 'Close';
-				scope.controls.cancel.btn = false;
 				
 				if (scope.$parameter_id > 2) scope = scope.$parent;				
 				$http({
@@ -119,7 +127,9 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 			  data: scope.parameter
 			}).then(function mySucces(response) {					
 				
-				$timeout(function() { self.list(scope); },200);
+				mode(scope,scope.parameter);
+				
+				growl.show('btn btn-success',{from: 'top', amount: 55},'Parameter successfully updated.');
 				
 			}, function myError(response) {
 				 
@@ -142,6 +152,7 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 			}).then(function mySucces(response) {
 
 				self.list(scope);
+				growl.show('btn btn-danger',{from: 'top', amount: 55},'Parameter successfully deleted.');
 				
 			}, function myError(response) {
 				 
@@ -155,33 +166,10 @@ angular.module('parameter-module',['bootstrap-modal']).factory('param', function
 			
 		};		
 		
-		/* self.filter = function(scope,filter) {				
-					
-			scope.filter.by = filter;
-			
-			$http({
-			  method: 'POST',
-			  url: 'handlers/filter.php',
-			  data: {filter: scope.filter.by}
-			}).then(function mySucces(response) {
-				
-				scope.filter.filters = response.data;
-				scope.filter.label = response.data[0];
-				self.filterGo(scope);
-				
-			}, function myError(response) {
-				 
-			  // error
-				
-			});				
-			
-		}; */
-		
-		
 		self.list = function(scope) {
 			
 			// load list
-			
+			scope.mode = 'list';
 			scope.parameter = {};
 			scope.parameter.parameter_id = 0;			
 			$http({
