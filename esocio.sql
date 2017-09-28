@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 21, 2017 at 12:45 AM
+-- Generation Time: Sep 28, 2017 at 01:46 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -181,7 +181,7 @@ CREATE TABLE `parameters` (
 --
 
 INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `is_tabular`, `is_tabular_multiple`) VALUES
-(1, 1, 'Physical Characteristics', 1, 0),
+(1, 1, 'Physical Characteristics', 0, 0),
 (2, 1, 'Demographics', 0, 0),
 (3, 2, 'Employment and Development Finance', 0, 0),
 (4, 3, 'Existing Land User Distribution', 0, 0),
@@ -230,7 +230,7 @@ CREATE TABLE `parameter_items` (
 --
 
 INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `is_group_item`) VALUES
-(1, 1, 'Land Area', 1),
+(1, 1, 'Land Area', 0),
 (2, 1, 'Terrain', 0),
 (3, 1, 'Climate', 0),
 (4, 1, 'Number of Barangays', 0),
@@ -442,27 +442,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`, `pb_north`, `pb_south`, `pb_east`, `pb_west`) VALUES
-(1, NULL, 'Agoo', NULL, NULL, NULL, NULL, NULL),
-(2, NULL, 'Aringay', NULL, NULL, NULL, NULL, NULL),
-(3, NULL, 'Bacnotan', NULL, NULL, NULL, NULL, NULL),
-(4, NULL, 'Bagulin', NULL, NULL, NULL, NULL, NULL),
-(5, NULL, 'Balaoan ', NULL, NULL, NULL, NULL, NULL),
-(6, NULL, 'Bangar', NULL, NULL, NULL, NULL, NULL),
-(7, NULL, 'Bauang', NULL, NULL, NULL, NULL, NULL),
-(8, NULL, 'Burgos', NULL, NULL, NULL, NULL, NULL),
-(9, NULL, 'Caba', NULL, NULL, NULL, NULL, NULL),
-(10, NULL, 'Damortis', NULL, NULL, NULL, NULL, NULL),
-(11, NULL, 'Luna', NULL, NULL, NULL, NULL, NULL),
-(12, NULL, 'Naguilian ', NULL, NULL, NULL, NULL, NULL),
-(13, NULL, 'Pugo', NULL, NULL, NULL, NULL, NULL),
-(14, NULL, 'Rosario', NULL, NULL, NULL, NULL, NULL),
-(15, NULL, 'San Fernando', NULL, NULL, NULL, NULL, NULL),
-(16, NULL, 'San Gabriel', NULL, NULL, NULL, NULL, NULL),
-(17, NULL, 'San Juan', NULL, NULL, NULL, NULL, NULL),
-(18, NULL, 'Santol', NULL, NULL, NULL, NULL, NULL),
-(19, NULL, 'Sto. Tomas', NULL, NULL, NULL, NULL, NULL),
-(20, NULL, 'Sudipen', NULL, NULL, NULL, NULL, NULL),
-(21, NULL, 'Tubao', NULL, NULL, NULL, NULL, NULL);
+(1, NULL, 'Agoo', 'z', 'z', 'z', 'z', 'z');
 
 -- --------------------------------------------------------
 
@@ -483,7 +463,7 @@ CREATE TABLE `sectors` (
 INSERT INTO `sectors` (`sector_id`, `sector_shortname`, `sector_description`) VALUES
 (1, 'macro', 'Macro Sector'),
 (2, 'employment', 'Employment and Development Finance Sector'),
-(3, 'enviromental', 'Environmental Sector'),
+(3, 'environment', 'Environmental Sector'),
 (4, 'agriculture', 'Agriculture and Utilities Sector'),
 (5, 'infra', 'Infrastructure and Utilities Sector'),
 (6, 'social', 'Social Welfare Sector'),
@@ -575,7 +555,7 @@ ALTER TABLE `parameter_table_row`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `sectors`
 --
