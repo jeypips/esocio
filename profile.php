@@ -195,11 +195,13 @@
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
 		<script src="assets/js/bootbox.min.js"></script>
+		<script src="assets/js/jquery.bootstrap-growl.min.js"></script> 		
 		
 		<!-- Angular  -->
 		<script src="angular/angular.min.js"></script>
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
+		<script src="modules/growl.js"></script>
 		<script src="modules/account.js"></script>
 		<script src="modules/profile.js"></script>
 		<script src="controllers/profile.js"></script>

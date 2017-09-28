@@ -1,0 +1,54 @@
+[28-Sep-2017 10:06:07 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1049] Unknown database 'esocio' in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:31
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(31): PDO->__construct('mysql:host=loca...', 'root', 'root', Array)
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\login.php(7): pdo_db->__construct()
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 31
+[28-Sep-2017 16:00:53 Asia/Manila] PHP Parse error:  syntax error, unexpected '}' in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 61
+[28-Sep-2017 16:01:11 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.item_groups' doesn't exist in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT item_gro...')
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(28): pdo_db->getData('SELECT item_gro...')
+#2 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(9): construct_profile(Object(pdo_db))
+#3 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
