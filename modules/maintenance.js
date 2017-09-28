@@ -39,28 +39,37 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 			
 		};
 		
+		function mode(scope,row) {
+			
+			if (row == null) {
+				scope.controls.ok.label = 'Save';
+				scope.controls.ok.btn = false;
+				scope.controls.cancel.label = 'Cancel';
+				scope.controls.cancel.btn = false;
+			} else {
+				scope.controls.ok.label = 'Update';
+				scope.controls.ok.btn = true;
+				scope.controls.cancel.label = 'Close';
+				scope.controls.cancel.btn = false;				
+			}
+			
+		};
 
 		self.sector = function(scope,row) {			
 		
 			scope.sectors = {};
 			scope.sectors.sector_id = 0;
+			
+			mode(scope,row);
 
 			$('#x_content').html(loading);
 			$('#x_content').load('forms/sector.html',function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
-			
-			scope.controls.ok.label = 'Save';
-			scope.controls.ok.btn = false;
-			scope.controls.cancel.label = 'Cancel';
-			scope.controls.cancel.btn = false;
+		
 			
 			if (row != null) {		
 				
-				scope.controls.ok.label = 'Update';
-				scope.controls.ok.btn = true;
-				scope.controls.cancel.label = 'Close';
-				scope.controls.cancel.btn = false;
 				
 				if (scope.$sector_id > 2) scope = scope.$parent;				
 				$http({
@@ -70,6 +79,7 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 				}).then(function mySucces(response) {
 					
 					angular.copy(response.data, scope.sectors);
+					
 					
 				}, function myError(response) {
 					 
@@ -97,8 +107,7 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 			}).then(function mySucces(response) {
 				
 				if (scope.sectors.sector_id == 0) scope.sectors.sector_id = response.data;
-				
-				$timeout(function() { self.list(scope); },200);
+				mode(scope,scope.sectors);
 				
 				growl.show('btn btn-success',{from: 'top', amount: 55},'Sector successfully updated.');
 				
@@ -123,6 +132,7 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 			}).then(function mySucces(response) {
 
 				self.list(scope);
+				growl.show('btn btn-danger',{from: 'top', amount: 55},'Sector successfully deleted.');
 				
 			}, function myError(response) {
 				 
@@ -162,7 +172,7 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 		self.list = function(scope) {
 			
 			// load list
-			
+			scope.mode = 'list';
 			scope.sector = {};
 			scope.sector.sector_id = 0;			
 			$http({
