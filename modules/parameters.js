@@ -80,7 +80,9 @@ angular.module('parameter-module',['bootstrap-modal','bootstrap-growl']).factory
 			scope.parameter.parameter_id = 0;
 			scope.parameter.parameter_table_row = [];
 			scope.parameter.dels = [];
-
+			
+			mode(scope,row);
+			
 			$('#parameter-list').html(loading);
 			$('#parameter-list').load('forms/parameter.html',function() {
 				$timeout(function() { $compile($('#parameter-list')[0])(scope); },200);
@@ -150,6 +152,7 @@ angular.module('parameter-module',['bootstrap-modal','bootstrap-growl']).factory
 			}).then(function mySucces(response) {
 
 				self.list(scope);
+				growl.show('btn btn-danger',{from: 'top', amount: 55},'Parameter successfully deleted.');
 				
 			}, function myError(response) {
 				 

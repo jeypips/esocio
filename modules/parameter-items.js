@@ -81,6 +81,8 @@ angular.module('parameterItem-module',['bootstrap-modal','bootstrap-growl']).fac
 			scope.parameter_item.item_groups = [];
 			scope.parameter_item.dels = [];
 
+			mode(scope,row);
+			
 			$('#parameter-item').html(loading);
 			$('#parameter-item').load('forms/parameter-item.html',function() {
 				$timeout(function() { $compile($('#parameter-item')[0])(scope); },200);
@@ -149,6 +151,7 @@ angular.module('parameterItem-module',['bootstrap-modal','bootstrap-growl']).fac
 			}).then(function mySucces(response) {
 
 				self.list(scope);
+				growl.show('btn btn-danger',{from: 'top', amount: 55},'Parameter item successfully deleted.');
 				
 			}, function myError(response) {
 				 

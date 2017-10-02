@@ -80,6 +80,7 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 					
 					angular.copy(response.data, scope.sectors);
 					
+					
 				}, function myError(response) {
 					 
 				  // error
@@ -131,6 +132,7 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 			}).then(function mySucces(response) {
 
 				self.list(scope);
+				growl.show('btn btn-danger',{from: 'top', amount: 55},'Sector successfully deleted.');
 				
 			}, function myError(response) {
 				 
