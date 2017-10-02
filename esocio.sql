@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 28, 2017 at 04:06 PM
+-- Generation Time: Oct 02, 2017 at 11:49 AM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -462,7 +462,8 @@ INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`,
 (18, NULL, 'Santol', NULL, NULL, NULL, NULL, NULL),
 (19, NULL, 'Sto. Tomas', NULL, NULL, NULL, NULL, NULL),
 (20, NULL, 'Sudipen', NULL, NULL, NULL, NULL, NULL),
-(21, NULL, 'Tubao', NULL, NULL, NULL, NULL, NULL);
+(21, NULL, 'Tubao', NULL, NULL, NULL, NULL, NULL),
+(22, NULL, 'agdgd', 'eg', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -488,6 +489,22 @@ CREATE TABLE `profile_sectors` (
   `profile_id` int(10) NOT NULL,
   `sector_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profile_sectors`
+--
+
+INSERT INTO `profile_sectors` (`id`, `profile_id`, `sector_id`) VALUES
+(1, 22, 1),
+(2, 22, 2),
+(3, 22, 3),
+(4, 22, 4),
+(5, 22, 5),
+(6, 22, 6),
+(7, 22, 7),
+(8, 22, 8),
+(9, 22, 9),
+(10, 22, 10);
 
 -- --------------------------------------------------------
 
@@ -667,12 +684,12 @@ ALTER TABLE `profile_item_groups`
 -- AUTO_INCREMENT for table `profile_sectors`
 --
 ALTER TABLE `profile_sectors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameters`
 --
 ALTER TABLE `profile_sector_parameters`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameter_items`
 --
@@ -715,28 +732,25 @@ ALTER TABLE `parameter_table_row`
 -- Constraints for table `profile_item_groups`
 --
 ALTER TABLE `profile_item_groups`
-  ADD CONSTRAINT `profile_item_groups_ibfk_1` FOREIGN KEY (`profile_parameter_item_id`) REFERENCES `profile_sector_parameter_items` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `profile_item_groups_ibfk_2` FOREIGN KEY (`item_group_id`) REFERENCES `items_groups` (`item_group_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `profile_item_groups_ibfk_1` FOREIGN KEY (`profile_parameter_item_id`) REFERENCES `profile_sector_parameter_items` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `profile_sectors`
 --
 ALTER TABLE `profile_sectors`
-  ADD CONSTRAINT `profile_sectors_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profile` (`profile_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `profile_sectors_ibfk_2` FOREIGN KEY (`sector_id`) REFERENCES `sectors` (`sector_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `profile_sectors_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profile` (`profile_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `profile_sector_parameters`
 --
 ALTER TABLE `profile_sector_parameters`
-  ADD CONSTRAINT `profile_sector_parameters_ibfk_1` FOREIGN KEY (`profile_sector_id`) REFERENCES `profile_sectors` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `profile_sector_parameters_ibfk_1` FOREIGN KEY (`profile_sector_id`) REFERENCES `profile_sectors` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `profile_sector_parameter_items`
 --
 ALTER TABLE `profile_sector_parameter_items`
-  ADD CONSTRAINT `profile_sector_parameter_items_ibfk_1` FOREIGN KEY (`profile_sector_parameter_id`) REFERENCES `profile_sector_parameters` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `profile_sector_parameter_items_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `parameter_items` (`item_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `profile_sector_parameter_items_ibfk_1` FOREIGN KEY (`profile_sector_parameter_id`) REFERENCES `profile_sector_parameters` (`id`) ON DELETE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
