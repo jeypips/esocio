@@ -9,6 +9,7 @@
 			<tr>
 			  <th>No.</th>
 			  <th>Municipal</th>
+			  <th>Year</th>
 			  <th>&nbsp;</th>
 			</tr>
 		  </thead>
@@ -16,6 +17,7 @@
 			<tr ng-repeat="profile in profiles">
 			  <td>{{profile.profile_id}}</td>
 			  <td>{{profile.municipality}}</td>
+			  <td>{{profile.year}}</td>
 			  <td>
 			  <button class="btn btn-sm btn-white" style="margin-right: 5px;" ng-click="form.activateForm(this,'profile',profile)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
 			  <button class="btn btn-sm btn-white" ng-click="form.delete(this,profile)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
