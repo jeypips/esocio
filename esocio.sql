@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 28, 2017 at 01:46 PM
+-- Generation Time: Oct 02, 2017 at 03:03 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -428,7 +428,7 @@ INSERT INTO `parameter_table_row` (`table_row_id`, `table_row_item`, `table_row_
 
 CREATE TABLE `profile` (
   `profile_id` int(11) NOT NULL,
-  `profile_year` date DEFAULT NULL,
+  `profile_year` varchar(4) DEFAULT NULL,
   `municipality` varchar(50) DEFAULT NULL,
   `location` varchar(50) DEFAULT NULL,
   `pb_north` varchar(50) DEFAULT NULL,
@@ -442,7 +442,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`, `pb_north`, `pb_south`, `pb_east`, `pb_west`) VALUES
-(1, NULL, 'Agoo', 'z', 'z', 'z', 'z', 'z');
+(1, '2017', 'Agoo', 'Agoo', 'Bauang', 'Caba', 'San Fernando', 'Tomas');
 
 -- --------------------------------------------------------
 
