@@ -181,7 +181,7 @@ CREATE TABLE `parameters` (
 --
 
 INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `is_tabular`, `is_tabular_multiple`) VALUES
-(1, 1, 'Physical Characteristics', 1, 0),
+(1, 1, 'Physical Characteristics', 0, 0),
 (2, 1, 'Demographics', 0, 0),
 (3, 2, 'Employment and Development Finance', 0, 0),
 (4, 3, 'Existing Land User Distribution', 0, 0),
@@ -432,7 +432,7 @@ INSERT INTO `parameter_table_row` (`table_row_id`, `table_row_item`, `table_row_
 
 CREATE TABLE `profile` (
   `profile_id` int(11) NOT NULL,
-  `profile_year` date DEFAULT NULL,
+  `profile_year` varchar(4) DEFAULT NULL,
   `municipality` varchar(50) DEFAULT NULL,
   `location` varchar(50) DEFAULT NULL,
   `pb_north` varchar(50) DEFAULT NULL,
@@ -519,6 +519,7 @@ CREATE TABLE `profile_sector_parameter_items` (
   `item_table_row` int(10) NOT NULL DEFAULT '0',
   `item_value` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 -- --------------------------------------------------------
 
@@ -663,7 +664,7 @@ ALTER TABLE `parameter_table_row`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `profile_item_groups`
 --
