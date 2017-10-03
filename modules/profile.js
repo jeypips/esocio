@@ -1,4 +1,4 @@
-angular.module('profile-module',['bootstrap-modal']).factory('form', function($compile,$timeout,$http,bootstrapModal) {
+angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-data']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,sectors) {
 	
 	function form() {
 		
@@ -47,6 +47,12 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 				
 			});
 
+			sectors.load(scope);
+			
+			$timeout(function() {
+				console.log(scope.data.sectors);
+			},500);
+			
 		};
 
 		function validate(scope,form) {
@@ -79,15 +85,36 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 			
 		};
 		
+		function sector(scope,form) {
+			
+			var sector = null;
+			
+			angular.forEach(scope.data.sectors, function(item,i) {
+				
+				if (form == item.shortname) sector = item;
+				
+			});
+			
+			return sector;
+			
+		};
+		
 		self.activateForm = function(scope,form,row) {
-
+			
+			if (form != 'profile') {
+				if (scope.$parent.profile.profile_id == 0) {
+					growl.show('btn btn-danger',{from: 'top', amount: 55},'Please finish Basic Profile form before proceeding to other forms');
+					// return;
+				};
+			};
+			
 			angular.forEach(scope.subMenuList, function(item,i) {
 				scope.subMenuList[i] = false;
 			});
 			
 			scope.subMenuList[form] = true;
 
-			scope.views.menu = true;			
+			scope.views.menu = true;
 			
 			mode(scope,row);
 			
@@ -97,7 +124,15 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 			
 			scope.profile = {};
 			scope.profile.profile_id = 0;
-
+			
+			scope.profile.sectors = {};
+			
+			if (form != 'profile') {
+				// console.log(sector(scope,form));
+				scope.profile.sectors[form] = angular.copy(sector(scope,form));
+				console.log(scope.profile.sectors);
+			};
+			
 			/*
 			**
 			*/
@@ -109,7 +144,7 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 			
 			if (row != null) {
 
-				if (scope.$profile_id> 2) scope = scope.$parent;				
+				if (scope.$id> 2) scope = scope.$parent;				
 
 				$http({
 				  method: 'POST',
@@ -117,51 +152,17 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 				  data: {profile_id: row.profile_id}
 				}).then(function mySucces(response) {
 					
-					angular.copy(response.data, scope[form]);
+					scope.profile = angular.copy(response.data);
 					
 				}, function myError(response) {
 					 
 				  // error
 					
-				});					
+				});
+				
 			};			
 			
 		};
-		
-/* 		self.profile = function(scope,row) {
-			
-			scope.views.menu = true;
-			
-			mode(scope,row);
-			
-			scope.profile = {};
-			scope.profile.profile_id = 0;
-
-			$('#x_content').html(loading);
-			$('#x_content').load('forms/profile.html',function() {
-				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
-			});
-			
-			if (row != null) {
-
-				if (scope.$profile_id> 2) scope = scope.$parent;				
-
-				$http({
-				  method: 'POST',
-				  url: 'handlers/profile-view.php',
-				  data: {profile_id: row.profile_id}
-				}).then(function mySucces(response) {
-					
-					angular.copy(response.data, scope.profile);
-					
-				}, function myError(response) {
-					 
-				  // error
-					
-				});					
-			};
-			
-		}; */
 		
 		self.edit = function(scope) {
 			
@@ -169,24 +170,51 @@ angular.module('profile-module',['bootstrap-modal']).factory('form', function($c
 			
 		};
 		
-		self.save = function(scope) {
+		self.save = function(scope,form) {
 			
-			if (validate(scope,'profile')) return;
+			if (validate(scope,form)) return;
 			
-			$http({
-			  method: 'POST',
-			  url: 'handlers/profile-save.php',
-			  data: {profile: scope.profile}
-			}).then(function mySucces(response) {
+			var url = null;
+			
+			switch (form) {
 				
-				if (scope.profile.profile_id == 0) scope.profile.profile_id = response.data;
-				mode(scope,scope.profile);
+				case "profile":
 				
-			}, function myError(response) {
-				 
-			  // error
+					$http({
+					  method: 'POST',
+					  url: 'handlers/profile-save.php',
+					  data: {profile: scope.profile}
+					}).then(function mySucces(response) {
+						
+						if (scope.profile.profile_id == 0) scope.profile.profile_id = response.data;
+						
+					}, function myError(response) {
+						 
+					  // error
+						
+					});					
 				
-			});			
+				break;
+				
+				default:
+					
+					$http({
+					  method: 'POST',
+					  url: 'handlers/'+form+'-save.php',
+					  data: scope.profile
+					}).then(function mySucces(response) {
+						
+					}, function myError(response) {
+						 
+					  // error
+						
+					});	
+					
+				break;		
+				
+			}
+			
+			mode(scope,scope.profile);			
 			
 		};		
 		
