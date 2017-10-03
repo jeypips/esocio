@@ -10,13 +10,16 @@ $con = new pdo_db("profile");
 
 if ($_POST['profile']['profile_id']) {
 	
-	$profile = $con->updateData($_POST['profile'],'profile_id');
+	$profile = $con->updateData($_POST['profile'],'profile_id');	
+	$profile_id = $_POST['profile']['profile_id'];
 	
 } else {
 	
-	$profile = $con->insertData($_POST['profile']);
-	echo $con->insertId;
+	$profile = $con->insertData($_POST['profile']);		
+	$profile_id = $con->insertId;
 
 }
+
+echo $profile_id;
 
 ?>
