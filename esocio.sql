@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 28, 2017 at 01:46 PM
+-- Generation Time: Oct 03, 2017 at 05:32 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -186,7 +186,7 @@ INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `is_
 (3, 2, 'Employment and Development Finance', 0, 0),
 (4, 3, 'Existing Land User Distribution', 0, 0),
 (5, 3, 'Land Classication', 0, 0),
-(6, 4, 'Food Sufficiency', 0, 1),
+(6, 4, 'Food Sufficiency - Plants', 0, 1),
 (7, 5, 'Road Network', 0, 0),
 (8, 5, 'Bridges', 0, 0),
 (9, 6, 'Social Welfare', 0, 0),
@@ -194,8 +194,8 @@ INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `is_
 (11, 8, 'Education Sector', 0, 0),
 (12, 9, 'Development Administration Sector', 0, 0),
 (13, 10, 'Trade, Industry and Tourism Sector', 0, 0),
-(14, 3, 'LIST OF WATER BODIES', 0, 0),
-(15, 4, 'Employment Income', 0, 0),
+(14, 3, 'LIST OF WATER BODIES', 1, 0),
+(15, 2, 'Employment Income', 1, 0),
 (16, 10, 'Investible Areas', 0, 0),
 (17, 10, 'Existing and Potential Industries', 0, 0),
 (18, 10, 'Enterprises', 0, 0),
@@ -398,7 +398,11 @@ INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `i
 (232, 31, 'No. of Tourist Destination', 0),
 (233, 31, 'Job Generated', 1),
 (234, 31, 'No. of Establishments', 1),
-(235, 31, 'Employment', 1);
+(235, 31, 'Employment', 1),
+(236, 6, 'Commodity', 0),
+(237, 6, 'Area (has.)', 0),
+(238, 6, 'Production (tons)', 0),
+(239, 6, 'Sufficiency Level (%)', 0);
 
 -- --------------------------------------------------------
 
@@ -428,7 +432,7 @@ INSERT INTO `parameter_table_row` (`table_row_id`, `table_row_item`, `table_row_
 
 CREATE TABLE `profile` (
   `profile_id` int(11) NOT NULL,
-  `profile_year` date DEFAULT NULL,
+  `profile_year` varchar(4) DEFAULT NULL,
   `municipality` varchar(50) DEFAULT NULL,
   `location` varchar(50) DEFAULT NULL,
   `pb_north` varchar(50) DEFAULT NULL,
@@ -442,7 +446,80 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`, `pb_north`, `pb_south`, `pb_east`, `pb_west`) VALUES
-(1, NULL, 'Agoo', 'z', 'z', 'z', 'z', 'z');
+(1, NULL, 'Agoo', NULL, NULL, NULL, NULL, NULL),
+(2, NULL, 'Aringay', NULL, NULL, NULL, NULL, NULL),
+(3, NULL, 'Bacnotan', NULL, NULL, NULL, NULL, NULL),
+(4, NULL, 'Bagulin', NULL, NULL, NULL, NULL, NULL),
+(5, NULL, 'Balaoan ', NULL, NULL, NULL, NULL, NULL),
+(6, NULL, 'Bangar', NULL, NULL, NULL, NULL, NULL),
+(7, NULL, 'Bauang', NULL, NULL, NULL, NULL, NULL),
+(8, NULL, 'Burgos', NULL, NULL, NULL, NULL, NULL),
+(9, NULL, 'Caba', NULL, NULL, NULL, NULL, NULL),
+(10, NULL, 'Damortis', NULL, NULL, NULL, NULL, NULL),
+(11, NULL, 'Luna', NULL, NULL, NULL, NULL, NULL),
+(12, NULL, 'Naguilian ', NULL, NULL, NULL, NULL, NULL),
+(13, NULL, 'Pugo', NULL, NULL, NULL, NULL, NULL),
+(14, NULL, 'Rosario', NULL, NULL, NULL, NULL, NULL),
+(15, NULL, 'San Fernando', NULL, NULL, NULL, NULL, NULL),
+(16, NULL, 'San Gabriel', NULL, NULL, NULL, NULL, NULL),
+(17, NULL, 'San Juan', NULL, NULL, NULL, NULL, NULL),
+(18, NULL, 'Santol', NULL, NULL, NULL, NULL, NULL),
+(19, NULL, 'Sto. Tomas', NULL, NULL, NULL, NULL, NULL),
+(20, NULL, 'Sudipen', NULL, NULL, NULL, NULL, NULL),
+(21, NULL, 'Tubao', NULL, NULL, NULL, NULL, NULL),
+(22, NULL, 'agdgd', 'eg', NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile_item_groups`
+--
+
+CREATE TABLE `profile_item_groups` (
+  `id` int(11) NOT NULL,
+  `profile_parameter_item_id` int(11) NOT NULL,
+  `item_group_id` int(11) NOT NULL,
+  `item_group_value` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile_sectors`
+--
+
+CREATE TABLE `profile_sectors` (
+  `id` int(10) NOT NULL,
+  `profile_id` int(10) NOT NULL,
+  `sector_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile_sector_parameters`
+--
+
+CREATE TABLE `profile_sector_parameters` (
+  `id` int(10) NOT NULL,
+  `profile_sector_id` int(10) NOT NULL,
+  `parameter_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile_sector_parameter_items`
+--
+
+CREATE TABLE `profile_sector_parameter_items` (
+  `id` int(10) NOT NULL,
+  `profile_sector_parameter_id` int(10) NOT NULL,
+  `item_id` int(10) NOT NULL,
+  `item_table_row` int(10) NOT NULL DEFAULT '0',
+  `item_value` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 -- --------------------------------------------------------
 
@@ -463,7 +540,7 @@ CREATE TABLE `sectors` (
 INSERT INTO `sectors` (`sector_id`, `sector_shortname`, `sector_description`) VALUES
 (1, 'macro', 'Macro Sector'),
 (2, 'employment', 'Employment and Development Finance Sector'),
-(3, 'environment', 'Environmental Sector'),
+(3, 'environmental', 'Environmental Sector'),
 (4, 'agriculture', 'Agriculture and Utilities Sector'),
 (5, 'infra', 'Infrastructure and Utilities Sector'),
 (6, 'social', 'Social Welfare Sector'),
@@ -517,6 +594,38 @@ ALTER TABLE `profile`
   ADD PRIMARY KEY (`profile_id`);
 
 --
+-- Indexes for table `profile_item_groups`
+--
+ALTER TABLE `profile_item_groups`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `profile_parameter_item_id` (`profile_parameter_item_id`),
+  ADD KEY `item_group_id` (`item_group_id`);
+
+--
+-- Indexes for table `profile_sectors`
+--
+ALTER TABLE `profile_sectors`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `profile_id` (`profile_id`),
+  ADD KEY `sector_id` (`sector_id`);
+
+--
+-- Indexes for table `profile_sector_parameters`
+--
+ALTER TABLE `profile_sector_parameters`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `profile_sector_id` (`profile_sector_id`),
+  ADD KEY `parameter_id` (`parameter_id`);
+
+--
+-- Indexes for table `profile_sector_parameter_items`
+--
+ALTER TABLE `profile_sector_parameter_items`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `profile_sector_parameter_id` (`profile_sector_parameter_id`),
+  ADD KEY `item_id` (`item_id`);
+
+--
 -- Indexes for table `sectors`
 --
 ALTER TABLE `sectors`
@@ -545,7 +654,7 @@ ALTER TABLE `parameters`
 -- AUTO_INCREMENT for table `parameter_items`
 --
 ALTER TABLE `parameter_items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
 --
 -- AUTO_INCREMENT for table `parameter_table_row`
 --
@@ -556,6 +665,26 @@ ALTER TABLE `parameter_table_row`
 --
 ALTER TABLE `profile`
   MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `profile_item_groups`
+--
+ALTER TABLE `profile_item_groups`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `profile_sectors`
+--
+ALTER TABLE `profile_sectors`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `profile_sector_parameters`
+--
+ALTER TABLE `profile_sector_parameters`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `profile_sector_parameter_items`
+--
+ALTER TABLE `profile_sector_parameter_items`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `sectors`
 --
@@ -588,6 +717,30 @@ ALTER TABLE `parameter_items`
 --
 ALTER TABLE `parameter_table_row`
   ADD CONSTRAINT `parameter_table_row_ibfk_1` FOREIGN KEY (`table_row_item`) REFERENCES `parameters` (`parameter_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `profile_item_groups`
+--
+ALTER TABLE `profile_item_groups`
+  ADD CONSTRAINT `profile_item_groups_ibfk_1` FOREIGN KEY (`profile_parameter_item_id`) REFERENCES `profile_sector_parameter_items` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `profile_sectors`
+--
+ALTER TABLE `profile_sectors`
+  ADD CONSTRAINT `profile_sectors_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profile` (`profile_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `profile_sector_parameters`
+--
+ALTER TABLE `profile_sector_parameters`
+  ADD CONSTRAINT `profile_sector_parameters_ibfk_1` FOREIGN KEY (`profile_sector_id`) REFERENCES `profile_sectors` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `profile_sector_parameter_items`
+--
+ALTER TABLE `profile_sector_parameter_items`
+  ADD CONSTRAINT `profile_sector_parameter_items_ibfk_1` FOREIGN KEY (`profile_sector_parameter_id`) REFERENCES `profile_sector_parameters` (`id`) ON DELETE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

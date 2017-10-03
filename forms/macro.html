@@ -1,34 +1,40 @@
 <div class="panel panel-border panel-primary">
 <div class="panel-heading">
-<h4><i class="icon icon-note"></i> Macro Sector
+
+<h4><i class="icon icon-note"></i> {{profile.sectors.macro.description}}
+
 <button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
 </h4>
 </div>
 <hr>
 <div class="panel-body">
-	<form name="formHolder.profile" id="formHolder.profile">
+
+	<form name="formHolder.macro" id="formHolder.macro">
 	<div class="panel panel-border panel-inverse card-box">
 	<div class="panel-heading">
-	<h5>Physical Characteristics</h5>
+	<h5>{{profile.sectors.macro.parameters[0].description}}</h5>
 	<hr>
 		<div class="row">
 			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-				<label class="label-control">Land Area</label>
-				<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+				<label class="label-control">{{profile.sectors.macro.parameters[0].items[0].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[0].items[0].item_value">
 			</div>
 			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-				<label class="label-control">Climate</label>
-				<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+				<label class="label-control">{{profile.sectors.macro.parameters[0].items[1].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[0].items[1].item_value">
+
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-				<label class="label-control">Terrain</label>
-				<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+
+				<label class="label-control">{{profile.sectors.macro.parameters[0].items[2].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[0].items[2].item_value">
 			</div>
 			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Barangays</label>
-					<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+				<label class="label-control">{{profile.sectors.macro.parameters[0].items[3].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[0].items[3].item_value">
+
 			</div>
 		</div>
 	</div>
@@ -38,46 +44,54 @@
 	
 	<div class="panel panel-border panel-inverse card-box">
 	<div class="panel-heading">
-	<h5>Demographics</h5>
+
+	<h5>{{profile.sectors.macro.parameters[1].description}}</h5>
 	<hr>
 	<div class="row">
 		<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-			<label class="label-control">Population</label>
-			<input type="text" class="form-control" name="pb_north" ng-disabled="controls.ok.btn">
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[0].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[1].items[0].item_value">
 		</div>
 		<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-			<label class="label-control">Number of Families</label>
-			<input type="text" class="form-control" name="pb_north" ng-disabled="controls.ok.btn">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-			<label class="label-control">Growth Rate</label>
-			<input type="text" class="form-control" name="pb_north" ng-disabled="controls.ok.btn">
-		</div>
-		<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-			<label class="label-control">Major Dialects/Language</label>
-			<input type="text" class="form-control" name="pb_north" ng-disabled="controls.ok.btn">
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[1].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[1].items[1].item_value">
+
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-			<label class="label-control">Population Density</label>
-			<input type="text" class="form-control" name="pb_north" ng-disabled="controls.ok.btn">
+
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[2].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[1].items[2].item_value">
 		</div>
 		<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-			<label class="label-control">Religion</label>
-			<input type="text" class="form-control" name="pb_north" ng-disabled="controls.ok.btn">
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[3].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[1].items[3].item_value">
+
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-			<label class="label-control">Number of Households</label>
-			<input type="text" class="form-control" name="pb_north" ng-disabled="controls.ok.btn">
+
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[4].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[1].items[4].item_value">
 		</div>
 		<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-			<label class="label-control">Literacy Rate</label>
-			<input type="text" class="form-control" name="pb_north" ng-disabled="controls.ok.btn">
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[5].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[1].items[5].item_value">
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[6].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[1].items[6].item_value">
+		</div>
+		<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[7].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[1].items[7].item_value">
+
 		</div>
 	</div>
 	</div>
@@ -86,7 +100,9 @@
 	</form>
 		<div class="form-group text-left m-b-0">
 			<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+
+			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'macro')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+
 		</div>
 	</div>
 </div>
