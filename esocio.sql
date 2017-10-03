@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 02, 2017 at 11:49 AM
+-- Generation Time: Oct 03, 2017 at 03:46 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -186,7 +186,7 @@ INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `is_
 (3, 2, 'Employment and Development Finance', 0, 0),
 (4, 3, 'Existing Land User Distribution', 0, 0),
 (5, 3, 'Land Classication', 0, 0),
-(6, 4, 'Food Sufficiency', 0, 1),
+(6, 4, 'Food Sufficiency - Plants', 0, 1),
 (7, 5, 'Road Network', 0, 0),
 (8, 5, 'Bridges', 0, 0),
 (9, 6, 'Social Welfare', 0, 0),
@@ -195,7 +195,7 @@ INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `is_
 (12, 9, 'Development Administration Sector', 0, 0),
 (13, 10, 'Trade, Industry and Tourism Sector', 0, 0),
 (14, 3, 'LIST OF WATER BODIES', 0, 0),
-(15, 4, 'Employment Income', 0, 0),
+(15, 2, 'Employment Income', 0, 0),
 (16, 10, 'Investible Areas', 0, 0),
 (17, 10, 'Existing and Potential Industries', 0, 0),
 (18, 10, 'Enterprises', 0, 0),
@@ -230,7 +230,7 @@ CREATE TABLE `parameter_items` (
 --
 
 INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `is_group_item`) VALUES
-(1, 1, 'Land Area', 1),
+(1, 1, 'Land Area', 0),
 (2, 1, 'Terrain', 0),
 (3, 1, 'Climate', 0),
 (4, 1, 'Number of Barangays', 0),
@@ -398,7 +398,11 @@ INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `i
 (232, 31, 'No. of Tourist Destination', 0),
 (233, 31, 'Job Generated', 1),
 (234, 31, 'No. of Establishments', 1),
-(235, 31, 'Employment', 1);
+(235, 31, 'Employment', 1),
+(236, 6, 'Commodity', 0),
+(237, 6, 'Area (has.)', 0),
+(238, 6, 'Production (tons)', 0),
+(239, 6, 'Sufficiency Level (%)', 0);
 
 -- --------------------------------------------------------
 
@@ -528,6 +532,7 @@ CREATE TABLE `profile_sector_parameter_items` (
   `id` int(10) NOT NULL,
   `profile_sector_parameter_id` int(10) NOT NULL,
   `item_id` int(10) NOT NULL,
+  `item_table_row` int(10) NOT NULL DEFAULT '0',
   `item_value` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -664,7 +669,7 @@ ALTER TABLE `parameters`
 -- AUTO_INCREMENT for table `parameter_items`
 --
 ALTER TABLE `parameter_items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
 --
 -- AUTO_INCREMENT for table `parameter_table_row`
 --
