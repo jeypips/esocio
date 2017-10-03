@@ -203,6 +203,7 @@
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/growl.js"></script>
 		<script src="modules/account.js"></script>
+		<script src="data/sectors.js"></script>
 		<script src="modules/profile.js"></script>
 		<script src="controllers/profile.js"></script>
 

@@ -1,4 +1,4 @@
-angular.module('profile-module',['bootstrap-modal','bootstrap-growl']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl) {
+angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-data']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,sectors) {
 	
 	function form() {
 		
@@ -47,6 +47,12 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl']).factory('
 				
 			});
 
+			sectors.load(scope);
+			
+			$timeout(function() {
+				console.log(scope.data.sectors);
+			},500);
+			
 		};
 
 		function validate(scope,form) {
@@ -79,6 +85,20 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl']).factory('
 			
 		};
 		
+		function sector(scope,form) {
+			
+			var sector = null;
+			
+			angular.forEach(scope.data.sectors, function(item,i) {
+				
+				if (form == item.shortname) sector = item;
+				
+			});
+			
+			return sector;
+			
+		};
+		
 		self.activateForm = function(scope,form,row) {
 			
 			if (form != 'profile') {
@@ -105,6 +125,14 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl']).factory('
 			scope.profile = {};
 			scope.profile.profile_id = 0;
 			
+			scope.profile.sectors = {};
+			
+			if (form != 'profile') {
+				// console.log(sector(scope,form));
+				scope.profile.sectors[form] = angular.copy(sector(scope,form));
+				console.log(scope.profile.sectors);
+			};
+			
 			/*
 			**
 			*/
@@ -130,7 +158,8 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl']).factory('
 					 
 				  // error
 					
-				});					
+				});
+				
 			};			
 			
 		};
@@ -170,7 +199,17 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl']).factory('
 				
 				case "macro":
 					
-
+					$http({
+					  method: 'POST',
+					  url: 'handlers/macro-save.php',
+					  data: scope.profile.sectors[form]
+					}).then(function mySucces(response) {
+						
+					}, function myError(response) {
+						 
+					  // error
+						
+					});	
 					
 				break;
 				

@@ -80,3 +80,53 @@ Stack trace:
 #2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(19): construct_profile(Object(pdo_db), '22')
 #3 {main}
   thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 129
+[03-Oct-2017 11:49:28 Asia/Manila] PHP Warning:  json_decode() expects parameter 1 to be string, array given in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php on line 5
+[03-Oct-2017 11:49:28 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 11:49:28 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php:0
+[03-Oct-2017 11:49:28 Asia/Manila] PHP   2. json_decode() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php:5
+[03-Oct-2017 12:50:15 Asia/Manila] PHP Parse error:  syntax error, unexpected '}' in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php on line 17
+[03-Oct-2017 12:56:28 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.paramaters' doesn't exist in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT paramete...')
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php(13): pdo_db->getData('SELECT paramete...')
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 38
+[03-Oct-2017 13:14:23 Asia/Manila] PHP Notice:  Undefined index: item_id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php on line 19
+[03-Oct-2017 13:14:23 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 13:14:23 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php:0
+[03-Oct-2017 13:14:23 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT item_id ...')
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php(19): pdo_db->getData('SELECT item_id ...')
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 38
+[03-Oct-2017 13:35:03 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 13:35:03 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 13:35:03 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 13:35:29 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 13:35:29 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 13:35:29 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 13:35:52 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 13:35:52 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 13:35:52 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 13:36:13 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 13:36:13 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 13:36:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 13:42:59 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '6' at line 1 in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT table_ro...')
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php(41): pdo_db->getData('SELECT table_ro...')
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 38
+[03-Oct-2017 15:44:45 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 15:44:45 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 15:44:45 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 15:45:11 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 15:45:11 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 15:45:11 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 15:45:26 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 15:45:26 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 15:45:26 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 15:45:51 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 15:45:51 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 15:45:51 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
