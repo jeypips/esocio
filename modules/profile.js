@@ -187,7 +187,6 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 					}).then(function mySucces(response) {
 						
 						if (scope.profile.profile_id == 0) scope.profile.profile_id = response.data;
-						mode(scope,scope.profile);
 						
 					}, function myError(response) {
 						 
@@ -197,12 +196,12 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 				
 				break;
 				
-				case "macro":
+				default:
 					
 					$http({
 					  method: 'POST',
-					  url: 'handlers/macro-save.php',
-					  data: scope.profile.sectors[form]
+					  url: 'handlers/'+form+'-save.php',
+					  data: scope.profile
 					}).then(function mySucces(response) {
 						
 					}, function myError(response) {
@@ -211,9 +210,11 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 						
 					});	
 					
-				break;
+				break;		
 				
-			}				
+			}
+			
+			mode(scope,scope.profile);			
 			
 		};		
 		

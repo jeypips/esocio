@@ -1,6 +1,6 @@
 <div class="panel panel-border panel-primary">
 <div class="panel-heading">
-<h4><i class="icon icon-note"></i> Employment and Development Finance Sector
+<h4><i class="icon icon-note"></i> {{profile.sectors.employment.description}}
 <button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
 </h4>
 </div>
@@ -13,59 +13,59 @@
 		<div class="card-box">
 			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Labor Force(No.)</label>
-					<input type="number" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.employment.parameters[0].items[0].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.employment.parameters[0].items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Employment Rate</label>
-					<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-			<hr>
-			<h5>Employment Distribution:</h5>
-			<div class="row">
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Agriculture</label>
-					<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Industry</label>
-					<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Services</label>
-					<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.employment.parameters[0].items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.employment.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 			<hr>
+			<h5>{{profile.sectors.employment.parameters[0].items[2].description}}:</h5>
 			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Proverty Incidence</label>
-					<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.employment.parameters[0].items[2].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.employment.parameters[0].items[2].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Magnitude of Poor Families</label>
-					<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.employment.parameters[0].items[2].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.employment.parameters[0].items[2].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Magnitude of Poor Population</label>
-					<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.employment.parameters[0].items[2].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.employment.parameters[0].items[2].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.employment.parameters[0].items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.employment.parameters[0].items[3].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.employment.parameters[0].items[4].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.employment.parameters[0].items[4].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.employment.parameters[0].items[5].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.employment.parameters[0].items[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Classification</label>
-					<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.employment.parameters[0].items[6].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.employment.parameters[0].items[6].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Municipal Gov't Revenue</label>
-					<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.employment.parameters[0].items[7].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.employment.parameters[0].items[7].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Municipal Gov't Expenditures</label>
-					<input type="text" class="form-control" name="land_area" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.employment.parameters[0].items[8].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.employment.parameters[0].items[8].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 		</div>
