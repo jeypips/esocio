@@ -161,3 +161,184 @@ Stack trace:
 #1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php(42): pdo_db->insertData(Array)
 #2 {main}
   thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 81
+[03-Oct-2017 20:28:34 Asia/Manila] PHP Notice:  Undefined variable: con in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 17
+[03-Oct-2017 20:28:34 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 20:28:34 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php:0
+[03-Oct-2017 20:28:34 Asia/Manila] PHP   2. sectors->fetchAll() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php:10
+[03-Oct-2017 20:28:34 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function getData() on unknown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php:17
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php(10): sectors->fetchAll()
+#1 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 17
+[03-Oct-2017 20:42:47 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'sectors' not found in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php on line 10
+[03-Oct-2017 20:45:06 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'sectors' not found in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php on line 10
+[03-Oct-2017 21:18:49 Asia/Manila] PHP Notice:  Undefined offset: 0 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php on line 15
+[03-Oct-2017 21:18:49 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 21:18:49 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php:0
+[03-Oct-2017 21:19:34 Asia/Manila] PHP Notice:  Undefined offset: 0 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php on line 15
+[03-Oct-2017 21:19:34 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 21:19:34 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php:0
+[03-Oct-2017 21:20:03 Asia/Manila] PHP Notice:  Undefined offset: 0 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php on line 15
+[03-Oct-2017 21:20:03 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 21:20:03 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php:0
+[03-Oct-2017 21:21:45 Asia/Manila] PHP Notice:  Undefined offset: 0 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php on line 15
+[03-Oct-2017 21:21:45 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 21:21:46 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php:0
+[04-Oct-2017 07:32:37 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sectors' in 'field list' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:81
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(81): PDO->prepare('INSERT INTO pro...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(20): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 81
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 21:31:49 Asia/Manila] PHP Notice:  Undefined variable: macro in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\employment-view.php on line 15
+[04-Oct-2017 21:31:49 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 21:31:49 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\employment-view.php:0
+[04-Oct-2017 21:45:54 Asia/Manila] PHP Notice:  Undefined variable: con in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 80
+[04-Oct-2017 21:45:54 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 21:45:54 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 21:45:54 Asia/Manila] PHP   2. sectors->profileSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:14
+[04-Oct-2017 21:45:54 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function getData() on unknown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php:80
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php(14): sectors->profileSector(1, 'macro')
+#1 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 80
+[04-Oct-2017 21:46:39 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'macro' in 'where clause' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT sector_i...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php(80): pdo_db->getData('SELECT sector_i...')
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php(14): sectors->profileSector(1, 'macro')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 38
+[04-Oct-2017 21:50:48 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'macro' in 'where clause' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT sector_i...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php(80): pdo_db->getData('SELECT sector_i...')
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php(14): sectors->profileSector(1, 'macro')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 38
+[04-Oct-2017 21:51:56 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 82
+[04-Oct-2017 21:51:56 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 21:51:56 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 21:51:56 Asia/Manila] PHP   2. sectors->profileSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:14
+[04-Oct-2017 21:51:56 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT paramete...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php(82): pdo_db->getData('SELECT paramete...')
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php(14): sectors->profileSector(1, 'macro')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 38
+[04-Oct-2017 21:53:09 Asia/Manila] PHP Notice:  Array to string conversion in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 82
+[04-Oct-2017 21:53:09 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 21:53:09 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 21:53:09 Asia/Manila] PHP   2. sectors->profileSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:14
+[04-Oct-2017 21:53:09 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[id]' at line 1 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT paramete...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php(82): pdo_db->getData('SELECT paramete...')
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php(14): sectors->profileSector(1, 'macro')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 38
+[04-Oct-2017 22:30:11 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profile_sector_parameter_id' in 'field list' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:81
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(81): PDO->prepare('INSERT INTO pro...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\employment-save.php(42): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 81
+[04-Oct-2017 23:12:01 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profile_sector_parameter_id' in 'field list' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:81
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(81): PDO->prepare('INSERT INTO pro...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\employment-save.php(42): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 81
+[04-Oct-2017 23:13:07 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profile_sector_parameter_id' in 'field list' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:81
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(81): PDO->prepare('INSERT INTO pro...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\employment-save.php(42): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 81

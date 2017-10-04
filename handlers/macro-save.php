@@ -9,7 +9,7 @@ require_once '../db.php';
 $con = new pdo_db("profile_sectors");
 
 $profile_sector = array(
-	"profile_id"=>1,
+	"profile_id"=>$_POST['profile_id'],
 	"sector_id"=>$_POST['sectors']['macro']['id']
 );
 
@@ -26,12 +26,11 @@ foreach ($_POST['sectors']['macro']['parameters'] as $i => $parameter) {
 	);
 
 	$con->insertData($profile_sector_parameter);
-	
-	$con->table = "profile_sector_parameter_items";
 	$profile_sector_parameter_id = $con->insertId;
 	
 	foreach ($_POST['sectors']['macro']['parameters'][$i]['items'] as $ii => $item) {
 		
+		$con->table = "profile_sector_parameter_items";		
 		$profile_sector_parameter_item = array(
 			"profile_sector_parameter_id"=>$profile_sector_parameter_id,
 			"item_id"=>$item['id'],

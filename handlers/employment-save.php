@@ -25,13 +25,12 @@ foreach ($_POST['sectors']['employment']['parameters'] as $i => $parameter) {
 		"parameter_id"=>$parameter['id']
 	);
 
-	$con->insertData($profile_sector_parameter);
-	
-	$con->table = "profile_sector_parameter_items";
+	$con->insertData($profile_sector_parameter);	
 	$profile_sector_parameter_id = $con->insertId;
 	
 	foreach ($_POST['sectors']['employment']['parameters'][$i]['items'] as $ii => $item) {
 		
+		$con->table = "profile_sector_parameter_items";		
 		$profile_sector_parameter_item = array(
 			"profile_sector_parameter_id"=>$profile_sector_parameter_id,
 			"item_id"=>$item['id'],
