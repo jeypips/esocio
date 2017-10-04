@@ -9,39 +9,39 @@
 
 	<form name="formHolder.education" id="formHolder.education">
 
-		<h5>*Number of Tertiary Schools</h5>
+		<h5>{{profile.sectors.education.parameters[0].items[0].description}}</h5>
 		<div class="row">
 			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-				<label class="label-control">College</label>
-				<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				<label class="label-control">{{profile.sectors.education.parameters[0].items[0].group_items[0].description}}</label>
+				<input type="number" class="form-control" ng-model="profile.sectors.education.parameters[0].items[0].group_items[0].item_value" ng-disabled="controls.ok.btn">
 			</div>
 			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-				<label class="label-control">University</label>
-				<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+				<label class="label-control">{{profile.sectors.education.parameters[0].items[0].group_items[1].description}}</label>
+				<input type="number" class="form-control" ng-model="profile.sectors.education.parameters[0].items[0].group_items[1].item_value" ng-disabled="controls.ok.btn">
 			</div>
 		</div>
 		<hr>
-		<h5>*Number of Secondary Schools</h5>
+		<h5>{{profile.sectors.education.parameters[0].items[1].description}}</h5>
 			<div class="row">
 				<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Public</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.education.parameters[0].items[1].group_items[0].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.education.parameters[0].items[1].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Private</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.education.parameters[0].items[1].group_items[1].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.education.parameters[0].items[1].group_items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 		<hr>
-		<h5>*Number of Elementary Schools</h5>
+		<h5>{{profile.sectors.education.parameters[0].items[2].description}}</h5>
 			<div class="row">
 				<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Public</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.education.parameters[0].items[2].group_items[0].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.education.parameters[0].items[2].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-6 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Private</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.education.parameters[0].items[2].group_items[1].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.education.parameters[0].items[2].group_items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 	</form>
