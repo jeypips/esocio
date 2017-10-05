@@ -8,9 +8,9 @@ require_once '../db.php';
 
 $con = new pdo_db("profile_sectors");
 $profile_id = $_POST['profile_id'];
-$sector_id = $_POST['sectors']['macro']['id'];
+$sector_id = $_POST['sectors']['social']['id'];
 
-$parameters = $_POST['sectors']['macro']['parameters'];
+$parameters = $_POST['sectors']['social']['parameters'];
 
 if (doesProfileExist($con,$profile_id,$sector_id)) updateProfile($con,$parameters,$profile_id,$sector_id);
 else addProfile($con,$parameters,$profile_id,$sector_id);
