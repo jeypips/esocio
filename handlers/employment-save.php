@@ -94,7 +94,7 @@ function updateProfile($con,$parameters,$profile_id,$sector_id) {
 			if ($item['has_group']) {
 
 				$con->table = "profile_item_groups";
-				
+
 				foreach ($item['group_items'] as $iii => $gi) {
 
 					$profile_item_group = array(
