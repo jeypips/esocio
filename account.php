@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="images/lu_seal.png">
 
-        <title>E-Socio | Profile</title>
+        <title>E-Socio | Account</title>
 		 
 		 <!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
@@ -42,9 +42,6 @@
     </head>
 
     <body class="fixed-left" ng-app="user" ng-controller="userCtrl" account-profile>
-
-        <!-- Begin page -->
-        <div id="wrapper" class="forced enlarged">
 
             <!-- Top Bar Start -->
             <div class="topbar">

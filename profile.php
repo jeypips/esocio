@@ -126,7 +126,7 @@
 		<div class="container">
 		
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-12 card-box">
 					<div id="x_content" class="x_content"></div>
 				</div>
 			</div>
@@ -138,6 +138,8 @@
 			   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
 			</footer>
 		</div>
+
+
 	
 	<div ng-show="views.menu">
 		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
