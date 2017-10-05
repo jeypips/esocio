@@ -9,83 +9,83 @@
 	<form name="formHolder.agriculture" id="formHolder.agriculture">
 	<div class="panel panel-inverse panel-border">
 	<div class="panel-heading">
-	<h5>Food Sufficiency</h5>
+	<h5>{{profile.sectors.agriculture.parameters[0].description}}</h5>
 	</div>
 	<div class="card-box">
-	<h5>Area(has.)</h5>
+	<h5>{{profile.sectors.agriculture.parameters[0].items[1].description}}</h5>
 		<div class="row">
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Palay/Rice</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[0].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[1].rows[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Corn</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[1].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[1].rows[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Fruit Vegetable</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[2].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[1].rows[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Leafy Vegetable</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[3].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[1].rows[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 		</div>
 		<div class="row">
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Fruits</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[4].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[1].rows[4].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Legumes</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[5].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[1].rows[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Rootcrops</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[6].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[1].rows[6].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Fish</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[7].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[1].rows[7].item_value" ng-disabled="controls.ok.btn">
 				</div>
 		</div>
 	</div>
 	<div class="card-box">
-	<h5>Production(tons)</h5>
+	<h5>{{profile.sectors.agriculture.parameters[0].items[2].description}}</h5>
 		<div class="row">
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Palay/Rice</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[0].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[2].rows[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Corn</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[1].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[2].rows[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Fruit Vegetable</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[2].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[2].rows[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Leafy Vegetable</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[3].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[2].rows[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 		</div>
 		<div class="row">
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Fruits</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[4].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[2].rows[4].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Legumes</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[5].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[2].rows[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Rootcrops</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[6].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[2].rows[6].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Fish</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[7].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[2].rows[7].item_value" ng-disabled="controls.ok.btn">
 				</div>
 		</div>
 	</div>	
@@ -93,40 +93,99 @@
 	<h5>Sufficiency Level (%)</h5>
 		<div class="row">
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Palay/Rice</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[0].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[3].rows[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Corn</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[1].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[3].rows[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Fruit Vegetable</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[2].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[3].rows[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Leafy Vegetable</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[3].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[3].rows[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 		</div>
 		<div class="row">
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Fruits</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[4].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[3].rows[4].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Legumes</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[5].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[3].rows[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Rootcrops</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[6].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[3].rows[6].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Fish</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[0].rows[7].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[0].items[3].rows[7].item_value" ng-disabled="controls.ok.btn">
 				</div>
 	</div>
+	</div>
+	</div>
+	<div class="panel panel-inverse panel-border">
+	<div class="panel-heading">
+	<h5>{{profile.sectors.agriculture.parameters[1].description}}</h5>
+	</div>
+	<div class="card-box">
+	<h5>{{profile.sectors.agriculture.parameters[1].items[1].description}}</h5>
+		<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[1].rows[0].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[1].items[1].rows[0].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[1].rows[1].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[1].items[1].rows[1].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[1].rows[2].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[1].items[1].rows[2].item_value" ng-disabled="controls.ok.btn">
+				</div>
+		</div>
+		<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[1].rows[3].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[1].items[1].rows[3].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[1].rows[4].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[1].items[1].rows[4].item_value" ng-disabled="controls.ok.btn">
+				</div>
+		</div>
+	</div>
+		<div class="card-box">
+	<h5>{{profile.sectors.agriculture.parameters[1].items[1].description}}</h5>
+		<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[1].rows[0].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[1].items[2].rows[0].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[1].rows[1].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[1].items[2].rows[1].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[1].rows[2].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[1].items[2].rows[2].item_value" ng-disabled="controls.ok.btn">
+				</div>
+		</div>
+		<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[1].rows[3].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[1].items[2].rows[3].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.agriculture.parameters[1].rows[4].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.agriculture.parameters[1].items[2].rows[4].item_value" ng-disabled="controls.ok.btn">
+				</div>
+		</div>
 	</div>
 	</div>
 	</form>
