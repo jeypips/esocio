@@ -23,7 +23,8 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 
 			scope.profile = {};
 			scope.profile.profile_id = 0;
-
+			scope.profile.sectors = {};			
+			
 			scope.profiles = []; // list
 
 			scope.views.subMenu = 0;
@@ -51,7 +52,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			
 			$timeout(function() {
 				console.log(scope.data.sectors);
-			},500);
+			},1000);
 			
 		};
 
@@ -100,11 +101,13 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 		};
 		
 		self.activateForm = function(scope,form,row) {
-			
+
+			if (scope.$id > 2) scope = scope.$parent;
+		
 			if (form != 'profile') {
-				if (scope.$parent.profile.profile_id == 0) {
+				if (scope.profile.profile_id == 0) {
 					growl.show('btn btn-danger',{from: 'top', amount: 55},'Please finish Basic Profile form before proceeding to other forms');
-					// return;
+					return;
 				};
 			};
 			
@@ -118,25 +121,6 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			
 			mode(scope,row);
 			
-			/*
-			** data structures
-			*/
-			
-			scope.profile = {};
-			scope.profile.profile_id = 0;
-			
-			scope.profile.sectors = {};
-			
-			if (form != 'profile') {
-				// console.log(sector(scope,form));
-				scope.profile.sectors[form] = angular.copy(sector(scope,form));
-				console.log(scope.profile.sectors);
-			};
-			
-			/*
-			**
-			*/
-			
 			$('#x_content').html(loading);
 			$('#x_content').load('forms/'+form+'.html',function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
@@ -145,22 +129,56 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			if (row != null) {
 
 				if (scope.$id> 2) scope = scope.$parent;				
-
-				$http({
-				  method: 'POST',
-				  url: 'handlers/'+form+'-view.php',
-				  data: {profile_id: row.profile_id}
-				}).then(function mySucces(response) {
-					
-					scope.profile = angular.copy(response.data);
-					
-				}, function myError(response) {
-					 
-				  // error
-					
-				});
 				
-			};			
+				switch (form) {
+				
+					case "profile":
+					
+						$http({
+						  method: 'POST',
+						  url: 'handlers/'+form+'-view.php',
+						  data: {profile_id: row.profile_id, sector: form}
+						}).then(function mySucces(response) {
+							
+							scope.profile = angular.copy(response.data);
+							scope.profile.sectors = {};							
+							
+						}, function myError(response) {
+							 
+						  // error
+							
+						});					
+					
+					break;
+					
+					default:
+					
+						$http({
+						  method: 'POST',
+						  url: 'handlers/'+form+'-view.php',
+						  data: {profile_id: row.profile_id, sector: form}
+						}).then(function mySucces(response) {
+
+							scope.profile.sectors = angular.copy(response.data);
+							console.log(scope.profile.sectors);
+							
+						}, function myError(response) {
+							 
+						  // error
+							
+						});						
+					
+					break;
+					
+				}
+				
+			};
+			
+			/* if (form != 'profile') {
+				console.log(sector(scope,form));
+				scope.profile.sectors[form] = angular.copy(sector(scope,form));
+				console.log(scope.profile.sectors);
+			}; */
 			
 		};
 		
@@ -186,7 +204,10 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 					  data: {profile: scope.profile}
 					}).then(function mySucces(response) {
 						
-						if (scope.profile.profile_id == 0) scope.profile.profile_id = response.data;
+						if (scope.profile.profile_id == 0) {
+							scope.profile = angular.copy(response.data);
+							scope.profile.sectors = {};							
+						};
 						
 					}, function myError(response) {
 						 
@@ -249,7 +270,8 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			// load list
 			scope.mode = 'list';
 			scope.profile = {};
-			scope.profile.profile_id = 0;			
+			scope.profile.profile_id = 0;
+			scope.profile.sectors = {};		
 			$http({
 			  method: 'POST',
 			  url: 'handlers/profile-list.php',

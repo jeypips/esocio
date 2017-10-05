@@ -8,6 +8,8 @@ include_once '../db.php';
 
 $con = new pdo_db("profile");
 
+unset($_POST['profile']['sectors']);
+
 if ($_POST['profile']['profile_id']) {
 	
 	$profile = $con->updateData($_POST['profile'],'profile_id');	
@@ -20,6 +22,8 @@ if ($_POST['profile']['profile_id']) {
 
 }
 
-echo $profile_id;
+$profile = $con->getData("SELECT * FROM profile WHERE profile_id = $profile_id");
+
+echo json_encode($profile[0]);
 
 ?>

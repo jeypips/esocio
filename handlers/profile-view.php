@@ -10,8 +10,8 @@ session_start();
 
 $con = new pdo_db();
 
-$profiles = $con->getData("SELECT * FROM profile WHERE profile_id = $_POST[profile_id]");
+$profile = $con->getData("SELECT * FROM profile WHERE profile_id = $_POST[profile_id]");
 
-echo json_encode($profiles[0]);
+echo json_encode($profile[0]);
 
 ?>
