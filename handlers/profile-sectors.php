@@ -16,8 +16,10 @@ $sectors = $con->getData("SELECT * FROM sectors");
 
 $profile_sectors = [];
 
+
 $profile = $con->getData("SELECT * FROM profile WHERE profile_id = $profile_id");
 $profile_sectors['profile'] = $profile[0];
+
 
 foreach ($sectors as $sector) {
 	
@@ -28,7 +30,6 @@ foreach ($sectors as $sector) {
 }
 
 header("Content-Type: application/json");
-
 echo json_encode($profile_sectors);
 
 ?>
