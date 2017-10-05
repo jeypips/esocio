@@ -1,0 +1,163 @@
+[28-Sep-2017 10:06:07 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1049] Unknown database 'esocio' in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:31
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(31): PDO->__construct('mysql:host=loca...', 'root', 'root', Array)
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\login.php(7): pdo_db->__construct()
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 31
+[28-Sep-2017 16:00:53 Asia/Manila] PHP Parse error:  syntax error, unexpected '}' in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 61
+[28-Sep-2017 16:01:11 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.item_groups' doesn't exist in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT item_gro...')
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(28): pdo_db->getData('SELECT item_gro...')
+#2 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(9): construct_profile(Object(pdo_db))
+#3 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Notice:  Undefined index: sector in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php on line 38
+[28-Sep-2017 16:02:05 Asia/Manila] PHP Stack trace:
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:0
+[28-Sep-2017 16:02:05 Asia/Manila] PHP   2. construct_profile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php:9
+[02-Oct-2017 07:20:14 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0,1,2,3,4,5,6,7,8,9) VALUES (?,?,?,?,?,?,?,?,?,?)' at line 1 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:81
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(81): PDO->prepare('INSERT INTO pro...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(45): pdo_db->insertData(Array)
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(19): construct_profile(Object(pdo_db), '22')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 81
+[02-Oct-2017 07:21:19 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0,1,2,3,4,5,6,7,8,9) VALUES (?,?,?,?,?,?,?,?,?,?)' at line 1 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:81
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(81): PDO->prepare('INSERT INTO pro...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(45): pdo_db->insertData(Array)
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(19): construct_profile(Object(pdo_db), '22')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 81
+[02-Oct-2017 07:30:17 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`esocio`.`profile_sector_parameters`, CONSTRAINT `profile_sector_parameters_ibfk_1` FOREIGN KEY (`profile_sector_id`) REFERENCES `profile_sectors` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION) in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:129
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(129): PDOStatement->execute(Array)
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(56): pdo_db->insertDataMulti(Array)
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(19): construct_profile(Object(pdo_db), '22')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 129
+[02-Oct-2017 07:31:10 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`esocio`.`profile_sector_parameters`, CONSTRAINT `profile_sector_parameters_ibfk_1` FOREIGN KEY (`profile_sector_id`) REFERENCES `profile_sectors` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION) in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:129
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(129): PDOStatement->execute(Array)
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(56): pdo_db->insertDataMulti(Array)
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(19): construct_profile(Object(pdo_db), '22')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 129
+[03-Oct-2017 11:49:28 Asia/Manila] PHP Warning:  json_decode() expects parameter 1 to be string, array given in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php on line 5
+[03-Oct-2017 11:49:28 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 11:49:28 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php:0
+[03-Oct-2017 11:49:28 Asia/Manila] PHP   2. json_decode() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php:5
+[03-Oct-2017 12:50:15 Asia/Manila] PHP Parse error:  syntax error, unexpected '}' in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php on line 17
+[03-Oct-2017 12:56:28 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.paramaters' doesn't exist in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT paramete...')
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php(13): pdo_db->getData('SELECT paramete...')
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 38
+[03-Oct-2017 13:14:23 Asia/Manila] PHP Notice:  Undefined index: item_id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php on line 19
+[03-Oct-2017 13:14:23 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 13:14:23 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php:0
+[03-Oct-2017 13:14:23 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT item_id ...')
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php(19): pdo_db->getData('SELECT item_id ...')
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 38
+[03-Oct-2017 13:35:03 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 13:35:03 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 13:35:03 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 13:35:29 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 13:35:29 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 13:35:29 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 13:35:52 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 13:35:52 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 13:35:52 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 13:36:13 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 13:36:13 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 13:36:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 13:42:59 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '6' at line 1 in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT table_ro...')
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php(41): pdo_db->getData('SELECT table_ro...')
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 38
+[03-Oct-2017 15:44:45 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 15:44:45 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 15:44:45 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 15:45:11 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 15:45:11 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 15:45:11 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 15:45:26 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 15:45:26 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 15:45:26 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 15:45:51 Asia/Manila] PHP Notice:  Undefined index: is_group_item in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php on line 15
+[03-Oct-2017 15:45:51 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 15:45:51 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php:0
+[03-Oct-2017 16:23:28 Asia/Manila] PHP Parse error:  syntax error, unexpected '"sector_id"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 11
+[03-Oct-2017 16:24:34 Asia/Manila] PHP Notice:  Undefined index: sectors in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 11
+[03-Oct-2017 16:24:34 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 16:24:34 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[03-Oct-2017 16:24:34 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'sector_id' cannot be null in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php(14): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 82
+[03-Oct-2017 16:25:11 Asia/Manila] PHP Notice:  Undefined index: sectors in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 11
+[03-Oct-2017 16:25:11 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 16:25:11 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[03-Oct-2017 16:25:11 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'sector_id' cannot be null in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php(14): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 82
+[03-Oct-2017 16:36:26 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'parameter_id' cannot be null in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php(27): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 82
+[03-Oct-2017 17:15:45 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profile_sector_parameter_id' in 'field list' in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:81
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(81): PDO->prepare('INSERT INTO pro...')
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php(42): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 81

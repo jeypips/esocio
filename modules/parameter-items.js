@@ -128,6 +128,7 @@ angular.module('parameterItem-module',['bootstrap-modal','bootstrap-growl']).fac
 			}).then(function mySucces(response) {
 				
 				mode(scope,scope.parameter_item);
+				self.list(scope);
 				growl.show('btn btn-success',{from: 'top', amount: 55},'Parameter item successfully updated.');
 				
 			}, function myError(response) {
