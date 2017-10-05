@@ -6,65 +6,69 @@
 </div>
 <hr>
 <div class="panel-body">
-	<form name="formHolder.profile" id="formHolder.profile">
+
+	<form name="formHolder.health" id="formHolder.health">
+
 		<div class="card-box col-lg-12">
 			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Crude Birth Rate</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Crude Death Rate</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Maternal Mortality Rate</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Infant Mortality Rate</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Morbidity Rate</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Mortality Rate</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Contraceptive Prevalence Rate</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Malnutrition - Pre School</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[4].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[4].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Malnutrition - In School</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[5].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Hospitals</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[6].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[6].item_value"" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Clinics</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[7].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[7].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[8].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[8].item_value" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[9].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.health.parameters[0].items[9].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[10].description}}</label>
+					<input type="number" class="form-control" ng-model="profile.sectors.health.parameters[0].items[10].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 		</div>
 	</form>
 		<div class="form-group text-left m-b-0">
 			<button class="btn btn-white waves-light waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+
+			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'health')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+
 		</div>
 	</div>
 </div>
