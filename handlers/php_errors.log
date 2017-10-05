@@ -161,3 +161,709 @@ Stack trace:
 #1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php(42): pdo_db->insertData(Array)
 #2 {main}
   thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 81
+[03-Oct-2017 20:28:34 Asia/Manila] PHP Notice:  Undefined variable: con in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 17
+[03-Oct-2017 20:28:34 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 20:28:34 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php:0
+[03-Oct-2017 20:28:34 Asia/Manila] PHP   2. sectors->fetchAll() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php:10
+[03-Oct-2017 20:28:34 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function getData() on unknown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php:17
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\sectors-structures.php(10): sectors->fetchAll()
+#1 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 17
+[03-Oct-2017 20:42:47 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'sectors' not found in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php on line 10
+[03-Oct-2017 20:45:06 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'sectors' not found in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php on line 10
+[03-Oct-2017 21:18:49 Asia/Manila] PHP Notice:  Undefined offset: 0 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php on line 15
+[03-Oct-2017 21:18:49 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 21:18:49 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php:0
+[03-Oct-2017 21:19:34 Asia/Manila] PHP Notice:  Undefined offset: 0 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php on line 15
+[03-Oct-2017 21:19:34 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 21:19:34 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php:0
+[03-Oct-2017 21:20:03 Asia/Manila] PHP Notice:  Undefined offset: 0 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php on line 15
+[03-Oct-2017 21:20:03 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 21:20:03 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php:0
+[03-Oct-2017 21:21:45 Asia/Manila] PHP Notice:  Undefined offset: 0 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php on line 15
+[03-Oct-2017 21:21:45 Asia/Manila] PHP Stack trace:
+[03-Oct-2017 21:21:46 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-view.php:0
+[04-Oct-2017 07:32:37 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sectors' in 'field list' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:81
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(81): PDO->prepare('INSERT INTO pro...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(20): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 81
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:39:33 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:39:33 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Notice:  Undefined index: sector_shortname in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 66
+[04-Oct-2017 20:40:01 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 20:40:01 Asia/Manila] PHP   2. sectors->fetchSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:13
+[04-Oct-2017 21:31:49 Asia/Manila] PHP Notice:  Undefined variable: macro in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\employment-view.php on line 15
+[04-Oct-2017 21:31:49 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 21:31:49 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\employment-view.php:0
+[04-Oct-2017 21:45:54 Asia/Manila] PHP Notice:  Undefined variable: con in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 80
+[04-Oct-2017 21:45:54 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 21:45:54 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 21:45:54 Asia/Manila] PHP   2. sectors->profileSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:14
+[04-Oct-2017 21:45:54 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function getData() on unknown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php:80
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php(14): sectors->profileSector(1, 'macro')
+#1 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 80
+[04-Oct-2017 21:46:39 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'macro' in 'where clause' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT sector_i...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php(80): pdo_db->getData('SELECT sector_i...')
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php(14): sectors->profileSector(1, 'macro')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 38
+[04-Oct-2017 21:50:48 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'macro' in 'where clause' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT sector_i...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php(80): pdo_db->getData('SELECT sector_i...')
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php(14): sectors->profileSector(1, 'macro')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 38
+[04-Oct-2017 21:51:56 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 82
+[04-Oct-2017 21:51:56 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 21:51:56 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 21:51:56 Asia/Manila] PHP   2. sectors->profileSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:14
+[04-Oct-2017 21:51:56 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT paramete...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php(82): pdo_db->getData('SELECT paramete...')
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php(14): sectors->profileSector(1, 'macro')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 38
+[04-Oct-2017 21:53:09 Asia/Manila] PHP Notice:  Array to string conversion in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php on line 82
+[04-Oct-2017 21:53:09 Asia/Manila] PHP Stack trace:
+[04-Oct-2017 21:53:09 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:0
+[04-Oct-2017 21:53:09 Asia/Manila] PHP   2. sectors->profileSector() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php:14
+[04-Oct-2017 21:53:09 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[id]' at line 1 in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(38): PDO->query('SELECT paramete...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\classes.php(82): pdo_db->getData('SELECT paramete...')
+#2 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\macro-view.php(14): sectors->profileSector(1, 'macro')
+#3 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 38
+[04-Oct-2017 22:30:11 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profile_sector_parameter_id' in 'field list' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:81
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(81): PDO->prepare('INSERT INTO pro...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\employment-save.php(42): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 81
+[04-Oct-2017 23:12:01 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profile_sector_parameter_id' in 'field list' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:81
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(81): PDO->prepare('INSERT INTO pro...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\employment-save.php(42): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 81
+[04-Oct-2017 23:13:07 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profile_sector_parameter_id' in 'field list' in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php:81
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php(81): PDO->prepare('INSERT INTO pro...')
+#1 C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\employment-save.php(42): pdo_db->insertData(Array)
+#2 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\db.php on line 81
+[05-Oct-2017 08:33:05 Asia/Manila] PHP Fatal error:  Cannot re-assign auto-global variable _POST in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 14
+[05-Oct-2017 08:34:11 Asia/Manila] PHP Fatal error:  Cannot re-assign auto-global variable _POST in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 14
+[05-Oct-2017 08:35:35 Asia/Manila] PHP Notice:  Undefined variable: con in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 98
+[05-Oct-2017 08:35:35 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 08:35:35 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 08:35:35 Asia/Manila] PHP   2. doesProfileExist() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:11
+[05-Oct-2017 08:35:35 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function getData() on unknown in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:98
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php(11): doesProfileExist()
+#1 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 98
+[05-Oct-2017 08:40:24 Asia/Manila] PHP Warning:  Missing argument 2 for addProfile(), called in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 14 and defined in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 16
+[05-Oct-2017 08:40:24 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 08:40:24 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 08:40:24 Asia/Manila] PHP   2. addProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:14
+[05-Oct-2017 08:40:24 Asia/Manila] PHP Warning:  Missing argument 3 for addProfile(), called in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 14 and defined in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 16
+[05-Oct-2017 08:40:24 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 08:40:24 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 08:40:24 Asia/Manila] PHP   2. addProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:14
+[05-Oct-2017 08:40:24 Asia/Manila] PHP Notice:  Undefined variable: profile_id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 19
+[05-Oct-2017 08:40:24 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 08:40:24 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 08:40:24 Asia/Manila] PHP   2. addProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:14
+[05-Oct-2017 08:40:24 Asia/Manila] PHP Notice:  Undefined variable: sector_id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 20
+[05-Oct-2017 08:40:24 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 08:40:24 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 08:40:24 Asia/Manila] PHP   2. addProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:14
+[05-Oct-2017 08:40:24 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'profile_id' cannot be null in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php(23): pdo_db->insertData(Array)
+#2 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php(14): addProfile(Object(pdo_db))
+#3 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:12:16 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:12:16 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Notice:  Undefined variable: item_values in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 82
+[05-Oct-2017 09:13:13 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:0
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:13
+[05-Oct-2017 09:13:13 Asia/Manila] PHP   3. profile_sector_parameter_item_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:66
+[05-Oct-2017 09:30:58 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:30:58 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:30:58 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:30:58 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:30:58 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:30:58 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:30:58 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:30:58 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:30:58 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:30:58 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:30:58 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:30:58 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1364 Field 'profile_parameter_item_id' doesn't have a default value in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php(105): pdo_db->insertData(Array)
+#2 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php(15): updateProfile(Object(pdo_db), Array, 1, 2)
+#3 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 82
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Notice:  Undefined variable: iv in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 142
+[05-Oct-2017 09:32:37 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:32:37 Asia/Manila] PHP   3. profile_item_group_id() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:101
+[05-Oct-2017 09:33:32 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 101
+[05-Oct-2017 09:33:32 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:33:32 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:33:32 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:33:32 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 101
+[05-Oct-2017 09:33:32 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:33:32 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:33:32 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:33:32 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 101
+[05-Oct-2017 09:33:32 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:33:32 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:33:32 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:33:32 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 101
+[05-Oct-2017 09:33:32 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:33:32 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:33:32 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:33:32 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 101
+[05-Oct-2017 09:33:32 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:33:32 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:33:32 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:34:50 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 101
+[05-Oct-2017 09:34:50 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:34:50 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:34:50 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:34:50 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 101
+[05-Oct-2017 09:34:50 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:34:50 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:34:50 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:34:50 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 101
+[05-Oct-2017 09:34:50 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:34:50 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:34:50 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:34:50 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 101
+[05-Oct-2017 09:34:50 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:34:50 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:34:50 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 09:34:50 Asia/Manila] PHP Notice:  Undefined index: id in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php on line 101
+[05-Oct-2017 09:34:50 Asia/Manila] PHP Stack trace:
+[05-Oct-2017 09:34:50 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
+[05-Oct-2017 09:34:50 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 10:12:26 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'item_group_id' in 'where clause' in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:250
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(250): PDO->prepare('DELETE FROM par...')
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php(37): pdo_db->deleteData(Array)
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 250
