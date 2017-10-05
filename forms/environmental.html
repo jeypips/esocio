@@ -1,0 +1,114 @@
+<div class="panel panel-border panel-primary">
+<div class="panel-heading">
+<h4><i class="icon icon-note"></i> Environmental Sector
+<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+</h4>
+</div>
+<hr>
+<div class="panel-body">
+	<form name="formHolder.environmental" id="formHolder.environmental">
+	<div class="panel panel-border panel-inverse card-box">
+	<div class="panel-heading">
+	<h5>{{profile.sectors.environmental.parameters[0].description}}</h5>
+	</div>
+	<hr>
+		<div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[0].items[0].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[0].items[0].item_value">
+			</div>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[0].items[1].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[0].items[1].item_value">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[0].items[2].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[0].items[2].item_value">
+			</div>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[0].items[3].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[0].items[3].item_value">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.environmental.parameters[0].items[4].description}}</label>
+					<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[0].items[4].item_value">
+			</div>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.environmental.parameters[0].items[5].description}}</label>
+					<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[0].items[5].item_value">
+			</div>
+		</div>
+	</div>
+		
+	<div class="panel panel-border panel-inverse card-box">
+	<div class="panel-heading">
+	<h5>{{profile.sectors.environmental.parameters[1].description}}</h5>
+	</div>
+	<hr>
+		<div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[0].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[0].item_value">
+			</div>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[1].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[1].item_value">
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[2].description}}</label>
+				<input type="number" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[2].item_value">
+			</div>
+			<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+				<label class="label-control">U{{profile.sectors.environmental.parameters[1].items[3].description}}</label>
+				<input type="number" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[3].item_value">
+			</div>
+			<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[4].description}}</label>
+				<input type="number" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[4].item_value">
+			</div>
+			<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[5].description}}</label>
+				<input type="number" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[5].item_value">
+			</div>
+			<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[6].description}}</label>
+				<input type="number" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[6].item_value">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[7].description}}</label>
+				<input type="number" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[7].item_value">
+			</div>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[8].description}}</label>
+				<input type="number" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[8].item_value">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[9].description}}</label>
+				<input type="number" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[9].item_value">
+			</div>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[10].description}}</label>
+				<input type="number" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[10].item_value">
+			</div>
+		</div>
+	</div>	
+
+	
+	</form>
+		<div class="form-group text-left m-b-0">
+			<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'environmental')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+		</div>
+	</div>
+</div>

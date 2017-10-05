@@ -6,303 +6,313 @@
 </div>
 <hr>
 <div class="panel-body">
-	<form name="formHolder.profile" id="formHolder.profile">
+
+	<form name="formHolder.infra" id="formHolder.infra">
+
 		<div class="panel panel-border panel-inverse card-box">
 		<div class="panel-heading">
-		<h5>Road Network (Total Linear Meter)</h5>
+		<h5>{{profile.sectors.infra.parameters[0].description}}</h5>
 		</div>
 		<hr>
+		<h5>{{profile.sectors.infra.parameters[0].items[0].description}}</h5>
 			<div class="row">
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Barangay Road: Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Asphalt</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Gravel</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Earthfill</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
+			<h5>{{profile.sectors.infra.parameters[0].items[1].description}}</h5>
 			<div class="row">
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Municipal Road: Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[1].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Asphalt</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[1].group_items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Gravel</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[2].description}}</label>
+					<input type="text" class="form-control"  ng-model="profile.sectors.infra.parameters[0].items[1].group_items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Earthfill</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[4].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[1].group_items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
+			<h5>{{profile.sectors.infra.parameters[0].items[2].description}}</h5>
 			<div class="row">
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Provincial Road: Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Asphalt</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Gravel</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Earthfill</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
+			<h5>{{profile.sectors.infra.parameters[0].items[3].description}}</h5>
 			<div class="row">
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">National Road: Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Asphalt</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Gravel</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Earthfill</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 		</div>
 		<div class="panel panel-border panel-inverse card-box">
 		<div class="panel-heading">
-		<h5>Bridges</h5>
+		<h5>{{profile.sectors.infra.parameters[1].description}}</h5>
 		</div>
 		<hr>
-			<h5>(Barangay Bridges)</h5>	
+			<h5>{{profile.sectors.infra.parameters[1].items[0].description}}</h5>	
 			<div class="row">
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">No. of Span: Steel</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Composite</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Jumbo</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Bailey</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[4].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[4].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Footbridge</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[5].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
+			<h5>{{profile.sectors.infra.parameters[1].items[1].description}}</h5>
 			<div class="row">
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Total Length: Steel</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Composite</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Jumbo</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Bailey</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[4].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[4].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Footbridge</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		<hr>
-		<h5>(Municipal Bridges)</h5>	
-			<div class="row">
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">No. of Span: Steel</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Composite</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Jumbo</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Bailey</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Footbridge</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Total Length: Steel</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Composite</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Jumbo</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Bailey</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Footbridge</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[5].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 		<hr>
-		<h5>(Provincial Bridges)</h5>
+		<h5>{{profile.sectors.infra.parameters[1].items[2].description}}</h5>	
 			<div class="row">
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">No. of Span: Steel</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Composite</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Jumbo</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Bailey</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[4].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[4].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Footbridge</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[5].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
+			<h5>{{profile.sectors.infra.parameters[1].items[3].description}}</h5>
 			<div class="row">
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Total Length: Steel</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Composite</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Jumbo</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Bailey</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[4].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[4].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Footbridge</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[5].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[5].item_value" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+		<hr>
+		<h5>{{profile.sectors.infra.parameters[1].items[4].description}}</h5>
+			<div class="row">
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[0].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[1].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[2].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[3].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[4].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[4].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[5].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[5].item_value" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+			<h5>{{profile.sectors.infra.parameters[1].items[5].description}}</h5>
+			<div class="row">
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[0].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[1].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[2].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[3].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[4].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[4].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[5].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 			<hr>
-			<h5>(National Bridges)</h5>
+			<h5>{{profile.sectors.infra.parameters[1].items[6].description}}</h5>
 			<div class="row">
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">No. of Span: Steel</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Composite</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Jumbo</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Bailey</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[4].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[4].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Footbridge</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[5].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
+				<h5>{{profile.sectors.infra.parameters[1].items[7].description}}</h5>
 			<div class="row">
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Total Length: Steel</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Concrete</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[1].item_value" name="municipality" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Composite</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Jumbo</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Bailey</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[4].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[4].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Footbridge</label>
-					<input type="text" class="form-control" name="municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[5].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 		</div>
@@ -310,7 +320,9 @@
 	</form>
 		<div class="form-group text-left m-b-0">
 			<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+
+			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'infra')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+
 		</div>
 	</div>
 </div>

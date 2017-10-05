@@ -128,7 +128,7 @@ angular.module('parameter-module',['bootstrap-modal','bootstrap-growl']).factory
 			}).then(function mySucces(response) {					
 				
 				mode(scope,scope.parameter);
-				
+				self.list(scope);
 				growl.show('btn btn-success',{from: 'top', amount: 55},'Parameter successfully updated.');
 				
 			}, function myError(response) {
