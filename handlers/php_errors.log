@@ -861,3 +861,9 @@ Stack trace:
 [05-Oct-2017 09:34:50 Asia/Manila] PHP Stack trace:
 [05-Oct-2017 09:34:50 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:0
 [05-Oct-2017 09:34:50 Asia/Manila] PHP   2. updateProfile() C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\employment-save.php:15
+[05-Oct-2017 10:12:26 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'item_group_id' in 'where clause' in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:250
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(250): PDO->prepare('DELETE FROM par...')
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php(37): pdo_db->deleteData(Array)
+#2 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 250
