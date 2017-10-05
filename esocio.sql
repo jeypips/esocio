@@ -4,10 +4,14 @@
 --
 -- Host: localhost
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- Generation Time: Sep 22, 2017 at 03:13 PM
 =======
 -- Generation Time: Sep 22, 2017 at 08:24 AM
 >>>>>>> origin/dex
+=======
+-- Generation Time: Oct 02, 2017 at 03:03 PM
+>>>>>>> refs/remotes/origin/jp
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -185,7 +189,7 @@ CREATE TABLE `parameters` (
 --
 
 INSERT INTO `parameters` (`parameter_id`, `parameter_no`, `parameter_name`, `is_tabular`, `is_tabular_multiple`) VALUES
-(1, 1, 'Physical Characteristics', 1, 0),
+(1, 1, 'Physical Characteristics', 0, 0),
 (2, 1, 'Demographics', 0, 0),
 (3, 2, 'Employment and Development Finance', 0, 0),
 (4, 3, 'Existing Land User Distribution', 0, 0),
@@ -432,7 +436,7 @@ INSERT INTO `parameter_table_row` (`table_row_id`, `table_row_item`, `table_row_
 
 CREATE TABLE `profile` (
   `profile_id` int(11) NOT NULL,
-  `profile_year` date DEFAULT NULL,
+  `profile_year` varchar(4) DEFAULT NULL,
   `municipality` varchar(50) DEFAULT NULL,
   `location` varchar(50) DEFAULT NULL,
   `pb_north` varchar(50) DEFAULT NULL,
@@ -446,6 +450,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`, `pb_north`, `pb_south`, `pb_east`, `pb_west`) VALUES
+<<<<<<< HEAD
 (4, NULL, 'Bagulin', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -521,6 +526,9 @@ CREATE TABLE `profile_sector_parameters` (
   `profile_sector_id` int(11) NOT NULL,
   `parameter_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+=======
+(1, '2017', 'Agoo', 'Agoo', 'Bauang', 'Caba', 'San Fernando', 'Tomas');
+>>>>>>> refs/remotes/origin/jp
 
 -- --------------------------------------------------------
 
@@ -552,6 +560,7 @@ INSERT INTO `sectors` (`sector_id`, `sector_description`, `sector_shortname`) VA
 (10, 'Trade, Industry and Tourism Sector', NULL);
 =======
 INSERT INTO `sectors` (`sector_id`, `sector_shortname`, `sector_description`) VALUES
+<<<<<<< HEAD
 (1, 'MS', 'Macro Sector'),
 (2, 'EDFS', 'Employment and Development Finance Sector'),
 (3, 'ES', 'Environmental Sector'),
@@ -563,6 +572,18 @@ INSERT INTO `sectors` (`sector_id`, `sector_shortname`, `sector_description`) VA
 (9, 'DAS', 'Development Administration Sector'),
 (10, 'TITS', 'Trade, Industry and Tourism Sector');
 >>>>>>> origin/dex
+=======
+(1, 'macro', 'Macro Sector'),
+(2, 'employment', 'Employment and Development Finance Sector'),
+(3, 'environment', 'Environmental Sector'),
+(4, 'agriculture', 'Agriculture and Utilities Sector'),
+(5, 'infra', 'Infrastructure and Utilities Sector'),
+(6, 'social', 'Social Welfare Sector'),
+(7, 'health', 'Health Sector'),
+(8, 'education', 'Education Sector'),
+(9, 'development', 'Development Administration Sector'),
+(10, 'trade', 'Trade, Industry and Tourism Sector');
+>>>>>>> refs/remotes/origin/jp
 
 --
 -- Indexes for dumped tables
@@ -686,6 +707,7 @@ ALTER TABLE `parameter_table_row`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
+<<<<<<< HEAD
   MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `profile_sector`
@@ -717,6 +739,9 @@ ALTER TABLE `profile_sectors`
 --
 ALTER TABLE `profile_sector_parameters`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+>>>>>>> refs/remotes/origin/jp
 --
 -- AUTO_INCREMENT for table `sectors`
 --
