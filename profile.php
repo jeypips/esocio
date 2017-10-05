@@ -106,9 +106,9 @@
 					<ul>
 					<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
-							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
-							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
-							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
+							<li><a href="index.php"><i class="icon-home"></i><span>Dashboard</span></a></li>
+							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span>Profile</span></a></li>
+							<li><a href="maintenance.php"><i class="icon-settings"></i><span>Maintenance </span></a></li>
                         </li>
 					</ul>
                         <div class="clearfix"></div>
@@ -144,7 +144,7 @@
 		</div>
 		
 		<div class="side-bar right-bar nicescroll">
-		<h4 class="text-center" style="margin-top: 20px;">Sector Description</h4>
+		<h4 class="text-center" style="margin-top: 20px;"></h4>
 		  <div class="contact-list nicescroll">
 		  <ul class="list-group contacts-list">
 		   <li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile')">
