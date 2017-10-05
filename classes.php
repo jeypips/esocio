@@ -27,7 +27,9 @@ class sectors {
 					$item_groups = $this->con->getData("SELECT item_group_id id, item_group_description description, '' item_group_value FROM items_groups WHERE item_group_item = $item[id]");
 					
 					$this->sectors[$i]['parameters'][$ii]['items'][$iii]['has_group'] = false;
-					
+
+					$this->sectors[$i]['parameters'][$ii]['items'][$iii]['row'] = 0;
+				
 					if (count($item_groups)) {
 						
 						$this->sectors[$i]['parameters'][$ii]['items'][$iii]['has_group'] = true;
@@ -40,9 +42,21 @@ class sectors {
 				# multiple rows table
 				if ($this->sectors[$i]['parameters'][$ii]['is_tabular_multiple']) {
 					
-					$rows = $this->con->getData("SELECT table_row_id id, table_row_description description FROM parameter_table_row WHERE table_row_item = $parameter[id]");
+					$rows = $this->con->getData("SELECT table_row_id id, table_row_description description FROM parameter_table_row WHERE table_row_item = $parameter[id]");					
+
+					foreach ($this->sectors[$i]['parameters'][$ii]['items'] as $n => $value) {
+
+						foreach ($rows as $row) {				
+							
+							$value['row'] = $row['id'];
+							$this->sectors[$i]['parameters'][$ii]['items'][] = $value;
+
+						}
+
+					}
 					
 					$this->sectors[$i]['parameters'][$ii]['rows'] = $rows;
+					
 				}
 
 			}
@@ -111,24 +125,28 @@ class sectors {
 				if (count($item_groups)) {
 					
 					# assign item group values
-					foreach($item_group_values as $n => $item_group_value) {
-						$item_groups[$n]['item_group_value'] = $this->item_group_value($item_group_values,$item_group_value['item_group_id']);
+					foreach($item_groups as $n => $item_group) {
+						$item_groups[$n]['item_group_value'] = $this->item_group_value($item_group_values,$item_group['id']);
 					}
 					#
 					
 					$sector[0]['parameters'][$i]['items'][$ii]['has_group'] = true;
 					$sector[0]['parameters'][$i]['items'][$ii]['group_items'] = $item_groups;
 					
+					$sector[0]['parameters'][$i]['items'][$ii]['row'] = 0;				
+					
 				}
 				
 			}
+			
+			// $sector[0]['parameters'][$i]['items'][$ii]['row'] = 0;
 			
 			# multiple rows table
 			if ($sector[0]['parameters'][$i]['is_tabular_multiple']) {
 				
 				$rows = $this->con->getData("SELECT table_row_id id, table_row_description description FROM parameter_table_row WHERE table_row_item = $parameter[id]");
-				
 				$sector[0]['parameters'][$i]['rows'] = $rows;
+				
 			}
 
 		}

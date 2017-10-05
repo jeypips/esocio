@@ -12,16 +12,16 @@
 		<div class="card-box col-lg-12">
 		<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Day Care Center</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.social.parameters[0].items[0].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.social.parameters[0].items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Day Care Worker</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.social.parameters[0].items[1].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.social.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Day Care Children</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.social.parameters[0].items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.social.parameters[0].items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 		</div>
