@@ -80,6 +80,7 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 					
 					angular.copy(response.data, scope.sectors);
 					
+					
 				}, function myError(response) {
 					 
 				  // error
