@@ -41,7 +41,7 @@
 		</style>
     </head>
 
-    <body class="fixed-left" ng-app="profile" ng-controller="profileCtrl" account-profile>
+    <body class="fixed-left" ng-app="user" ng-controller="userCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper" class="forced enlarged">
@@ -67,7 +67,7 @@
                                 <span class="clearfix"></span>
                             </div>
 							<div class="navbar-left app-search pull-left hidden-xs">
-			                     <h5 class="portlet-title" style="color:white;">Profile</h5>
+			                     <h5 class="portlet-title" style="color:white;">Account</h5>
 			                </div>
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
@@ -107,10 +107,10 @@
 					<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
 							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
-							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
+							<li><a href="profile.php"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
 							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
-							<li><a href="account.php"><i class="icon-people"></i><span> User Account </span></a></li>
-						</li>
+							<li><a href="account.php" class="active"><i class="icon-people"></i><span> User Account </span></a></li>
+                        </li>
 					</ul>
                         <div class="clearfix"></div>
                     </div>
@@ -138,34 +138,6 @@
 			   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
 			</footer>
 		</div>
-	
-	<div ng-show="views.menu">
-		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
-			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
-		</div>
-		
-		<div class="side-bar right-bar nicescroll">
-		<h4 class="text-center" style="margin-top: 20px;">Sector Description</h4>
-		  <div class="contact-list nicescroll">
-		  <ul class="list-group contacts-list">
-		   <li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile',profile)">
-				<a href="javascript:;">
-					<span class="text text-inverse">Basic Information</span>
-					<i class="icon icon-pin online"></i>
-				</a>
-				<span class="clearfix"></span>
-			</li>
-			<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname,profile)">
-				<a href="javascript:;">
-					<span class="text text-inverse">{{s.sector_description}}</span>
-					<i class="icon icon-pin online"></i>
-				</a>
-				<span class="clearfix"></span>
-			</li>
-			</ul>
-		  </div>
-		</div>
-	</div>
 	<!-- END wrapper -->
 	
         <script>
@@ -185,10 +157,7 @@
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
 		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
-        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
-		<script src="dist/jspdf.min.js"></script>
-		<script src="dist/jspdf.debug.js"></script>
-		<script src="dist/jspdf.plugin.autotable.js"></script>		
+        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>	
 
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
@@ -207,9 +176,8 @@
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/growl.js"></script>
 		<script src="modules/account.js"></script>
-		<script src="data/sectors.js"></script>
-		<script src="modules/profile.js"></script>
-		<script src="controllers/profile.js"></script>
+		<script src="modules/users.js"></script>
+		<script src="controllers/user.js"></script>
 
     </body>
 </html>
