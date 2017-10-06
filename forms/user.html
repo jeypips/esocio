@@ -29,14 +29,18 @@
 				</div>					
 			</div>
 			<div class="row">
-				<div class="col-lg-6 col-md-10 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.account_name_municipality.$touched && formHolder.account_info.account_name_municipality.$invalid}">
+				<div class="col-lg-4 col-md-10 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.account_name_municipality.$touched && formHolder.account_info.account_name_municipality.$invalid}">
 					<label class="label-control">Municipality</label>
 					<input type="text" class="form-control" name="account_name_municipality" ng-model="account_info.account_name_municipality" required ng-disabled="controls.ok.btn">
 					<span class="help-block" ng-show="formHolder.account_info.account_name_municipality.$touched && formHolder.account_info.account_name_municipality.$invalid">Municipality is required</span>
 				</div>
-				<div class="col-lg-6 col-md-10 col-sm-12 form-group">
+				<div class="col-lg-4 col-md-10 col-sm-12 form-group">
 					<label class="label-control">Email</label>
 					<input type="text" class="form-control" name="account_email" ng-model="account_info.account_email" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-10 col-sm-12 form-group">
+					<label class="label-control">Groups</label>
+					<input type="text" class="form-control" name="groups" ng-model="account_info.groups" ng-disabled="controls.ok.btn">
 				</div>				
 			</div>
 			<hr>
@@ -48,7 +52,7 @@
 				</div>
 				<div class="col-lg-3 col-md-10 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.account_password.$touched && formHolder.account_info.account_password.$invalid}">
 					<label class="label-control">Password</label>
-					<input type="text" class="form-control" name="account_password" ng-model="account_info.account_password" required ng-disabled="controls.ok.btn">
+					<input type="password" class="form-control" name="account_password" ng-model="account_info.account_password" required ng-disabled="controls.ok.btn">
 					<span class="help-block" ng-show="formHolder.account_info.account_password.$touched && formHolder.account_info.account_password.$invalid">Password is required</span>
 				</div>				
 			</div>
