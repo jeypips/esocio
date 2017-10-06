@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 05, 2017 at 06:22 PM
+-- Generation Time: Oct 06, 2017 at 03:37 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -34,15 +34,17 @@ CREATE TABLE `account_info` (
   `account_name_municipality` varchar(150) DEFAULT NULL,
   `account_username` varchar(50) DEFAULT NULL,
   `account_password` varchar(50) DEFAULT NULL,
-  `account_email` varchar(50) DEFAULT NULL
+  `account_email` varchar(50) DEFAULT NULL,
+  `groups` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `account_info`
 --
 
-INSERT INTO `account_info` (`account_id`, `account_firstname`, `account_middlename`, `account_lastname`, `account_name_municipality`, `account_username`, `account_password`, `account_email`) VALUES
-(1, 'John Paul', 'Garcia', 'Balanon', 'sample', 'admin', 'admin', 'jp@gmail.com');
+INSERT INTO `account_info` (`account_id`, `account_firstname`, `account_middlename`, `account_lastname`, `account_name_municipality`, `account_username`, `account_password`, `account_email`, `groups`) VALUES
+(1, 'John Paul', 'Garcia', 'Balanon', 'sample', 'admin', 'admin', 'jp@gmail.com', 'admin'),
+(2, 'Dexter', 'Rivera', 'Florendo', 'Bauang', 'user', 'user', 'dex@gmail.com', 'user');
 
 -- --------------------------------------------------------
 
@@ -491,7 +493,7 @@ INSERT INTO `parameter_table_row` (`table_row_id`, `table_row_item`, `table_row_
 
 CREATE TABLE `profile` (
   `profile_id` int(11) NOT NULL,
-  `profile_year` year(4) DEFAULT NULL,
+  `profile_year` varchar(4) DEFAULT NULL,
   `municipality` varchar(50) DEFAULT NULL,
   `location` varchar(50) DEFAULT NULL,
   `pb_north` varchar(50) DEFAULT NULL,
@@ -505,27 +507,27 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`, `pb_north`, `pb_south`, `pb_east`, `pb_west`) VALUES
-(1, 2017, 'Agoo', 'Agoo', 'Thomas', 'Bauang', 'San Fernando', 'Caba'),
-(2, 2017, 'Aringay', NULL, NULL, NULL, NULL, NULL),
-(3, 2017, 'Bacnotan', NULL, NULL, NULL, NULL, NULL),
-(4, 2017, 'Bagulin', NULL, NULL, NULL, NULL, NULL),
-(5, 2017, 'Balaoan ', NULL, NULL, NULL, NULL, NULL),
-(6, 2017, 'Bangar', NULL, NULL, NULL, NULL, NULL),
-(7, 2017, 'Bauang', NULL, NULL, NULL, NULL, NULL),
-(8, 2017, 'Burgos', NULL, NULL, NULL, NULL, NULL),
-(9, 2017, 'Caba', NULL, NULL, NULL, NULL, NULL),
-(10, 2017, 'Damortis', NULL, NULL, NULL, NULL, NULL),
-(11, 2017, 'Luna', NULL, NULL, NULL, NULL, NULL),
-(12, 2017, 'Naguilian ', NULL, NULL, NULL, NULL, NULL),
-(13, 2017, 'Pugo', NULL, NULL, NULL, NULL, NULL),
-(14, 2017, 'Rosario', NULL, NULL, NULL, NULL, NULL),
-(15, 2017, 'San Fernando', NULL, NULL, NULL, NULL, NULL),
-(16, 2017, 'San Gabriel', NULL, NULL, NULL, NULL, NULL),
-(17, 2017, 'San Juan', NULL, NULL, NULL, NULL, NULL),
-(18, 2017, 'Santol', NULL, NULL, NULL, NULL, NULL),
-(19, 2017, 'Sto. Tomas', NULL, NULL, NULL, NULL, NULL),
-(20, 2017, 'Sudipen', NULL, NULL, NULL, NULL, NULL),
-(21, 2017, 'Tubao', NULL, NULL, NULL, NULL, NULL);
+(1, '2017', 'Agoo', 'Agoo', 'Thomas', 'Bauang', 'San Fernando', 'Caba'),
+(2, '2017', 'Aringay', NULL, NULL, NULL, NULL, NULL),
+(3, '2017', 'Bacnotan', NULL, NULL, NULL, NULL, NULL),
+(4, '2017', 'Bagulin', NULL, NULL, NULL, NULL, NULL),
+(5, '2017', 'Balaoan ', NULL, NULL, NULL, NULL, NULL),
+(6, '2017', 'Bangar', NULL, NULL, NULL, NULL, NULL),
+(7, '2017', 'Bauang', NULL, NULL, NULL, NULL, NULL),
+(8, '2017', 'Burgos', NULL, NULL, NULL, NULL, NULL),
+(9, '2017', 'Caba', NULL, NULL, NULL, NULL, NULL),
+(10, '2017', 'Damortis', NULL, NULL, NULL, NULL, NULL),
+(11, '2017', 'Luna', NULL, NULL, NULL, NULL, NULL),
+(12, '2017', 'Naguilian ', NULL, NULL, NULL, NULL, NULL),
+(13, '2017', 'Pugo', NULL, NULL, NULL, NULL, NULL),
+(14, '2017', 'Rosario', NULL, NULL, NULL, NULL, NULL),
+(15, '2017', 'San Fernando', NULL, NULL, NULL, NULL, NULL),
+(16, '2017', 'San Gabriel', NULL, NULL, NULL, NULL, NULL),
+(17, '2017', 'San Juan', NULL, NULL, NULL, NULL, NULL),
+(18, '2017', 'Santol', NULL, NULL, NULL, NULL, NULL),
+(19, '2017', 'Sto. Tomas', NULL, NULL, NULL, NULL, NULL),
+(20, '2017', 'Sudipen', NULL, NULL, NULL, NULL, NULL),
+(21, '2017', 'Tubao', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -702,7 +704,7 @@ ALTER TABLE `sectors`
 -- AUTO_INCREMENT for table `account_info`
 --
 ALTER TABLE `account_info`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `items_groups`
 --
@@ -732,27 +734,27 @@ ALTER TABLE `parameter_table_row`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `profile_item_groups`
 --
 ALTER TABLE `profile_item_groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `profile_sectors`
 --
 ALTER TABLE `profile_sectors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameters`
 --
 ALTER TABLE `profile_sector_parameters`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameter_items`
 --
 ALTER TABLE `profile_sector_parameter_items`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 --
 -- AUTO_INCREMENT for table `sectors`
 --
