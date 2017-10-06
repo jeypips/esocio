@@ -867,3 +867,31 @@ Stack trace:
 #1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\parameter-item-save.php(37): pdo_db->deleteData(Array)
 #2 {main}
   thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 250
+[06-Oct-2017 00:13:32 Asia/Manila] PHP Notice:  Undefined index: row in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php on line 88
+[06-Oct-2017 00:13:32 Asia/Manila] PHP Stack trace:
+[06-Oct-2017 00:13:32 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:0
+[06-Oct-2017 00:13:32 Asia/Manila] PHP   2. updateProfile() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:15
+[06-Oct-2017 00:13:32 Asia/Manila] PHP Notice:  Undefined index: row in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php on line 88
+[06-Oct-2017 00:13:32 Asia/Manila] PHP Stack trace:
+[06-Oct-2017 00:13:32 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:0
+[06-Oct-2017 00:13:32 Asia/Manila] PHP   2. updateProfile() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:15
+[06-Oct-2017 00:13:32 Asia/Manila] PHP Notice:  Undefined index: row in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php on line 88
+[06-Oct-2017 00:13:32 Asia/Manila] PHP Stack trace:
+[06-Oct-2017 00:13:32 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:0
+[06-Oct-2017 00:13:32 Asia/Manila] PHP   2. updateProfile() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:15
+[06-Oct-2017 00:13:32 Asia/Manila] PHP Notice:  Undefined index: row in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php on line 88
+[06-Oct-2017 00:13:32 Asia/Manila] PHP Stack trace:
+[06-Oct-2017 00:13:32 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:0
+[06-Oct-2017 00:13:32 Asia/Manila] PHP   2. updateProfile() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:15
+[06-Oct-2017 00:13:33 Asia/Manila] PHP Notice:  Undefined index: row in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php on line 88
+[06-Oct-2017 00:13:33 Asia/Manila] PHP Stack trace:
+[06-Oct-2017 00:13:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:0
+[06-Oct-2017 00:13:33 Asia/Manila] PHP   2. updateProfile() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:15
+[06-Oct-2017 00:13:33 Asia/Manila] PHP Notice:  Undefined index: row in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php on line 88
+[06-Oct-2017 00:13:33 Asia/Manila] PHP Stack trace:
+[06-Oct-2017 00:13:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:0
+[06-Oct-2017 00:13:33 Asia/Manila] PHP   2. updateProfile() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:15
+[06-Oct-2017 00:13:33 Asia/Manila] PHP Notice:  Undefined index: row in C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php on line 88
+[06-Oct-2017 00:13:33 Asia/Manila] PHP Stack trace:
+[06-Oct-2017 00:13:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:0
+[06-Oct-2017 00:13:33 Asia/Manila] PHP   2. updateProfile() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:15

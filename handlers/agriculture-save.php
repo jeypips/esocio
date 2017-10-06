@@ -44,7 +44,7 @@ function addProfile($con,$parameters,$profile_id,$sector_id) {
 				"profile_sector_parameter_id"=>$profile_sector_parameter_id,
 				"item_id"=>$item['id'],
 				"item_value"=>$item['item_value'],
-				"item_table_row"=>0
+				"item_table_row"=>$item['row']
 			);
 			
 			$con->insertData($profile_sector_parameter_item);
@@ -76,7 +76,7 @@ function addProfile($con,$parameters,$profile_id,$sector_id) {
 
 function updateProfile($con,$parameters,$profile_id,$sector_id) {
 
-	$items_values = $con->getData("SELECT profile_sector_parameter_items.id, profile_sector_parameter_items.item_id FROM profile_sector_parameter_items LEFT JOIN profile_sector_parameters ON profile_sector_parameter_items.profile_sector_parameter_id = profile_sector_parameters.id LEFT JOIN profile_sectors ON profile_sector_parameters.profile_sector_id = profile_sectors.id WHERE profile_sectors.profile_id = $profile_id AND profile_sectors.sector_id = $sector_id");	
+	$items_values = $con->getData("SELECT profile_sector_parameter_items.id, profile_sector_parameter_items.item_id, profile_sector_parameter_items.item_table_row FROM profile_sector_parameter_items LEFT JOIN profile_sector_parameters ON profile_sector_parameter_items.profile_sector_parameter_id = profile_sector_parameters.id LEFT JOIN profile_sectors ON profile_sector_parameters.profile_sector_id = profile_sectors.id WHERE profile_sectors.profile_id = $profile_id AND profile_sectors.sector_id = $sector_id");	
 	$item_group_values = $con->getData("SELECT profile_item_groups.id, profile_item_groups.item_group_id FROM profile_item_groups LEFT JOIN profile_sector_parameter_items ON profile_item_groups.profile_parameter_item_id = profile_sector_parameter_items.id LEFT JOIN profile_sector_parameters ON profile_sector_parameter_items.profile_sector_parameter_id = profile_sector_parameters.id LEFT JOIN profile_sectors ON profile_sector_parameters.profile_sector_id = profile_sectors.id WHERE profile_sectors.profile_id = $profile_id AND profile_sectors.sector_id = $sector_id");
 
 	foreach ($parameters as $i => $parameter) {
@@ -85,7 +85,7 @@ function updateProfile($con,$parameters,$profile_id,$sector_id) {
 			
 			$con->table = "profile_sector_parameter_items";
 			$profile_sector_parameter_item = array(
-				"id"=>profile_sector_parameter_item_id($items_values,$item['id']),
+				"id"=>profile_sector_parameter_item_id($items_values,$item['id'],$item['row']),
 				"item_value"=>$item['item_value']
 			);
 			
@@ -114,13 +114,13 @@ function updateProfile($con,$parameters,$profile_id,$sector_id) {
 
 }
 
-function profile_sector_parameter_item_id($items_values,$item_id) {
+function profile_sector_parameter_item_id($items_values,$item_id,$row) {
 	
 	$id = null;
 	
 	foreach ($items_values as $i => $iv) {
 		
-		if ($iv['item_id'] == $item_id) {
+		if (($iv['item_id'] == $item_id) && ($iv['item_table_row'] == $row)) {
 
 			$id = $iv['id'];
 			break;

@@ -117,9 +117,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			
 			scope.subMenuList[form] = true;
 
-			scope.views.menu = true;
-			
-			mode(scope,row);
+			scope.views.menu = true;			
 			
 			$('#x_content').html(loading);
 			$('#x_content').load('forms/'+form+'.html',function() {
@@ -173,6 +171,10 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 				}
 				
 			};
+			
+			$timeout(function() {
+				mode(scope,row);
+			}, 500);
 			
 			/* if (form != 'profile') {
 				console.log(sector(scope,form));
@@ -333,7 +335,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 		
 		function print(scope,profile_sectors) {
 			
-			
+
 		console.log(profile_sectors.profile.profile_year);						
 
 		
