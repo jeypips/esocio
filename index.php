@@ -107,6 +107,7 @@
 							<li><a href="index.php" class="active"><i class="icon-home"></i><span> Dashboard </span></a></li>
 							<li><a href="profile.php"><i class="icon-screen-desktop"></i><span> Profile </span></a></li>
 							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
+							<li><a href="account.php"><i class="icon-people"></i><span> User Account </span></a></li>
 						</li>
 					</ul>
 					<div class="clearfix"></div>

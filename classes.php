@@ -27,7 +27,9 @@ class sectors {
 					$item_groups = $this->con->getData("SELECT item_group_id id, item_group_description description, '' item_group_value FROM items_groups WHERE item_group_item = $item[id]");
 					
 					$this->sectors[$i]['parameters'][$ii]['items'][$iii]['has_group'] = false;
-					
+
+					$this->sectors[$i]['parameters'][$ii]['items'][$iii]['row'] = 0;
+				
 					if (count($item_groups)) {
 						
 						$this->sectors[$i]['parameters'][$ii]['items'][$iii]['has_group'] = true;
@@ -40,9 +42,23 @@ class sectors {
 				# multiple rows table
 				if ($this->sectors[$i]['parameters'][$ii]['is_tabular_multiple']) {
 					
-					$rows = $this->con->getData("SELECT table_row_id id, table_row_description description FROM parameter_table_row WHERE table_row_item = $parameter[id]");
+					$rows = $this->con->getData("SELECT table_row_id id, table_row_description description FROM parameter_table_row WHERE table_row_item = $parameter[id]");					
+
+					foreach ($this->sectors[$i]['parameters'][$ii]['items'] as $n => $value) {
+
+						if ($n == 0) continue;					
+					
+						foreach ($rows as $row) {				
+							
+							$value['row'] = $row['id'];
+							$this->sectors[$i]['parameters'][$ii]['items'][] = $value;
+
+						}
+
+					}
 					
 					$this->sectors[$i]['parameters'][$ii]['rows'] = $rows;
+					
 				}
 
 			}
@@ -80,7 +96,7 @@ class sectors {
 		$sector_id = $this->sector_id($sector_shortname);
 		
 		# for contructions
-		$items_values = $this->con->getData("SELECT profile_sector_parameter_items.item_id, profile_sector_parameter_items.item_value FROM profile_sector_parameter_items LEFT JOIN profile_sector_parameters ON profile_sector_parameter_items.profile_sector_parameter_id = profile_sector_parameters.id LEFT JOIN profile_sectors ON profile_sector_parameters.profile_sector_id = profile_sectors.id WHERE profile_sectors.profile_id = $profile_id AND profile_sectors.sector_id = $sector_id");
+		$items_values = $this->con->getData("SELECT profile_sector_parameter_items.item_id, profile_sector_parameter_items.item_value, profile_sector_parameter_items.item_table_row FROM profile_sector_parameter_items LEFT JOIN profile_sector_parameters ON profile_sector_parameter_items.profile_sector_parameter_id = profile_sector_parameters.id LEFT JOIN profile_sectors ON profile_sector_parameters.profile_sector_id = profile_sectors.id WHERE profile_sectors.profile_id = $profile_id AND profile_sectors.sector_id = $sector_id");
 		$item_group_values = $this->con->getData("SELECT profile_item_groups.item_group_id, profile_item_groups.item_group_value FROM profile_item_groups LEFT JOIN profile_sector_parameter_items ON profile_item_groups.profile_parameter_item_id = profile_sector_parameter_items.id LEFT JOIN profile_sector_parameters ON profile_sector_parameter_items.profile_sector_parameter_id = profile_sector_parameters.id LEFT JOIN profile_sectors ON profile_sector_parameters.profile_sector_id = profile_sectors.id WHERE profile_sectors.profile_id = $profile_id AND profile_sectors.sector_id = $sector_id");
 		#
 		
@@ -92,11 +108,11 @@ class sectors {
 		
 		foreach($sector[0]['parameters'] as $i => $parameter) {
 
-			$items = $this->con->getData("SELECT item_id id, item_attribute description, '' item_value FROM parameter_items WHERE item_parameter = $parameter[id]");
+			$items = $this->con->getData("SELECT item_id id, item_attribute description, '' item_value, 0 row FROM parameter_items WHERE item_parameter = $parameter[id]");
 			
 			# assign item values
 			foreach($items as $n => $item) {
-				$items[$n]['item_value'] = $this->item_value($items_values,$item['id']);
+				$items[$n]['item_value'] = $this->item_value($items_values,$item['id'],0);
 			};
 			#
 			
@@ -111,24 +127,41 @@ class sectors {
 				if (count($item_groups)) {
 					
 					# assign item group values
-					foreach($item_group_values as $n => $item_group_value) {
-						$item_groups[$n]['item_group_value'] = $this->item_group_value($item_group_values,$item_group_value['item_group_id']);
+					foreach($item_groups as $n => $item_group) {
+						$item_groups[$n]['item_group_value'] = $this->item_group_value($item_group_values,$item_group['id']);
 					}
 					#
 					
 					$sector[0]['parameters'][$i]['items'][$ii]['has_group'] = true;
 					$sector[0]['parameters'][$i]['items'][$ii]['group_items'] = $item_groups;
 					
+					$sector[0]['parameters'][$i]['items'][$ii]['row'] = 0;				
+					
 				}
 				
-			}
+			}			
 			
 			# multiple rows table
 			if ($sector[0]['parameters'][$i]['is_tabular_multiple']) {
 				
 				$rows = $this->con->getData("SELECT table_row_id id, table_row_description description FROM parameter_table_row WHERE table_row_item = $parameter[id]");
 				
+				foreach ($sector[0]['parameters'][$i]['items'] as $n => $value) {
+					
+					if ($n == 0) continue;
+					
+					foreach ($rows as $row) {				
+						
+						$value['row'] = $row['id'];
+						$value['item_value'] = $this->item_value($items_values,$value['id'],$row['id']);
+						$sector[0]['parameters'][$i]['items'][] = $value;
+
+					}
+
+				}				
+				
 				$sector[0]['parameters'][$i]['rows'] = $rows;
+				
 			}
 
 		}
@@ -145,13 +178,13 @@ class sectors {
 		
 	}
 	
-	function item_value($items_values,$id) {
+	function item_value($items_values,$id,$row) {
 		
 		$value = null;
 		
 		foreach($items_values as $i => $iv) {
 			
-			if ($iv['item_id'] == $id) {
+			if (($iv['item_id'] == $id) && ($iv['item_table_row'] == $row)) {
 					
 				$value = $iv['item_value'];
 				break;
