@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 05, 2017 at 04:32 PM
+-- Generation Time: Oct 05, 2017 at 06:22 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -171,6 +171,33 @@ CREATE TABLE `municipal` (
   `municipality` varchar(255) DEFAULT NULL,
   `year` year(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `municipal`
+--
+
+INSERT INTO `municipal` (`id`, `municipality`, `year`) VALUES
+(1, 'Agoo', 2017),
+(2, 'Aringay', 2017),
+(3, 'Bacnotan', 2017),
+(4, 'Bagulin', 2017),
+(5, 'Balaoan', 2017),
+(6, 'Bangar', 2017),
+(7, 'Bauang', 2017),
+(8, 'Burgos', 2017),
+(9, 'Caba', 2017),
+(10, 'Damortis', 2017),
+(11, 'Luna', 2017),
+(12, 'Naguilian', 2017),
+(13, 'Pugo', 2017),
+(14, 'Rosario', 2017),
+(15, 'San Fernando', 2017),
+(16, 'San Gabriel', 2017),
+(17, 'san Juan', 2017),
+(18, 'Santol', 2017),
+(19, 'Sto. Tomas', 2017),
+(20, 'Sudipen', 2017),
+(21, 'Tubao', 2017);
 
 -- --------------------------------------------------------
 
@@ -479,27 +506,26 @@ CREATE TABLE `profile` (
 
 INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`, `pb_north`, `pb_south`, `pb_east`, `pb_west`) VALUES
 (1, 2017, 'Agoo', 'Agoo', 'Thomas', 'Bauang', 'San Fernando', 'Caba'),
-(2, NULL, 'Aringay', NULL, NULL, NULL, NULL, NULL),
-(3, NULL, 'Bacnotan', NULL, NULL, NULL, NULL, NULL),
-(4, NULL, 'Bagulin', NULL, NULL, NULL, NULL, NULL),
-(5, NULL, 'Balaoan ', NULL, NULL, NULL, NULL, NULL),
-(6, NULL, 'Bangar', NULL, NULL, NULL, NULL, NULL),
-(7, NULL, 'Bauang', NULL, NULL, NULL, NULL, NULL),
-(8, NULL, 'Burgos', NULL, NULL, NULL, NULL, NULL),
-(9, NULL, 'Caba', NULL, NULL, NULL, NULL, NULL),
-(10, NULL, 'Damortis', NULL, NULL, NULL, NULL, NULL),
-(11, NULL, 'Luna', NULL, NULL, NULL, NULL, NULL),
-(12, NULL, 'Naguilian ', NULL, NULL, NULL, NULL, NULL),
-(13, NULL, 'Pugo', NULL, NULL, NULL, NULL, NULL),
-(14, NULL, 'Rosario', NULL, NULL, NULL, NULL, NULL),
-(15, NULL, 'San Fernando', NULL, NULL, NULL, NULL, NULL),
-(16, NULL, 'San Gabriel', NULL, NULL, NULL, NULL, NULL),
-(17, NULL, 'San Juan', NULL, NULL, NULL, NULL, NULL),
-(18, NULL, 'Santol', NULL, NULL, NULL, NULL, NULL),
-(19, NULL, 'Sto. Tomas', NULL, NULL, NULL, NULL, NULL),
-(20, NULL, 'Sudipen', NULL, NULL, NULL, NULL, NULL),
-(21, NULL, 'Tubao', NULL, NULL, NULL, NULL, NULL),
-(22, NULL, 'agdgd', 'eg', NULL, NULL, NULL, NULL);
+(2, 2017, 'Aringay', NULL, NULL, NULL, NULL, NULL),
+(3, 2017, 'Bacnotan', NULL, NULL, NULL, NULL, NULL),
+(4, 2017, 'Bagulin', NULL, NULL, NULL, NULL, NULL),
+(5, 2017, 'Balaoan ', NULL, NULL, NULL, NULL, NULL),
+(6, 2017, 'Bangar', NULL, NULL, NULL, NULL, NULL),
+(7, 2017, 'Bauang', NULL, NULL, NULL, NULL, NULL),
+(8, 2017, 'Burgos', NULL, NULL, NULL, NULL, NULL),
+(9, 2017, 'Caba', NULL, NULL, NULL, NULL, NULL),
+(10, 2017, 'Damortis', NULL, NULL, NULL, NULL, NULL),
+(11, 2017, 'Luna', NULL, NULL, NULL, NULL, NULL),
+(12, 2017, 'Naguilian ', NULL, NULL, NULL, NULL, NULL),
+(13, 2017, 'Pugo', NULL, NULL, NULL, NULL, NULL),
+(14, 2017, 'Rosario', NULL, NULL, NULL, NULL, NULL),
+(15, 2017, 'San Fernando', NULL, NULL, NULL, NULL, NULL),
+(16, 2017, 'San Gabriel', NULL, NULL, NULL, NULL, NULL),
+(17, 2017, 'San Juan', NULL, NULL, NULL, NULL, NULL),
+(18, 2017, 'Santol', NULL, NULL, NULL, NULL, NULL),
+(19, 2017, 'Sto. Tomas', NULL, NULL, NULL, NULL, NULL),
+(20, 2017, 'Sudipen', NULL, NULL, NULL, NULL, NULL),
+(21, 2017, 'Tubao', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -514,76 +540,6 @@ CREATE TABLE `profile_item_groups` (
   `item_group_value` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `profile_item_groups`
---
-
-INSERT INTO `profile_item_groups` (`id`, `profile_parameter_item_id`, `item_group_id`, `item_group_value`) VALUES
-(1, 1, 26, 'a'),
-(2, 1, 27, 'a'),
-(3, 1, 28, 'a'),
-(4, 1, 29, 'a'),
-(5, 2, 30, 'b'),
-(6, 2, 31, 'b'),
-(7, 2, 32, 'b'),
-(8, 2, 33, 'b'),
-(9, 3, 34, 'c'),
-(10, 3, 35, 'c'),
-(11, 3, 36, 'c'),
-(12, 3, 37, 'c'),
-(13, 4, 38, 'd'),
-(14, 4, 39, 'd'),
-(15, 4, 40, 'd'),
-(16, 4, 41, 'd'),
-(17, 5, 42, 'e'),
-(18, 5, 43, 'e'),
-(19, 5, 44, 'e'),
-(20, 5, 45, 'e'),
-(21, 5, 46, 'e'),
-(22, 5, 47, 'e'),
-(23, 6, 48, 'f'),
-(24, 6, 49, 'f'),
-(25, 6, 50, 'f'),
-(26, 6, 51, 'f'),
-(27, 6, 52, 'f'),
-(28, 6, 53, 'f'),
-(29, 7, 54, 'g'),
-(30, 7, 55, 'g'),
-(31, 7, 56, 'g'),
-(32, 7, 57, 'g'),
-(33, 7, 58, 'g'),
-(34, 7, 59, 'g'),
-(35, 8, 60, 'h'),
-(36, 8, 61, 'h'),
-(37, 8, 62, 'h'),
-(38, 8, 63, 'h'),
-(39, 8, 64, 'h'),
-(40, 8, 65, 'h'),
-(41, 9, 66, 'i'),
-(42, 9, 67, 'i'),
-(43, 9, 68, 'i'),
-(44, 9, 69, 'i'),
-(45, 9, 70, 'i'),
-(46, 9, 71, 'i'),
-(47, 10, 72, 'j'),
-(48, 10, 73, 'j'),
-(49, 10, 74, 'j'),
-(50, 10, 75, 'j'),
-(51, 10, 76, 'j'),
-(52, 10, 77, 'j'),
-(53, 11, 78, 'k'),
-(54, 11, 79, 'k'),
-(55, 11, 80, 'k'),
-(56, 11, 81, 'k'),
-(57, 11, 82, 'k'),
-(58, 11, 83, 'k'),
-(59, 12, 84, 'l'),
-(60, 12, 85, 'l'),
-(61, 12, 86, 'l'),
-(62, 12, 87, 'l'),
-(63, 12, 88, 'l'),
-(64, 12, 89, 'l');
-
 -- --------------------------------------------------------
 
 --
@@ -596,13 +552,6 @@ CREATE TABLE `profile_sectors` (
   `sector_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `profile_sectors`
---
-
-INSERT INTO `profile_sectors` (`id`, `profile_id`, `sector_id`) VALUES
-(1, 1, 5);
-
 -- --------------------------------------------------------
 
 --
@@ -614,14 +563,6 @@ CREATE TABLE `profile_sector_parameters` (
   `profile_sector_id` int(10) NOT NULL,
   `parameter_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `profile_sector_parameters`
---
-
-INSERT INTO `profile_sector_parameters` (`id`, `profile_sector_id`, `parameter_id`) VALUES
-(1, 1, 7),
-(2, 1, 8);
 
 -- --------------------------------------------------------
 
@@ -636,24 +577,6 @@ CREATE TABLE `profile_sector_parameter_items` (
   `item_table_row` int(10) NOT NULL DEFAULT '0',
   `item_value` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `profile_sector_parameter_items`
---
-
-INSERT INTO `profile_sector_parameter_items` (`id`, `profile_sector_parameter_id`, `item_id`, `item_table_row`, `item_value`) VALUES
-(1, 1, 39, 0, ''),
-(2, 1, 43, 0, ''),
-(3, 1, 47, 0, ''),
-(4, 1, 51, 0, ''),
-(5, 2, 55, 0, ''),
-(6, 2, 61, 0, ''),
-(7, 2, 67, 0, ''),
-(8, 2, 73, 0, ''),
-(9, 2, 79, 0, ''),
-(10, 2, 85, 0, ''),
-(11, 2, 91, 0, ''),
-(12, 2, 97, 0, '');
 
 -- --------------------------------------------------------
 
@@ -789,12 +712,12 @@ ALTER TABLE `items_groups`
 -- AUTO_INCREMENT for table `municipal`
 --
 ALTER TABLE `municipal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `parameters`
 --
 ALTER TABLE `parameters`
-  MODIFY `parameter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `parameter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `parameter_items`
 --
@@ -804,12 +727,12 @@ ALTER TABLE `parameter_items`
 -- AUTO_INCREMENT for table `parameter_table_row`
 --
 ALTER TABLE `parameter_table_row`
-  MODIFY `table_row_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `table_row_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `profile_item_groups`
 --
@@ -819,17 +742,17 @@ ALTER TABLE `profile_item_groups`
 -- AUTO_INCREMENT for table `profile_sectors`
 --
 ALTER TABLE `profile_sectors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameters`
 --
 ALTER TABLE `profile_sector_parameters`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameter_items`
 --
 ALTER TABLE `profile_sector_parameter_items`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `sectors`
 --
