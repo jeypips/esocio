@@ -106,7 +106,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 		
 			if (form != 'profile') {
 				if (scope.profile.profile_id == 0) {
-					// growl.show('btn btn-danger',{from: 'top', amount: 55},'Please finish Basic Profile form before proceeding to other forms');
+					growl.show('btn btn-danger',{from: 'top', amount: 55},'Please finish Basic Profile form before proceeding to other forms');
 					return;
 				};
 			};
