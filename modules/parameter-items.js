@@ -129,7 +129,7 @@ angular.module('parameterItem-module',['bootstrap-modal','bootstrap-growl']).fac
 				
 				mode(scope,scope.parameter_item);
 				self.list(scope);
-				growl.show('btn btn-success',{from: 'top', amount: 55},'Parameter item successfully updated.');
+				// growl.show('btn btn-success',{from: 'top', amount: 55},'Parameter item successfully updated.');
 				
 			}, function myError(response) {
 				 
@@ -152,7 +152,7 @@ angular.module('parameterItem-module',['bootstrap-modal','bootstrap-growl']).fac
 			}).then(function mySucces(response) {
 
 				self.list(scope);
-				growl.show('btn btn-danger',{from: 'top', amount: 55},'Parameter item successfully deleted.');
+				// growl.show('btn btn-danger',{from: 'top', amount: 55},'Parameter item successfully deleted.');
 				
 			}, function myError(response) {
 				 
