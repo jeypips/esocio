@@ -1,6 +1,6 @@
-angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).factory('manage', function($compile,$timeout,$http,bootstrapModal,growl) {
+angular.module('user-module',['bootstrap-modal','bootstrap-growl']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl) {
 	
-	function manage() {
+	function form() {
 		
 		var self = this;
 		
@@ -19,23 +19,23 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 				},
 			};			
 
-			scope.sectors = {};
-			scope.sectors.sector_id = 0;
+			scope.account_info = {};
+			scope.account_info.account_id = 0;
 
-			scope.sectors = []; // list
+			scope.account_infos = []; // list
 
 		};
 
 		function validate(scope) {
 			
-			var controls = scope.formHolder.sectors.$$controls;
+			var controls = scope.formHolder.account_info.$$controls;
 			
 			angular.forEach(controls,function(elem,i) {
 				
 				if (elem.$$attr.$attr.required) elem.$touched = elem.$invalid;
 									
 			});
-			return scope.formHolder.sectors.$invalid;
+			return scope.formHolder.account_info.$invalid;
 			
 		};
 		
@@ -55,30 +55,29 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 			
 		};
 
-		self.sector = function(scope,row) {			
+		self.user = function(scope,row) {			
 		
-			scope.sectors = {};
-			scope.sectors.sector_id = 0;
+			scope.account_info = {};
+			scope.account_info.account_id = 0;
 			
 			mode(scope,row);
 
 			$('#x_content').html(loading);
-			$('#x_content').load('forms/sector.html',function() {
+			$('#x_content').load('forms/user.html',function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
 		
 			
-			if (row != null) {		
-				
-				
-				if (scope.$sector_id > 2) scope = scope.$parent;				
+			if (row != null) {	
+			
+				if (scope.$account_id > 2) scope = scope.$parent;				
 				$http({
 				  method: 'POST',
-				  url: 'handlers/sector-view.php',
-				  data: {sector_id: row.sector_id}
+				  url: 'handlers/user-view.php',
+				  data: {account_id: row.account_id}
 				}).then(function mySucces(response) {
 					
-					angular.copy(response.data, scope.sectors);
+					angular.copy(response.data, scope.account_info);
 					
 					
 				}, function myError(response) {
@@ -102,14 +101,12 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 			
 			$http({
 			  method: 'POST',
-			  url: 'handlers/sector-save.php',
-			  data: {sectors: scope.sectors}
+			  url: 'handlers/user-save.php',
+			  data: {account_info: scope.account_info}
 			}).then(function mySucces(response) {
 				
-				if (scope.sectors.sector_id == 0) scope.sectors.sector_id = response.data;
-				mode(scope,scope.sectors);
-				
-				// growl.show('btn btn-success',{from: 'top', amount: 55},'Sector successfully updated.');
+				if (scope.account_info.account_id == 0) scope.account_info.account_id = response.data;
+				mode(scope,scope.account_info);
 				
 			}, function myError(response) {
 				 
@@ -127,12 +124,11 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 			
 			$http({
 			  method: 'POST',
-			  url: 'handlers/sector-delete.php',
-			  data: {sector_id: [row.sector_id]}
+			  url: 'handlers/user-delete.php',
+			  data: {account_id: [row.account_id]}
 			}).then(function mySucces(response) {
 
 				self.list(scope);
-				// growl.show('btn btn-danger',{from: 'top', amount: 55},'Sector successfully deleted.');
 				
 			}, function myError(response) {
 				 
@@ -172,15 +168,14 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 		self.list = function(scope) {
 			
 			// load list
-			scope.mode = 'list';
-			scope.sector = {};
-			scope.sector.sector_id = 0;			
+			scope.account_info = {};
+			scope.account_info.account_id = 0;			
 			$http({
 			  method: 'POST',
-			  url: 'handlers/sector-list.php',
+			  url: 'handlers/user-list.php',
 			}).then(function mySucces(response) {
 				
-				scope.sectors = response.data;
+				scope.account_infos = response.data;
 				
 			}, function myError(response) {
 				 
@@ -190,11 +185,11 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 			//
 
 			$('#x_content').html(loading);
-			$('#x_content').load('lists/maintenance.html', function() {
+			$('#x_content').load('lists/users.html', function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
 				// instantiate datable
 				$timeout(function() {
-					$('#maintenance').DataTable({
+					$('#user-list').DataTable({
 						"ordering": false
 					});	
 				},200);
@@ -203,6 +198,6 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 		};
 	};
 	
-	return new manage();
+	return new form();
 	
 });
