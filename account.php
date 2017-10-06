@@ -43,6 +43,9 @@
 
     <body class="fixed-left" ng-app="user" ng-controller="userCtrl" account-profile>
 
+	 <!-- Begin page -->
+        <div id="wrapper">
+		
             <!-- Top Bar Start -->
             <div class="topbar">
 
@@ -135,6 +138,7 @@
 			   <strong>Copyright &copy; <?php echo date("Y"); ?> PGLU, E-Socio Economic Profiling in La Union.</strong> All rights reserved.
 			</footer>
 		</div>
+	</div>
 	<!-- END wrapper -->
 	
         <script>
