@@ -368,7 +368,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 		
 			var PlantRows = [
 			
-            [profile_sectors.agriculture.parameters[0].rows[0].description,profile_sectors.agriculture.parameters[0].items[12].profile_sectors.agriculture.parameters[0].items[20].item_value , profile_sectors.agriculture.parameters[0].items[28].item_value ]		   
+            [profile_sectors.agriculture.parameters[0].rows[0].description,profile_sectors.agriculture.parameters[0].items[12].profile_sectors.agriculture.parameters[0].items[20].item_value , profile_sectors.agriculture.parameters[0].items[28].item_value]		   
 			];
 			
 			
