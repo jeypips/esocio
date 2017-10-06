@@ -147,15 +147,10 @@
 		</div>
 		
 		<div class="side-bar right-bar nicescroll">
-		<h4 class="text-center" style="margin-top: 20px;">Sector Description</h4>
-		  <div class="contact-list nicescroll">
+		 <div class="contact-list nicescroll">
 		  <ul class="list-group contacts-list">
-		   <li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile',profile)">
-				<a href="javascript:;">
-					<span class="text text-inverse">Basic Information</span>
-					<i class="icon icon-pin online"></i>
-				</a>
-				<span class="clearfix"></span>
+			<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile',profile)">
+				<a href="javascript:;"><h4 class="text text-inverse text-center active" style="margin-bottom: -9px;">{{profile.municipality}}</h4></a>
 			</li>
 			<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname,profile)">
 				<a href="javascript:;">
