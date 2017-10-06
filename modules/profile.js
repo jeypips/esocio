@@ -453,6 +453,13 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.addPage();
 			doc.addImage(imgData, 'JPEG', 50, 3, 120, 40);
 			doc.text(20, 40, 'D. AGRICULTURE SECTOR');
+			doc.autoTable(PlantColumns, PlantRows, {
+			margin: {top: 265},
+			tableWidth: '50', 
+			addPageContent: function(data) {
+			startY: 150
+			}
+			});
 			doc.text(20, 100, 'E. INFRASTRUCTURE AND UTILITIES SECTOR');
 			doc.text(30, 105, 'Road Network (total lineal meters');
 			doc.text(40, 110, 'Barangay Road');
