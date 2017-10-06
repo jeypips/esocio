@@ -367,7 +367,6 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			[profile_sectors.agriculture.parameters[0].items[0].description,profile_sectors.agriculture.parameters[0].items[1].description , profile_sectors.agriculture.parameters[0].items[2].description,profile_sectors.agriculture.parameters[0].items[3].description ]		   
 		
 			var PlantRows = [
-			
            [profile_sectors.agriculture.parameters[0].rows[0].description,profile_sectors.agriculture.parameters[0].items[4].item_value,profile_sectors.agriculture.parameters[0].items[12].item_value , profile_sectors.agriculture.parameters[0].items[20].item_value ],		   
            [profile_sectors.agriculture.parameters[0].rows[1].description,profile_sectors.agriculture.parameters[0].items[5].item_value,profile_sectors.agriculture.parameters[0].items[13].item_value , profile_sectors.agriculture.parameters[0].items[21].item_value ],		   
            [profile_sectors.agriculture.parameters[0].rows[2].description,profile_sectors.agriculture.parameters[0].items[6].item_value,profile_sectors.agriculture.parameters[0].items[14].item_value , profile_sectors.agriculture.parameters[0].items[22].item_value ],		   
@@ -376,6 +375,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
            [profile_sectors.agriculture.parameters[0].rows[5].description,profile_sectors.agriculture.parameters[0].items[9].item_value,profile_sectors.agriculture.parameters[0].items[17].item_value , profile_sectors.agriculture.parameters[0].items[25].item_value ],		   
            [profile_sectors.agriculture.parameters[0].rows[6].description,profile_sectors.agriculture.parameters[0].items[10].item_value,profile_sectors.agriculture.parameters[0].items[18].item_value , profile_sectors.agriculture.parameters[0].items[26].item_value ],		   
            [profile_sectors.agriculture.parameters[0].rows[7].description,profile_sectors.agriculture.parameters[0].items[11].item_value,profile_sectors.agriculture.parameters[0].items[19].item_value , profile_sectors.agriculture.parameters[0].items[27].item_value ]		   
+
 			];
 			
 			var AnimalColumns = 
