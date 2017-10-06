@@ -111,8 +111,8 @@ class sectors {
 				if (count($item_groups)) {
 					
 					# assign item group values
-					foreach($item_group_values as $n => $item_group_value) {
-						$item_groups[$n]['item_group_value'] = $this->item_group_value($item_group_values,$item_group_value['item_group_id']);
+					foreach($item_groups as $n => $item_group) {
+						$item_groups[$n]['item_group_value'] = $this->item_group_value($item_group_values,$item_group['id']);
 					}
 					#
 					
