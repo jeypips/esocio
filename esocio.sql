@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 03, 2017 at 12:08 PM
+-- Generation Time: Oct 05, 2017 at 04:32 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -64,8 +64,6 @@ INSERT INTO `items_groups` (`item_group_id`, `item_group_item`, `item_group_desc
 (1, 15, 'Agriculture'),
 (2, 15, 'Industry'),
 (3, 15, 'Services'),
-(4, 21, 'Food'),
-(5, 21, 'Non Food'),
 (6, 168, 'Proprietorship'),
 (7, 168, 'Corporate'),
 (8, 170, 'YES'),
@@ -165,6 +163,18 @@ INSERT INTO `items_groups` (`item_group_id`, `item_group_item`, `item_group_desc
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `municipal`
+--
+
+CREATE TABLE `municipal` (
+  `id` int(11) NOT NULL,
+  `municipality` varchar(255) DEFAULT NULL,
+  `year` year(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `parameters`
 --
 
@@ -249,7 +259,7 @@ INSERT INTO `parameter_items` (`item_id`, `item_parameter`, `item_attribute`, `i
 (18, 3, 'Poverty Incidence', 0),
 (19, 3, 'Magnitude of Poor Families', 0),
 (20, 3, 'Magnitude of Poor Population', 0),
-(21, 3, 'Classification', 1),
+(21, 3, 'Classification', 0),
 (22, 3, 'Municipal Gov\'t Revenue', 0),
 (23, 3, 'Municipal Gov\'t Expenditures', 0),
 (24, 4, 'Agricultural Areas', 0),
@@ -454,7 +464,7 @@ INSERT INTO `parameter_table_row` (`table_row_id`, `table_row_item`, `table_row_
 
 CREATE TABLE `profile` (
   `profile_id` int(11) NOT NULL,
-  `profile_year` varchar(4) DEFAULT NULL,
+  `profile_year` year(4) DEFAULT NULL,
   `municipality` varchar(50) DEFAULT NULL,
   `location` varchar(50) DEFAULT NULL,
   `pb_north` varchar(50) DEFAULT NULL,
@@ -468,7 +478,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`, `pb_north`, `pb_south`, `pb_east`, `pb_west`) VALUES
-(1, NULL, 'Agoo', NULL, NULL, NULL, NULL, NULL),
+(1, 2017, 'Agoo', 'Agoo', 'Thomas', 'Bauang', 'San Fernando', 'Caba'),
 (2, NULL, 'Aringay', NULL, NULL, NULL, NULL, NULL),
 (3, NULL, 'Bacnotan', NULL, NULL, NULL, NULL, NULL),
 (4, NULL, 'Bagulin', NULL, NULL, NULL, NULL, NULL),
@@ -504,6 +514,76 @@ CREATE TABLE `profile_item_groups` (
   `item_group_value` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `profile_item_groups`
+--
+
+INSERT INTO `profile_item_groups` (`id`, `profile_parameter_item_id`, `item_group_id`, `item_group_value`) VALUES
+(1, 1, 26, 'a'),
+(2, 1, 27, 'a'),
+(3, 1, 28, 'a'),
+(4, 1, 29, 'a'),
+(5, 2, 30, 'b'),
+(6, 2, 31, 'b'),
+(7, 2, 32, 'b'),
+(8, 2, 33, 'b'),
+(9, 3, 34, 'c'),
+(10, 3, 35, 'c'),
+(11, 3, 36, 'c'),
+(12, 3, 37, 'c'),
+(13, 4, 38, 'd'),
+(14, 4, 39, 'd'),
+(15, 4, 40, 'd'),
+(16, 4, 41, 'd'),
+(17, 5, 42, 'e'),
+(18, 5, 43, 'e'),
+(19, 5, 44, 'e'),
+(20, 5, 45, 'e'),
+(21, 5, 46, 'e'),
+(22, 5, 47, 'e'),
+(23, 6, 48, 'f'),
+(24, 6, 49, 'f'),
+(25, 6, 50, 'f'),
+(26, 6, 51, 'f'),
+(27, 6, 52, 'f'),
+(28, 6, 53, 'f'),
+(29, 7, 54, 'g'),
+(30, 7, 55, 'g'),
+(31, 7, 56, 'g'),
+(32, 7, 57, 'g'),
+(33, 7, 58, 'g'),
+(34, 7, 59, 'g'),
+(35, 8, 60, 'h'),
+(36, 8, 61, 'h'),
+(37, 8, 62, 'h'),
+(38, 8, 63, 'h'),
+(39, 8, 64, 'h'),
+(40, 8, 65, 'h'),
+(41, 9, 66, 'i'),
+(42, 9, 67, 'i'),
+(43, 9, 68, 'i'),
+(44, 9, 69, 'i'),
+(45, 9, 70, 'i'),
+(46, 9, 71, 'i'),
+(47, 10, 72, 'j'),
+(48, 10, 73, 'j'),
+(49, 10, 74, 'j'),
+(50, 10, 75, 'j'),
+(51, 10, 76, 'j'),
+(52, 10, 77, 'j'),
+(53, 11, 78, 'k'),
+(54, 11, 79, 'k'),
+(55, 11, 80, 'k'),
+(56, 11, 81, 'k'),
+(57, 11, 82, 'k'),
+(58, 11, 83, 'k'),
+(59, 12, 84, 'l'),
+(60, 12, 85, 'l'),
+(61, 12, 86, 'l'),
+(62, 12, 87, 'l'),
+(63, 12, 88, 'l'),
+(64, 12, 89, 'l');
+
 -- --------------------------------------------------------
 
 --
@@ -516,6 +596,13 @@ CREATE TABLE `profile_sectors` (
   `sector_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `profile_sectors`
+--
+
+INSERT INTO `profile_sectors` (`id`, `profile_id`, `sector_id`) VALUES
+(1, 1, 5);
+
 -- --------------------------------------------------------
 
 --
@@ -527,6 +614,14 @@ CREATE TABLE `profile_sector_parameters` (
   `profile_sector_id` int(10) NOT NULL,
   `parameter_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profile_sector_parameters`
+--
+
+INSERT INTO `profile_sector_parameters` (`id`, `profile_sector_id`, `parameter_id`) VALUES
+(1, 1, 7),
+(2, 1, 8);
 
 -- --------------------------------------------------------
 
@@ -542,6 +637,23 @@ CREATE TABLE `profile_sector_parameter_items` (
   `item_value` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `profile_sector_parameter_items`
+--
+
+INSERT INTO `profile_sector_parameter_items` (`id`, `profile_sector_parameter_id`, `item_id`, `item_table_row`, `item_value`) VALUES
+(1, 1, 39, 0, ''),
+(2, 1, 43, 0, ''),
+(3, 1, 47, 0, ''),
+(4, 1, 51, 0, ''),
+(5, 2, 55, 0, ''),
+(6, 2, 61, 0, ''),
+(7, 2, 67, 0, ''),
+(8, 2, 73, 0, ''),
+(9, 2, 79, 0, ''),
+(10, 2, 85, 0, ''),
+(11, 2, 91, 0, ''),
+(12, 2, 97, 0, '');
 
 -- --------------------------------------------------------
 
@@ -587,6 +699,12 @@ ALTER TABLE `account_info`
 ALTER TABLE `items_groups`
   ADD PRIMARY KEY (`item_group_id`),
   ADD KEY `item_group_item` (`item_group_item`);
+
+--
+-- Indexes for table `municipal`
+--
+ALTER TABLE `municipal`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `parameters`
@@ -668,6 +786,11 @@ ALTER TABLE `account_info`
 ALTER TABLE `items_groups`
   MODIFY `item_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 --
+-- AUTO_INCREMENT for table `municipal`
+--
+ALTER TABLE `municipal`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `parameters`
 --
 ALTER TABLE `parameters`
@@ -676,9 +799,7 @@ ALTER TABLE `parameters`
 -- AUTO_INCREMENT for table `parameter_items`
 --
 ALTER TABLE `parameter_items`
-
   MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=251;
-
 --
 -- AUTO_INCREMENT for table `parameter_table_row`
 --
@@ -693,27 +814,7 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `profile_item_groups`
 --
 ALTER TABLE `profile_item_groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `profile_sectors`
---
-ALTER TABLE `profile_sectors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `profile_sector_parameters`
---
-ALTER TABLE `profile_sector_parameters`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `profile_sector_parameter_items`
---
-ALTER TABLE `profile_sector_parameter_items`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
---
--- AUTO_INCREMENT for table `profile_item_groups`
---
-ALTER TABLE `profile_item_groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 --
 -- AUTO_INCREMENT for table `profile_sectors`
 --
