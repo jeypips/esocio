@@ -83,7 +83,7 @@
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.account_username}}</b></a></li>
+                                        <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.groups}}</b></a></li>
 										<hr>
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
