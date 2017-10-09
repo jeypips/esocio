@@ -333,7 +333,11 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 		
 		function print(scope,profile_sectors) {
 			
+<<<<<<< HEAD
 			
+=======
+
+>>>>>>> refs/remotes/origin/jp
 		console.log(profile_sectors.profile.profile_year);						
 
 		
@@ -359,6 +363,41 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			];
 			
 			
+<<<<<<< HEAD
+=======
+				var PlantColumns = 
+			// ["", "Plants Food Sufficiency", ""],
+			
+			[profile_sectors.agriculture.parameters[0].items[0].description,profile_sectors.agriculture.parameters[0].items[1].description , profile_sectors.agriculture.parameters[0].items[2].description,profile_sectors.agriculture.parameters[0].items[3].description ]		   
+		
+			var PlantRows = [
+           [profile_sectors.agriculture.parameters[0].rows[0].description,profile_sectors.agriculture.parameters[0].items[4].item_value,profile_sectors.agriculture.parameters[0].items[12].item_value , profile_sectors.agriculture.parameters[0].items[20].item_value ],		   
+           [profile_sectors.agriculture.parameters[0].rows[1].description,profile_sectors.agriculture.parameters[0].items[5].item_value,profile_sectors.agriculture.parameters[0].items[13].item_value , profile_sectors.agriculture.parameters[0].items[21].item_value ],		   
+           [profile_sectors.agriculture.parameters[0].rows[2].description,profile_sectors.agriculture.parameters[0].items[6].item_value,profile_sectors.agriculture.parameters[0].items[14].item_value , profile_sectors.agriculture.parameters[0].items[22].item_value ],		   
+           [profile_sectors.agriculture.parameters[0].rows[3].description,profile_sectors.agriculture.parameters[0].items[7].item_value,profile_sectors.agriculture.parameters[0].items[15].item_value , profile_sectors.agriculture.parameters[0].items[23].item_value ],		   
+           [profile_sectors.agriculture.parameters[0].rows[4].description,profile_sectors.agriculture.parameters[0].items[8].item_value,profile_sectors.agriculture.parameters[0].items[16].item_value , profile_sectors.agriculture.parameters[0].items[24].item_value ],		   
+           [profile_sectors.agriculture.parameters[0].rows[5].description,profile_sectors.agriculture.parameters[0].items[9].item_value,profile_sectors.agriculture.parameters[0].items[17].item_value , profile_sectors.agriculture.parameters[0].items[25].item_value ],		   
+           [profile_sectors.agriculture.parameters[0].rows[6].description,profile_sectors.agriculture.parameters[0].items[10].item_value,profile_sectors.agriculture.parameters[0].items[18].item_value , profile_sectors.agriculture.parameters[0].items[26].item_value ],		   
+           [profile_sectors.agriculture.parameters[0].rows[7].description,profile_sectors.agriculture.parameters[0].items[11].item_value,profile_sectors.agriculture.parameters[0].items[19].item_value , profile_sectors.agriculture.parameters[0].items[27].item_value ]		   
+
+			];
+			
+			var AnimalColumns = 
+			// ["", "Plants Food Sufficiency", ""],
+			
+			[profile_sectors.agriculture.parameters[1].items[0].description,profile_sectors.agriculture.parameters[1].items[1].description , profile_sectors.agriculture.parameters[1].items[2].description]		   
+		
+			var AnimalRows = [
+			
+           [profile_sectors.agriculture.parameters[1].rows[0].description,profile_sectors.agriculture.parameters[1].items[3].item_value,profile_sectors.agriculture.parameters[1].items[8].item_value ],		   
+           [profile_sectors.agriculture.parameters[1].rows[1].description,profile_sectors.agriculture.parameters[1].items[4].item_value,profile_sectors.agriculture.parameters[1].items[9].item_value ],		   
+           [profile_sectors.agriculture.parameters[1].rows[2].description,profile_sectors.agriculture.parameters[1].items[5].item_value,profile_sectors.agriculture.parameters[1].items[10].item_value ],		   
+           [profile_sectors.agriculture.parameters[1].rows[3].description,profile_sectors.agriculture.parameters[1].items[6].item_value,profile_sectors.agriculture.parameters[1].items[11].item_value ],		   
+           [profile_sectors.agriculture.parameters[1].rows[4].description,profile_sectors.agriculture.parameters[1].items[7].item_value,profile_sectors.agriculture.parameters[1].items[12].item_value ]	   
+           ];
+			
+			
+>>>>>>> refs/remotes/origin/jp
 			
 			// You'll need to make your image into a Data URL
 			// Use http://dataurl.net/#dataurlmaker
@@ -378,28 +417,46 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.addPage();
 			doc.addImage(imgData, 'JPEG', 50, 3, 120, 40);
 			doc.setFontSize(11)
+<<<<<<< HEAD
 			doc.setFontType('bold')
+=======
+			doc.setFontType('bold');
+>>>>>>> refs/remotes/origin/jp
 			doc.text(105, 40,'MUNICIPALITY:' + profile_sectors.profile.municipality, null, null, 'center');
 			doc.setFontSize(11)
 			doc.setFontSize(9)
 			doc.setFontType('normal')
 			doc.text(20, 45, 'Location:' + profile_sectors.profile.location);			
 			doc.text(20, 50, 'POLITICAL BOUNDARIES:');
+			doc.setFontType('normal');
 			doc.text(30, 55, 'North:' + profile_sectors.profile.pb_north);
 			doc.text(30, 60, 'South:' + profile_sectors.profile.pb_south);
 			doc.text(110, 55, 'East:' + profile_sectors.profile.pb_east);
 			doc.text(110, 60, 'West:' + profile_sectors.profile.pb_west);
+<<<<<<< HEAD
 			doc.setFontType('bold')
 			doc.text(20, 70, 'A. MACRO SECTOR:');	
 			doc.text(30, 75, 'PHYSICAL CHARACTERISTICS');
 			doc.setFontType('normal')
+=======
+			doc.setFontType('bold');
+			doc.text(20, 70, 'A. MACRO SECTOR:');
+			doc.text(30, 75, 'PHYSICAL CHARACTERISTICS');
+			doc.setFontType('normal');
+>>>>>>> refs/remotes/origin/jp
 			doc.text(40, 80, 'Land Area:' +profile_sectors.macro.parameters[0].items[0].item_value);
 			doc.text(110, 80, 'Climate:' +profile_sectors.macro.parameters[0].items[2].item_value);
 			doc.text(40, 85, 'Terrain:' +profile_sectors.macro.parameters[0].items[1].item_value);
 			doc.text(110, 85, 'Number of Barangays:' +profile_sectors.macro.parameters[0].items[3].item_value);
+<<<<<<< HEAD
 			doc.setFontType('bold')
 			doc.text(30, 93, 'DEMOGRAPHICS');
 			doc.setFontType('normal')
+=======
+			doc.setFontType('bold');
+			doc.text(30, 93, 'DEMOGRAPHICS');
+			doc.setFontType('normal');
+>>>>>>> refs/remotes/origin/jp
 			doc.text(40, 98, 'Population:' +profile_sectors.macro.parameters[1].items[0].item_value);
 			doc.text(40, 103, 'Growth Rate:' +profile_sectors.macro.parameters[1].items[1].item_value);
 			doc.text(40, 108, 'Population Density:' +profile_sectors.macro.parameters[1].items[2].item_value);
@@ -408,9 +465,15 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.text(110, 103, 'Major Dialects/Languages:' +profile_sectors.macro.parameters[1].items[5].item_value);
 			doc.text(110, 108, 'Religion:' +profile_sectors.macro.parameters[1].items[6].item_value);
 			doc.text(110, 113, 'Literacy Rate:' +profile_sectors.macro.parameters[1].items[7].item_value);
+<<<<<<< HEAD
 			doc.setFontType('bold')
 			doc.text(20, 123, 'B. EMPLOYMENT AND DEVELOPMENT FINANCE:');
 			doc.setFontType('normal')
+=======
+			doc.setFontType('bold');
+			doc.text(20, 123, 'B. EMPLOYMENT AND DEVELOPMENT FINANCE:');
+			doc.setFontType('normal');
+>>>>>>> refs/remotes/origin/jp
 			doc.text(40, 128, 'Labor Force (No.):' +profile_sectors.employment.parameters[0].items[0].item_value);
 			doc.text(40, 133, 'Employment Rate:' +profile_sectors.employment.parameters[0].items[1].item_value);
 			doc.text(40, 138, 'Employment Distribution:');
@@ -423,6 +486,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.text(110, 143, 'Classification:' +profile_sectors.employment.parameters[0].items[6].item_value);
 			doc.text(110, 148, "Municipal Gov't Revenue:" +profile_sectors.employment.parameters[0].items[7].item_value);
 			doc.text(110, 153, "Municipal Gov't Expenditures:" +profile_sectors.employment.parameters[0].items[8].item_value);
+			doc.setFontType('bold');
 			doc.text(105, 165,'EMPLOYMENT AND INCOME GENERATED BY COMMODITY', null, null, 'center');
 			doc.autoTable(columns, rows, {
 			margin: {top: 168},
@@ -430,8 +494,13 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			startY: 150
 			}
 			});
+<<<<<<< HEAD
 			doc.setFontType('bold')
 			doc.text(20, 195, 'C.ENVIRONMENT SECTOR')		
+=======
+			doc.setFontType('bold');
+			doc.text(20, 195, 'C.ENVIRONMENT SECTOR');
+>>>>>>> refs/remotes/origin/jp
 			doc.text(20, 200, 'Existing Land Use Distribution');
 			doc.setFontType('normal');
 			doc.text(40, 205, 'Agricultural Areas:' +profile_sectors.environmental.parameters[0].items[0].item_value);
@@ -454,6 +523,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.text(130, 245, 'SEASHORES:' +profile_sectors.environmental.parameters[1].items[10].item_value);
 			doc.text(20, 250, 'Number of Sawmills:' +profile_sectors.environmental.parameters[1].items[7].item_value);
 			doc.text(130, 250, 'Number of Lumber Dealers:' +profile_sectors.environmental.parameters[1].items[8].item_value);
+			doc.setFontType('bold');
 			doc.text(105, 262,'LIST OF WATER BODIES', null, null, 'center');
 			doc.autoTable(WaterColumns, WaterRows, {
 			margin: {top: 265},
@@ -468,6 +538,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.setFontType('bold');
 			doc.text(20, 40, 'D. AGRICULTURE SECTOR');
 			doc.text(20, 45, 'Food Sufficiency');
+<<<<<<< HEAD
 			// doc.autoTable(PlantColumns, PlantRows, {
 			// margin: {top: 265},
 			// tableWidth: '50', 
@@ -606,6 +677,156 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.text(110, 93, 'Number of Clinic:'+profile_sectors.health.parameters[0].items[10].item_value);
 			doc.setFontType('bold');
 			doc.text(20, 103, 'H. EDUCATION SECTOR' );	
+=======
+			doc.autoTable(PlantColumns, PlantRows, {
+			styles: {fontSize: 7},
+			margin: {top: 48, left: 20},
+			tableWidth: 95, 
+			addPageContent: function(data) {
+			startY: 150
+			}
+			});	
+			doc.autoTable(AnimalColumns, AnimalRows, {
+			styles: {fontSize: 7},
+			margin: {top: 53, left: 120},
+			tableWidth: 70, 
+			addPageContent: function(data) {
+			startY: 150
+			}
+			});
+			doc.setFontType('bold');
+			doc.text(20, 115, 'E. INFRASTRUCTURE AND UTILITIES SECTOR');
+			doc.text(30, 123, 'Road Network (total lineal meters');
+			doc.text(40, 128, 'Barangay Road');
+			doc.setFontType('normal');
+			doc.text(50, 133, 'Concrete:');
+			doc.text(80, 133, 'Asphalt:');
+			doc.text(110, 133, 'Gravel:');
+			doc.text(140, 133, 'Earthfill:');
+			doc.setFontType('bold');
+			doc.text(40, 138, 'Municipal Road');
+			doc.setFontType('normal');
+			doc.text(50, 143, 'Concrete:');
+			doc.text(80, 143, 'Asphalt:');
+			doc.text(110, 143, 'Gravel:');
+			doc.text(140, 143, 'Earthfill:');
+			doc.setFontType('bold');
+			doc.text(40, 148, 'Provincial Road');
+			doc.setFontType('normal');
+			doc.text(50, 153, 'Concrete:');
+			doc.text(80, 153, 'Asphalt:');
+			doc.text(110, 153, 'Gravel:');
+			doc.text(140, 153, 'Earthfill:');
+			doc.setFontType('bold');
+			doc.text(40, 158, 'National Road');
+			doc.setFontType('normal');
+			doc.text(50, 163, 'Concrete:');
+			doc.text(80, 163, 'Asphalt:');
+			doc.text(110, 163, 'Gravel:');
+			doc.text(140, 163, 'Earthfill:');
+			doc.setFontType('bold');
+			doc.text(30, 171, 'Bridges');
+			doc.text(40, 176, 'Barangay Bridges');
+			doc.text(50, 181, '(Total Number of Span)');
+			doc.setFontType('normal');
+			doc.text(50, 186, 'Steel:');
+			doc.text(70, 186, 'Concrete:');
+			doc.text(90, 186, 'Composite:');
+			doc.text(110, 186, 'Jumbo:');
+			doc.text(130, 186, 'Bailey:');
+			doc.text(150, 186, 'Footbridge:');
+			doc.setFontType('bold');
+			doc.text(50, 191, '(Total Length)');
+			doc.setFontType('normal');
+			doc.text(50, 196, 'Steel:');
+			doc.text(70, 196, 'Concrete:');
+			doc.text(90, 196, 'Composite:');
+			doc.text(110, 196, 'Jumbo:');
+			doc.text(130, 196, 'Bailey:');
+			doc.text(150, 196, 'Footbridge:');
+			doc.setFontType('bold');
+			doc.text(40, 204, 'Municipal Bridges');
+			doc.text(50, 209, '(Total Number of Span)');
+			doc.setFontType('normal');
+			doc.text(50, 214, 'Steel:');
+			doc.text(70, 214, 'Concrete:');
+			doc.text(90, 214, 'Composite:');
+			doc.text(110, 214, 'Jumbo:');
+			doc.text(130, 214, 'Bailey:');
+			doc.text(150, 214, 'Footbridge:');
+			doc.setFontType('bold');
+			doc.text(50, 219, '(Total Length)');
+			doc.setFontType('normal');
+			doc.text(50, 224, 'Steel:');
+			doc.text(70, 224, 'Concrete:');
+			doc.text(90, 224, 'Composite:');
+			doc.text(110, 224, 'Jumbo:');
+			doc.text(130, 224, 'Bailey:');
+			doc.text(150, 224, 'Footbridge:');
+			doc.setFontType('bold');
+			doc.text(40, 232, 'Provincial Bridges');
+			doc.text(50, 237, '(Total Number of Span)');
+			doc.setFontType('normal');
+			doc.text(50, 242, 'Steel:');
+			doc.text(70, 242, 'Concrete:');
+			doc.text(90, 242, 'Composite:');
+			doc.text(110, 242, 'Jumbo:');
+			doc.text(130, 242, 'Bailey:');
+			doc.text(150, 242, 'Footbridge:');
+			doc.setFontType('bold');
+			doc.text(50, 247, '(Total Length)');
+			doc.setFontType('normal');
+			doc.text(50, 252, 'Steel:');
+			doc.text(70, 252, 'Concrete:');
+			doc.text(90, 252, 'Composite:');
+			doc.text(110, 252, 'Jumbo:');
+			doc.text(130, 252, 'Bailey:');
+			doc.text(150, 252, 'Footbridge:');
+			doc.setFontType('bold');
+			doc.text(40, 260, 'National Bridges');
+			doc.text(50, 265, '(Total Number of Span)');
+			doc.setFontType('normal');
+			doc.text(50, 270, 'Steel:');
+			doc.text(70, 270, 'Concrete:');
+			doc.text(90, 270, 'Composite:');
+			doc.text(110, 270, 'Jumbo:');
+			doc.text(130, 270, 'Bailey:');
+			doc.text(150, 270, 'Footbridge:');
+			doc.setFontType('bold');
+			doc.text(50, 275, '(Total Length)');
+			doc.setFontType('normal');
+			doc.text(50, 280, 'Steel:');
+			doc.text(70, 280, 'Concrete:');
+			doc.text(90, 280, 'Composite:');
+			doc.text(110, 280, 'Jumbo:');
+			doc.text(130, 280, 'Bailey:');
+			doc.text(150, 280, 'Footbridge:');
+			
+			doc.addPage();
+			doc.addImage(imgData, 'JPEG', 50, 3, 120, 40);
+			doc.setFontType('bold');
+			doc.text(20, 40, 'F. SOCIAL WELFARE ');
+			doc.setFontType('normal');
+			doc.text(30, 45, 'Number of Day Care Center:  ' + profile_sectors.social.parameters[0].items[0].item_value);
+			doc.text(30, 50, 'Number of Day Care Worker:  ' + profile_sectors.social.parameters[0].items[1].item_value);
+			doc.text(30, 55, 'Number of Day Care Children:  ' + profile_sectors.social.parameters[0].items[2].item_value);
+			doc.setFontType('bold');
+			doc.text(20, 63, 'G. HEALTH SECTOR' );
+			doc.setFontType('normal');
+			doc.text(30, 68, 'Crude Birth Rate:'+profile_sectors.health.parameters[0].items[0].item_value );
+			doc.text(30, 73, 'Crude Death Rate:'+profile_sectors.health.parameters[0].items[1].item_value);
+			doc.text(30, 78, 'Maternal Mortality Rate:'+profile_sectors.health.parameters[0].items[2].item_value);
+			doc.text(30, 83, 'Infant Mortality Rate:'+profile_sectors.health.parameters[0].items[3].item_value);
+			doc.text(30, 88, 'Morbidity Rate:'+profile_sectors.health.parameters[0].items[4].item_value);
+			doc.text(30, 93, 'Mortality Rate:'+profile_sectors.health.parameters[0].items[5].item_value);
+			doc.text(110, 68, 'Contraceptive Prevalence Rate:'+profile_sectors.health.parameters[0].items[6].item_value);
+			doc.text(110, 73, 'Malnutrition Rate - Pre School:'+profile_sectors.health.parameters[0].items[7].item_value);
+			doc.text(139, 78, 'In-School:'+profile_sectors.health.parameters[0].items[8].item_value);
+			doc.text(110,88, 'Number of Hospitals:'+profile_sectors.health.parameters[0].items[9].item_value);
+			doc.text(110, 93, 'Number of Clinic:'+profile_sectors.health.parameters[0].items[10].item_value);
+			doc.setFontType('bold');
+			doc.text(20, 101, 'H. EDUCATION SECTOR' );	
+>>>>>>> refs/remotes/origin/jp
 			doc.setFontType('normal');
 			doc.text(25, 107, 'Number of Tertiary Schools');	
 			doc.text(100, 107, 'College:'+profile_sectors.education.parameters[0].items[0].group_items[0].item_group_value);	
@@ -617,6 +838,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.text(100, 115, 'Public:'+profile_sectors.education.parameters[0].items[2].group_items[0].item_group_value);	
 			doc.text(140, 115, 'Private:'+profile_sectors.education.parameters[0].items[2].group_items[1].item_group_value);
 			doc.setFontType('bold');
+<<<<<<< HEAD
 			doc.text(20, 125, 'I. DEVELOPMENT ADMINISTRATION CENTER');
 			doc.setFontType('normal');
 			doc.text(25, 130, 'Crime Rate-');
@@ -629,6 +851,20 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.text(110, 138, 'Number of Fire Trucks:'+profile_sectors.development.parameters[0].items[5].item_value);
 			doc.text(110, 142, 'Number of Radio Stations:'+profile_sectors.development.parameters[0].items[6].item_value);
 			doc.text(110, 146, 'Number of Postal Services:'+profile_sectors.development.parameters[0].items[7].item_value);
+=======
+			doc.text(20, 123, 'I. DEVELOPMENT ADMINISTRATION CENTER');
+			doc.setFontType('normal');
+			doc.text(25, 128, 'Crime Rate-');
+			doc.text(50, 128, 'Index:'+profile_sectors.development.parameters[0].items[0].group_items[0].item_group_value);
+			doc.text(100, 128, 'Non-Index:'+profile_sectors.development.parameters[0].items[0].group_items[1].item_group_value);
+			doc.text(25, 133, 'Number of Cooperatives:'+profile_sectors.development.parameters[0].items[1].item_value);
+			doc.text(25, 138, 'Number of Banks:'+profile_sectors.development.parameters[0].items[2].item_value);
+			doc.text(25, 143, 'Number of Lending Institution:'+profile_sectors.development.parameters[0].items[3].item_value);
+			doc.text(110, 133, 'Number of Messengerial Office:'+profile_sectors.development.parameters[0].items[4].item_value);
+			doc.text(110, 138, 'Number of Fire Trucks:'+profile_sectors.development.parameters[0].items[5].item_value);
+			doc.text(110, 143, 'Number of Radio Stations:'+profile_sectors.development.parameters[0].items[6].item_value);
+			doc.text(110, 148, 'Number of Postal Services:'+profile_sectors.development.parameters[0].items[7].item_value);
+>>>>>>> refs/remotes/origin/jp
 			doc.setFontType('bold');
 			doc.text(20, 156, 'J. TRADE, INDUSTRY AND TOURISM SECTOR');
 			doc.setFontType('normal');
@@ -652,10 +888,13 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.text(120, 198, 'Number of Water Stations:');
 			doc.text(120, 202, 'Number of Resorts:');
 			doc.text(120, 206, 'Others:');
+<<<<<<< HEAD
 			
 			
 			
 			
+=======
+>>>>>>> refs/remotes/origin/jp
 			doc.output('dataurlnewwindow');
 			// doc.save('p.pdf');
 			
