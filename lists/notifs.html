@@ -1,0 +1,25 @@
+<div class="panel panel-border panel-primary">
+	<div class="panel-heading">
+		<h4><i class="icon-bell"></i> Notification
+		</h4>
+	</div>
+<hr>
+	<div class="panel-body">
+		<table id="notif-list" class="table table-striped m-0">
+		  <thead>
+			<tr>
+			  <th>No.</th>
+			  <th>Description</th>
+			  <th>Date</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr ng-repeat="notification in notifications">
+			  <td>{{notification.id}}</td>
+			  <td>{{notification.description}}</td>
+			  <td>{{notification.system_date}}</td>
+			</tr>
+		  </tbody>
+		</table>
+	</div>
+</div>
