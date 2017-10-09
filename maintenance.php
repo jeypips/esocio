@@ -125,7 +125,7 @@
                                            </a>
                                         </li>
                                         <li>
-                                            <a href="javascript:void(0);" class="list-group-item text-right">
+                                            <a href="notifs.php" ng-click="form.notif(this)" class="list-group-item text-right">
                                                 <small class="font-600">See all notifications</small>
                                             </a>
                                         </li>

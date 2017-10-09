@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="images/lu_seal.png">
 
-        <title>E-Socio | Account</title>
+        <title>E-Socio | Notification</title>
 		 
 		 <!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
@@ -41,7 +41,7 @@
 		</style>
     </head>
 
-    <body class="fixed-left" ng-app="user" ng-controller="userCtrl" account-profile>
+    <body class="fixed-left" ng-app="notif" ng-controller="notifCtrl" account-profile>
 
 	 <!-- Begin page -->
         <div id="wrapper">
@@ -67,7 +67,7 @@
                                 <span class="clearfix"></span>
                             </div>
 							<div class="navbar-left app-search pull-left hidden-xs">
-			                     <h5 class="portlet-title" style="color:white;">Account</h5>
+			                     <h5 class="portlet-title" style="color:white;">Notification</h5>
 			                </div>
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
@@ -123,7 +123,7 @@
                                            </a>
                                         </li>
                                         <li>
-                                            <a href="notifs.php" ng-click="form.notif(this)" class="list-group-item text-right">
+                                            <a href="javascript:;" ng-click="form.notif(this)" class="list-group-item text-right">
                                                 <small class="font-600">See all notifications</small>
                                             </a>
                                         </li>
@@ -163,7 +163,7 @@
 							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
 							<li><a href="profile.php"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
 							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
-							<li><a href="account.php" class="active"><i class="icon-people"></i><span> User Account </span></a></li>
+							<li><a href="account.php"><i class="icon-people"></i><span> User Account </span></a></li>
                         </li>
 					</ul>
                         <div class="clearfix"></div>
@@ -231,8 +231,8 @@
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/growl.js"></script>
 		<script src="modules/account.js"></script>
-		<script src="modules/users.js"></script>
-		<script src="controllers/user.js"></script>
+		<script src="modules/notif.js"></script>
+		<script src="controllers/notif.js"></script>
 
     </body>
 </html>
