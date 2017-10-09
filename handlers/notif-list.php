@@ -10,7 +10,7 @@ session_start();
 
 $con = new pdo_db();
 
-$notifications = $con->getData("SELECT * FROM notifications");
+$notifications = $con->getData("SELECT * FROM notifications JOIN account_info ON account_info.account_id = notifications.account_no JOIN sectors ON sectors.sector_id = notifications.sector_no");
 
 echo json_encode($notifications);
 
