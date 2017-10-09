@@ -201,12 +201,7 @@
 			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>
 		<div class="side-bar right-bar nicescroll">
-<<<<<<< HEAD
-		<h4 class="text-center" style="margin-top: 20px;"></h4>
-		  <div class="contact-list nicescroll">
-=======
 		 <div class="contact-list nicescroll">
->>>>>>> refs/remotes/origin/jp
 		  <ul class="list-group contacts-list">
 			<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile',profile)">
 				<a href="javascript:;"><h4 class="text text-inverse text-center active" style="margin-bottom: -9px;">{{profile.municipality}}</h4></a>
