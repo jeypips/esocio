@@ -36,8 +36,7 @@
 		.not-active {
 			pointer-events: none;
 			cursor: default;
-		}
-		
+		}	
 		</style>
     </head>
 
@@ -235,11 +234,9 @@
 		<script src="angular/angular.min.js"></script>
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
+		<script src="modules/growl.js"></script>
 		<script src="modules/account.js"></script>
 		<script src="modules/dashboard.js"></script>
 		<script src="controllers/dashboard.js"></script>
-
-
-
     </body>
 </html>
