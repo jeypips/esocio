@@ -331,6 +331,13 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			
 		};
 		
+		self.notif = function(scope) {
+			$('#x_content').html(loading);
+			$('#x_content').load('notifs.html', function() {
+				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
+			});
+		};
+		
 		function print(scope,profile_sectors) {
 		console.log(profile_sectors.profile.profile_year);						
 

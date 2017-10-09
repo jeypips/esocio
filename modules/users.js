@@ -20,9 +20,12 @@ angular.module('user-module',['bootstrap-modal','bootstrap-growl']).factory('for
 			};			
 
 			scope.account_info = {};
+			scope.notification = {};
 			scope.account_info.account_id = 0;
+			scope.notification.id = 0;
 
 			scope.account_infos = []; // list
+			scope.notifications = []; // list
 
 		};
 
@@ -194,6 +197,13 @@ angular.module('user-module',['bootstrap-modal','bootstrap-growl']).factory('for
 					});	
 				},200);
 				
+			});
+		};
+		
+		self.notif = function(scope) {
+			$('#x_content').html(loading);
+			$('#x_content').load('notifs.html', function() {
+				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
 			});
 		};
 	};
