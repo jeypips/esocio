@@ -7,6 +7,7 @@ app.controller('dashboardCtrl',function($scope,fullscreen,form) {
 	
 	form.data($scope);
 	form.notif($scope);
+	form.list($scope);
 	
 	$scope.form = form;
 
