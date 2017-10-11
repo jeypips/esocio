@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 11, 2017 at 11:29 AM
+-- Generation Time: Oct 11, 2017 at 05:36 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -221,8 +221,7 @@ CREATE TABLE `notifications` (
 --
 
 INSERT INTO `notifications` (`id`, `sector_no`, `account_no`, `description`, `system_date`, `is_hidden`) VALUES
-(1, 1, 1, 'Macro sector has been changed', '2017-10-17', 1),
-(2, 1, 1, 'Environmental sector has been changed', '2017-10-11', 1);
+(1, 1, 21, 'Tubao has added Macro Sector', '2017-10-11', 0);
 
 -- --------------------------------------------------------
 
@@ -577,6 +576,13 @@ CREATE TABLE `profile_sectors` (
   `sector_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `profile_sectors`
+--
+
+INSERT INTO `profile_sectors` (`id`, `profile_id`, `sector_id`) VALUES
+(1, 21, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -588,6 +594,14 @@ CREATE TABLE `profile_sector_parameters` (
   `profile_sector_id` int(10) NOT NULL,
   `parameter_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profile_sector_parameters`
+--
+
+INSERT INTO `profile_sector_parameters` (`id`, `profile_sector_id`, `parameter_id`) VALUES
+(1, 1, 1),
+(2, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -602,6 +616,24 @@ CREATE TABLE `profile_sector_parameter_items` (
   `item_table_row` int(10) NOT NULL DEFAULT '0',
   `item_value` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profile_sector_parameter_items`
+--
+
+INSERT INTO `profile_sector_parameter_items` (`id`, `profile_sector_parameter_id`, `item_id`, `item_table_row`, `item_value`) VALUES
+(1, 1, 1, 0, ''),
+(2, 1, 2, 0, ''),
+(3, 1, 3, 0, ''),
+(4, 1, 4, 0, ''),
+(5, 2, 5, 0, ''),
+(6, 2, 6, 0, ''),
+(7, 2, 7, 0, ''),
+(8, 2, 8, 0, ''),
+(9, 2, 9, 0, ''),
+(10, 2, 10, 0, ''),
+(11, 2, 11, 0, ''),
+(12, 2, 12, 0, '');
 
 -- --------------------------------------------------------
 
@@ -750,7 +782,7 @@ ALTER TABLE `municipal`
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `parameters`
 --
@@ -780,17 +812,17 @@ ALTER TABLE `profile_item_groups`
 -- AUTO_INCREMENT for table `profile_sectors`
 --
 ALTER TABLE `profile_sectors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameters`
 --
 ALTER TABLE `profile_sector_parameters`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameter_items`
 --
 ALTER TABLE `profile_sector_parameter_items`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `sectors`
 --
@@ -805,13 +837,6 @@ ALTER TABLE `sectors`
 --
 ALTER TABLE `items_groups`
   ADD CONSTRAINT `items_groups_ibfk_1` FOREIGN KEY (`item_group_item`) REFERENCES `parameter_items` (`item_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
-
---
--- Constraints for table `notifications`
---
-ALTER TABLE `notifications`
-  ADD CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`sector_no`) REFERENCES `sectors` (`sector_id`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `notifications_ibfk_2` FOREIGN KEY (`account_no`) REFERENCES `account_info` (`account_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `parameters`
