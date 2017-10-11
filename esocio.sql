@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 09, 2017 at 11:10 AM
+-- Generation Time: Oct 11, 2017 at 11:29 AM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -43,7 +43,7 @@ CREATE TABLE `account_info` (
 --
 
 INSERT INTO `account_info` (`account_id`, `account_firstname`, `account_middlename`, `account_lastname`, `account_name_municipality`, `account_username`, `account_password`, `account_email`, `groups`) VALUES
-(1, 'John Paul', 'Garcia', 'Balanon', 'sample', 'admin', 'admin', 'jp@gmail.com', 'admin'),
+(1, 'John Paul', 'Garcia', 'Balanon', 'San Fernando', 'admin', 'admin', 'jp@gmail.com', 'admin'),
 (2, 'Dexter', 'Rivera', 'Florendo', 'Bauang', 'user', 'user', 'dex@gmail.com', 'user');
 
 -- --------------------------------------------------------
@@ -209,6 +209,8 @@ INSERT INTO `municipal` (`id`, `municipality`, `year`) VALUES
 
 CREATE TABLE `notifications` (
   `id` int(11) NOT NULL,
+  `sector_no` int(11) NOT NULL,
+  `account_no` int(11) NOT NULL,
   `description` varchar(50) NOT NULL,
   `system_date` date NOT NULL,
   `is_hidden` tinyint(4) NOT NULL
@@ -218,8 +220,9 @@ CREATE TABLE `notifications` (
 -- Dumping data for table `notifications`
 --
 
-INSERT INTO `notifications` (`id`, `description`, `system_date`, `is_hidden`) VALUES
-(1, 'Sample ba', '2017-10-04', 1);
+INSERT INTO `notifications` (`id`, `sector_no`, `account_no`, `description`, `system_date`, `is_hidden`) VALUES
+(1, 1, 1, 'Macro sector has been changed', '2017-10-17', 1),
+(2, 1, 1, 'Environmental sector has been changed', '2017-10-11', 1);
 
 -- --------------------------------------------------------
 
@@ -655,7 +658,9 @@ ALTER TABLE `municipal`
 -- Indexes for table `notifications`
 --
 ALTER TABLE `notifications`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sector_no` (`sector_no`),
+  ADD KEY `account_no` (`account_no`);
 
 --
 -- Indexes for table `parameters`
@@ -745,7 +750,7 @@ ALTER TABLE `municipal`
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `parameters`
 --
@@ -800,6 +805,13 @@ ALTER TABLE `sectors`
 --
 ALTER TABLE `items_groups`
   ADD CONSTRAINT `items_groups_ibfk_1` FOREIGN KEY (`item_group_item`) REFERENCES `parameter_items` (`item_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `notifications`
+--
+ALTER TABLE `notifications`
+  ADD CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`sector_no`) REFERENCES `sectors` (`sector_id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `notifications_ibfk_2` FOREIGN KEY (`account_no`) REFERENCES `account_info` (`account_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `parameters`
