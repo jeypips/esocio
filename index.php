@@ -68,10 +68,10 @@
 							<div class="navbar-left app-search pull-left hidden-xs">
 			                     <h5 class="portlet-title" style="color:white;">Dashboard</h5>
 			                </div>
-                            <ul class="nav navbar-nav navbar-right pull-right">
+                            <ul class="nav navbar-nav navbar-right pull-right" fetch-notifications>
 								<li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
-                                        <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">2</span>
+                                        <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">{{(notifications.length>0)?notifications.length:''}}</span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-lg">
                                         <li class="notifi-title"><span class="label label-white pull-right"></span>Notification</li>
@@ -86,7 +86,7 @@
                                                  <div class="media-body">
                                                     <h5 class="media-heading">{{notification.description}}</h5>
                                                     <p class="m-0">
-                                                        <small>There are <span class="text-primary font-600">2</span> new updates available</small>
+                                                        <small>There are <span class="text-primary font-600">{{(notifications.length>0)?notifications.length:''}}</span> new updates</small>
                                                     </p>
                                                  </div>
                                               </div>
@@ -94,7 +94,7 @@
 										   
                                         </li>
                                         <li>
-                                            <a href="notifs.php" ng-click="form.notif(this)" class="list-group-item text-right">
+                                            <a href="notifs.php" ng-click="notifs.php" class="list-group-item text-right">
                                                 <small class="font-600">See all notifications</small>
                                             </a>
                                         </li>
@@ -208,6 +208,7 @@
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/growl.js"></script>
 		<script src="modules/account.js"></script>
+		<script src="modules/notifications.js"></script>
 		<script src="modules/dashboard.js"></script>
 		<script src="controllers/dashboard.js"></script>
     </body>

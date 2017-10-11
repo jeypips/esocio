@@ -5,6 +5,7 @@ $_POST = json_decode(file_get_contents('php://input'), true);
 header("Content-Type: application/json");
 
 require_once '../db.php';
+include_once 'notifications.php';
 
 $con = new pdo_db("profile_sectors");
 $profile_id = $_POST['profile_id'];
@@ -72,6 +73,8 @@ function addProfile($con,$parameters,$profile_id,$sector_id) {
 		
 	}
 
+	notify($con,'add',$profile_id,$sector_id);		
+	
 }
 
 function updateProfile($con,$parameters,$profile_id,$sector_id) {
@@ -111,6 +114,8 @@ function updateProfile($con,$parameters,$profile_id,$sector_id) {
 		}
 		
 	}
+	
+	notify($con,'update',$profile_id,$sector_id);		
 
 }
 
