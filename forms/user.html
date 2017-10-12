@@ -40,8 +40,12 @@
 				</div>
 				<div class="col-lg-4 col-md-10 col-sm-12 form-group">
 					<label class="label-control">Groups</label>
-					<input type="text" class="form-control" name="groups" ng-model="account_info.groups" ng-disabled="controls.ok.btn">
-				</div>				
+					<select class="form-control" ng-model="account_info.groups" ng-disabled="controls.ok.btn">
+						<option>-</option>
+						<option>admin</option>
+						<option>user</option>
+					</select>
+				</div>
 			</div>
 			<hr>
 			<div class="row">
