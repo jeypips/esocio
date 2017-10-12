@@ -1,7 +1,5 @@
 <?php
 
-header("Content-Type: application/json");
-
 $_POST = json_decode(file_get_contents('php://input'), true);
 
 require_once '../db.php';
@@ -12,6 +10,7 @@ $con = new pdo_db();
 
 $notifications = $con->getData("SELECT * FROM notifications");
 
+header("Content-Type: application/json");
 echo json_encode($notifications);
 
 ?>

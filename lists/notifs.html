@@ -1,6 +1,6 @@
 <div class="panel panel-border panel-primary">
 	<div class="panel-heading">
-		<h4><i class="icon-bell"></i> Notification
+		<h4><i class="icon-bell"></i> Notifications
 		</h4>
 	</div>
 <hr>
@@ -9,6 +9,7 @@
 		  <thead>
 			<tr>
 			  <th>No.</th>
+			  <th>Municipality</th>
 			  <th>Description</th>
 			  <th>Date</th>
 			</tr>
@@ -16,6 +17,7 @@
 		  <tbody>
 			<tr ng-repeat="notification in notifications">
 			  <td>{{notification.id}}</td>
+			  <td>{{notification.account_name_municipality}}</td>
 			  <td>{{notification.description}}</td>
 			  <td>{{notification.system_date}}</td>
 			</tr>

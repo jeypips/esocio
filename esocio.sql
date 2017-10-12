@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 09, 2017 at 11:10 AM
+-- Generation Time: Oct 11, 2017 at 05:36 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -43,7 +43,7 @@ CREATE TABLE `account_info` (
 --
 
 INSERT INTO `account_info` (`account_id`, `account_firstname`, `account_middlename`, `account_lastname`, `account_name_municipality`, `account_username`, `account_password`, `account_email`, `groups`) VALUES
-(1, 'John Paul', 'Garcia', 'Balanon', 'sample', 'admin', 'admin', 'jp@gmail.com', 'admin'),
+(1, 'John Paul', 'Garcia', 'Balanon', 'San Fernando', 'admin', 'admin', 'jp@gmail.com', 'admin'),
 (2, 'Dexter', 'Rivera', 'Florendo', 'Bauang', 'user', 'user', 'dex@gmail.com', 'user');
 
 -- --------------------------------------------------------
@@ -209,6 +209,8 @@ INSERT INTO `municipal` (`id`, `municipality`, `year`) VALUES
 
 CREATE TABLE `notifications` (
   `id` int(11) NOT NULL,
+  `sector_no` int(11) NOT NULL,
+  `account_no` int(11) NOT NULL,
   `description` varchar(50) NOT NULL,
   `system_date` date NOT NULL,
   `is_hidden` tinyint(4) NOT NULL
@@ -218,8 +220,8 @@ CREATE TABLE `notifications` (
 -- Dumping data for table `notifications`
 --
 
-INSERT INTO `notifications` (`id`, `description`, `system_date`, `is_hidden`) VALUES
-(1, 'Sample ba', '2017-10-04', 1);
+INSERT INTO `notifications` (`id`, `sector_no`, `account_no`, `description`, `system_date`, `is_hidden`) VALUES
+(1, 1, 21, 'Tubao has added Macro Sector', '2017-10-11', 0);
 
 -- --------------------------------------------------------
 
@@ -574,6 +576,13 @@ CREATE TABLE `profile_sectors` (
   `sector_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `profile_sectors`
+--
+
+INSERT INTO `profile_sectors` (`id`, `profile_id`, `sector_id`) VALUES
+(1, 21, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -585,6 +594,14 @@ CREATE TABLE `profile_sector_parameters` (
   `profile_sector_id` int(10) NOT NULL,
   `parameter_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profile_sector_parameters`
+--
+
+INSERT INTO `profile_sector_parameters` (`id`, `profile_sector_id`, `parameter_id`) VALUES
+(1, 1, 1),
+(2, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -599,6 +616,24 @@ CREATE TABLE `profile_sector_parameter_items` (
   `item_table_row` int(10) NOT NULL DEFAULT '0',
   `item_value` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profile_sector_parameter_items`
+--
+
+INSERT INTO `profile_sector_parameter_items` (`id`, `profile_sector_parameter_id`, `item_id`, `item_table_row`, `item_value`) VALUES
+(1, 1, 1, 0, ''),
+(2, 1, 2, 0, ''),
+(3, 1, 3, 0, ''),
+(4, 1, 4, 0, ''),
+(5, 2, 5, 0, ''),
+(6, 2, 6, 0, ''),
+(7, 2, 7, 0, ''),
+(8, 2, 8, 0, ''),
+(9, 2, 9, 0, ''),
+(10, 2, 10, 0, ''),
+(11, 2, 11, 0, ''),
+(12, 2, 12, 0, '');
 
 -- --------------------------------------------------------
 
@@ -655,7 +690,9 @@ ALTER TABLE `municipal`
 -- Indexes for table `notifications`
 --
 ALTER TABLE `notifications`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sector_no` (`sector_no`),
+  ADD KEY `account_no` (`account_no`);
 
 --
 -- Indexes for table `parameters`
@@ -775,17 +812,17 @@ ALTER TABLE `profile_item_groups`
 -- AUTO_INCREMENT for table `profile_sectors`
 --
 ALTER TABLE `profile_sectors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameters`
 --
 ALTER TABLE `profile_sector_parameters`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameter_items`
 --
 ALTER TABLE `profile_sector_parameter_items`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `sectors`
 --
