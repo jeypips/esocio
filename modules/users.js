@@ -200,12 +200,6 @@ angular.module('user-module',['bootstrap-modal','bootstrap-growl']).factory('for
 			});
 		};
 		
-		self.notif = function(scope) {
-			$('#x_content').html(loading);
-			$('#x_content').load('notifs.html', function() {
-				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
-			});
-		};
 	};
 	
 	return new form();
