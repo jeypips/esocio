@@ -1,4 +1,4 @@
-var app = angular.module('maintenance',['toggle-fullscreen','account-module','maintenance-module','parameter-module','parameterItem-module']);
+var app = angular.module('maintenance',['toggle-fullscreen','account-module','maintenance-module','parameter-module','parameterItem-module','notifications-module']);
 
 app.controller('maintenanceCtrl',function($scope,fullscreen,manage,param,paramItem) {
 	
