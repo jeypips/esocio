@@ -70,7 +70,7 @@
 			                     <h5 class="portlet-title" style="color:white;">Account</h5>
 			                </div>
                              <ul class="nav navbar-nav navbar-right pull-right" fetch-notifications>
-                                <li class="dropdown hidden-xs">
+                                <li class="dropdown hidden-xs" ng-show="accountProfile.groups == 'admin'">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
                                         <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">{{(notifications.length>0)?notifications.length:''}}</span>
                                     </a>
@@ -134,8 +134,8 @@
 						<li class="has_sub">
 							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
 							<li><a href="profile.php"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
-							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
-							<li><a href="account.php" class="active"><i class="icon-people"></i><span> User Account </span></a></li>
+							<li ng-show="accountProfile.groups == 'admin'"><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
+							<li ng-show="accountProfile.groups == 'admin'"><a href="account.php" class="active"><i class="icon-people"></i><span> User Account </span></a></li>
                         </li>
 					</ul>
                         <div class="clearfix"></div>

@@ -11,6 +11,8 @@ $con = new pdo_db();
 $notifications = $con->getData("SELECT * FROM notifications");
 
 header("Content-Type: application/json");
+
 echo json_encode($notifications);
+
 
 ?>
