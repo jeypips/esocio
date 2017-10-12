@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 09, 2017 at 11:10 AM
+-- Generation Time: Oct 12, 2017 at 05:00 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -43,8 +43,8 @@ CREATE TABLE `account_info` (
 --
 
 INSERT INTO `account_info` (`account_id`, `account_firstname`, `account_middlename`, `account_lastname`, `account_name_municipality`, `account_username`, `account_password`, `account_email`, `groups`) VALUES
-(1, 'John Paul', 'Garcia', 'Balanon', 'sample', 'admin', 'admin', 'jp@gmail.com', 'admin'),
-(2, 'Dexter', 'Rivera', 'Florendo', 'Bauang', 'user', 'user', 'dex@gmail.com', 'user');
+(1, 'John Paul', 'Garcia', 'Balanon', '12', 'admin', 'admin', 'jp@gmail.com', 'admin'),
+(2, 'Dexter', 'Rivera', 'Florendo', '2', 'user', 'user', 'dex@gmail.com', 'user');
 
 -- --------------------------------------------------------
 
@@ -170,36 +170,34 @@ INSERT INTO `items_groups` (`item_group_id`, `item_group_item`, `item_group_desc
 
 CREATE TABLE `municipal` (
   `id` int(11) NOT NULL,
-  `municipality` varchar(255) DEFAULT NULL,
-  `year` year(4) DEFAULT NULL
+  `municipality` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `municipal`
 --
 
-INSERT INTO `municipal` (`id`, `municipality`, `year`) VALUES
-(1, 'Agoo', 2017),
-(2, 'Aringay', 2017),
-(3, 'Bacnotan', 2017),
-(4, 'Bagulin', 2017),
-(5, 'Balaoan', 2017),
-(6, 'Bangar', 2017),
-(7, 'Bauang', 2017),
-(8, 'Burgos', 2017),
-(9, 'Caba', 2017),
-(10, 'Damortis', 2017),
-(11, 'Luna', 2017),
-(12, 'Naguilian', 2017),
-(13, 'Pugo', 2017),
-(14, 'Rosario', 2017),
-(15, 'San Fernando', 2017),
-(16, 'San Gabriel', 2017),
-(17, 'san Juan', 2017),
-(18, 'Santol', 2017),
-(19, 'Sto. Tomas', 2017),
-(20, 'Sudipen', 2017),
-(21, 'Tubao', 2017);
+INSERT INTO `municipal` (`id`, `municipality`) VALUES
+(1, 'Agoo'),
+(2, 'Aringay'),
+(3, 'Bacnotan'),
+(4, 'Bagulin'),
+(5, 'Balaoan'),
+(6, 'Bangar'),
+(7, 'Bauang'),
+(8, 'Burgos'),
+(9, 'Caba'),
+(10, 'Luna'),
+(11, 'Naguilian'),
+(12, 'Pugo'),
+(13, 'Rosario'),
+(14, 'San Fernando'),
+(15, 'San Gabriel'),
+(16, 'San Juan'),
+(17, 'Santo Tomas'),
+(18, 'Santol'),
+(19, 'Sudipen'),
+(20, 'Tubao');
 
 -- --------------------------------------------------------
 
@@ -209,6 +207,8 @@ INSERT INTO `municipal` (`id`, `municipality`, `year`) VALUES
 
 CREATE TABLE `notifications` (
   `id` int(11) NOT NULL,
+  `sector_no` int(11) NOT NULL,
+  `account_no` int(11) NOT NULL,
   `description` varchar(50) NOT NULL,
   `system_date` date NOT NULL,
   `is_hidden` tinyint(4) NOT NULL
@@ -218,8 +218,33 @@ CREATE TABLE `notifications` (
 -- Dumping data for table `notifications`
 --
 
-INSERT INTO `notifications` (`id`, `description`, `system_date`, `is_hidden`) VALUES
-(1, 'Sample ba', '2017-10-04', 1);
+INSERT INTO `notifications` (`id`, `sector_no`, `account_no`, `description`, `system_date`, `is_hidden`) VALUES
+(1, 0, 1, 'Agoo has updated its profile', '2017-10-12', 0),
+(2, 0, 1, 'Array has updated its profile', '2017-10-12', 0),
+(3, 0, 1, ' has updated its profile', '2017-10-12', 0),
+(4, 0, 1, '1 has updated its profile', '2017-10-12', 0),
+(5, 0, 22, '2 has added new profile', '2017-10-12', 0),
+(6, 0, 23, '2 has added new profile', '2017-10-12', 0),
+(7, 0, 22, '2 has added new profile', '2017-10-12', 0),
+(8, 0, 2, '2 has added new profile', '2017-10-12', 0),
+(9, 0, 3, '3 has added new profile', '2017-10-12', 0),
+(10, 0, 4, '4 has added new profile', '2017-10-12', 0),
+(11, 0, 5, '5 has added new profile', '2017-10-12', 0),
+(12, 0, 6, '6 has added new profile', '2017-10-12', 0),
+(13, 0, 7, '7 has added new profile', '2017-10-12', 0),
+(14, 0, 8, '8 has added new profile', '2017-10-12', 0),
+(15, 0, 9, '9 has added new profile', '2017-10-12', 0),
+(16, 0, 10, '10 has added new profile', '2017-10-12', 0),
+(17, 0, 11, '11 has added new profile', '2017-10-12', 0),
+(18, 0, 12, '12 has added new profile', '2017-10-12', 0),
+(19, 0, 13, '13 has added new profile', '2017-10-12', 0),
+(20, 0, 14, '14 has added new profile', '2017-10-12', 0),
+(21, 0, 15, '15 has added new profile', '2017-10-12', 0),
+(22, 0, 16, '16 has added new profile', '2017-10-12', 0),
+(23, 0, 17, '17 has added new profile', '2017-10-12', 0),
+(24, 0, 18, '18 has added new profile', '2017-10-12', 0),
+(25, 0, 19, '19 has added new profile', '2017-10-12', 0),
+(26, 0, 20, '20 has added new profile', '2017-10-12', 0);
 
 -- --------------------------------------------------------
 
@@ -527,27 +552,26 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`, `pb_north`, `pb_south`, `pb_east`, `pb_west`) VALUES
-(1, '2017', 'Agoo', 'Agoo', 'Thomas', 'Bauang', 'San Fernando', 'Caba'),
-(2, '2017', 'Aringay', NULL, NULL, NULL, NULL, NULL),
-(3, '2017', 'Bacnotan', NULL, NULL, NULL, NULL, NULL),
-(4, '2017', 'Bagulin', NULL, NULL, NULL, NULL, NULL),
-(5, '2017', 'Balaoan ', NULL, NULL, NULL, NULL, NULL),
-(6, '2017', 'Bangar', NULL, NULL, NULL, NULL, NULL),
-(7, '2017', 'Bauang', NULL, NULL, NULL, NULL, NULL),
-(8, '2017', 'Burgos', NULL, NULL, NULL, NULL, NULL),
-(9, '2017', 'Caba', NULL, NULL, NULL, NULL, NULL),
-(10, '2017', 'Damortis', NULL, NULL, NULL, NULL, NULL),
-(11, '2017', 'Luna', NULL, NULL, NULL, NULL, NULL),
-(12, '2017', 'Naguilian ', NULL, NULL, NULL, NULL, NULL),
-(13, '2017', 'Pugo', NULL, NULL, NULL, NULL, NULL),
-(14, '2017', 'Rosario', NULL, NULL, NULL, NULL, NULL),
-(15, '2017', 'San Fernando', NULL, NULL, NULL, NULL, NULL),
-(16, '2017', 'San Gabriel', NULL, NULL, NULL, NULL, NULL),
-(17, '2017', 'San Juan', NULL, NULL, NULL, NULL, NULL),
-(18, '2017', 'Santol', NULL, NULL, NULL, NULL, NULL),
-(19, '2017', 'Sto. Tomas', NULL, NULL, NULL, NULL, NULL),
-(20, '2017', 'Sudipen', NULL, NULL, NULL, NULL, NULL),
-(21, '2017', 'Tubao', NULL, NULL, NULL, NULL, NULL);
+(1, '2017', '1', 'Agoo', 'Thomas', 'Bauang', 'San Fernando', 'Caba'),
+(2, '2017', '2', NULL, NULL, NULL, NULL, NULL),
+(3, '2017', '3', NULL, NULL, NULL, NULL, NULL),
+(4, '2017', '4', NULL, NULL, NULL, NULL, NULL),
+(5, '2017', '5', NULL, NULL, NULL, NULL, NULL),
+(6, '2017', '6', NULL, NULL, NULL, NULL, NULL),
+(7, '2017', '7', NULL, NULL, NULL, NULL, NULL),
+(8, '2017', '8', NULL, NULL, NULL, NULL, NULL),
+(9, '2017', '9', NULL, NULL, NULL, NULL, NULL),
+(10, '2017', '10', NULL, NULL, NULL, NULL, NULL),
+(11, '2017', '11', NULL, NULL, NULL, NULL, NULL),
+(12, '2017', '12', NULL, NULL, NULL, NULL, NULL),
+(13, '2017', '13', NULL, NULL, NULL, NULL, NULL),
+(14, '2017', '14', NULL, NULL, NULL, NULL, NULL),
+(15, '2017', '15', NULL, NULL, NULL, NULL, NULL),
+(16, '2017', '16', NULL, NULL, NULL, NULL, NULL),
+(17, '2017', '17', NULL, NULL, NULL, NULL, NULL),
+(18, '2017', '18', NULL, NULL, NULL, NULL, NULL),
+(19, '2017', '19', NULL, NULL, NULL, NULL, NULL),
+(20, '2017', '20', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -655,7 +679,9 @@ ALTER TABLE `municipal`
 -- Indexes for table `notifications`
 --
 ALTER TABLE `notifications`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sector_no` (`sector_no`),
+  ADD KEY `account_no` (`account_no`);
 
 --
 -- Indexes for table `parameters`
@@ -730,7 +756,7 @@ ALTER TABLE `sectors`
 -- AUTO_INCREMENT for table `account_info`
 --
 ALTER TABLE `account_info`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `items_groups`
 --
@@ -740,12 +766,12 @@ ALTER TABLE `items_groups`
 -- AUTO_INCREMENT for table `municipal`
 --
 ALTER TABLE `municipal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 --
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `parameters`
 --
@@ -765,27 +791,27 @@ ALTER TABLE `parameter_table_row`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `profile_item_groups`
 --
 ALTER TABLE `profile_item_groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `profile_sectors`
 --
 ALTER TABLE `profile_sectors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameters`
 --
 ALTER TABLE `profile_sector_parameters`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameter_items`
 --
 ALTER TABLE `profile_sector_parameter_items`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `sectors`
 --
