@@ -1,4 +1,4 @@
-var app = angular.module('user',['toggle-fullscreen','account-module','user-module']);
+var app = angular.module('user',['toggle-fullscreen','account-module','user-module','notifications-module']);
 
 app.controller('userCtrl',function($scope,fullscreen,form) {
 	
