@@ -1,4 +1,4 @@
-var app = angular.module('profile',['toggle-fullscreen','account-module','profile-module']);
+var app = angular.module('profile',['toggle-fullscreen','account-module','profile-module','notifications-module']);
 
 app.controller('profileCtrl',function($scope,fullscreen,form) {
 	
