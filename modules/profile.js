@@ -54,6 +54,21 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 				console.log(scope.data.sectors);
 			},1000);
 			
+			scope.municipalities = [];
+			/*
+			** municipalities
+			*/
+			$http({
+				method: 'POST',
+				url: 'handlers/municipalities.php'
+			}).then(function mySucces(response) {
+				
+				scope.municipalities = angular.copy(response.data);
+				
+			}, function myError(response) {
+				
+			});	
+			
 		};
 
 		function validate(scope,form) {

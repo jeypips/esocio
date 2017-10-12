@@ -19,7 +19,7 @@
 			<tr ng-repeat="account_info in account_infos">
 			  <td>{{account_info.account_id}}</td>
 			  <td>{{account_info.account_firstname}} {{account_info.account_middlename}} {{account_info.account_lastname}}</td>
-			  <td>{{account_info.account_name_municipality}}</td>
+			  <td>{{account_info.account_name_municipality.municipality}}</td>
 			  <td>
 			  <button class="btn btn-sm btn-white" style="margin-right: 5px;" ng-click="form.user(this,account_info)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
 			  <button class="btn btn-sm btn-white" ng-click="form.delete(this,account_info)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
