@@ -38,13 +38,13 @@
 					<label class="label-control">Email</label>
 					<input type="text" class="form-control" name="account_email" ng-model="account_info.account_email" ng-disabled="controls.ok.btn">
 				</div>
-				<div class="col-lg-4 col-md-10 col-sm-12 form-group">
+				<div class="col-lg-4 col-md-10 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.groups.$touched && formHolder.account_info.groups.$invalid}">
 					<label class="label-control">Groups</label>
-					<select class="form-control" ng-model="account_info.groups" ng-disabled="controls.ok.btn">
-						<option>-</option>
-						<option>admin</option>
-						<option>user</option>
-					</select>
+				<select class="form-control" name="groups" ng-model="account_info.groups" ng-disabled="controls.ok.btn" required>
+					<option>admin</option>
+					<option>user</option>
+				</select>
+				<span class="help-block" ng-show="formHolder.account_info.groups.$touched && formHolder.account_info.groups.$invalid">Groups is required</span>
 				</div>
 			</div>
 			<hr>
