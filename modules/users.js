@@ -26,6 +26,21 @@ angular.module('user-module',['bootstrap-modal','bootstrap-growl']).factory('for
 
 			scope.account_infos = []; // list
 			scope.notifications = []; // list
+			
+			scope.municipalities = [];
+			/*
+			** municipalities
+			*/
+			$http({
+				method: 'POST',
+				url: 'handlers/municipalities.php'
+			}).then(function mySucces(response) {
+				
+				scope.municipalities = angular.copy(response.data);
+				
+			}, function myError(response) {
+				
+			});				
 
 		};
 

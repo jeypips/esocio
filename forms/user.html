@@ -31,7 +31,7 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-10 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.account_name_municipality.$touched && formHolder.account_info.account_name_municipality.$invalid}">
 					<label class="label-control">Municipality</label>
-					<input type="text" class="form-control" name="account_name_municipality" ng-model="account_info.account_name_municipality" required ng-disabled="controls.ok.btn">
+					<select class="form-control" name="account_name_municipality" ng-model="account_info.account_name_municipality" ng-options="m.municipality for m in municipalities track by m.id" required ng-disabled="controls.ok.btn"></select>
 					<span class="help-block" ng-show="formHolder.account_info.account_name_municipality.$touched && formHolder.account_info.account_name_municipality.$invalid">Municipality is required</span>
 				</div>
 				<div class="col-lg-4 col-md-10 col-sm-12 form-group">
