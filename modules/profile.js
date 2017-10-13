@@ -164,6 +164,26 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 					
 					break;
 					
+					case "trade":
+					
+						$http({
+						  method: 'POST',
+						  url: 'handlers/'+form+'-view.php',
+						  data: {profile_id: row.profile_id, sector: form}
+						}).then(function mySucces(response) {
+
+							response.data.trade.parameters[0].items[0].item_value = new Date(response.data.trade.parameters[0].items[0].item_value);
+							response.data.trade.parameters[0].items[1].item_value = new Date(response.data.trade.parameters[0].items[1].item_value);
+							scope.profile.sectors = angular.copy(response.data);
+							
+						}, function myError(response) {
+							 
+						  // error
+							
+						});						
+					
+					break;
+					
 					default:
 					
 						$http({
@@ -420,7 +440,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.text(105, 65,'SOCIO-ECONOMIC', null, null, 'center');
 			doc.text(105, 95,'PROFILE', null, null, 'center');
 			doc.text(105, 125,'OF', null, null, 'center');
-			doc.text(105, 150,profile_sectors.profile.municipality, null, null, 'center');
+			doc.text(105, 150,profile_sectors.profile.municipality_name, null, null, 'center');
 			doc.text(105, 180,'LA UNION', null, null, 'center');
 			doc.setFontSize(60)
 			doc.text(105, 210,profile_sectors.profile.profile_year, null, null, 'center');
@@ -428,7 +448,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.addImage(imgData, 'JPEG', 50, 3, 120, 40);
 			doc.setFontSize(11)
 			doc.setFontType('bold');
-			doc.text(105, 40,'MUNICIPALITY:' + profile_sectors.profile.municipality, null, null, 'center');
+			doc.text(105, 40,'MUNICIPALITY:' +profile_sectors.profile.municipality_name, null, null, 'center');
 			doc.setFontSize(11)
 			doc.setFontSize(9)
 			doc.text(20, 45, 'Location:' + profile_sectors.profile.location);			
@@ -693,26 +713,26 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.setFontType('bold');
 			doc.text(20, 156, 'J. TRADE, INDUSTRY AND TOURISM SECTOR');
 			doc.setFontType('normal');
-			doc.text(20, 160, 'Date of Parochial Fiesta:');
-			doc.text(20, 164, 'Date of Town Fiesta:');
-			doc.text(90, 160, 'Name of Patron:');
-			doc.text(90, 164, 'Market Days:');
+			doc.text(20, 160, 'Date of Parochial Fiesta:'+profile_sectors.trade.parameters[0].items[0].item_value);
+			doc.text(20, 164, 'Date of Town Fiesta:'+profile_sectors.trade.parameters[0].items[1].item_value);
+			doc.text(90, 160, 'Name of Patron:'+profile_sectors.trade.parameters[0].items[2].item_value);
+			doc.text(90, 164, 'Market Days:'+profile_sectors.trade.parameters[0].items[3].item_value);
 			doc.text(20, 174, 'Trade and Industry:');
-			doc.text(30, 178, 'Number of Bussiness Establishments:');
+			doc.text(30, 178, 'Number of Bussiness Establishments:'+profile_sectors.trade.parameters[0].items[4].item_value);
 			doc.text(40, 182, 'Trading:');
 			doc.text(40, 186, 'Services:');
 			doc.text(40, 190, 'Manufacturing:');
-			doc.text(30, 194, 'Number of Beauty Parlor:');
-			doc.text(30, 198, 'Number of Barber Shops:');
-			doc.text(30, 202, 'Number of Photo Studio/Video Shops:');
-			doc.text(30, 206, 'Number of Tailoring/Dress Shops:');
-			doc.text(120, 182, 'Number of Restaurants:');
-			doc.text(120, 186, 'Number of Eateries/Canteen:');
-			doc.text(120, 190, 'Number of Funeral Parlor:');
-			doc.text(120, 194, 'Number of Gasoline Stations:');
-			doc.text(120, 198, 'Number of Water Stations:');
-			doc.text(120, 202, 'Number of Resorts:');
-			doc.text(120, 206, 'Others:');
+			doc.text(30, 194, 'Number of Beauty Parlor:'+profile_sectors.trade.parameters[0].items[5].item_value);
+			doc.text(30, 198, 'Number of Barber Shops:'+profile_sectors.trade.parameters[0].items[6].item_value);
+			doc.text(30, 202, 'Number of Photo Studio/Video Shops:'+profile_sectors.trade.parameters[0].items[7].item_value);
+			doc.text(30, 206, 'Number of Tailoring/Dress Shops:'+profile_sectors.trade.parameters[0].items[8].item_value);
+			doc.text(120, 182, 'Number of Restaurants:'+profile_sectors.trade.parameters[0].items[9].item_value);
+			doc.text(120, 186, 'Number of Eateries/Canteen:'+profile_sectors.trade.parameters[0].items[10].item_value);
+			doc.text(120, 190, 'Number of Funeral Parlor:'+profile_sectors.trade.parameters[0].items[11].item_value);
+			doc.text(120, 194, 'Number of Gasoline Stations:'+profile_sectors.trade.parameters[0].items[12].item_value);
+			doc.text(120, 198, 'Number of Water Stations:'+profile_sectors.trade.parameters[0].items[13].item_value);
+			doc.text(120, 202, 'Number of Resorts:'+profile_sectors.trade.parameters[0].items[14].item_value);
+			doc.text(120, 206, 'Others:'+profile_sectors.trade.parameters[0].items[14].item_value);
 			doc.output('dataurlnewwindow');
 			// doc.save('p.pdf');
 			
