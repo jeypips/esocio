@@ -12,7 +12,7 @@
         <title>E-Socio | Dashboard</title>
 
         <!--Morris Chart CSS -->
-		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+		<!--<link rel="stylesheet" href="assets/plugins/morris/morris.css">-->
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -196,14 +196,23 @@
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
         <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
 
-        <script src="assets/plugins/morris/morris.min.js"></script>
+        <!-- <script src="assets/plugins/morris/morris.min.js"></script> -->
         <script src="assets/plugins/raphael/raphael-min.js"></script>
         <script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
         <script src="assets/pages/jquery.dashboard.js"></script>
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
-		<script src="assets/js/bootbox.min.js"></script
-		>
+		<script src="assets/js/bootbox.min.js"></script>
+		
+        <script src="assets/plugins/flot-chart/jquery.flot.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.time.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.tooltip.min.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.resize.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.pie.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.selection.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.stack.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.orderBars.min.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.crosshair.js"></script>	
 		
 		<!-- Angular  -->
 		<script src="angular/angular.min.js"></script>
@@ -213,6 +222,7 @@
 		<script src="data/sectors.js"></script>
 		<script src="modules/account.js"></script>
 		<script src="modules/notifications.js"></script>
+		<script src="modules/charts.js"></script>
 		<script src="modules/dashboard.js"></script>
 		<script src="controllers/dashboard.js"></script>
     </body>

@@ -1,4 +1,4 @@
-angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl) {
+angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,flot) {
 	
 	function form() {
 		
@@ -48,6 +48,10 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl']).factory
 			
 			$timeout(function() {
 				console.log(scope.sectors);
+				
+				// pie chart
+				flot.pie(scope.sectors);
+				
 			},1000);
 			
 			$timeout(function() {
