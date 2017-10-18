@@ -2,7 +2,7 @@
 
 function notify($con,$mode,$profile_id,$sector_id) {
 
-	$profiles = $con->getData("SELECT municipality FROM profile WHERE profile_id = $profile_id");
+	$profiles = $con->getData("SELECT municipality FROM municipal WHERE id = $profile_id");
 	$profile = "";
 	foreach ($profiles as $p) {
 		$profile = $p['municipality'];

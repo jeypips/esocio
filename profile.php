@@ -20,6 +20,7 @@
         <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/font-awesome-animation.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -70,12 +71,12 @@
 			                     <h5 class="portlet-title" style="color:white;">Profile</h5>
 			                </div>
                             <ul class="nav navbar-nav navbar-right pull-right" fetch-notifications>
-                                <li class="dropdown hidden-xs">
+                                <li class="dropdown hidden-xs" ng-show="accountProfile.groups == 'admin'">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
                                         <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">{{(notifications.length>0)?notifications.length:''}}</span>
                                     </a>
 									<ul class="dropdown-menu dropdown-menu-lg">
-                                        <li class="notifi-title"><span class="label label-default pull-right"></span>Notification</li>
+                                        <li class="notifi-title"><span class="label label-default pull-right"></span>Notification<i style="cursor: pointer; color: black;" class="faa-ring animated pull-right icon-trash"></i></li>
                                         <li class="list-group nicescroll notification-list">
                                            <!-- list item-->
                                            <a href="javascript:;" class="list-group-item" ng-repeat="notification in notifications">
@@ -133,8 +134,8 @@
 
 							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
 							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
-							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
-							<li><a href="account.php"><i class="icon-people"></i><span> User Account </span></a></li>
+							<li ng-show="accountProfile.groups == 'admin'"><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
+							<li ng-show="accountProfile.groups == 'admin'"><a href="account.php"><i class="icon-people"></i><span> User Account </span></a></li>
 						</li>
 					</ul>
                         <div class="clearfix"></div>
@@ -174,7 +175,7 @@
 		 <div class="contact-list nicescroll">
 		  <ul class="list-group contacts-list">
 			<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile',profile)">
-				<a href="javascript:;"><h4 class="text text-inverse text-center active" style="margin-bottom: -9px;">{{profile.municipality}}</h4></a>
+				<a href="javascript:;"><h4 class="text text-inverse text-center active" style="margin-bottom: -9px;">{{profile.municipality.municipality}}</h4></a>
 			</li>
 			<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname,profile)">
 				<a href="javascript:;">
