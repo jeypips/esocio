@@ -20,6 +20,7 @@
         <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/font-awesome-animation.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -77,7 +78,7 @@
                                         <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">{{(notifications.length>0)?notifications.length:''}}</span>
                                     </a>
 									<ul class="dropdown-menu dropdown-menu-lg">
-                                        <li class="notifi-title"><span class="label label-default pull-right"></span>Notification</li>
+                                        <li class="notifi-title"><span class="label label-default pull-right"></span>Notification<i style="cursor: pointer; color: black;" class="faa-ring animated pull-right icon-trash"></i></li>
                                         <li class="list-group nicescroll notification-list">
                                           
                                            <!-- list item-->

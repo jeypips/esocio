@@ -12,7 +12,7 @@
         <title>E-Socio | Dashboard</title>
 
         <!--Morris Chart CSS -->
-		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+		<!--<link rel="stylesheet" href="assets/plugins/morris/morris.css">-->
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -20,6 +20,7 @@
         <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/font-awesome-animation.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -71,10 +72,10 @@
                             <ul class="nav navbar-nav navbar-right pull-right" fetch-notifications>
 								<li class="dropdown hidden-xs" ng-show="accountProfile.groups == 'admin'">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
-                                        <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">{{(notifications.length>0)?notifications.length:''}}</span>
+                                        <i class="icon-bell" ></i> <span class="badge badge-xs badge-danger">{{(notifications.length>0)?notifications.length:''}}</span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-lg">
-                                        <li class="notifi-title"><span class="label label-white pull-right"></span>Notification<i class="fa fa-close pull-right text-muted"></i></li>
+                                        <li class="notifi-title"><span class="label label-white pull-right"></span>Notification<i style="cursor: pointer; color: black;" class="faa-ring animated pull-right icon-trash"></i></li>
                                         <li class="list-group nicescroll notification-list">
                                          
                                            <!-- list item-->
@@ -159,6 +160,7 @@
 								</div>
 							</div>
 						</div>
+						<div id="x_content"></div>
                     </div> <!-- container -->
                 </div> <!-- content -->
 
@@ -194,7 +196,7 @@
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
         <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
 
-        <script src="assets/plugins/morris/morris.min.js"></script>
+        <!-- <script src="assets/plugins/morris/morris.min.js"></script> -->
         <script src="assets/plugins/raphael/raphael-min.js"></script>
         <script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
         <script src="assets/pages/jquery.dashboard.js"></script>
@@ -202,13 +204,25 @@
         <script src="assets/js/jquery.app.js"></script>
 		<script src="assets/js/bootbox.min.js"></script>
 		
+        <script src="assets/plugins/flot-chart/jquery.flot.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.time.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.tooltip.min.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.resize.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.pie.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.selection.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.stack.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.orderBars.min.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.crosshair.js"></script>	
+		
 		<!-- Angular  -->
 		<script src="angular/angular.min.js"></script>
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/growl.js"></script>
+		<script src="data/sectors.js"></script>
 		<script src="modules/account.js"></script>
 		<script src="modules/notifications.js"></script>
+		<script src="modules/charts.js"></script>
 		<script src="modules/dashboard.js"></script>
 		<script src="controllers/dashboard.js"></script>
     </body>

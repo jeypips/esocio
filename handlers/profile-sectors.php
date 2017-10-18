@@ -17,7 +17,7 @@ $sectors = $con->getData("SELECT * FROM sectors");
 $profile_sectors = [];
 
 
-$profile = $con->getData("SELECT * FROM profile WHERE profile_id = $profile_id");
+$profile = $con->getData("SELECT *, (SELECT municipal.municipality FROM municipal WHERE municipal.id = profile.municipality) municipality_name FROM profile WHERE profile_id = $profile_id");
 $profile_sectors['profile'] = $profile[0];
 
 

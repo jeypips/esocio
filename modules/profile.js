@@ -164,6 +164,26 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 					
 					break;
 					
+					case "trade":
+					
+						$http({
+						  method: 'POST',
+						  url: 'handlers/'+form+'-view.php',
+						  data: {profile_id: row.profile_id, sector: form}
+						}).then(function mySucces(response) {
+
+							response.data.trade.parameters[0].items[0].item_value = new Date(response.data.trade.parameters[0].items[0].item_value);
+							response.data.trade.parameters[0].items[1].item_value = new Date(response.data.trade.parameters[0].items[1].item_value);
+							scope.profile.sectors = angular.copy(response.data);
+							
+						}, function myError(response) {
+							 
+						  // error
+							
+						});						
+					
+					break;
+					
 					default:
 					
 						$http({
@@ -420,7 +440,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.text(105, 65,'SOCIO-ECONOMIC', null, null, 'center');
 			doc.text(105, 95,'PROFILE', null, null, 'center');
 			doc.text(105, 125,'OF', null, null, 'center');
-			doc.text(105, 150,profile_sectors.profile.municipality, null, null, 'center');
+			doc.text(105, 150,profile_sectors.profile.municipality_name, null, null, 'center');
 			doc.text(105, 180,'LA UNION', null, null, 'center');
 			doc.setFontSize(60)
 			doc.text(105, 210,profile_sectors.profile.profile_year, null, null, 'center');
@@ -428,7 +448,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.addImage(imgData, 'JPEG', 50, 3, 120, 40);
 			doc.setFontSize(11)
 			doc.setFontType('bold');
-			doc.text(105, 40,'MUNICIPALITY:' + profile_sectors.profile.municipality, null, null, 'center');
+			doc.text(105, 40,'MUNICIPALITY:' +profile_sectors.profile.municipality_name, null, null, 'center');
 			doc.setFontSize(11)
 			doc.setFontSize(9)
 			doc.text(20, 45, 'Location:' + profile_sectors.profile.location);			
@@ -540,108 +560,108 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.text(30, 123, 'Road Network (total lineal meters');
 			doc.text(40, 128, 'Barangay Road');
 			doc.setFontType('normal');
-			doc.text(50, 133, 'Concrete:');
-			doc.text(80, 133, 'Asphalt:');
-			doc.text(110, 133, 'Gravel:');
-			doc.text(140, 133, 'Earthfill:');
+			doc.text(50, 133, 'Concrete:'+profile_sectors.infra.parameters[0].items[0].group_items[0].item_group_value);
+			doc.text(80, 133, 'Asphalt:'+profile_sectors.infra.parameters[0].items[0].group_items[1].item_group_value);
+			doc.text(110, 133, 'Gravel:'+profile_sectors.infra.parameters[0].items[0].group_items[2].item_group_value);
+			doc.text(140, 133, 'Earthfill:'+profile_sectors.infra.parameters[0].items[0].group_items[3].item_group_value);
 			doc.setFontType('bold');
 			doc.text(40, 138, 'Municipal Road');
 			doc.setFontType('normal');
-			doc.text(50, 143, 'Concrete:');
-			doc.text(80, 143, 'Asphalt:');
-			doc.text(110, 143, 'Gravel:');
-			doc.text(140, 143, 'Earthfill:');
+			doc.text(50, 143, 'Concrete:'+profile_sectors.infra.parameters[0].items[1].group_items[0].item_group_value);
+			doc.text(80, 143, 'Asphalt:'+profile_sectors.infra.parameters[0].items[1].group_items[1].item_group_value);
+			doc.text(110, 143, 'Gravel:'+profile_sectors.infra.parameters[0].items[1].group_items[2].item_group_value);
+			doc.text(140, 143, 'Earthfill:'+profile_sectors.infra.parameters[0].items[1].group_items[3].item_group_value);
 			doc.setFontType('bold');
 			doc.text(40, 148, 'Provincial Road');
 			doc.setFontType('normal');
-			doc.text(50, 153, 'Concrete:');
-			doc.text(80, 153, 'Asphalt:');
-			doc.text(110, 153, 'Gravel:');
-			doc.text(140, 153, 'Earthfill:');
+			doc.text(50, 153, 'Concrete:'+profile_sectors.infra.parameters[0].items[2].group_items[0].item_group_value);
+			doc.text(80, 153, 'Asphalt:'+profile_sectors.infra.parameters[0].items[2].group_items[1].item_group_value);
+			doc.text(110, 153, 'Gravel:'+profile_sectors.infra.parameters[0].items[2].group_items[2].item_group_value);
+			doc.text(140, 153, 'Earthfill:'+profile_sectors.infra.parameters[0].items[2].group_items[3].item_group_value);
 			doc.setFontType('bold');
 			doc.text(40, 158, 'National Road');
 			doc.setFontType('normal');
-			doc.text(50, 163, 'Concrete:');
-			doc.text(80, 163, 'Asphalt:');
-			doc.text(110, 163, 'Gravel:');
-			doc.text(140, 163, 'Earthfill:');
+			doc.text(50, 163, 'Concrete:'+profile_sectors.infra.parameters[0].items[3].group_items[0].item_group_value);
+			doc.text(80, 163, 'Asphalt:'+profile_sectors.infra.parameters[0].items[3].group_items[1].item_group_value);
+			doc.text(110, 163, 'Gravel:'+profile_sectors.infra.parameters[0].items[3].group_items[2].item_group_value);
+			doc.text(140, 163, 'Earthfill:'+profile_sectors.infra.parameters[0].items[3].group_items[3].item_group_value);
 			doc.setFontType('bold');
 			doc.text(30, 171, 'Bridges');
 			doc.text(40, 176, 'Barangay Bridges');
 			doc.text(50, 181, '(Total Number of Span)');
 			doc.setFontType('normal');
-			doc.text(50, 186, 'Steel:');
-			doc.text(70, 186, 'Concrete:');
-			doc.text(90, 186, 'Composite:');
-			doc.text(110, 186, 'Jumbo:');
-			doc.text(130, 186, 'Bailey:');
-			doc.text(150, 186, 'Footbridge:');
+			doc.text(50, 186, 'Steel:'+profile_sectors.infra.parameters[1].items[0].group_items[0].item_group_value);
+			doc.text(70, 186, 'Concrete:'+profile_sectors.infra.parameters[1].items[0].group_items[1].item_group_value);
+			doc.text(90, 186, 'Composite:'+profile_sectors.infra.parameters[1].items[0].group_items[2].item_group_value);
+			doc.text(110, 186, 'Jumbo:'+profile_sectors.infra.parameters[1].items[0].group_items[3].item_group_value);
+			doc.text(130, 186, 'Bailey:'+profile_sectors.infra.parameters[1].items[0].group_items[4].item_group_value);
+			doc.text(150, 186, 'Footbridge:'+profile_sectors.infra.parameters[1].items[0].group_items[5].item_group_value);
 			doc.setFontType('bold');
 			doc.text(50, 191, '(Total Length)');
 			doc.setFontType('normal');
-			doc.text(50, 196, 'Steel:');
-			doc.text(70, 196, 'Concrete:');
-			doc.text(90, 196, 'Composite:');
-			doc.text(110, 196, 'Jumbo:');
-			doc.text(130, 196, 'Bailey:');
-			doc.text(150, 196, 'Footbridge:');
+			doc.text(50, 196, 'Steel:'+profile_sectors.infra.parameters[1].items[1].group_items[0].item_group_value);
+			doc.text(70, 196, 'Concrete:'+profile_sectors.infra.parameters[1].items[1].group_items[1].item_group_value);
+			doc.text(90, 196, 'Composite:'+profile_sectors.infra.parameters[1].items[1].group_items[2].item_group_value);
+			doc.text(110, 196, 'Jumbo:'+profile_sectors.infra.parameters[1].items[1].group_items[3].item_group_value);
+			doc.text(130, 196, 'Bailey:'+profile_sectors.infra.parameters[1].items[1].group_items[4].item_group_value);
+			doc.text(150, 196, 'Footbridge:'+profile_sectors.infra.parameters[1].items[1].group_items[5].item_group_value);
 			doc.setFontType('bold');
 			doc.text(40, 204, 'Municipal Bridges');
 			doc.text(50, 209, '(Total Number of Span)');
 			doc.setFontType('normal');
-			doc.text(50, 214, 'Steel:');
-			doc.text(70, 214, 'Concrete:');
-			doc.text(90, 214, 'Composite:');
-			doc.text(110, 214, 'Jumbo:');
-			doc.text(130, 214, 'Bailey:');
-			doc.text(150, 214, 'Footbridge:');
+			doc.text(50, 214, 'Steel:'+profile_sectors.infra.parameters[1].items[2].group_items[0].item_group_value);
+			doc.text(70, 214, 'Concrete:'+profile_sectors.infra.parameters[1].items[2].group_items[1].item_group_value);
+			doc.text(90, 214, 'Composite:'+profile_sectors.infra.parameters[1].items[2].group_items[2].item_group_value);
+			doc.text(110, 214, 'Jumbo:'+profile_sectors.infra.parameters[1].items[2].group_items[3].item_group_value);
+			doc.text(130, 214, 'Bailey:'+profile_sectors.infra.parameters[1].items[2].group_items[4].item_group_value);
+			doc.text(150, 214, 'Footbridge:'+profile_sectors.infra.parameters[1].items[2].group_items[5].item_group_value);
 			doc.setFontType('bold');
 			doc.text(50, 219, '(Total Length)');
 			doc.setFontType('normal');
-			doc.text(50, 224, 'Steel:');
-			doc.text(70, 224, 'Concrete:');
-			doc.text(90, 224, 'Composite:');
-			doc.text(110, 224, 'Jumbo:');
-			doc.text(130, 224, 'Bailey:');
-			doc.text(150, 224, 'Footbridge:');
+			doc.text(50, 224, 'Steel:'+profile_sectors.infra.parameters[1].items[3].group_items[0].item_group_value);
+			doc.text(70, 224, 'Concrete:'+profile_sectors.infra.parameters[1].items[3].group_items[1].item_group_value);
+			doc.text(90, 224, 'Composite:'+profile_sectors.infra.parameters[1].items[3].group_items[2].item_group_value);
+			doc.text(110, 224, 'Jumbo:'+profile_sectors.infra.parameters[1].items[3].group_items[3].item_group_value);
+			doc.text(130, 224, 'Bailey:'+profile_sectors.infra.parameters[1].items[3].group_items[4].item_group_value);
+			doc.text(150, 224, 'Footbridge:'+profile_sectors.infra.parameters[1].items[3].group_items[5].item_group_value);
 			doc.setFontType('bold');
 			doc.text(40, 232, 'Provincial Bridges');
 			doc.text(50, 237, '(Total Number of Span)');
 			doc.setFontType('normal');
-			doc.text(50, 242, 'Steel:');
-			doc.text(70, 242, 'Concrete:');
-			doc.text(90, 242, 'Composite:');
-			doc.text(110, 242, 'Jumbo:');
-			doc.text(130, 242, 'Bailey:');
-			doc.text(150, 242, 'Footbridge:');
+			doc.text(50, 242, 'Steel:'+profile_sectors.infra.parameters[1].items[4].group_items[0].item_group_value);
+			doc.text(70, 242, 'Concrete:'+profile_sectors.infra.parameters[1].items[4].group_items[1].item_group_value);
+			doc.text(90, 242, 'Composite:'+profile_sectors.infra.parameters[1].items[4].group_items[2].item_group_value);
+			doc.text(110, 242, 'Jumbo:'+profile_sectors.infra.parameters[1].items[4].group_items[3].item_group_value);
+			doc.text(130, 242, 'Bailey:'+profile_sectors.infra.parameters[1].items[4].group_items[4].item_group_value);
+			doc.text(150, 242, 'Footbridge:'+profile_sectors.infra.parameters[1].items[4].group_items[5].item_group_value);
 			doc.setFontType('bold');
 			doc.text(50, 247, '(Total Length)');
 			doc.setFontType('normal');
-			doc.text(50, 252, 'Steel:');
-			doc.text(70, 252, 'Concrete:');
-			doc.text(90, 252, 'Composite:');
-			doc.text(110, 252, 'Jumbo:');
-			doc.text(130, 252, 'Bailey:');
-			doc.text(150, 252, 'Footbridge:');
+			doc.text(50, 252, 'Steel:'+profile_sectors.infra.parameters[1].items[5].group_items[0].item_group_value);
+			doc.text(70, 252, 'Concrete:'+profile_sectors.infra.parameters[1].items[5].group_items[1].item_group_value);
+			doc.text(90, 252, 'Composite:'+profile_sectors.infra.parameters[1].items[5].group_items[2].item_group_value);
+			doc.text(110, 252, 'Jumbo:'+profile_sectors.infra.parameters[1].items[5].group_items[3].item_group_value);
+			doc.text(130, 252, 'Bailey:'+profile_sectors.infra.parameters[1].items[5].group_items[4].item_group_value);
+			doc.text(150, 252, 'Footbridge:'+profile_sectors.infra.parameters[1].items[5].group_items[5].item_group_value);
 			doc.setFontType('bold');
 			doc.text(40, 260, 'National Bridges');
 			doc.text(50, 265, '(Total Number of Span)');
 			doc.setFontType('normal');
-			doc.text(50, 270, 'Steel:');
-			doc.text(70, 270, 'Concrete:');
-			doc.text(90, 270, 'Composite:');
-			doc.text(110, 270, 'Jumbo:');
-			doc.text(130, 270, 'Bailey:');
-			doc.text(150, 270, 'Footbridge:');
+			doc.text(50, 270, 'Steel:'+profile_sectors.infra.parameters[1].items[6].group_items[0].item_group_value);
+			doc.text(70, 270, 'Concrete:'+profile_sectors.infra.parameters[1].items[6].group_items[1].item_group_value);
+			doc.text(90, 270, 'Composite:'+profile_sectors.infra.parameters[1].items[6].group_items[2].item_group_value);
+			doc.text(110, 270, 'Jumbo:'+profile_sectors.infra.parameters[1].items[6].group_items[3].item_group_value);
+			doc.text(130, 270, 'Bailey:'+profile_sectors.infra.parameters[1].items[6].group_items[4].item_group_value);
+			doc.text(150, 270, 'Footbridge:'+profile_sectors.infra.parameters[1].items[6].group_items[5].item_group_value);
 			doc.setFontType('bold');
 			doc.text(50, 275, '(Total Length)');
 			doc.setFontType('normal');
-			doc.text(50, 280, 'Steel:');
-			doc.text(70, 280, 'Concrete:');
-			doc.text(90, 280, 'Composite:');
-			doc.text(110, 280, 'Jumbo:');
-			doc.text(130, 280, 'Bailey:');
-			doc.text(150, 280, 'Footbridge:');
+			doc.text(50, 280, 'Steel:'+profile_sectors.infra.parameters[1].items[7].group_items[0].item_group_value);
+			doc.text(70, 280, 'Concrete:'+profile_sectors.infra.parameters[1].items[7].group_items[1].item_group_value);
+			doc.text(90, 280, 'Composite:'+profile_sectors.infra.parameters[1].items[7].group_items[2].item_group_value);
+			doc.text(110, 280, 'Jumbo:'+profile_sectors.infra.parameters[1].items[7].group_items[3].item_group_value);
+			doc.text(130, 280, 'Bailey:'+profile_sectors.infra.parameters[1].items[7].group_items[4].item_group_value);
+			doc.text(150, 280, 'Footbridge:'+profile_sectors.infra.parameters[1].items[7].group_items[5].item_group_value);
 			
 			doc.addPage();
 			doc.addImage(imgData, 'JPEG', 50, 3, 120, 40);
@@ -693,26 +713,26 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.setFontType('bold');
 			doc.text(20, 156, 'J. TRADE, INDUSTRY AND TOURISM SECTOR');
 			doc.setFontType('normal');
-			doc.text(20, 160, 'Date of Parochial Fiesta:');
-			doc.text(20, 164, 'Date of Town Fiesta:');
-			doc.text(90, 160, 'Name of Patron:');
-			doc.text(90, 164, 'Market Days:');
+			doc.text(20, 160, 'Date of Parochial Fiesta:'+profile_sectors.trade.parameters[0].items[0].item_value);
+			doc.text(20, 164, 'Date of Town Fiesta:'+profile_sectors.trade.parameters[0].items[1].item_value);
+			doc.text(90, 160, 'Name of Patron:'+profile_sectors.trade.parameters[0].items[2].item_value);
+			doc.text(90, 164, 'Market Days:'+profile_sectors.trade.parameters[0].items[3].item_value);
 			doc.text(20, 174, 'Trade and Industry:');
-			doc.text(30, 178, 'Number of Bussiness Establishments:');
+			doc.text(30, 178, 'Number of Bussiness Establishments:'+profile_sectors.trade.parameters[0].items[4].item_value);
 			doc.text(40, 182, 'Trading:');
 			doc.text(40, 186, 'Services:');
 			doc.text(40, 190, 'Manufacturing:');
-			doc.text(30, 194, 'Number of Beauty Parlor:');
-			doc.text(30, 198, 'Number of Barber Shops:');
-			doc.text(30, 202, 'Number of Photo Studio/Video Shops:');
-			doc.text(30, 206, 'Number of Tailoring/Dress Shops:');
-			doc.text(120, 182, 'Number of Restaurants:');
-			doc.text(120, 186, 'Number of Eateries/Canteen:');
-			doc.text(120, 190, 'Number of Funeral Parlor:');
-			doc.text(120, 194, 'Number of Gasoline Stations:');
-			doc.text(120, 198, 'Number of Water Stations:');
-			doc.text(120, 202, 'Number of Resorts:');
-			doc.text(120, 206, 'Others:');
+			doc.text(30, 194, 'Number of Beauty Parlor:'+profile_sectors.trade.parameters[0].items[5].item_value);
+			doc.text(30, 198, 'Number of Barber Shops:'+profile_sectors.trade.parameters[0].items[6].item_value);
+			doc.text(30, 202, 'Number of Photo Studio/Video Shops:'+profile_sectors.trade.parameters[0].items[7].item_value);
+			doc.text(30, 206, 'Number of Tailoring/Dress Shops:'+profile_sectors.trade.parameters[0].items[8].item_value);
+			doc.text(120, 182, 'Number of Restaurants:'+profile_sectors.trade.parameters[0].items[9].item_value);
+			doc.text(120, 186, 'Number of Eateries/Canteen:'+profile_sectors.trade.parameters[0].items[10].item_value);
+			doc.text(120, 190, 'Number of Funeral Parlor:'+profile_sectors.trade.parameters[0].items[11].item_value);
+			doc.text(120, 194, 'Number of Gasoline Stations:'+profile_sectors.trade.parameters[0].items[12].item_value);
+			doc.text(120, 198, 'Number of Water Stations:'+profile_sectors.trade.parameters[0].items[13].item_value);
+			doc.text(120, 202, 'Number of Resorts:'+profile_sectors.trade.parameters[0].items[14].item_value);
+			doc.text(120, 206, 'Others:'+profile_sectors.trade.parameters[0].items[14].item_value);
 			doc.output('dataurlnewwindow');
 			// doc.save('p.pdf');
 			
