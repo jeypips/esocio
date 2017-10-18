@@ -109,7 +109,7 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 				if (scope.sectors.sector_id == 0) scope.sectors.sector_id = response.data;
 				mode(scope,scope.sectors);
 				
-				// growl.show('btn btn-success',{from: 'top', amount: 55},'Sector successfully updated.');
+				growl.show('btn btn-success',{from: 'top', amount: 55},'Sector successfully updated.');
 				
 			}, function myError(response) {
 				 
@@ -132,7 +132,7 @@ angular.module('maintenance-module',['bootstrap-modal','bootstrap-growl']).facto
 			}).then(function mySucces(response) {
 
 				self.list(scope);
-				// growl.show('btn btn-danger',{from: 'top', amount: 55},'Sector successfully deleted.');
+				growl.show('btn btn-danger',{from: 'top', amount: 55},'Sector successfully deleted.');
 				
 			}, function myError(response) {
 				 
