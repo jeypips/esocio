@@ -42,7 +42,7 @@ angular.module('flot-module',[]).factory('flot',function() {
 						colors : colors,
 						tooltip : true,
 						tooltipOpts : {
-							content : "%s, %p.0%"
+							content : "<span style='color: #000!important;'>%s, %p.0%</span>",
 						}
 					};
 
