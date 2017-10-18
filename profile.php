@@ -76,7 +76,7 @@
                                         <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">{{(notifications.length>0)?notifications.length:''}}</span>
                                     </a>
 									<ul class="dropdown-menu dropdown-menu-lg">
-                                        <li class="notifi-title"><span class="label label-default pull-right"></span>Notification<i style="cursor: pointer;" class="faa-ring animated pull-right icon-trash"></i></li>
+                                        <li class="notifi-title"><span class="label label-default pull-right"></span>Notification<i style="cursor: pointer; color: black;" class="faa-ring animated pull-right icon-trash"></i></li>
                                         <li class="list-group nicescroll notification-list">
                                            <!-- list item-->
                                            <a href="javascript:;" class="list-group-item" ng-repeat="notification in notifications">
