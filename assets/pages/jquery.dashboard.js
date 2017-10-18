@@ -13,7 +13,7 @@
     };
     
     //creates Stacked chart
-    Dashboard1.prototype.createStackedChart  = function(element, data, xkey, ykeys, labels, lineColors) {
+    /* Dashboard1.prototype.createStackedChart  = function(element, data, xkey, ykeys, labels, lineColors) {
         Morris.Bar({
             element: element,
             data: data,
@@ -26,10 +26,10 @@
             gridLineColor: '#eeeeee',
             barColors: lineColors
         });
-    },
+    }, */
 
     //creates area chart with dotted
-    Dashboard1.prototype.createAreaChartDotted = function(element, pointSize, lineWidth, data, xkey, ykeys, labels, Pfillcolor, Pstockcolor, lineColors) {
+    /* Dashboard1.prototype.createAreaChartDotted = function(element, pointSize, lineWidth, data, xkey, ykeys, labels, Pfillcolor, Pstockcolor, lineColors) {
         Morris.Area({
             element: element,
             pointSize: 0,
@@ -46,13 +46,13 @@
             lineColors: lineColors
         });
 
-   },
+   }, */
     
     
     Dashboard1.prototype.init = function() {
 
         //creating Stacked chart
-        var $stckedData  = [
+        /* var $stckedData  = [
             { y: '2005', a: 45, b: 180, c: 100 },
             { y: '2006', a: 75,  b: 65, c: 80 },
             { y: '2007', a: 100, b: 90, c: 56 },
@@ -65,10 +65,10 @@
             { y: '2014', a: 75,  b: 65, c: 90 },
             { y: '2015', a: 100, b: 90, c: 130 }
         ];
-        this.createStackedChart('morris-bar-stacked', $stckedData, 'y', ['a', 'b', 'c'], ['Desktops', 'Tablets', 'Mobiles'], ['#5fbeaa', '#5d9cec', '#ebeff2']);
+        this.createStackedChart('morris-bar-stacked', $stckedData, 'y', ['a', 'b', 'c'], ['Desktops', 'Tablets', 'Mobiles'], ['#5fbeaa', '#5d9cec', '#ebeff2']); */
 
         //creating area chart
-        var $areaDotData = [
+        /* var $areaDotData = [
                 { y: '2009', a: 10, b: 20, c:30 },
                 { y: '2010', a: 75,  b: 65, c:30 },
                 { y: '2011', a: 50,  b: 40, c:30 },
@@ -77,7 +77,7 @@
                 { y: '2014', a: 75,  b: 65, c:30 },
                 { y: '2015', a: 90, b: 60, c:30 }
             ];
-        this.createAreaChartDotted('morris-area-with-dotted', 0, 0, $areaDotData, 'y', ['a', 'b', 'c'], ['Desktops ', 'Tablets ', 'Mobiles '],['#ffffff'],['#999999'], ['#5fbeaa', '#5d9cec','#ebeff2']);
+        this.createAreaChartDotted('morris-area-with-dotted', 0, 0, $areaDotData, 'y', ['a', 'b', 'c'], ['Desktops ', 'Tablets ', 'Mobiles '],['#ffffff'],['#999999'], ['#5fbeaa', '#5d9cec','#ebeff2']); */
 
     },
     //init
