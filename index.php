@@ -152,7 +152,7 @@
 							<div class="col-lg-12">
 								<div class="panel panel-border panel-inverse">
 									<div class="panel-heading">
-										<h3 class="panel-title">WELCOME!</h3>
+										<h3 class="panel-title">WELCOME {{accountProfile.fullname}}!</h3>
 									</div>
 									<div class="panel-body">
 										<p>Introducing E-Socio Economic Profiling in La Union v.1.0 </p>
