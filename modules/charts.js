@@ -25,6 +25,15 @@ angular.module('flot-module',[]).factory('flot',function() {
 					}, {
 						label : labels[2],
 						data : datas[2]
+					},{
+						label : labels[3],
+						data : datas[3]
+					},{
+						label : labels[4],
+						data : datas[4]
+					},{
+						label : labels[5],
+						data : datas[5]
 					}];
 					var options = {
 						series : {
@@ -38,11 +47,14 @@ angular.module('flot-module',[]).factory('flot',function() {
 						grid : {
 							hoverable : true,
 							clickable : true
+							
 						},
 						colors : colors,
 						tooltip : true,
 						tooltipOpts : {
-							content : "%s, %p.0%"
+
+							content : "<span style='color: #000!important;'>%s, %p.0%</span>"
+
 						}
 					};
 
@@ -53,9 +65,9 @@ angular.module('flot-module',[]).factory('flot',function() {
 				FlotChart.prototype.init = function() {
 
 					//Pie graph data
-					var pielabels = ["Series 1", "Series 2", "Series 3"];
-					var datas = [20, 30, 15];
-					var colors = ["#5fbeaa", "#6c85bd", "#34d3eb"];
+					var pielabels = [sectors.environmental.parameters[0].items[0].description, sectors.environmental.parameters[0].items[1].description, sectors.environmental.parameters[0].items[2].description, sectors.environmental.parameters[0].items[3].description, sectors.environmental.parameters[0].items[4].description, sectors.environmental.parameters[0].items[5].description];
+					var datas = [sectors.environmental.parameters[0].items[0].item_value, sectors.environmental.parameters[0].items[1].item_value, sectors.environmental.parameters[0].items[2].item_value, sectors.environmental.parameters[0].items[3].item_value, sectors.environmental.parameters[0].items[4].item_value, sectors.environmental.parameters[0].items[5].item_value];
+					var colors = ["#5fbeaa", "#6c85bd", "#34d3eb","#FF7F50", "	#ff9999", "	#DDA0DD"];
 					this.createPieGraph("#pie-chart #pie-chart-container", pielabels, datas, colors);
 
 				}

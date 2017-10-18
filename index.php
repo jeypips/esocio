@@ -37,14 +37,14 @@
 		.not-active {
 			pointer-events: none;
 			cursor: default;
-		}	
+		}
 		</style>
     </head>
 
     <body class="fixed-left" ng-app="dashboard" ng-controller="dashboardCtrl" account-profile>
 
         <!-- Begin page -->
-        <div id="wrapper">
+        <div id="wrapper" class="forced enlarged">
 
             <!-- Top Bar Start -->
             <div class="topbar">
@@ -152,7 +152,7 @@
 							<div class="col-lg-12">
 								<div class="panel panel-border panel-inverse">
 									<div class="panel-heading">
-										<h3 class="panel-title">WELCOME!</h3>
+										<h3 class="panel-title">WELCOME {{accountProfile.fullname}}!</h3>
 									</div>
 									<div class="panel-body">
 										<p>Introducing E-Socio Economic Profiling in La Union v.1.0 </p>
