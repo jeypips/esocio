@@ -37,14 +37,14 @@
 		.not-active {
 			pointer-events: none;
 			cursor: default;
-		}	
+		}
 		</style>
     </head>
 
     <body class="fixed-left" ng-app="dashboard" ng-controller="dashboardCtrl" account-profile>
 
         <!-- Begin page -->
-        <div id="wrapper">
+        <div id="wrapper" class="forced enlarged">
 
             <!-- Top Bar Start -->
             <div class="topbar">
