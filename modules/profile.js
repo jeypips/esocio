@@ -1,4 +1,4 @@
-angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-data']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,sectors) {
+angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-data','bootstrap-growl']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,sectors,growl) {
 	
 	function form() {
 		
@@ -239,9 +239,10 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 					  data: {profile: scope.profile}
 					}).then(function mySucces(response) {
 						
+						
 						if (scope.profile.profile_id == 0) {
 							scope.profile = angular.copy(response.data);
-							scope.profile.sectors = {};							
+							scope.profile.sectors = {};	
 						};
 						
 					}, function myError(response) {
