@@ -20,6 +20,7 @@
         <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/font-awesome-animation.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -71,11 +72,37 @@
 							<div class="navbar-left app-search pull-left hidden-xs">
 			                     <h5 class="portlet-title" style="color:white;">Maintenance</h5>
 			                </div>
-                            <ul class="nav navbar-nav navbar-right pull-right">
-                                <li class="dropdown hidden-xs">
+                            <ul class="nav navbar-nav navbar-right pull-right" fetch-notifications>
+                                <li class="dropdown hidden-xs" ng-show="accountProfile.groups == 'admin'">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
-                                        <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">3</span>
+                                        <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">{{(notifications.length>0)?notifications.length:''}}</span>
                                     </a>
+									<ul class="dropdown-menu dropdown-menu-lg">
+                                        <li class="notifi-title"><span class="label label-default pull-right"></span>Notification<i style="cursor: pointer; color: black;" class="faa-ring animated pull-right icon-trash"></i></li>
+                                        <li class="list-group nicescroll notification-list">
+                                          
+                                           <!-- list item-->
+                                           <a href="javascript:;" class="list-group-item" ng-repeat="notification in notifications">
+                                              <div class="media">
+                                                 <div class="pull-left p-r-10">
+                                                    <em class="fa fa-bell-o fa-2x text-success"></em>
+                                                 </div>
+                                                 <div class="media-body">
+                                                    <h5 class="media-heading">{{notification.description}}</h5>
+                                                    <p class="m-0">
+                                                        <small>There are <span class="text-primary font-600">{{(notifications.length>0)?notifications.length:''}}</span> new updates</small>
+                                                    </p>
+                                                 </div>
+                                              </div>
+                                           </a>
+										   
+                                        </li>
+                                        <li>
+                                            <a href="notifs.php" ng-click="notifs.php" class="list-group-item text-right">
+                                                <small class="font-600">See all notifications</small>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
@@ -83,7 +110,7 @@
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.account_username}}</b></a></li>
+                                        <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.groups}}</b></a></li>
 										<hr>
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
@@ -110,7 +137,8 @@
 						<li class="has_sub">
 							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard </span></a></li>
 							<li><a href="profile.php"><i class="icon-screen-desktop"></i><span> Profile </span></a></li>
-							<li><a href="maintenance.php" class="active"><i class="icon-settings"></i><span> Maintenance </span></a></li>
+							<li ng-show="accountProfile.groups == 'admin'"><a href="maintenance.php" class="active"><i class="icon-settings"></i><span> Maintenance </span></a></li>
+							<li ng-show="accountProfile.groups == 'admin'"><a href="account.php"><i class="icon-people"></i><span> User Account </span></a></li>
 						</li>
 					</ul>
                         <div class="clearfix"></div>
@@ -212,6 +240,7 @@
 		<script src="modules/parameters.js"></script>
 		<script src="modules/growl.js"></script>
 		<script src="modules/parameter-items.js"></script>
+		<script src="modules/notifications.js"></script>
 		<script src="controllers/maintenance.js"></script>
 
 

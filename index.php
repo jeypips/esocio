@@ -12,7 +12,7 @@
         <title>E-Socio | Dashboard</title>
 
         <!--Morris Chart CSS -->
-		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+		<!--<link rel="stylesheet" href="assets/plugins/morris/morris.css">-->
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -20,6 +20,7 @@
         <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/font-awesome-animation.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,14 +38,13 @@
 			pointer-events: none;
 			cursor: default;
 		}
-		
 		</style>
     </head>
 
     <body class="fixed-left" ng-app="dashboard" ng-controller="dashboardCtrl" account-profile>
 
         <!-- Begin page -->
-        <div id="wrapper">
+        <div id="wrapper" class="forced enlarged">
 
             <!-- Top Bar Start -->
             <div class="topbar">
@@ -69,19 +69,45 @@
 							<div class="navbar-left app-search pull-left hidden-xs">
 			                     <h5 class="portlet-title" style="color:white;">Dashboard</h5>
 			                </div>
-                            <ul class="nav navbar-nav navbar-right pull-right">
-                                <li class="dropdown hidden-xs">
+                            <ul class="nav navbar-nav navbar-right pull-right" fetch-notifications>
+								<li class="dropdown hidden-xs" ng-show="accountProfile.groups == 'admin'">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
-                                        <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">3</span>
+                                        <i class="icon-bell" ></i> <span class="badge badge-xs badge-danger">{{(notifications.length>0)?notifications.length:''}}</span>
                                     </a>
-                                </li>
+                                    <ul class="dropdown-menu dropdown-menu-lg">
+                                        <li class="notifi-title"><span class="label label-white pull-right"></span>Notification<i style="cursor: pointer; color: black;" class="faa-ring animated pull-right icon-trash"></i></li>
+                                        <li class="list-group nicescroll notification-list">
+                                         
+                                           <!-- list item-->
+                                           <a href="javascript:;" class="list-group-item" ng-repeat="notification in notifications">
+											  <div class="media">
+                                                 <div class="pull-left p-r-10">
+                                                    <em class="fa fa-bell-o fa-2x text-success"></em>
+                                                 </div>
+                                                 <div class="media-body">
+                                                    <h5 class="media-heading">{{notification.description}}</h5>
+                                                    <p class="m-0">
+                                                        <small>There are <span class="text-primary font-600">{{(notifications.length>0)?notifications.length:''}}</span> new updates</small>
+                                                    </p>
+                                                 </div>
+                                              </div>
+                                           </a>
+										   
+                                        </li>
+                                        <li>
+                                            <a href="notifs.php" ng-click="notifs.php" class="list-group-item text-right">
+                                                <small class="font-600">See all notifications</small>
+                                            </a>
+                                        </li>
+                                    </ul>
+								</li>
                                 <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.account_username}}</b></a></li>
+                                        <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.groups}}</b></a></li>
 										<hr>
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
@@ -106,7 +132,8 @@
 						<li class="has_sub">
 							<li><a href="index.php" class="active"><i class="icon-home"></i><span> Dashboard </span></a></li>
 							<li><a href="profile.php"><i class="icon-screen-desktop"></i><span> Profile </span></a></li>
-							<li><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
+							<li ng-show="accountProfile.groups == 'admin'"><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
+							<li ng-show="accountProfile.groups == 'admin'"><a href="account.php"><i class="icon-people"></i><span> User Account </span></a></li>
 						</li>
 					</ul>
 					<div class="clearfix"></div>
@@ -125,7 +152,7 @@
 							<div class="col-lg-12">
 								<div class="panel panel-border panel-inverse">
 									<div class="panel-heading">
-										<h3 class="panel-title">WELCOME!</h3>
+										<h3 class="panel-title">WELCOME {{accountProfile.fullname}}!</h3>
 									</div>
 									<div class="panel-body">
 										<p>Introducing E-Socio Economic Profiling in La Union v.1.0 </p>
@@ -133,6 +160,7 @@
 								</div>
 							</div>
 						</div>
+						<div id="x_content"></div>
                     </div> <!-- container -->
                 </div> <!-- content -->
 
@@ -168,7 +196,7 @@
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
         <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
 
-        <script src="assets/plugins/morris/morris.min.js"></script>
+        <!-- <script src="assets/plugins/morris/morris.min.js"></script> -->
         <script src="assets/plugins/raphael/raphael-min.js"></script>
         <script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
         <script src="assets/pages/jquery.dashboard.js"></script>
@@ -176,14 +204,26 @@
         <script src="assets/js/jquery.app.js"></script>
 		<script src="assets/js/bootbox.min.js"></script>
 		
+        <script src="assets/plugins/flot-chart/jquery.flot.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.time.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.tooltip.min.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.resize.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.pie.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.selection.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.stack.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.orderBars.min.js"></script>
+        <script src="assets/plugins/flot-chart/jquery.flot.crosshair.js"></script>	
+		
 		<!-- Angular  -->
 		<script src="angular/angular.min.js"></script>
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
+		<script src="modules/growl.js"></script>
+		<script src="data/sectors.js"></script>
 		<script src="modules/account.js"></script>
+		<script src="modules/notifications.js"></script>
+		<script src="modules/charts.js"></script>
+		<script src="modules/dashboard.js"></script>
 		<script src="controllers/dashboard.js"></script>
-
-
-
     </body>
 </html>

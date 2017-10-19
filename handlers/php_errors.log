@@ -895,3 +895,80 @@ Stack trace:
 [06-Oct-2017 00:13:33 Asia/Manila] PHP Stack trace:
 [06-Oct-2017 00:13:33 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:0
 [06-Oct-2017 00:13:33 Asia/Manila] PHP   2. updateProfile() C:\Users\SLY One\Desktop\UwAmp310\www\esocio\handlers\agriculture-save.php:15
+[11-Oct-2017 16:49:54 Asia/Manila] PHP Parse error:  syntax error, unexpected '}' in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\notifications.php on line 26
+[11-Oct-2017 16:50:24 Asia/Manila] PHP Parse error:  syntax error, unexpected '}' in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\notifications.php on line 26
+[11-Oct-2017 16:51:01 Asia/Manila] PHP Parse error:  syntax error, unexpected '"is_hidden"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\notifications.php on line 33
+[11-Oct-2017 16:52:46 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`esocio`.`notifications`, CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`sector_no`) REFERENCES `sectors` (`sector_id`) ON DELETE CASCADE ON UPDATE NO ACTION) in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\notifications.php(58): pdo_db->insertData(Array)
+#2 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\profile-save.php(24): notify(Object(pdo_db), 'add', '21', 0)
+#3 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\db.php on line 82
+[11-Oct-2017 16:57:23 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function notify() in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php:117
+Stack trace:
+#0 C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php(15): updateProfile(Object(pdo_db), Array, 21, 1)
+#1 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\esocio\handlers\macro-save.php on line 117
+[13-Oct-2017 15:32:00 UTC] PHP Notice:  Undefined index: municipality in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php on line 31
+[13-Oct-2017 15:32:00 UTC] PHP Stack trace:
+[13-Oct-2017 15:32:00 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php:0
+[13-Oct-2017 15:32:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM m...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php(31): pdo_db->getData('SELECT * FROM m...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[13-Oct-2017 16:00:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php(57): pdo_db->insertData(Array)
+#2 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\trade-save.php(118): notify(Object(pdo_db), 'update', 1, 10)
+#3 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\trade-save.php(16): updateProfile(Object(pdo_db), Array, 1, 10)
+#4 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 82
+[13-Oct-2017 16:02:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php(57): pdo_db->insertData(Array)
+#2 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\trade-save.php(118): notify(Object(pdo_db), 'update', 1, 10)
+#3 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\trade-save.php(16): updateProfile(Object(pdo_db), Array, 1, 10)
+#4 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 82
+[13-Oct-2017 16:37:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php(57): pdo_db->insertData(Array)
+#2 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\trade-save.php(118): notify(Object(pdo_db), 'update', 1, 10)
+#3 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\trade-save.php(16): updateProfile(Object(pdo_db), Array, 1, 10)
+#4 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 82
+[13-Oct-2017 16:43:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php(57): pdo_db->insertData(Array)
+#2 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\trade-save.php(118): notify(Object(pdo_db), 'update', 1, 10)
+#3 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\trade-save.php(16): updateProfile(Object(pdo_db), Array, 1, 10)
+#4 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 82
+[13-Oct-2017 16:57:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'municipal WHERE id = municipality) municipality_name FROM profile WHERE profile_' at line 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT *, (SELE...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php(20): pdo_db->getData('SELECT *, (SELE...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[13-Oct-2017 16:57:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'municipal WHERE id = municipality) municipality_name FROM profile WHERE profile_' at line 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT *, (SELE...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php(20): pdo_db->getData('SELECT *, (SELE...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[18-Oct-2017 17:17:54 UTC] PHP Notice:  Undefined index: profile_id in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 13
+[18-Oct-2017 17:17:54 UTC] PHP Stack trace:
+[18-Oct-2017 17:17:54 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[18-Oct-2017 17:17:54 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT *, (SELE...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php(20): pdo_db->getData('SELECT *, (SELE...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38

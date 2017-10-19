@@ -12,93 +12,93 @@
 		<div class="card-box col-lg-12">
 			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Date of Parochial Fiesta</label>
-					<input type="date" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[0].description}}</label>
+					<input type="date" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[0].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Name of Patron</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[2].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[2].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Date of Town Fiesta</label>
-					<input type="date" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[1].description}}</label>
+					<input type="date" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Market Days</label>
-					<input type="text" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[3].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[3].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 		</div>
 		<h5>*Trade and Industry</h5>
 		<div class="card-box col-lg-12">
-			<h5>Number of Business Establishments</h5>
+			<h5>{{profile.sectors.trade.parameters[0].items[4].description}}</h5>
 			<div class="row">
 					<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-							<label class="label-control">Trading</label>
-						<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+							<label class="label-control">{{profile.sectors.trade.parameters[0].items[4].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[4].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
 					</div>
 					<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-							<label class="label-control">Services</label>
-						<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+							<label class="label-control">{{profile.sectors.trade.parameters[0].items[4].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[4].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
 					</div>
 					<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-							<label class="label-control">Manufacturing</label>
-						<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+							<label class="label-control">{{profile.sectors.trade.parameters[0].items[4].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[4].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
 					</div>
 			</div>
 			<hr>
 			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Beauty Parlor</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[5].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[5].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Barber Shops</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[6].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[6].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Photo Studios/Video Shops</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Tailoring/Dress Shop</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Restaurants</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Eateries/Canteen</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[7].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[7].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Funeral Parlor</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[8].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[8].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Gasoline Stations</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[9].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[9].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Water Stations</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[10].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[10].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Number of Resorts</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[11].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[11].item_value" ng-disabled="controls.ok.btn">
 				</div>
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-					<label class="label-control">Others</label>
-					<input type="number" class="form-control" name="municipality" ng-model="profile.municipality" ng-disabled="controls.ok.btn">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[12].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[12].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[13].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[13].item_value" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[14].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[14].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[15].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.trade.parameters[0].items[15].item_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
 		</div>
@@ -106,7 +106,7 @@
 		<div class="form-group text-left m-b-0">
 			<button class="btn btn-white waves-light waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
 
-			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this'trade')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'trade')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 
 		</div>
 	</div>

@@ -1,0 +1,71 @@
+<div class="panel panel-primary panel-border">
+<div class="panel-heading">
+<h4><i class="icon icon-note"></i> User Account
+<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+</h4>
+</div>
+<hr>
+<div class="panel-body">
+	<form name="formHolder.account_info" id="formHolder.account_info">
+		<div class="panel panel-inverse panel-border card-box">
+		<div class="panel-heading">
+		</div>
+		<div class="card-box">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.account_firstname.$touched && formHolder.account_info.account_firstname.$invalid}">
+					<label class="label-control">First Name</label>
+					<input type="text" class="form-control" name="account_firstname" ng-model="account_info.account_firstname" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.account_info.account_firstname.$touched && formHolder.account_info.account_firstname.$invalid">First name is required</span>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.account_lastname.$touched && formHolder.account_info.account_lastname.$invalid}">
+					<label class="label-control">Last Name</label>
+					<input type="text" class="form-control" name="account_lastname" ng-model="account_info.account_lastname" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.account_info.account_lastname.$touched && formHolder.account_info.account_lastname.$invalid">Last name is required</span>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.account_middlename.$touched && formHolder.account_info.account_middlename.$invalid}">
+					<label class="label-control">Middle Name</label>
+					<input type="text" class="form-control" name="account_middlename" ng-model="account_info.account_middlename" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.account_info.account_middlename.$touched && formHolder.account_info.account_middlename.$invalid">Middle name is required</span>
+				</div>					
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-10 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.account_name_municipality.$touched && formHolder.account_info.account_name_municipality.$invalid}">
+					<label class="label-control">Municipality</label>
+					<select class="form-control" name="account_name_municipality" ng-model="account_info.account_name_municipality" ng-options="m.municipality for m in municipalities track by m.id" required ng-disabled="controls.ok.btn"></select>
+					<span class="help-block" ng-show="formHolder.account_info.account_name_municipality.$touched && formHolder.account_info.account_name_municipality.$invalid">Municipality is required</span>
+				</div>
+				<div class="col-lg-4 col-md-10 col-sm-12 form-group">
+					<label class="label-control">Email</label>
+					<input type="text" class="form-control" name="account_email" ng-model="account_info.account_email" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-10 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.groups.$touched && formHolder.account_info.groups.$invalid}">
+					<label class="label-control">Groups</label>
+				<select class="form-control" name="groups" ng-model="account_info.groups" ng-disabled="controls.ok.btn" required>
+					<option>admin</option>
+					<option>user</option>
+				</select>
+				<span class="help-block" ng-show="formHolder.account_info.groups.$touched && formHolder.account_info.groups.$invalid">Groups is required</span>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-lg-3 col-md-10 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.account_username.$touched && formHolder.account_info.account_username.$invalid}">
+					<label class="label-control">Username</label>
+					<input type="text" class="form-control" name="account_username" ng-model="account_info.account_username" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.account_info.account_username.$touched && formHolder.account_info.account_username.$invalid">Username is required</span>
+				</div>
+				<div class="col-lg-3 col-md-10 col-sm-12 form-group" ng-class="{'has-error': formHolder.account_info.account_password.$touched && formHolder.account_info.account_password.$invalid}">
+					<label class="label-control">Password</label>
+					<input type="password" class="form-control" name="account_password" ng-model="account_info.account_password" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.account_info.account_password.$touched && formHolder.account_info.account_password.$invalid">Password is required</span>
+				</div>				
+			</div>
+		</div>
+	</div>
+	</form>
+		<div class="form-group text-left m-b-0">
+			<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+		</div>
+	</div>
+</div>

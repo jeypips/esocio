@@ -186,7 +186,7 @@ class sectors {
 			
 			if (($iv['item_id'] == $id) && ($iv['item_table_row'] == $row)) {
 					
-				$value = $iv['item_value'];
+				$value = ($iv['item_value'] == null)?"":$iv['item_value'];
 				break;
 					
 			}
@@ -205,7 +205,7 @@ class sectors {
 			
 			if ($igv['item_group_id'] == $id) {
 					
-				$value = $igv['item_group_value'];
+				$value = ($igv['item_group_value']==null)?"":$igv['item_group_value'];
 				break;
 					
 			}
