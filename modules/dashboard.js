@@ -9,7 +9,7 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 		self.data = function(scope) { // initialize data	
 				
 			scope.sectors = [];
-			scope.consolodated = [];
+			scope.consolidated = [];
 			
 			$timeout(function() {
 			
@@ -55,10 +55,10 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 					
 					$http({
 					  method: 'POST',
-					  url: 'handlers/consolodated-sectors.php'
+					  url: 'handlers/consolidated-sectors.php'
 					}).then(function mySucces(response) {
 						
-						scope.consolodated = angular.copy(response.data);
+						scope.consolidated = angular.copy(response.data);
 						
 					}, function myError(response) {
 						 
