@@ -223,6 +223,7 @@
 		<script src="modules/account.js"></script>
 		<script src="modules/notifications.js"></script>
 		<script src="modules/charts.js"></script>
+		<script src="modules/admincharts.js"></script>
 		<script src="modules/dashboard.js"></script>
 		<script src="controllers/dashboard.js"></script>
     </body>
