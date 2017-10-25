@@ -1,4 +1,4 @@
-angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,flot) {
+angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-module','flots-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,flot,flots) {
 	
 	function form() {
 		
@@ -9,50 +9,84 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 		self.data = function(scope) { // initialize data	
 				
 			scope.sectors = [];
+			scope.consolidated = [];
 			
 			$timeout(function() {
 			
-				$http({
-				  method: 'POST',
-				  url: 'handlers/user-dashboard.php',
-				  data: {account_name_municipality: scope.accountProfile.account_name_municipality}
-				}).then(function mySucces(response) {
+				if (scope.accountProfile.groups == 'user') {			
+			
+					$http({
+					  method: 'POST',
+					  url: 'handlers/user-dashboard.php',
+					  data: {account_name_municipality: scope.accountProfile.account_name_municipality}
+					}).then(function mySucces(response) {
 
-					scope.profile_id = response.data;
+						scope.profile_id = response.data;
 
-				}, function myError(response) {
-					 
-				  // error
-					
-				});	
+					}, function myError(response) {
+						 
+					  // error
+						
+					});
+				
+				}
 			
 			},100);
 			
 			$timeout(function() {
-			
-				$http({
-				  method: 'POST',
-				  url: 'handlers/profile-sectors.php',
-				  data: {profile_id: scope.profile_id}
-				}).then(function mySucces(response) {
+				
+				if (scope.accountProfile.groups == 'user') {
+				
+					$http({
+					  method: 'POST',
+					  url: 'handlers/profile-sectors.php',
+					  data: {profile_id: scope.profile_id}
+					}).then(function mySucces(response) {
+						
+						scope.sectors = angular.copy(response.data);
+						
+					}, function myError(response) {
+						 
+					  // error
+						
+					});
+				
+				} else {
 					
-					scope.sectors = angular.copy(response.data);
+					$http({
+					  method: 'POST',
+					  url: 'handlers/consolidated-sectors.php'
+					}).then(function mySucces(response) {
+						
+						scope.consolidated = angular.copy(response.data);
+						
+					}, function myError(response) {
+						 
+					  // error
+						
+					});
 					
-				}, function myError(response) {
-					 
-				  // error
-					
-				});
+				}
 			
 			},200);
 			
 			$timeout(function() {
-				console.log(scope.sectors);
 				
-				// pie chart
-				flot.pie(scope.sectors);
+				if (scope.accountProfile.groups == 'user') {
 				
-			},1000);
+					console.log(scope.sectors);					
+					// pie chart
+					flot.pie(scope.sectors);
+				
+				} else {
+					
+					console.log(scope.consolidated);				
+					// pie Admin chart
+					flots.pie(scope.consolidated);
+				
+				}
+				
+			},2000);
 			
 			$timeout(function() {
 				
