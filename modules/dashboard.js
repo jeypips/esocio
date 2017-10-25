@@ -1,4 +1,4 @@
-angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,flot) {
+angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-module', 'flots-module', 'landcharts-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,flot,flots,landcharts) {
 	
 	function form() {
 		
@@ -9,7 +9,7 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 		self.data = function(scope) { // initialize data	
 				
 			scope.sectors = [];
-			scope.consolodated = [];
+			scope.consolidated = [];
 			
 			$timeout(function() {
 			
@@ -32,7 +32,7 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 				}
 			
 			},100);
-			
+		
 			$timeout(function() {
 				
 				if (scope.accountProfile.groups == 'user') {
@@ -55,10 +55,10 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 					
 					$http({
 					  method: 'POST',
-					  url: 'handlers/consolodated-sectors.php'
+					  url: 'handlers/consolidated-sectors.php'
 					}).then(function mySucces(response) {
 						
-						scope.consolodated = angular.copy(response.data);
+						scope.consolidated = angular.copy(response.data);
 						
 					}, function myError(response) {
 						 
@@ -80,10 +80,17 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 				
 				} else {
 					
+					console.log(scope.consolidated);				
+					// pie chart
+					flots.pie(scope.consolidated);
+					landcharts.pie(scope.consolidated);
 				}
 				
-			},1000);
+			},2000);
 			
+			
+		
+			  
 			$timeout(function() {
 				
 				var form = scope.accountProfile.groups;
