@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-module','flots-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,flot,flots) {
-=======
+
 angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-module', 'flots-module', 'landcharts-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,flot,flots,landcharts) {
->>>>>>> refs/remotes/origin/dex
+
 	
 	function form() {
 		
@@ -85,15 +83,11 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 				} else {
 					
 					console.log(scope.consolidated);				
-<<<<<<< HEAD
-					// pie Admin chart
-					flots.pie(scope.consolidated);
-				
-=======
+
 					// pie chart
 					flots.pie(scope.consolidated);
 					landcharts.pie(scope.consolidated);
->>>>>>> refs/remotes/origin/dex
+
 				}
 				
 			},2000);
