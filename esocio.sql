@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 12, 2017 at 05:00 PM
+-- Generation Time: Oct 24, 2017 at 02:07 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -43,8 +43,8 @@ CREATE TABLE `account_info` (
 --
 
 INSERT INTO `account_info` (`account_id`, `account_firstname`, `account_middlename`, `account_lastname`, `account_name_municipality`, `account_username`, `account_password`, `account_email`, `groups`) VALUES
-(1, 'John Paul', 'Garcia', 'Balanon', '12', 'admin', 'admin', 'jp@gmail.com', 'admin'),
-(2, 'Dexter', 'Rivera', 'Florendo', '2', 'user', 'user', 'dex@gmail.com', 'user');
+(1, 'Rachelle Ann', 'M.', 'Salundaguit', '14', 'admin', 'admin', 'jp@gmail.com', 'admin'),
+(2, 'Kim', 'R.', 'Bayani', '2', 'user', 'user', 'dex@gmail.com', 'user');
 
 -- --------------------------------------------------------
 
@@ -209,7 +209,7 @@ CREATE TABLE `notifications` (
   `id` int(11) NOT NULL,
   `sector_no` int(11) NOT NULL,
   `account_no` int(11) NOT NULL,
-  `description` varchar(50) NOT NULL,
+  `description` varchar(500) NOT NULL,
   `system_date` date NOT NULL,
   `is_hidden` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -219,32 +219,61 @@ CREATE TABLE `notifications` (
 --
 
 INSERT INTO `notifications` (`id`, `sector_no`, `account_no`, `description`, `system_date`, `is_hidden`) VALUES
-(1, 0, 1, 'Agoo has updated its profile', '2017-10-12', 0),
-(2, 0, 1, 'Array has updated its profile', '2017-10-12', 0),
-(3, 0, 1, ' has updated its profile', '2017-10-12', 0),
-(4, 0, 1, '1 has updated its profile', '2017-10-12', 0),
-(5, 0, 22, '2 has added new profile', '2017-10-12', 0),
-(6, 0, 23, '2 has added new profile', '2017-10-12', 0),
-(7, 0, 22, '2 has added new profile', '2017-10-12', 0),
-(8, 0, 2, '2 has added new profile', '2017-10-12', 0),
-(9, 0, 3, '3 has added new profile', '2017-10-12', 0),
-(10, 0, 4, '4 has added new profile', '2017-10-12', 0),
-(11, 0, 5, '5 has added new profile', '2017-10-12', 0),
-(12, 0, 6, '6 has added new profile', '2017-10-12', 0),
-(13, 0, 7, '7 has added new profile', '2017-10-12', 0),
-(14, 0, 8, '8 has added new profile', '2017-10-12', 0),
-(15, 0, 9, '9 has added new profile', '2017-10-12', 0),
-(16, 0, 10, '10 has added new profile', '2017-10-12', 0),
-(17, 0, 11, '11 has added new profile', '2017-10-12', 0),
-(18, 0, 12, '12 has added new profile', '2017-10-12', 0),
-(19, 0, 13, '13 has added new profile', '2017-10-12', 0),
-(20, 0, 14, '14 has added new profile', '2017-10-12', 0),
-(21, 0, 15, '15 has added new profile', '2017-10-12', 0),
-(22, 0, 16, '16 has added new profile', '2017-10-12', 0),
-(23, 0, 17, '17 has added new profile', '2017-10-12', 0),
-(24, 0, 18, '18 has added new profile', '2017-10-12', 0),
-(25, 0, 19, '19 has added new profile', '2017-10-12', 0),
-(26, 0, 20, '20 has added new profile', '2017-10-12', 0);
+(27, 1, 1, 'Agoo has updated Macro Sector Info', '2017-10-13', 0),
+(28, 1, 3, 'Bacnotan has added Macro Sector', '2017-10-13', 0),
+(29, 10, 1, 'Agoo has added Trade, Industry and Tourism Sector', '2017-10-13', 0),
+(30, 0, 1, 'Agoo has updated its profile', '2017-10-13', 0),
+(31, 1, 1, 'Agoo has added Macro Sector', '2017-10-13', 0),
+(32, 2, 1, 'Agoo has updated Employment and Development Finance Sector Info', '2017-10-13', 0),
+(33, 3, 1, 'Agoo has added Environmental Sector', '2017-10-13', 0),
+(34, 4, 1, 'Agoo has added Agriculture and Utilities Sector', '2017-10-13', 0),
+(35, 5, 1, 'Agoo has added Infrastructure and Utilities Sector', '2017-10-13', 0),
+(36, 5, 1, 'Agoo has updated Infrastructure and Utilities Sector Info', '2017-10-13', 0),
+(37, 6, 1, 'Agoo has added Social Welfare Sector', '2017-10-13', 0),
+(38, 7, 1, 'Agoo has added Health Sector', '2017-10-13', 0),
+(39, 8, 1, 'Agoo has added Education Sector', '2017-10-13', 0),
+(40, 9, 1, 'Agoo has added Development Administration Sector', '2017-10-13', 0),
+(41, 10, 1, 'Agoo has added Trade, Industry and Tourism Sector', '2017-10-13', 0),
+(42, 4, 1, 'Agoo has updated Agriculture and Utilities Sector Info', '2017-10-13', 0),
+(43, 1, 2, 'Aringay has added Macro Sector', '2017-10-13', 0),
+(44, 2, 2, 'Aringay has added Employment and Development Finance Sector', '2017-10-18', 0),
+(45, 3, 2, 'Aringay has added Environmental Sector', '2017-10-18', 0),
+(46, 4, 2, 'Aringay has added Agriculture and Utilities Sector', '2017-10-18', 0),
+(47, 3, 2, 'Aringay has updated Environmental Sector Info', '2017-10-18', 0),
+(48, 6, 2, 'Aringay has added Social Welfare Sector', '2017-10-18', 0),
+(49, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(50, 1, 1, 'Agoo has added Macro Sector', '2017-10-18', 0),
+(51, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(52, 1, 1, 'Agoo has updated Macro Sector Info', '2017-10-18', 0),
+(53, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(54, 1, 1, 'Agoo has updated Macro Sector Info', '2017-10-18', 0),
+(55, 1, 1, 'Agoo has updated Macro Sector Info', '2017-10-18', 0),
+(56, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(57, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(58, 1, 1, 'Agoo has updated Macro Sector Info', '2017-10-18', 0),
+(59, 1, 1, 'Agoo has updated Macro Sector Info', '2017-10-18', 0),
+(60, 1, 1, 'Agoo has updated Macro Sector Info', '2017-10-18', 0),
+(61, 2, 1, 'Agoo has added Employment and Development Finance Sector', '2017-10-18', 0),
+(62, 2, 1, 'Agoo has updated Employment and Development Finance Sector Info', '2017-10-18', 0),
+(63, 1, 1, 'Agoo has updated Macro Sector Info', '2017-10-18', 0),
+(64, 1, 1, 'Agoo has updated Macro Sector Info', '2017-10-18', 0),
+(65, 2, 1, 'Agoo has updated Employment and Development Finance Sector Info', '2017-10-18', 0),
+(66, 1, 1, 'Agoo has updated Macro Sector Info', '2017-10-18', 0),
+(67, 2, 1, 'Agoo has updated Employment and Development Finance Sector Info', '2017-10-18', 0),
+(68, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(69, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(70, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(71, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(72, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(73, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(74, 0, 1, 'Agoo has updated its profile', '2017-10-18', 0),
+(75, 10, 2, 'Aringay has added Trade, Industry and Tourism Sector', '2017-10-19', 0),
+(76, 3, 2, 'Aringay has updated Environmental Sector Info', '2017-10-19', 0),
+(77, 3, 2, 'Aringay has updated Environmental Sector Info', '2017-10-20', 0),
+(78, 3, 2, 'Aringay has updated Environmental Sector Info', '2017-10-20', 0),
+(79, 1, 2, 'Aringay has updated Macro Sector Info', '2017-10-20', 0),
+(80, 1, 2, 'Aringay has updated Macro Sector Info', '2017-10-20', 0),
+(81, 1, 1, 'Agoo has updated Macro Sector Info', '2017-10-24', 0);
 
 -- --------------------------------------------------------
 
@@ -552,7 +581,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`profile_id`, `profile_year`, `municipality`, `location`, `pb_north`, `pb_south`, `pb_east`, `pb_west`) VALUES
-(1, '2017', '1', 'Agoo', 'Thomas', 'Bauang', 'San Fernando', 'Caba'),
+(1, '2017', '1', 'Agoo', 'Thomas', 'Bauang', 'San Fernandos', 'Caba'),
 (2, '2017', '2', NULL, NULL, NULL, NULL, NULL),
 (3, '2017', '3', NULL, NULL, NULL, NULL, NULL),
 (4, '2017', '4', NULL, NULL, NULL, NULL, NULL),
@@ -586,6 +615,41 @@ CREATE TABLE `profile_item_groups` (
   `item_group_value` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `profile_item_groups`
+--
+
+INSERT INTO `profile_item_groups` (`id`, `profile_parameter_item_id`, `item_group_id`, `item_group_value`) VALUES
+(1, 15, 1, '1'),
+(2, 15, 2, '1'),
+(3, 15, 3, '1'),
+(4, 103, 1, ''),
+(5, 103, 2, ''),
+(6, 103, 3, ''),
+(7, 117, 98, ''),
+(8, 117, 99, ''),
+(9, 117, 100, ''),
+(10, 140, 6, ''),
+(11, 140, 7, ''),
+(12, 142, 8, ''),
+(13, 142, 9, ''),
+(14, 146, 10, ''),
+(15, 146, 11, ''),
+(16, 151, 12, ''),
+(17, 151, 13, ''),
+(18, 178, 14, ''),
+(19, 178, 15, ''),
+(20, 201, 16, ''),
+(21, 201, 17, ''),
+(22, 205, 18, ''),
+(23, 205, 19, ''),
+(24, 206, 20, ''),
+(25, 206, 21, ''),
+(26, 206, 22, ''),
+(27, 207, 23, ''),
+(28, 207, 24, ''),
+(29, 207, 25, '');
+
 -- --------------------------------------------------------
 
 --
@@ -598,6 +662,20 @@ CREATE TABLE `profile_sectors` (
   `sector_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `profile_sectors`
+--
+
+INSERT INTO `profile_sectors` (`id`, `profile_id`, `sector_id`) VALUES
+(1, 2, 1),
+(2, 2, 2),
+(3, 2, 3),
+(4, 2, 4),
+(5, 2, 6),
+(6, 1, 1),
+(7, 1, 2),
+(8, 2, 10);
+
 -- --------------------------------------------------------
 
 --
@@ -609,6 +687,42 @@ CREATE TABLE `profile_sector_parameters` (
   `profile_sector_id` int(10) NOT NULL,
   `parameter_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profile_sector_parameters`
+--
+
+INSERT INTO `profile_sector_parameters` (`id`, `profile_sector_id`, `parameter_id`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 2, 3),
+(4, 2, 15),
+(5, 3, 4),
+(6, 3, 5),
+(7, 3, 14),
+(8, 4, 6),
+(9, 4, 32),
+(10, 5, 9),
+(11, 6, 1),
+(12, 6, 2),
+(13, 7, 3),
+(14, 7, 15),
+(15, 8, 13),
+(16, 8, 16),
+(17, 8, 17),
+(18, 8, 18),
+(19, 8, 19),
+(20, 8, 20),
+(21, 8, 21),
+(22, 8, 22),
+(23, 8, 23),
+(24, 8, 24),
+(25, 8, 25),
+(26, 8, 26),
+(27, 8, 27),
+(28, 8, 28),
+(29, 8, 29),
+(30, 8, 31);
 
 -- --------------------------------------------------------
 
@@ -623,6 +737,219 @@ CREATE TABLE `profile_sector_parameter_items` (
   `item_table_row` int(10) NOT NULL DEFAULT '0',
   `item_value` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profile_sector_parameter_items`
+--
+
+INSERT INTO `profile_sector_parameter_items` (`id`, `profile_sector_parameter_id`, `item_id`, `item_table_row`, `item_value`) VALUES
+(1, 1, 1, 0, '1'),
+(2, 1, 2, 0, '2'),
+(3, 1, 3, 0, '2'),
+(4, 1, 4, 0, '2'),
+(5, 2, 5, 0, '2'),
+(6, 2, 6, 0, '24'),
+(7, 2, 7, 0, '4'),
+(8, 2, 8, 0, '4'),
+(9, 2, 9, 0, '3'),
+(10, 2, 10, 0, '4'),
+(11, 2, 11, 0, '4'),
+(12, 2, 12, 0, '3'),
+(13, 3, 13, 0, '1'),
+(14, 3, 14, 0, '1'),
+(15, 3, 15, 0, ''),
+(16, 3, 18, 0, '1'),
+(17, 3, 19, 0, '1'),
+(18, 3, 20, 0, '1'),
+(19, 3, 21, 0, '1'),
+(20, 3, 22, 0, '1'),
+(21, 3, 23, 0, '1'),
+(22, 4, 154, 0, '1'),
+(23, 4, 155, 0, '1'),
+(24, 4, 156, 0, '1'),
+(25, 5, 24, 0, '1'),
+(26, 5, 240, 0, '1'),
+(27, 5, 241, 0, '1'),
+(28, 5, 242, 0, '1'),
+(29, 5, 243, 0, '1'),
+(30, 5, 244, 0, '1'),
+(31, 6, 30, 0, '1'),
+(32, 6, 31, 0, '1'),
+(33, 6, 32, 0, '1'),
+(34, 6, 33, 0, '1'),
+(35, 6, 34, 0, '1'),
+(36, 6, 35, 0, '1'),
+(37, 6, 36, 0, '1'),
+(38, 6, 37, 0, '1'),
+(39, 6, 38, 0, '1'),
+(40, 6, 245, 0, '1'),
+(41, 6, 246, 0, '1'),
+(42, 7, 151, 0, '1'),
+(43, 7, 152, 0, '1'),
+(44, 7, 153, 0, '1'),
+(45, 8, 236, 0, ''),
+(46, 8, 237, 0, ''),
+(47, 8, 238, 0, ''),
+(48, 8, 239, 0, ''),
+(49, 8, 237, 1, '1'),
+(50, 8, 237, 2, '1'),
+(51, 8, 237, 3, '1'),
+(52, 8, 237, 4, '1'),
+(53, 8, 237, 5, '1'),
+(54, 8, 237, 6, '1'),
+(55, 8, 237, 7, '1'),
+(56, 8, 237, 8, '1'),
+(57, 8, 238, 1, '1'),
+(58, 8, 238, 2, '1'),
+(59, 8, 238, 3, '1'),
+(60, 8, 238, 4, '1'),
+(61, 8, 238, 5, '1'),
+(62, 8, 238, 6, '1'),
+(63, 8, 238, 7, '1'),
+(64, 8, 238, 8, '1'),
+(65, 8, 239, 1, '1'),
+(66, 8, 239, 2, '1'),
+(67, 8, 239, 3, '1'),
+(68, 8, 239, 4, '1'),
+(69, 8, 239, 5, '1'),
+(70, 8, 239, 6, '1'),
+(71, 8, 239, 7, '1'),
+(72, 8, 239, 8, '1'),
+(73, 9, 247, 0, ''),
+(74, 9, 248, 0, ''),
+(75, 9, 249, 0, ''),
+(76, 9, 248, 9, '1'),
+(77, 9, 248, 10, '1'),
+(78, 9, 248, 11, '1'),
+(79, 9, 248, 12, '1'),
+(80, 9, 248, 13, '1'),
+(81, 9, 249, 9, '1'),
+(82, 9, 249, 10, '1'),
+(83, 9, 249, 11, '1'),
+(84, 9, 249, 12, '11'),
+(85, 9, 249, 13, '1'),
+(86, 10, 103, 0, '55'),
+(87, 10, 104, 0, '56'),
+(88, 10, 105, 0, '666'),
+(89, 11, 1, 0, '2'),
+(90, 11, 2, 0, ''),
+(91, 11, 3, 0, '2'),
+(92, 11, 4, 0, ''),
+(93, 12, 5, 0, '22'),
+(94, 12, 6, 0, '3'),
+(95, 12, 7, 0, '3'),
+(96, 12, 8, 0, '3'),
+(97, 12, 9, 0, '3'),
+(98, 12, 10, 0, '3'),
+(99, 12, 11, 0, '3'),
+(100, 12, 12, 0, '3'),
+(101, 13, 13, 0, '2'),
+(102, 13, 14, 0, '1'),
+(103, 13, 15, 0, ''),
+(104, 13, 18, 0, ''),
+(105, 13, 19, 0, ''),
+(106, 13, 20, 0, ''),
+(107, 13, 21, 0, ''),
+(108, 13, 22, 0, ''),
+(109, 13, 23, 0, ''),
+(110, 14, 154, 0, ''),
+(111, 14, 155, 0, ''),
+(112, 14, 156, 0, ''),
+(113, 15, 131, 0, '2017-10-05T16:00:00.000Z'),
+(114, 15, 132, 0, '2017-10-06T16:00:00.000Z'),
+(115, 15, 133, 0, ''),
+(116, 15, 134, 0, ''),
+(117, 15, 135, 0, ''),
+(118, 15, 138, 0, ''),
+(119, 15, 139, 0, ''),
+(120, 15, 140, 0, ''),
+(121, 15, 141, 0, ''),
+(122, 15, 142, 0, ''),
+(123, 15, 143, 0, ''),
+(124, 15, 145, 0, ''),
+(125, 15, 146, 0, ''),
+(126, 15, 147, 0, ''),
+(127, 15, 148, 0, ''),
+(128, 15, 149, 0, ''),
+(129, 16, 157, 0, ''),
+(130, 16, 158, 0, ''),
+(131, 17, 159, 0, ''),
+(132, 17, 160, 0, ''),
+(133, 17, 161, 0, ''),
+(134, 18, 162, 0, ''),
+(135, 18, 163, 0, ''),
+(136, 18, 164, 0, ''),
+(137, 18, 165, 0, ''),
+(138, 18, 166, 0, ''),
+(139, 18, 167, 0, ''),
+(140, 18, 168, 0, ''),
+(141, 19, 169, 0, ''),
+(142, 19, 170, 0, ''),
+(143, 19, 171, 0, ''),
+(144, 19, 172, 0, ''),
+(145, 20, 173, 0, ''),
+(146, 20, 174, 0, ''),
+(147, 20, 175, 0, ''),
+(148, 20, 176, 0, ''),
+(149, 20, 180, 0, ''),
+(150, 21, 177, 0, ''),
+(151, 21, 178, 0, ''),
+(152, 21, 179, 0, ''),
+(153, 22, 181, 0, ''),
+(154, 22, 182, 0, ''),
+(155, 22, 183, 0, ''),
+(156, 22, 184, 0, ''),
+(157, 23, 185, 0, ''),
+(158, 23, 186, 0, ''),
+(159, 23, 187, 0, ''),
+(160, 23, 188, 0, ''),
+(161, 23, 189, 0, ''),
+(162, 23, 190, 0, ''),
+(163, 23, 191, 0, ''),
+(164, 23, 192, 0, ''),
+(165, 23, 193, 0, ''),
+(166, 23, 194, 0, ''),
+(167, 23, 195, 0, ''),
+(168, 24, 196, 0, ''),
+(169, 24, 197, 0, ''),
+(170, 24, 198, 0, ''),
+(171, 24, 199, 0, ''),
+(172, 24, 200, 0, ''),
+(173, 25, 201, 0, ''),
+(174, 25, 202, 0, ''),
+(175, 25, 203, 0, ''),
+(176, 25, 204, 0, ''),
+(177, 25, 205, 0, ''),
+(178, 25, 206, 0, ''),
+(179, 26, 207, 0, ''),
+(180, 26, 208, 0, ''),
+(181, 26, 209, 0, ''),
+(182, 27, 210, 0, ''),
+(183, 27, 211, 0, ''),
+(184, 27, 212, 0, ''),
+(185, 27, 213, 0, ''),
+(186, 28, 214, 0, ''),
+(187, 28, 215, 0, ''),
+(188, 28, 216, 0, ''),
+(189, 28, 217, 0, ''),
+(190, 29, 218, 0, ''),
+(191, 29, 219, 0, ''),
+(192, 29, 220, 0, ''),
+(193, 29, 221, 0, ''),
+(194, 29, 222, 0, ''),
+(195, 29, 223, 0, ''),
+(196, 29, 224, 0, ''),
+(197, 29, 225, 0, ''),
+(198, 29, 226, 0, ''),
+(199, 29, 227, 0, ''),
+(200, 29, 228, 0, ''),
+(201, 30, 229, 0, ''),
+(202, 30, 230, 0, ''),
+(203, 30, 231, 0, ''),
+(204, 30, 232, 0, ''),
+(205, 30, 233, 0, ''),
+(206, 30, 234, 0, ''),
+(207, 30, 235, 0, '');
 
 -- --------------------------------------------------------
 
@@ -756,7 +1083,7 @@ ALTER TABLE `sectors`
 -- AUTO_INCREMENT for table `account_info`
 --
 ALTER TABLE `account_info`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `items_groups`
 --
@@ -766,12 +1093,12 @@ ALTER TABLE `items_groups`
 -- AUTO_INCREMENT for table `municipal`
 --
 ALTER TABLE `municipal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 --
 -- AUTO_INCREMENT for table `parameters`
 --
@@ -796,22 +1123,22 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `profile_item_groups`
 --
 ALTER TABLE `profile_item_groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `profile_sectors`
 --
 ALTER TABLE `profile_sectors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameters`
 --
 ALTER TABLE `profile_sector_parameters`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `profile_sector_parameter_items`
 --
 ALTER TABLE `profile_sector_parameter_items`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
 --
 -- AUTO_INCREMENT for table `sectors`
 --
