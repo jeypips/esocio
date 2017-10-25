@@ -130,6 +130,7 @@
 					<ul>
 					<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
+
 							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
 							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
 							<li ng-show="accountProfile.groups == 'admin'"><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
