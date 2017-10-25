@@ -40,13 +40,13 @@ foreach ($municipalities as $municipality) {
 			
 		}
 
-		$consolodated[$municipality['municipality']][$p['profile_year']] = $profile_sectors;
+		$consolidated[$municipality['municipality']][$p['profile_year']] = $profile_sectors;
 		
 	}
 	
 }
 
 header("Content-Type: application/json");
-echo json_encode($consolodated);
+echo json_encode($consolidated);
 
 ?>

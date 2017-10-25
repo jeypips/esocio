@@ -74,19 +74,19 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 				
 				if (scope.accountProfile.groups == 'user') {
 				
-					console.log(scope.sectors);				
+					console.log(scope.sectors);					
 					// pie chart
 					flot.pie(scope.sectors);
 				
 				} else {
 					
 					console.log(scope.consolidated);				
-					// pie chart
+					// pie Admin chart
 					flots.pie(scope.consolidated);
 				
 				}
 				
-			},1000);
+			},2000);
 			
 			$timeout(function() {
 				

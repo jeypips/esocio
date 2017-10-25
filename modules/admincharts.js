@@ -62,7 +62,7 @@ angular.module('flots-module',[]).factory('flots',function() {
 				}
 
 				//initializing various charts and components
-				FlotChart.prototype.init = function() {
+				FlotChart.prototype.init = function() { 
 					// console.log(consolidated.Agoo['2017'].macro.parameters[1].items[0].description);
 					//Pie graph data
 					var pielabels = [consolidated.Agoo['2017'].macro.parameters[1].items[0].description,'Aringay'];

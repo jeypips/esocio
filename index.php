@@ -69,7 +69,7 @@
 							<div class="navbar-left app-search pull-left hidden-xs">
 			                     <h5 class="portlet-title" style="color:white;">Dashboard</h5>
 			                </div>
-                            <ul class="nav navbar-nav navbar-right pull-right" fetch-notifications>
+                            <ul class="nav navbar-nav navbar-right pull-right"><!-- fetch-notifications--> 
 								<li class="dropdown hidden-xs" ng-show="accountProfile.groups == 'admin'">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
                                         <i class="icon-bell" ></i> <span class="badge badge-xs badge-danger">{{(notifications.length>0)?notifications.length:''}}</span>
@@ -79,7 +79,7 @@
                                         <li class="list-group nicescroll notification-list">
                                          
                                            <!-- list item-->
-                                           <a href="javascript:;" class="list-group-item" ng-repeat="notification in notifications">
+                                           <a href="notifs.php" class="list-group-item" ng-repeat="notification in notifications">
 											  <div class="media">
                                                  <div class="pull-left p-r-10">
                                                     <em class="fa fa-bell-o fa-2x text-success"></em>
