@@ -82,7 +82,7 @@
                                         <li class="list-group nicescroll notification-list">
                                           
                                            <!-- list item-->
-                                           <a href="javascript:;" class="list-group-item" ng-repeat="notification in notifications">
+                                           <a href="notifs.php" class="list-group-item" ng-repeat="notification in notifications">
                                               <div class="media">
                                                  <div class="pull-left p-r-10">
                                                     <em class="fa fa-bell-o fa-2x text-success"></em>
@@ -112,7 +112,6 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.groups}}</b></a></li>
 										<hr>
-                                        <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
                                     </ul>
                                 </li>
