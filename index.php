@@ -69,7 +69,7 @@
 							<div class="navbar-left app-search pull-left hidden-xs">
 			                     <h5 class="portlet-title" style="color:white;">Dashboard</h5>
 			                </div>
-                            <ul class="nav navbar-nav navbar-right pull-right"><!-- fetch-notifications--> 
+                            <ul class="nav navbar-nav navbar-right pull-right" fetch-notifications>
 								<li class="dropdown hidden-xs" ng-show="accountProfile.groups == 'admin'">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
                                         <i class="icon-bell" ></i> <span class="badge badge-xs badge-danger">{{(notifications.length>0)?notifications.length:''}}</span>
@@ -109,7 +109,6 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.groups}}</b></a></li>
 										<hr>
-                                        <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
                                     </ul>
                                 </li>
