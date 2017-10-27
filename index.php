@@ -67,7 +67,7 @@
                                 <span class="clearfix"></span>
                             </div>
 							<div class="navbar-left app-search pull-left hidden-xs">
-			                     <h5 class="portlet-title" style="color:white;">Dashboard</h5>
+			                     <h5 class="portlet-title" style="color:white;">E-Socio Economic Profiling in La Union</h5>
 			                </div>
                             <ul class="nav navbar-nav navbar-right pull-right" fetch-notifications>
 								<li class="dropdown hidden-xs" ng-show="accountProfile.groups == 'admin'">
@@ -223,6 +223,9 @@
 		<script src="modules/notifications.js"></script>
 		<script src="modules/charts.js"></script>
 		<script src="modules/admincharts.js"></script>
+
+		<script src="modules/landcharts.js"></script>
+
 		<script src="modules/dashboard.js"></script>
 		<script src="controllers/dashboard.js"></script>
     </body>

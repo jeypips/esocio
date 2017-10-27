@@ -130,6 +130,7 @@
 					<ul>
 					<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
+
 							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
 							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
 							<li ng-show="accountProfile.groups == 'admin'"><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
@@ -152,6 +153,23 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div id="x_content" class="x_content"></div>
+					<div ng-show="views.menu">
+							<div class="col-lg-3">
+									<ul class="list-group contacts-list">
+									<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile',profile)">
+										<a href="javascript:;"><h4 class="text text-inverse text-center active"><b><i class="glyphicon glyphicon-home pull-left"></i>{{profile.municipality.municipality}}</b></h4></a>
+									</li>
+									<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname,profile)">
+										<a href="javascript:;">
+											<span class="text text-inverse">{{s.sector_description}}</span>
+											<i class="icon icon-pin online"></i>
+										</a>
+										<span class="clearfix"></span>
+									</li>
+									</ul>
+								</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			
@@ -164,11 +182,12 @@
 		</div>
 
 
-	
-	<div ng-show="views.menu">
+	 <!-- <div ng-show="views.menu">
+
 		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
 			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>
+		
 		<div class="side-bar right-bar nicescroll">
 		 <div class="contact-list nicescroll">
 		  <ul class="list-group contacts-list">
@@ -185,7 +204,7 @@
 			</ul>
 		  </div>
 		</div>
-	</div>
+	</div> -->
 	<!-- END wrapper -->
 	
         <script>
