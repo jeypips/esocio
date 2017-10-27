@@ -1,10 +1,22 @@
 <div class="panel panel-border panel-primary col-lg-9">
 <div class="panel-heading">
-<h4><i class="icon icon-note"></i> Environmental Sector
+<h4><div class="row">
+	<div class="col-sm-12">
+		<ol class="breadcrumb" style="margin-left: 20px;">
+			<li>
+				<a href="#" ng-click="form.activateForm(this,'profile',profile)" class="text-inverse"><i class="icon-home"></i> {{profile.municipality.municipality}}</a>
+			</li>
+			<li>
+				<span class="text-custom">{{profile.sectors.environmental.description}}</span>
+			</li>
+		</ol>
+	</div>
+</div>
 <button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
 </h4>
 </div>
 <hr>
+
 <div class="panel-body">
 	<form name="formHolder.environmental" id="formHolder.environmental">
 	<div class="panel panel-border panel-inverse card-box">
@@ -13,9 +25,10 @@
 	</div>
 	<hr>
 		<div class="row">
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.agricultural_areas.$touched && formHolder.environmental.agricultural_areas.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[0].items[0].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[0].items[0].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="agricultural_areas" ng-model="profile.sectors.environmental.parameters[0].items[0].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.agricultural_areas.$touched && formHolder.environmental.agricultural_areas.$invalid">Agricultural Areas is required</span>
 			</div>
 			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
 				<label class="label-control">{{profile.sectors.environmental.parameters[0].items[1].description}}</label>
@@ -23,9 +36,10 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.forest_areas.$touched && formHolder.environmental.forest_areas.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[0].items[2].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[0].items[2].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="forest_areas" ng-model="profile.sectors.environmental.parameters[0].items[2].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.forest_areas.$touched && formHolder.environmental.forest_areas.$invalid">Forest/Wooded Areas is required</span>
 			</div>
 			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
 				<label class="label-control">{{profile.sectors.environmental.parameters[0].items[3].description}}</label>
@@ -37,9 +51,10 @@
 					<label class="label-control">{{profile.sectors.environmental.parameters[0].items[4].description}}</label>
 					<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[0].items[4].item_value">
 			</div>
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.builtUp_areas.$touched && formHolder.environmental.builtUp_areas.$invalid}">
 					<label class="label-control">{{profile.sectors.environmental.parameters[0].items[5].description}}</label>
-					<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[0].items[5].item_value">
+					<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="builtUp_areas" ng-model="profile.sectors.environmental.parameters[0].items[5].item_value" required>
+					<span class="help-block" ng-show="formHolder.environmental.builtUp_areas.$touched && formHolder.environmental.builtUp_areas.$invalid">Built-up Areas is required</span>
 			</div>
 		</div>
 	</div>
@@ -50,70 +65,79 @@
 	</div>
 	<hr>
 		<div class="row">
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.certified_ad.$touched && formHolder.environmental.certified_ad.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[0].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[0].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="certified_ad" ng-model="profile.sectors.environmental.parameters[1].items[0].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.certified_ad.$touched && formHolder.environmental.certified_ad.$invalid">Certified A and D is required</span>
 			</div>
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.pf_land.$touched && formHolder.environmental.pf_land.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[1].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[1].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="pf_land" ng-model="profile.sectors.environmental.parameters[1].items[1].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.pf_land.$touched && formHolder.environmental.pf_land.$invalid">Public Forest Land is required</span>
 			</div>
 		</div>
 		
 		<div class="row">
-			<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[2].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[2].item_value">
-			</div>
-			<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.upland.$touched && formHolder.environmental.upland.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[3].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[3].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="upland" ng-model="profile.sectors.environmental.parameters[1].items[3].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.upland.$touched && formHolder.environmental.upland.$invalid">Upland is required</span>
 			</div>
-			<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.lowland.$touched && formHolder.environmental.lowland.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[4].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[4].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="lowland" ng-model="profile.sectors.environmental.parameters[1].items[4].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.lowland.$touched && formHolder.environmental.lowland.$invalid">Lowland is required</span>
 			</div>
-			<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.coastal.$touched && formHolder.environmental.coastal.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[5].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[5].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="coastal" ng-model="profile.sectors.environmental.parameters[1].items[5].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.coastal.$touched && formHolder.environmental.coastal.$invalid">Coastal is required</span>
 			</div>
-			<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.riverside.$touched && formHolder.environmental.riverside.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[6].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[6].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="riverside" ng-model="profile.sectors.environmental.parameters[1].items[6].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.riverside.$touched && formHolder.environmental.riverside.$invalid">Riverside is required</span>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.sawmills.$touched && formHolder.environmental.sawmills.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[7].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[7].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="sawmills" ng-model="profile.sectors.environmental.parameters[1].items[7].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.sawmills.$touched && formHolder.environmental.sawmills.$invalid">Number of Sawmills is required</span>
 			</div>
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.lumber_dealers.$touched && formHolder.environmental.lumber_dealers.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[8].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[8].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="lumber_dealers" ng-model="profile.sectors.environmental.parameters[1].items[8].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.lumber_dealers.$touched && formHolder.environmental.lumber_dealers.$invalid">Number of Lumber Dealers is required</span>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.riverbanks.$touched && formHolder.environmental.riverbanks.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[9].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[9].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="riverbanks" ng-model="profile.sectors.environmental.parameters[1].items[9].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.riverbanks.$touched && formHolder.environmental.riverbanks.$invalid">Length of RIVERBANKS is required</span>
 			</div>
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.seashores.$touched && formHolder.environmental.seashores.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[1].items[10].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[1].items[10].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="seashores" ng-model="profile.sectors.environmental.parameters[1].items[10].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.seashores.$touched && formHolder.environmental.seashores.$invalid">SEASHORES is required</span>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.rivers.$touched && formHolder.environmental.rivers.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[2].items[0].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[2].items[0].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="rivers" ng-model="profile.sectors.environmental.parameters[2].items[0].item_value"required>
+				<span class="help-block" ng-show="formHolder.environmental.rivers.$touched && formHolder.environmental.rivers.$invalid">RIVERS is required</span>
 			</div>
-			<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+			<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.environmental.esteros_creeks.$touched && formHolder.environmental.esteros_creeks.$invalid}">
 				<label class="label-control">{{profile.sectors.environmental.parameters[2].items[1].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[2].items[1].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="esteros_creeks" ng-model="profile.sectors.environmental.parameters[2].items[1].item_value" required>
+				<span class="help-block" ng-show="formHolder.environmental.esteros_creeks.$touched && formHolder.environmental.esteros_creeks.$invalid">ESTEROS/CREEKS is required</span>
 			</div>
 			<div class="col-lg-4 col-md-8 col-sm-12 form-group">
 				<label class="label-control">{{profile.sectors.environmental.parameters[2].items[2].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.environmental.parameters[2].items[2].item_value">
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn"  ng-model="profile.sectors.environmental.parameters[2].items[2].item_value" >
+				<!-- <span class="help-block" ng-show="formHolder.environmental.canals.$touched && formHolder.environmental.canals.$invalid">CANALS is required</span> -->
 			</div>
 		</div>
 	</div>	

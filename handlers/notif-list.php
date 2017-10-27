@@ -8,7 +8,7 @@ session_start();
 
 $con = new pdo_db();
 
-$notifications = $con->getData("SELECT * FROM notifications");
+$notifications = $con->getData("SELECT * FROM notifications ORDER BY id DESC");
 
 header("Content-Type: application/json");
 
