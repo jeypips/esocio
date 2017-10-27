@@ -1,10 +1,22 @@
 <div class="panel panel-border panel-primary col-lg-9">
 <div class="panel-heading">
-<h4><i class="icon icon-note"></i> Trade, Industry and Tourism Sector
+<h4><div class="row">
+	<div class="col-sm-12">
+		<ol class="breadcrumb" style="margin-left: 20px;">
+			<li>
+				<a href="#" ng-click="form.activateForm(this,'profile',profile)" class="text-inverse"><i class="icon-home"></i> {{profile.municipality.municipality}}</a>
+			</li>
+			<li>
+				<span class="text-custom">{{profile.sectors.trade.description}}</span>
+			</li>
+		</ol>
+	</div>
+</div>
 <button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
 </h4>
 </div>
 <hr>
+
 <div class="panel-body">
 
 	<form name="formHolder.trade" id="formHolder.trade">
