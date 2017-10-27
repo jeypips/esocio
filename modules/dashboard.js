@@ -90,7 +90,7 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 
 				}
 				
-			},2000);
+			},5000);
 			
 			
 		
