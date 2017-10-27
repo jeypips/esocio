@@ -1,366 +1,368 @@
-<div class="panel panel-border panel-primary col-lg-9">
-<div class="panel-heading">
-<h4><div class="row">
-	<div class="col-sm-12">
-		<ol class="breadcrumb" style="margin-left: 20px;">
-			<li>
-				<a href="#" ng-click="form.activateForm(this,'profile',profile)" class="text-inverse"><i class="icon-home"></i> {{profile.municipality.municipality}}</a>
-			</li>
-			<li>
-				<span class="text-custom">{{profile.sectors.infra.description}}</span>
-			</li>
-		</ol>
-	</div>
-</div>
-<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
-</h4>
-</div>
-<hr>
-
-<div class="panel-body">
-
-	<form name="formHolder.infra" id="formHolder.infra">
-
-		<div class="panel panel-border panel-inverse card-box">
-		<div class="panel-heading">
-		<h5>{{profile.sectors.infra.parameters[0].description}}</h5>
-		</div>
-		<div class="card-box">
-		<h5>{{profile.sectors.infra.parameters[0].items[0].description}}</h5>
-			<div class="row">
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		</div>
-		
-		<div class="card-box">
-			<h5>{{profile.sectors.infra.parameters[0].items[1].description}}</h5>
-			<div class="row">
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[1].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[1].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[1].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[1].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		</div>
-		<div class="card-box">
-			<h5>{{profile.sectors.infra.parameters[0].items[2].description}}</h5>
-			<div class="row">
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		</div>
-		
-		<div class="card-box">
-			<h5>{{profile.sectors.infra.parameters[0].items[3].description}}</h5>
-			<div class="row">
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-3 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		</div>
-		</div>
-		
-		<div class="panel panel-border panel-inverse card-box">
-		<div class="panel-heading">
-		<h5>{{profile.sectors.infra.parameters[1].description}}</h5>
-		</div>
-		<div class="card-box">
-			<h5>{{profile.sectors.infra.parameters[1].items[0].description}}</h5>	
-			<div class="row">
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[4].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[5].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		</div>
-		
-		<div class="card-box">
-			<h5>{{profile.sectors.infra.parameters[1].items[1].description}}</h5>
-			<div class="row">
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[4].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[5].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		</div>
-		
-		<div class="card-box">
-		<h5>{{profile.sectors.infra.parameters[1].items[2].description}}</h5>	
-			<div class="row">
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[4].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[5].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		</div>
-		
-		<div class="card-box">
-			<h5>{{profile.sectors.infra.parameters[1].items[3].description}}</h5>
-			<div class="row">
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[4].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[5].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		</div>
-		
-		<div class="card-box">
-		<h5>{{profile.sectors.infra.parameters[1].items[4].description}}</h5>
-			<div class="row">
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[4].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[5].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		</div>
-		
-		<div class="card-box">
-			<h5>{{profile.sectors.infra.parameters[1].items[5].description}}</h5>
-			<div class="row">
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[4].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[5].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		</div>
-		
-		<div class="card-box">
-			<h5>{{profile.sectors.infra.parameters[1].items[6].description}}</h5>
-			<div class="row">
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[4].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[5].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
-		</div>
-		
-		<div class="card-box">
-				<h5>{{profile.sectors.infra.parameters[1].items[7].description}}</h5>
-			<div class="row">
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[0].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[1].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[1].item_group_value" name="municipality" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[2].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[3].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[4].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-				<div class="col-lg-2 col-md-8 col-sm-12 form-group">
-					<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[5].description}}</label>
-					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
-				</div>
-			</div>
+<div class="col-lg-9">
+	<div class="panel panel-border panel-primary">
+	<div class="panel-heading">
+	<h4><div class="row">
+		<div class="col-sm-12">
+			<ol class="breadcrumb" style="margin-left: 20px;">
+				<li>
+					<a href="#" ng-click="form.activateForm(this,'profile',profile)" class="text-inverse"><i class="icon-home"></i> {{profile.municipality.municipality}}</a>
+				</li>
+				<li>
+					<span class="text-custom">{{profile.sectors.infra.description}}</span>
+				</li>
+				<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+			</ol>
 		</div>
 	</div>
-	</form>
-		<div class="form-group text-left m-b-0">
-			<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'infra')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+	</h4>
+	</div>
+	<hr>
+
+	<div class="panel-body">
+
+		<form name="formHolder.infra" id="formHolder.infra">
+
+			<div class="panel panel-border panel-inverse card-box">
+			<div class="panel-heading">
+			<h5>{{profile.sectors.infra.parameters[0].description}}</h5>
+			</div>
+			<div class="card-box">
+			<h5>{{profile.sectors.infra.parameters[0].items[0].description}}</h5>
+				<div class="row">
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[0].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[0].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+			
+			<div class="card-box">
+				<h5>{{profile.sectors.infra.parameters[0].items[1].description}}</h5>
+				<div class="row">
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[1].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[1].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[1].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[1].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[1].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+			<div class="card-box">
+				<h5>{{profile.sectors.infra.parameters[0].items[2].description}}</h5>
+				<div class="row">
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[2].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[2].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+			
+			<div class="card-box">
+				<h5>{{profile.sectors.infra.parameters[0].items[3].description}}</h5>
+				<div class="row">
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-3 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[0].items[3].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[0].items[3].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+			</div>
+			
+			<div class="panel panel-border panel-inverse card-box">
+			<div class="panel-heading">
+			<h5>{{profile.sectors.infra.parameters[1].description}}</h5>
+			</div>
+			<div class="card-box">
+				<h5>{{profile.sectors.infra.parameters[1].items[0].description}}</h5>	
+				<div class="row">
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[4].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[0].group_items[5].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[0].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+			
+			<div class="card-box">
+				<h5>{{profile.sectors.infra.parameters[1].items[1].description}}</h5>
+				<div class="row">
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[4].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[1].group_items[5].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[1].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+			
+			<div class="card-box">
+			<h5>{{profile.sectors.infra.parameters[1].items[2].description}}</h5>	
+				<div class="row">
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[4].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[2].group_items[5].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[2].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+			
+			<div class="card-box">
+				<h5>{{profile.sectors.infra.parameters[1].items[3].description}}</h5>
+				<div class="row">
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[4].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[3].group_items[5].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[3].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+			
+			<div class="card-box">
+			<h5>{{profile.sectors.infra.parameters[1].items[4].description}}</h5>
+				<div class="row">
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[4].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[4].group_items[5].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[4].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+			
+			<div class="card-box">
+				<h5>{{profile.sectors.infra.parameters[1].items[5].description}}</h5>
+				<div class="row">
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[4].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[5].group_items[5].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[5].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+			
+			<div class="card-box">
+				<h5>{{profile.sectors.infra.parameters[1].items[6].description}}</h5>
+				<div class="row">
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[1].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[4].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[6].group_items[5].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[6].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+			
+			<div class="card-box">
+					<h5>{{profile.sectors.infra.parameters[1].items[7].description}}</h5>
+				<div class="row">
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[0].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[0].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[1].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[1].item_group_value" name="municipality" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[2].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[2].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[3].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[3].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[4].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[4].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+					<div class="col-lg-2 col-md-8 col-sm-12 form-group">
+						<label class="label-control">{{profile.sectors.infra.parameters[1].items[7].group_items[5].description}}</label>
+						<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
+					</div>
+				</div>
+			</div>
+		</div>
+		</form>
+			<div class="form-group text-left m-b-0">
+				<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+				<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'infra')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+			</div>
 		</div>
 	</div>
 </div>

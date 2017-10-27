@@ -1,136 +1,138 @@
-<div class="panel panel-border panel-primary col-lg-9">
-<div class="panel-heading">
-<h4><div class="row">
-	<div class="col-sm-12">
-		<ol class="breadcrumb" style="margin-left: 20px;">
-			<li>
-				<a href="#" ng-click="form.activateForm(this,'profile',profile)" class="text-inverse"><i class="icon-home"></i> {{profile.municipality.municipality}}</a>
-			</li>
-			<li>
-				<span class="text-custom">{{profile.sectors.agriculture.description}}</span>
-			</li>
-		</ol>
+<div class="col-lg-9">
+	<div class="panel panel-border panel-primary">
+	<div class="panel-heading">
+	<h4><div class="row">
+		<div class="col-sm-12">
+			<ol class="breadcrumb" style="margin-left: 20px;">
+				<li>
+					<a href="#" ng-click="form.activateForm(this,'profile',profile)" class="text-inverse"><i class="icon-home"></i> {{profile.municipality.municipality}}</a>
+				</li>
+				<li>
+					<span class="text-custom">{{profile.sectors.agriculture.description}}</span>
+				</li>
+				<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+			</ol>
+		</div>
 	</div>
-</div>
-<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
-</h4>
-</div>
-<hr>
+	</h4>
+	</div>
+	<hr>
 
-<div class="panel-body">
-	<form name="formHolder.agriculture" id="formHolder.agriculture">
-	<div class="panel panel-inverse panel-border">
-		<div class="panel-heading">
-		<h5>{{profile.sectors.agriculture.parameters[0].description}}</h5>
+	<div class="panel-body">
+		<form name="formHolder.agriculture" id="formHolder.agriculture">
+		<div class="panel panel-inverse panel-border">
+			<div class="panel-heading">
+			<h5>{{profile.sectors.agriculture.parameters[0].description}}</h5>
+			</div>
+			<hr>
+				<table class="table table-bordered m-0">
+						<thead>
+							<tr>
+								<th>{{profile.sectors.agriculture.parameters[0].items[0].description}}</th>
+								<th>{{profile.sectors.agriculture.parameters[0].items[1].description}}</th>
+								<th>{{profile.sectors.agriculture.parameters[0].items[2].description}}</th>
+								<th>{{profile.sectors.agriculture.parameters[0].items[3].description}}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[0].rows[0].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[4].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[12].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[20].item_value" ng-disabled="controls.ok.btn"></td>
+							</tr>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[0].rows[1].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[5].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[13].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[21].item_value" ng-disabled="controls.ok.btn"></td>
+							</tr>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[0].rows[2].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[6].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[14].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[22].item_value" ng-disabled="controls.ok.btn"></td>							
+							</tr>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[0].rows[3].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[7].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[15].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[23].item_value" ng-disabled="controls.ok.btn"></td>														
+							</tr>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[0].rows[4].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[8].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[16].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[24].item_value" ng-disabled="controls.ok.btn"></td>																					
+							</tr>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[0].rows[5].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[9].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[17].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[25].item_value" ng-disabled="controls.ok.btn"></td>
+							</tr>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[0].rows[6].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[10].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[18].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[26].item_value" ng-disabled="controls.ok.btn"></td>
+							</tr>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[0].rows[7].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[11].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[19].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[27].item_value" ng-disabled="controls.ok.btn"></td>
+							</tr>						
+						</tbody>
+				</table>
 		</div>
-		<hr>
-			<table class="table table-bordered m-0">
-					<thead>
-						<tr>
-							<th>{{profile.sectors.agriculture.parameters[0].items[0].description}}</th>
-							<th>{{profile.sectors.agriculture.parameters[0].items[1].description}}</th>
-							<th>{{profile.sectors.agriculture.parameters[0].items[2].description}}</th>
-							<th>{{profile.sectors.agriculture.parameters[0].items[3].description}}</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[0].rows[0].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[4].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[12].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[20].item_value" ng-disabled="controls.ok.btn"></td>
-						</tr>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[0].rows[1].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[5].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[13].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[21].item_value" ng-disabled="controls.ok.btn"></td>
-						</tr>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[0].rows[2].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[6].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[14].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[22].item_value" ng-disabled="controls.ok.btn"></td>							
-						</tr>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[0].rows[3].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[7].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[15].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[23].item_value" ng-disabled="controls.ok.btn"></td>														
-						</tr>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[0].rows[4].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[8].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[16].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[24].item_value" ng-disabled="controls.ok.btn"></td>																					
-						</tr>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[0].rows[5].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[9].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[17].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[25].item_value" ng-disabled="controls.ok.btn"></td>
-						</tr>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[0].rows[6].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[10].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[18].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[26].item_value" ng-disabled="controls.ok.btn"></td>
-						</tr>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[0].rows[7].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[11].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[19].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[0].items[27].item_value" ng-disabled="controls.ok.btn"></td>
-						</tr>						
-					</tbody>
-			</table>
-	</div>
-	<div class="panel panel-inverse panel-border">
-		<div class="panel-heading">
-		<h5>{{profile.sectors.agriculture.parameters[1].description}}</h5>
+		<div class="panel panel-inverse panel-border">
+			<div class="panel-heading">
+			<h5>{{profile.sectors.agriculture.parameters[1].description}}</h5>
+			</div>
+			<hr>
+				<table class="table table-bordered m-0">
+						<thead>
+							<tr>
+								<th>{{profile.sectors.agriculture.parameters[1].items[0].description}}</th>
+								<th>{{profile.sectors.agriculture.parameters[1].items[1].description}}</th>
+								<th>{{profile.sectors.agriculture.parameters[1].items[2].description}}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[1].rows[0].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[3].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[8].item_value" ng-disabled="controls.ok.btn"></td>
+							</tr>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[1].rows[1].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[4].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[9].item_value" ng-disabled="controls.ok.btn"></td>
+							</tr>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[1].rows[2].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[5].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[10].item_value" ng-disabled="controls.ok.btn"></td>
+							</tr>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[1].rows[3].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[6].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[11].item_value" ng-disabled="controls.ok.btn"></td>
+							</tr>
+							<tr>
+								<td>{{profile.sectors.agriculture.parameters[1].rows[4].description}}</td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[7].item_value" ng-disabled="controls.ok.btn"></td>
+								<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[12].item_value" ng-disabled="controls.ok.btn"></td>
+							</tr>						
+						</tbody>
+				</table>
 		</div>
-		<hr>
-			<table class="table table-bordered m-0">
-					<thead>
-						<tr>
-							<th>{{profile.sectors.agriculture.parameters[1].items[0].description}}</th>
-							<th>{{profile.sectors.agriculture.parameters[1].items[1].description}}</th>
-							<th>{{profile.sectors.agriculture.parameters[1].items[2].description}}</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[1].rows[0].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[3].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[8].item_value" ng-disabled="controls.ok.btn"></td>
-						</tr>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[1].rows[1].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[4].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[9].item_value" ng-disabled="controls.ok.btn"></td>
-						</tr>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[1].rows[2].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[5].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[10].item_value" ng-disabled="controls.ok.btn"></td>
-						</tr>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[1].rows[3].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[6].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[11].item_value" ng-disabled="controls.ok.btn"></td>
-						</tr>
-						<tr>
-							<td>{{profile.sectors.agriculture.parameters[1].rows[4].description}}</td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[7].item_value" ng-disabled="controls.ok.btn"></td>
-							<td><input class="form-control" type="text" ng-model="profile.sectors.agriculture.parameters[1].items[12].item_value" ng-disabled="controls.ok.btn"></td>
-						</tr>						
-					</tbody>
-			</table>
-	</div>
-	</form>
-	<div class="form-group text-left m-b-0">
-		<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-		<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'agriculture')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
-	</div>
+		</form>
+		<div class="form-group text-left m-b-0">
+			<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'agriculture')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+		</div>
+		</div>
 	</div>
 </div>

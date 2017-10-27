@@ -1,79 +1,81 @@
-<div class="panel panel-primary panel-border col-lg-9">
-<div class="panel-heading">
-<h4><div class="row">
-	<div class="col-sm-12">
-		<ol class="breadcrumb" style="margin-left: 20px;">
-			<li>
-				<a href="#" ng-click="form.activateForm(this,'profile',profile)" class="text-inverse"><i class="icon-home"></i> {{profile.municipality.municipality}}</a>
-			</li>
-			<li>
-				<span class="text-custom">Basic Information</span>
-			</li>
-		</ol>
+<div class="col-lg-9">
+	<div class="panel panel-primary panel-border">
+	<div class="panel-heading">
+	<h4><div class="row">
+		<div class="col-sm-12">
+			<ol class="breadcrumb" style="margin-left: 20px;">
+				<li>
+					<a href="#" ng-click="form.activateForm(this,'profile',profile)" class="text-inverse"><i class="icon-home"></i> {{profile.municipality.municipality}}</a>
+				</li>
+				<li>
+					<span class="text-custom">Basic Information</span>
+				</li>
+				<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+			</ol>
+		</div>
 	</div>
-</div>
-<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
-</h4>
-</div>
-<hr>
+	</h4>
+	</div>
+	<hr>
 
-<div class="panel-body">
-	<form name="formHolder.profile" id="formHolder.profile">
-		<div class="panel panel-inverse panel-border card-box">
-		<div class="panel-heading">
-		</div>
-		<div class="card-box">
-			<div class="row">
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
-					<label class="label-control">Municipality</label>
-					<select class="form-control" name="municipality" ng-model="profile.municipality" ng-options="m.municipality for m in municipalities track by m.id" ng-disabled="controls.ok.btn" required></select>
-					<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Municipal Name is required</span>
-				</div>
-<!-- 				<div class="col-lg-4 col-md-4 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
-					<label class="label-control">Location</label>
-					<input type="text" class="form-control" name="location" ng-model="profile.location" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Location is required</span>
-				</div> -->
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.profile_year.$touched && formHolder.profile.profile_year.$invalid}">
-					<label class="label-control">Year</label>
-					<input type="text" class="form-control" name="profile_year" ng-model="profile.profile_year" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.profile.profile_year.$touched && formHolder.profile.profile_year.$invalid">Year name is required</span>
-				</div>				
+	<div class="panel-body">
+		<form name="formHolder.profile" id="formHolder.profile">
+			<div class="panel panel-inverse panel-border card-box">
+			<div class="panel-heading">
 			</div>
-		</div>
-		
-		<div class="card-box">
-		<h5>*Political Boundaries</h5>
-			<div class="row">
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.pb_north.$touched && formHolder.profile.pb_north.$invalid}">
-					<label class="label-control">North</label>
-					<input type="text" class="form-control" name="pb_north" ng-model="profile.pb_north" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.profile.pb_north.$touched && formHolder.profile.pb_north.$invalid">North is required</span>
-				</div>
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.pb_east.$touched && formHolder.profile.pb_east.$invalid}">
-					<label class="label-control">East</label>
-					<input type="text" class="form-control" name="pb_east" ng-model="profile.pb_east" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.profile.pb_east.$touched && formHolder.profile.pb_east.$invalid">East is required</span>
+			<div class="card-box">
+				<div class="row">
+					<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid}">
+						<label class="label-control">Municipality</label>
+						<select class="form-control" name="municipality" ng-model="profile.municipality" ng-options="m.municipality for m in municipalities track by m.id" ng-disabled="controls.ok.btn" required></select>
+						<span class="help-block" ng-show="formHolder.profile.municipality.$touched && formHolder.profile.municipality.$invalid">Municipal Name is required</span>
+					</div>
+	<!-- 				<div class="col-lg-4 col-md-4 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.location.$touched && formHolder.profile.location.$invalid}">
+						<label class="label-control">Location</label>
+						<input type="text" class="form-control" name="location" ng-model="profile.location" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.profile.location.$touched && formHolder.profile.location.$invalid">Location is required</span>
+					</div> -->
+					<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.profile_year.$touched && formHolder.profile.profile_year.$invalid}">
+						<label class="label-control">Year</label>
+						<input type="text" class="form-control" name="profile_year" ng-model="profile.profile_year" required ng-disabled="controls.ok.btn">
+						<span class="help-block" ng-show="formHolder.profile.profile_year.$touched && formHolder.profile.profile_year.$invalid">Year name is required</span>
+					</div>				
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.pb_south.$touched && formHolder.profile.pb_south.$invalid}">
-					<label class="label-control">South</label>
-					<input type="text" class="form-control" name="pb_south" ng-model="profile.pb_south" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.profile.pb_south.$touched && formHolder.profile.pb_south.$invalid">South is required</span>
+			
+			<div class="card-box">
+			<h5>*Political Boundaries</h5>
+				<div class="row">
+					<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.pb_north.$touched && formHolder.profile.pb_north.$invalid}">
+						<label class="label-control">North</label>
+						<input type="text" class="form-control" name="pb_north" ng-model="profile.pb_north" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.profile.pb_north.$touched && formHolder.profile.pb_north.$invalid">North is required</span>
+					</div>
+					<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.pb_east.$touched && formHolder.profile.pb_east.$invalid}">
+						<label class="label-control">East</label>
+						<input type="text" class="form-control" name="pb_east" ng-model="profile.pb_east" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.profile.pb_east.$touched && formHolder.profile.pb_east.$invalid">East is required</span>
+					</div>
 				</div>
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.pb_west.$touched && formHolder.profile.pb_west.$invalid}">
-					<label class="label-control">West</label>
-					<input type="text" class="form-control" name="pb_west" ng-model="profile.pb_west"  ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.profile.pb_west.$touched && formHolder.profile.pb_west.$invalid">West is required</span>
+				<div class="row">
+					<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.pb_south.$touched && formHolder.profile.pb_south.$invalid}">
+						<label class="label-control">South</label>
+						<input type="text" class="form-control" name="pb_south" ng-model="profile.pb_south" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.profile.pb_south.$touched && formHolder.profile.pb_south.$invalid">South is required</span>
+					</div>
+					<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.profile.pb_west.$touched && formHolder.profile.pb_west.$invalid}">
+						<label class="label-control">West</label>
+						<input type="text" class="form-control" name="pb_west" ng-model="profile.pb_west"  ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.profile.pb_west.$touched && formHolder.profile.pb_west.$invalid">West is required</span>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	</form>
-		<div class="form-group text-left m-b-0">
-			<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'profile')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+		</form>
+			<div class="form-group text-left m-b-0">
+				<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+				<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'profile')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+			</div>
 		</div>
 	</div>
 </div>
