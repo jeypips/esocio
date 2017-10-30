@@ -1,4 +1,6 @@
+
 angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-module', 'flots-module', 'landcharts-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,flot,flots,landcharts) {
+
 	
 	function form() {
 		
@@ -74,19 +76,21 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 				
 				if (scope.accountProfile.groups == 'user') {
 				
-					console.log(scope.sectors);				
+					console.log(scope.sectors);					
 					// pie chart
 					flot.pie(scope.sectors);
 				
 				} else {
 					
 					console.log(scope.consolidated);				
+
 					// pie chart
 					flots.pie(scope.consolidated);
 					landcharts.pie(scope.consolidated);
+
 				}
 				
-			},2000);
+			},5000);
 			
 			
 		

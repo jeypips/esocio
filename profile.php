@@ -68,7 +68,7 @@
                                 <span class="clearfix"></span>
                             </div>
 							<div class="navbar-left app-search pull-left hidden-xs">
-			                     <h5 class="portlet-title" style="color:white;">Profile</h5>
+			                     <h5 class="portlet-title" style="color:white;">E-Socio Economic Profiling in La Union</h5>
 			                </div>
                             <ul class="nav navbar-nav navbar-right pull-right" fetch-notifications>
                                 <li class="dropdown hidden-xs" ng-show="accountProfile.groups == 'admin'">
@@ -79,7 +79,7 @@
                                         <li class="notifi-title"><span class="label label-default pull-right"></span>Notification<i style="cursor: pointer; color: black;" class="faa-ring animated pull-right icon-trash"></i></li>
                                         <li class="list-group nicescroll notification-list">
                                            <!-- list item-->
-                                           <a href="javascript:;" class="list-group-item" ng-repeat="notification in notifications">
+                                           <a href="notifs.php" class="list-group-item" ng-repeat="notification in notifications">
                                               <div class="media">
                                                  <div class="pull-left p-r-10">
                                                     <em class="fa fa-bell-o fa-2x text-success"></em>
@@ -108,7 +108,6 @@
                                      <ul class="dropdown-menu">
                                         <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.groups}}</b></a></li>
 										<hr>
-                                        <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
                                     </ul>
                                 </li>
@@ -131,6 +130,7 @@
 					<ul>
 					<li class="text-muted menu-title">Navigation</li>
 						<li class="has_sub">
+
 							<li><a href="index.php"><i class="icon-home"></i><span> Dashboard</span></a></li>
 							<li><a href="profile.php" class="active"><i class="icon-screen-desktop"></i><span> Profile</span></a></li>
 							<li ng-show="accountProfile.groups == 'admin'"><a href="maintenance.php"><i class="icon-settings"></i><span> Maintenance </span></a></li>
@@ -153,6 +153,31 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div id="x_content" class="x_content"></div>
+					<div ng-show="views.menu">
+						<div class="col-lg-3">
+							<div class="panel panel-border panel-success">
+								<div class="panel-heading">
+								</div>
+								<ul class="list-group contacts-list">
+								<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile',profile)">
+									<a href="javascript:;">
+										<span class="text text-inverse">Basic Information</span>
+										<i class="icon icon-pin online"></i>
+									</a>
+									<span class="clearfix"></span>
+								</li>
+								<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname,profile)">
+									<a href="javascript:;">
+										<span class="text text-inverse">{{s.sector_description}}</span>
+										<i class="icon icon-pin online"></i>
+									</a>
+									<span class="clearfix"></span>
+								</li>
+								</ul>
+							</div>
+						</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			
@@ -165,11 +190,12 @@
 		</div>
 
 
-	
-	<div ng-show="views.menu">
+	 <!-- <div ng-show="views.menu">
+
 		<div id="sub-menu" style="position: fixed; top: 180px; right: {{views.subMenu}};" ng-click="form.subMenu(this)">
 			<button href="javascript:;" class="btn btn-youtube right-bar-toggle waves-effect waves-light"><i class="glyphicon glyphicon-th"></i></button>
 		</div>
+		
 		<div class="side-bar right-bar nicescroll">
 		 <div class="contact-list nicescroll">
 		  <ul class="list-group contacts-list">
@@ -186,7 +212,7 @@
 			</ul>
 		  </div>
 		</div>
-	</div>
+	</div> -->
 	<!-- END wrapper -->
 	
         <script>
