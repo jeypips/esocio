@@ -68,7 +68,6 @@
                             </div>
 							<div class="navbar-left app-search pull-left hidden-xs">
 			                     <h5 class="portlet-title" style="color:white;">E-Socio Economic Profiling in La Union</h5>
-							
 			                </div>
 			                     
 			            

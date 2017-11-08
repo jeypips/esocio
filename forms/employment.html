@@ -1,5 +1,24 @@
 <div class="col-lg-9">
-	<div class="panel panel-border panel-primary">
+<div class="panel panel-border panel-primary">
+<div class="panel-heading">
+<div class="row">
+	<div class="col-sm-12">
+		<ol class="breadcrumb" style="margin-left: 20px;">
+			<li>
+				<a href="#" ng-click="form.activateForm(this,'profile',profile)" class="text-inverse"><i class="icon-home"></i> {{profile.municipality.municipality}}</a>
+			</li>
+			<li>
+				<span class="text-custom"> Employment and Development Finance Sector</span>
+			</li>
+			<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+		</ol>
+	</div>
+</div>
+</div>
+<hr>
+<div class="panel-body">
+	<form name="formHolder.employment" id="formHolder.employment">
+	<div class="panel panel-inverse panel-border card-box">
 	<div class="panel-heading">
 	<h4><div class="row">
 		<div class="col-sm-12">
@@ -57,22 +76,14 @@
 						<span class="help-block" ng-show="formHolder.employment.services.$touched && formHolder.employment.services.$invalid">Services is required</span>
 					</div>
 				</div>
-				<hr>
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-						<label class="label-control">{{profile.sectors.employment.parameters[0].items[3].description}}</label>
-						<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.employment.parameters[0].items[3].item_value">
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.employment.poorfamilies.$touched && formHolder.employment.poorfamilies.$invalid}">
-						<label class="label-control">{{profile.sectors.employment.parameters[0].items[4].description}}</label>
-						<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="poorfamilies" ng-model="profile.sectors.employment.parameters[0].items[4].item_value" required>
-						<span class="help-block" ng-show="formHolder.employment.poorfamilies.$touched && formHolder.employment.poorfamilies.$invalid">Magnitude of Poor Families is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.employment.poorpopulation.$touched && formHolder.employment.poorpopulation.$invalid}">
-						<label class="label-control">{{profile.sectors.employment.parameters[0].items[5].description}}</label>
-						<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="poorpopulation" ng-model="profile.sectors.employment.parameters[0].items[5].item_value" required>
-						<span class="help-block" ng-show="formHolder.employment.poorpopulation.$touched && formHolder.employment.poorpopulation.$invalid">Magnitude of Poor Population is required</span>
-					</div>
+			</div>
+			<hr>
+			<h5>{{profile.sectors.employment.parameters[1].description}}</h5>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.employment.parameters[1].items[0].description}}</label>
+					<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.employment.parameters[1].items[0].item_value">
+					<!-- <span class="help-block" ng-show="formHolder.employment.commodity.$touched && formHolder.employment.commodity.$invalid">Commodity is required</span> -->
 				</div>
 				
 				<div class="row">
@@ -112,12 +123,14 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		</form>
-			<div class="form-group text-left m-b-0">
-				<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+			<hr>
+			<div class="row">
+				<button class="btn btn-googleplus waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
 				<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'employment')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 			</div>
 		</div>
 	</div>
+	</form>
+	</div>
+</div>
 </div>
