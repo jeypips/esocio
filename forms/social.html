@@ -17,27 +17,28 @@
 </div>
 <hr>
 
-<div class="panel-body">
+	<div class="panel-body">
 
-	<form name="formHolder.social" id="formHolder.social">
+		<form name="formHolder.social" id="formHolder.social">
 
-		<div class="card-box col-lg-12">
-		<div class="row">
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.social.dc_center.$touched && formHolder.social.dc_center.$invalid}">
-					<label class="label-control">{{profile.sectors.social.parameters[0].items[0].description}}</label>
-					<input type="text" class="form-control" name="dc_center" ng-model="profile.sectors.social.parameters[0].items[0].item_value" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.social.dc_center.$touched && formHolder.social.dc_center.$invalid">Number of Day Care Center is required</span>
-				</div>
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.social.dc_worker.$touched && formHolder.social.dc_worker.$invalid}">
-					<label class="label-control">{{profile.sectors.social.parameters[0].items[1].description}}</label>
-					<input type="text" class="form-control" name="dc_worker" ng-model="profile.sectors.social.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.social.dc_worker.$touched && formHolder.social.dc_worker.$invalid">Number of Day Care Worker is required</span>
-				</div>
-				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.social.dc_children.$touched && formHolder.social.dc_children.$invalid}">
-					<label class="label-control">{{profile.sectors.social.parameters[0].items[2].description}}</label>
-					<input type="text" class="form-control" name="dc_children" ng-model="profile.sectors.social.parameters[0].items[2].item_value" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.social.dc_children.$touched && formHolder.social.dc_children.$invalid">Number of Day Care Children is required</span>
-				</div>
+			<div class="card-box col-lg-12">
+			<div class="row">
+					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.social.dc_center.$touched && formHolder.social.dc_center.$invalid}">
+						<label class="label-control">{{profile.sectors.social.parameters[0].items[0].description}}</label>
+						<input type="text" class="form-control" name="dc_center" ng-model="profile.sectors.social.parameters[0].items[0].item_value" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.social.dc_center.$touched && formHolder.social.dc_center.$invalid">Number of Day Care Center is required</span>
+					</div>
+					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.social.dc_worker.$touched && formHolder.social.dc_worker.$invalid}">
+						<label class="label-control">{{profile.sectors.social.parameters[0].items[1].description}}</label>
+						<input type="text" class="form-control" name="dc_worker" ng-model="profile.sectors.social.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.social.dc_worker.$touched && formHolder.social.dc_worker.$invalid">Number of Day Care Worker is required</span>
+					</div>
+					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.social.dc_children.$touched && formHolder.social.dc_children.$invalid}">
+						<label class="label-control">{{profile.sectors.social.parameters[0].items[2].description}}</label>
+						<input type="text" class="form-control" name="dc_children" ng-model="profile.sectors.social.parameters[0].items[2].item_value" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.social.dc_children.$touched && formHolder.social.dc_children.$invalid">Number of Day Care Children is required</span>
+					</div>
+        </div>
 		</div>
 		<hr>
 		<div class="row">
