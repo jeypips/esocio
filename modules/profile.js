@@ -737,8 +737,8 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			doc.text(120, 198, 'Number of Water Stations:'+profile_sectors.trade.parameters[0].items[13].item_value);
 			doc.text(120, 202, 'Number of Resorts:'+profile_sectors.trade.parameters[0].items[14].item_value);
 			doc.text(120, 206, 'Others:'+profile_sectors.trade.parameters[0].items[14].item_value);
-			doc.output('dataurlnewwindow');
-			// doc.save('p.pdf');
+			var blob = doc.output('blob');
+			window.open(URL.createObjectURL(blob));
 			
 		};
 		

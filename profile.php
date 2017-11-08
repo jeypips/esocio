@@ -68,7 +68,7 @@
                                 <span class="clearfix"></span>
                             </div>
 							<div class="navbar-left app-search pull-left hidden-xs">
-			                     <h5 class="portlet-title" style="color:white;">Profile</h5>
+			                     <h5 class="portlet-title" style="color:white;">E-Socio Economic Profiling in La Union</h5>
 			                </div>
                             <ul class="nav navbar-nav navbar-right pull-right" fetch-notifications>
                                 <li class="dropdown hidden-xs" ng-show="accountProfile.groups == 'admin'">
@@ -155,9 +155,18 @@
 					<div id="x_content" class="x_content"></div>
 					<div ng-show="views.menu">
 							<div class="col-lg-3">
+							<div class="panel panel-success panel-border">
+								<div class="panel-heading">
+								</div>
 									<ul class="list-group contacts-list">
+									<li class="list-group-item">
+										<h4 class="text text-inverse text-center active"><b>Menu</b></h4>
+									</li>
 									<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile',profile)">
-										<a href="javascript:;"><h4 class="text text-inverse text-center active"><b><i class="glyphicon glyphicon-home pull-left"></i>{{profile.municipality.municipality}}</b></h4></a>
+										<a href="javascript:;">
+											<span class="text text-inverse">Basic Information</span>
+											<i class="icon icon-pin online"></i>
+										</a>
 									</li>
 									<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname,profile)">
 										<a href="javascript:;">
@@ -168,6 +177,7 @@
 									</li>
 									</ul>
 								</div>
+							</div>
 						</div>
 					</div>
 				</div>
