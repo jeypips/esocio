@@ -1,6 +1,7 @@
-<div class="panel panel-border panel-primary col-lg-9">
+<div class="col-lg-9">
+<div class="panel panel-border panel-primary">
 <div class="panel-heading">
-<h4><div class="row">
+<div class="row">
 	<div class="col-sm-12">
 		<ol class="breadcrumb" style="margin-left: 20px;">
 			<li>
@@ -9,11 +10,10 @@
 			<li>
 				<span class="text-custom"> Employment and Development Finance Sector</span>
 			</li>
+			<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
 		</ol>
 	</div>
 </div>
-<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
-</h4>
 </div>
 <hr>
 
@@ -93,7 +93,7 @@
 			</div>
 			<hr>
 			<h5>{{profile.sectors.employment.parameters[1].description}}</h5>
-				<div class="row">
+			<div class="row">
 				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
 					<label class="label-control">{{profile.sectors.employment.parameters[1].items[0].description}}</label>
 					<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.employment.parameters[1].items[0].item_value">
@@ -110,12 +110,14 @@
 					<!-- <span class="help-block" ng-show="formHolder.employment.income_generated.$touched && formHolder.employment.income_generated.$invalid">Income Generated (PhP.) is required</span> -->
 				</div>
 			</div>
+			<hr>
+			<div class="row">
+				<button class="btn btn-googleplus waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+				<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'employment')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+			</div>
 		</div>
 	</div>
 	</form>
-		<div class="form-group text-left m-b-0">
-			<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'employment')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
-		</div>
 	</div>
+</div>
 </div>

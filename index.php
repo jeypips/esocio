@@ -67,14 +67,7 @@
                                 <span class="clearfix"></span>
                             </div>
 							<div class="navbar-left app-search pull-left hidden-xs">
-							<ol class="breadcrumb" style="margin-left: 20px;">
-							<li>
 			                     <h5 class="portlet-title" style="color:white;">E-Socio Economic Profiling in La Union</h5>
-							</li>
-							<li>
-			                     <h5 class="portlet-title" style="color:white;">E-Socio Economic Profiling in La Union</h5>
-							</li>
-							</ol>
 			                </div>
 			                     
 			            

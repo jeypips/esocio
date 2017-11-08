@@ -1,6 +1,7 @@
-<div class="panel panel-border panel-primary col-lg-9">
+<div class="col-lg-9">
+<div class="panel panel-border panel-primary">
 <div class="panel-heading">
-<h4><div class="row">
+<div class="row">
 	<div class="col-sm-12">
 		<ol class="breadcrumb" style="margin-left: 20px;">
 			<li>
@@ -9,18 +10,20 @@
 			<li>
 				<span class="text-custom">{{profile.sectors.infra.description}}</span>
 			</li>
+			<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
 		</ol>
 	</div>
 </div>
-<button class="btn btn-linkedin pull-right waves-effect waves-light" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
-</h4>
 </div>
 <hr>
 
 <div class="panel-body">
 
 	<form name="formHolder.infra" id="formHolder.infra">
-
+		<div class="row">
+			<button class="btn btn-googleplus waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'infra')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+		</div>
 		<div class="panel panel-border panel-inverse card-box">
 		<div class="panel-heading">
 		<h5>{{profile.sectors.infra.parameters[0].description}}</h5>
@@ -355,12 +358,14 @@
 					<input type="text" class="form-control" ng-model="profile.sectors.infra.parameters[1].items[7].group_items[5].item_group_value" ng-disabled="controls.ok.btn">
 				</div>
 			</div>
+			<hr>
+			<div class="row">
+				<button class="btn btn-googleplus waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+				<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'infra')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+			</div>
 		</div>
 	</div>
 	</form>
-		<div class="form-group text-left m-b-0">
-			<button class="btn btn-white waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'infra')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
-		</div>
 	</div>
+</div>
 </div>
