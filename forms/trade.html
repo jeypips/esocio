@@ -16,122 +16,121 @@
 </div>
 </div>
 <hr>
-	<div class="panel-body">
 
-		<form name="formHolder.trade" id="formHolder.trade">
+<div class="panel-body">
 
-			<div class="card-box col-lg-12">
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.date_pf.$touched && formHolder.trade.date_pf.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[0].description}}</label>
-						<input type="date" class="form-control" name="date_pf" ng-model="profile.sectors.trade.parameters[0].items[0].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.date_pf.$touched && formHolder.trade.date_pf.$invalid">Date of Parochial Fiesta is required</span>
-					</div>
-					<div class="col-lg-8 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.patron.$touched && formHolder.trade.patron.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[2].description}}</label>
-						<input type="text" class="form-control" name="patron" ng-model="profile.sectors.trade.parameters[0].items[2].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.patron.$touched && formHolder.trade.patron.$invalid">Name of Patron is required</span>
-					</div>
+	<form name="formHolder.trade" id="formHolder.trade">
+
+		<div class="card-box col-lg-12">
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.date_pf.$touched && formHolder.trade.date_pf.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[0].description}}</label>
+					<input type="date" class="form-control" name="date_pf" ng-model="profile.sectors.trade.parameters[0].items[0].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.date_pf.$touched && formHolder.trade.date_pf.$invalid">Date of Parochial Fiesta is required</span>
 				</div>
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.town_fiesta.$touched && formHolder.trade.town_fiesta.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[1].description}}</label>
-						<input type="date" class="form-control" name="town_fiesta" ng-model="profile.sectors.trade.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.town_fiesta.$touched && formHolder.trade.town_fiesta.$invalid">Date of Town Fiesta is required</span>
-					</div>
-					<div class="col-lg-8 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.market_days.$touched && formHolder.trade.market_days.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[3].description}}</label>
-						<input type="text" class="form-control" name="market_days" ng-model="profile.sectors.trade.parameters[0].items[3].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.market_days.$touched && formHolder.trade.market_days.$invalid">Market Days is required</span>
-					</div>
+				<div class="col-lg-8 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.patron.$touched && formHolder.trade.patron.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[2].description}}</label>
+					<input type="text" class="form-control" name="patron" ng-model="profile.sectors.trade.parameters[0].items[2].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.patron.$touched && formHolder.trade.patron.$invalid">Name of Patron is required</span>
 				</div>
 			</div>
-			<h5>*Trade and Industry</h5>
-			<div class="card-box col-lg-12">
-				<h5>{{profile.sectors.trade.parameters[0].items[4].description}}</h5>
-				<div class="row">
-						<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.trading.$touched && formHolder.trade.trading.$invalid}">
-								<label class="label-control">{{profile.sectors.trade.parameters[0].items[4].group_items[0].description}}</label>
-							<input type="text" class="form-control" name="trading" ng-model="profile.sectors.trade.parameters[0].items[4].group_items[0].item_group_value" ng-disabled="controls.ok.btn" required>
-							<span class="help-block" ng-show="formHolder.trade.trading.$touched && formHolder.trade.trading.$invalid">Trading is required</span>
-						</div>
-						<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.services.$touched && formHolder.trade.services.$invalid}">
-								<label class="label-control">{{profile.sectors.trade.parameters[0].items[4].group_items[1].description}}</label>
-							<input type="text" class="form-control" name="services" ng-model="profile.sectors.trade.parameters[0].items[4].group_items[1].item_group_value" ng-disabled="controls.ok.btn" required>
-							<span class="help-block" ng-show="formHolder.trade.services.$touched && formHolder.trade.services.$invalid">Services is required</span>
-						</div>
-						<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.manufacturing.$touched && formHolder.trade.manufacturing.$invalid}">
-								<label class="label-control">{{profile.sectors.trade.parameters[0].items[4].group_items[2].description}}</label>
-							<input type="text" class="form-control" name="manufacturing" ng-model="profile.sectors.trade.parameters[0].items[4].group_items[2].item_group_value" ng-disabled="controls.ok.btn" required>
-							<span class="help-block" ng-show="formHolder.trade.manufacturing.$touched && formHolder.trade.manufacturing.$invalid">Manufacturing is required</span>
-						</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.town_fiesta.$touched && formHolder.trade.town_fiesta.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[1].description}}</label>
+					<input type="date" class="form-control" name="town_fiesta" ng-model="profile.sectors.trade.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.town_fiesta.$touched && formHolder.trade.town_fiesta.$invalid">Date of Town Fiesta is required</span>
 				</div>
-				<hr>
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.beauty_parlor.$touched && formHolder.trade.beauty_parlor.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[5].description}}</label>
-						<input type="text" class="form-control" name="beauty_parlor" ng-model="profile.sectors.trade.parameters[0].items[5].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.beauty_parlor.$touched && formHolder.trade.beauty_parlor.$invalid">Number of Beauty Parlor is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.barber_shops.$touched && formHolder.trade.barber_shops.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[6].description}}</label>
-						<input type="text" class="form-control" name="barber_shops" ng-model="profile.sectors.trade.parameters[0].items[6].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.barber_shops.$touched && formHolder.trade.barber_shops.$invalid">Number of Barber Shops is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.ps_vs.$touched && formHolder.trade.ps_vs.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[7].description}}</label>
-						<input type="text" class="form-control" name="ps_vs" ng-model="profile.sectors.trade.parameters[0].items[7].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.ps_vs.$touched && formHolder.trade.ps_vs.$invalid">Number of Photo Studios/Video Shops is required</span>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.tailoring.$touched && formHolder.trade.tailoring.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[8].description}}</label>
-						<input type="text" class="form-control" name="tailoring" ng-model="profile.sectors.trade.parameters[0].items[8].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.tailoring.$touched && formHolder.trade.tailoring.$invalid">Number of Tailoring/Dress Shop is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.restaurants.$touched && formHolder.trade.restaurants.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[9].description}}</label>
-						<input type="text" class="form-control" name="restaurants" ng-model="profile.sectors.trade.parameters[0].items[9].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.restaurants.$touched && formHolder.trade.restaurants.$invalid">Number of Restaurants is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.eateries.$touched && formHolder.trade.eateries.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[10].description}}</label>
-						<input type="text" class="form-control" name="eateries" ng-model="profile.sectors.trade.parameters[0].items[10].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.eateries.$touched && formHolder.trade.eateries.$invalid">Number of Eateries/Canteen is required</span>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.funeral_parlor.$touched && formHolder.trade.funeral_parlor.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[11].description}}</label>
-						<input type="text" class="form-control" name="funeral_parlor" ng-model="profile.sectors.trade.parameters[0].items[11].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.funeral_parlor.$touched && formHolder.trade.funeral_parlor.$invalid">Number of Funeral Parlor is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.gasoline_stations.$touched && formHolder.trade.gasoline_stations.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[12].description}}</label>
-						<input type="text" class="form-control" name="gasoline_stations" ng-model="profile.sectors.trade.parameters[0].items[12].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.gasoline_stations.$touched && formHolder.trade.gasoline_stations.$invalid">Number of Gasoline Stations is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.water_stations.$touched && formHolder.trade.water_stations.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[13].description}}</label>
-						<input type="text" class="form-control" name="water_stations" ng-model="profile.sectors.trade.parameters[0].items[13].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.water_stations.$touched && formHolder.trade.water_stations.$invalid">Number of Water Stations is required</span>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.resorts.$touched && formHolder.trade.resorts.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[14].description}}</label>
-						<input type="text" class="form-control" name="resorts" ng-model="profile.sectors.trade.parameters[0].items[14].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.resorts.$touched && formHolder.trade.resorts.$invalid">Number of Resorts is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.others.$touched && formHolder.trade.others.$invalid}">
-						<label class="label-control">{{profile.sectors.trade.parameters[0].items[15].description}}</label>
-						<input type="text" class="form-control" name="others" ng-model="profile.sectors.trade.parameters[0].items[15].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.trade.others.$touched && formHolder.trade.others.$invalid">Others is required</span>
-					</div>
+				<div class="col-lg-8 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.market_days.$touched && formHolder.trade.market_days.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[3].description}}</label>
+					<input type="text" class="form-control" name="market_days" ng-model="profile.sectors.trade.parameters[0].items[3].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.market_days.$touched && formHolder.trade.market_days.$invalid">Market Days is required</span>
 				</div>
 			</div>
-
+		</div>
+		<h5>*Trade and Industry</h5>
+		<div class="card-box col-lg-12">
+			<h5>{{profile.sectors.trade.parameters[0].items[4].description}}</h5>
+			<div class="row">
+					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.trading.$touched && formHolder.trade.trading.$invalid}">
+							<label class="label-control">{{profile.sectors.trade.parameters[0].items[4].group_items[0].description}}</label>
+						<input type="text" class="form-control" name="trading" ng-model="profile.sectors.trade.parameters[0].items[4].group_items[0].item_group_value" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.trade.trading.$touched && formHolder.trade.trading.$invalid">Trading is required</span>
+					</div>
+					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.services.$touched && formHolder.trade.services.$invalid}">
+							<label class="label-control">{{profile.sectors.trade.parameters[0].items[4].group_items[1].description}}</label>
+						<input type="text" class="form-control" name="services" ng-model="profile.sectors.trade.parameters[0].items[4].group_items[1].item_group_value" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.trade.services.$touched && formHolder.trade.services.$invalid">Services is required</span>
+					</div>
+					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.manufacturing.$touched && formHolder.trade.manufacturing.$invalid}">
+							<label class="label-control">{{profile.sectors.trade.parameters[0].items[4].group_items[2].description}}</label>
+						<input type="text" class="form-control" name="manufacturing" ng-model="profile.sectors.trade.parameters[0].items[4].group_items[2].item_group_value" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.trade.manufacturing.$touched && formHolder.trade.manufacturing.$invalid">Manufacturing is required</span>
+					</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.beauty_parlor.$touched && formHolder.trade.beauty_parlor.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[5].description}}</label>
+					<input type="text" class="form-control" name="beauty_parlor" ng-model="profile.sectors.trade.parameters[0].items[5].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.beauty_parlor.$touched && formHolder.trade.beauty_parlor.$invalid">Number of Beauty Parlor is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.barber_shops.$touched && formHolder.trade.barber_shops.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[6].description}}</label>
+					<input type="text" class="form-control" name="barber_shops" ng-model="profile.sectors.trade.parameters[0].items[6].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.barber_shops.$touched && formHolder.trade.barber_shops.$invalid">Number of Barber Shops is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.ps_vs.$touched && formHolder.trade.ps_vs.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[7].description}}</label>
+					<input type="text" class="form-control" name="ps_vs" ng-model="profile.sectors.trade.parameters[0].items[7].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.ps_vs.$touched && formHolder.trade.ps_vs.$invalid">Number of Photo Studios/Video Shops is required</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.tailoring.$touched && formHolder.trade.tailoring.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[8].description}}</label>
+					<input type="text" class="form-control" name="tailoring" ng-model="profile.sectors.trade.parameters[0].items[8].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.tailoring.$touched && formHolder.trade.tailoring.$invalid">Number of Tailoring/Dress Shop is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.restaurants.$touched && formHolder.trade.restaurants.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[9].description}}</label>
+					<input type="text" class="form-control" name="restaurants" ng-model="profile.sectors.trade.parameters[0].items[9].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.restaurants.$touched && formHolder.trade.restaurants.$invalid">Number of Restaurants is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.eateries.$touched && formHolder.trade.eateries.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[10].description}}</label>
+					<input type="text" class="form-control" name="eateries" ng-model="profile.sectors.trade.parameters[0].items[10].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.eateries.$touched && formHolder.trade.eateries.$invalid">Number of Eateries/Canteen is required</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.funeral_parlor.$touched && formHolder.trade.funeral_parlor.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[11].description}}</label>
+					<input type="text" class="form-control" name="funeral_parlor" ng-model="profile.sectors.trade.parameters[0].items[11].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.funeral_parlor.$touched && formHolder.trade.funeral_parlor.$invalid">Number of Funeral Parlor is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.gasoline_stations.$touched && formHolder.trade.gasoline_stations.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[12].description}}</label>
+					<input type="text" class="form-control" name="gasoline_stations" ng-model="profile.sectors.trade.parameters[0].items[12].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.gasoline_stations.$touched && formHolder.trade.gasoline_stations.$invalid">Number of Gasoline Stations is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.water_stations.$touched && formHolder.trade.water_stations.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[13].description}}</label>
+					<input type="text" class="form-control" name="water_stations" ng-model="profile.sectors.trade.parameters[0].items[13].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.water_stations.$touched && formHolder.trade.water_stations.$invalid">Number of Water Stations is required</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.resorts.$touched && formHolder.trade.resorts.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[14].description}}</label>
+					<input type="text" class="form-control" name="resorts" ng-model="profile.sectors.trade.parameters[0].items[14].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.resorts.$touched && formHolder.trade.resorts.$invalid">Number of Resorts is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.trade.others.$touched && formHolder.trade.others.$invalid}">
+					<label class="label-control">{{profile.sectors.trade.parameters[0].items[15].description}}</label>
+					<input type="text" class="form-control" name="others" ng-model="profile.sectors.trade.parameters[0].items[15].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.trade.others.$touched && formHolder.trade.others.$invalid">Others is required</span>
+				</div>
+			</div>
 			<hr>
 			<div class="row">
 				<button class="btn btn-googleplus waves-light waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
@@ -139,7 +138,6 @@
 			</div>
 		</div>
 	</form>
-
 	</div>
 </div>
 </div>

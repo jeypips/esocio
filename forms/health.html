@@ -16,71 +16,71 @@
 </div>
 </div>
 <hr>
-	<div class="panel-body">
 
-		<form name="formHolder.health" id="formHolder.health">
+<div class="panel-body">
 
-			<div class="card-box col-lg-12">
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.crude_birthrate.$touched && formHolder.health.crude_birthrate.$invalid}">
-						<label class="label-control">{{profile.sectors.health.parameters[0].items[0].description}}</label>
-						<input type="text" class="form-control" name="crude_birthrate" ng-model="profile.sectors.health.parameters[0].items[0].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.health.crude_birthrate.$touched && formHolder.health.crude_birthrate.$invalid">Crude Birth Rate is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.crude_deathrate.$touched && formHolder.health.crude_deathrate.$invalid}">
-						<label class="label-control">{{profile.sectors.health.parameters[0].items[1].description}}</label>
-						<input type="text" class="form-control" name="crude_deathrate" ng-model="profile.sectors.health.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.health.crude_deathrate.$touched && formHolder.health.crude_deathrate.$invalid">Crude Death Rate is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.maternal_mortalityrate.$touched && formHolder.health.maternal_mortalityrate.$invalid}">
-						<label class="label-control">{{profile.sectors.health.parameters[0].items[2].description}}</label>
-						<input type="text" class="form-control" name="maternal_mortalityrate" ng-model="profile.sectors.health.parameters[0].items[2].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.health.maternal_mortalityrate.$touched && formHolder.health.maternal_mortalityrate.$invalid">Maternal Mortality Rate is required</span>
-					</div>
+	<form name="formHolder.health" id="formHolder.health">
+
+		<div class="card-box col-lg-12">
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.crude_birthrate.$touched && formHolder.health.crude_birthrate.$invalid}">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[0].description}}</label>
+					<input type="text" class="form-control" name="crude_birthrate" ng-model="profile.sectors.health.parameters[0].items[0].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.health.crude_birthrate.$touched && formHolder.health.crude_birthrate.$invalid">Crude Birth Rate is required</span>
 				</div>
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.infant_mortalityrate.$touched && formHolder.health.infant_mortalityrate.$invalid}">
-						<label class="label-control">{{profile.sectors.health.parameters[0].items[3].description}}</label>
-						<input type="text" class="form-control" name="infant_mortalityrate" ng-model="profile.sectors.health.parameters[0].items[3].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.health.infant_mortalityrate.$touched && formHolder.health.infant_mortalityrate.$invalid">Infant Mortality Rate is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.morbidityrate.$touched && formHolder.health.morbidityrate.$invalid}">
-						<label class="label-control">{{profile.sectors.health.parameters[0].items[4].description}}</label>
-						<input type="text" class="form-control" name="morbidityrate" ng-model="profile.sectors.health.parameters[0].items[4].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.health.morbidityrate.$touched && formHolder.health.morbidityrate.$invalid">Morbidity Rate is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.mortalityrate.$touched && formHolder.health.mortalityrate.$invalid}">
-						<label class="label-control">{{profile.sectors.health.parameters[0].items[5].description}}</label>
-						<input type="text" class="form-control" name="mortalityrate" ng-model="profile.sectors.health.parameters[0].items[5].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.health.mortalityrate.$touched && formHolder.health.mortalityrate.$invalid">Mortality Rate is required</span>
-					</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.crude_deathrate.$touched && formHolder.health.crude_deathrate.$invalid}">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[1].description}}</label>
+					<input type="text" class="form-control" name="crude_deathrate" ng-model="profile.sectors.health.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.health.crude_deathrate.$touched && formHolder.health.crude_deathrate.$invalid">Crude Death Rate is required</span>
 				</div>
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.contra_pr.$touched && formHolder.health.contra_pr.$invalid}">
-						<label class="label-control">{{profile.sectors.health.parameters[0].items[6].description}}</label>
-						<input type="text" class="form-control" name="contra_pr" ng-model="profile.sectors.health.parameters[0].items[6].item_value"" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.health.contra_pr.$touched && formHolder.health.contra_pr.$invalid">Contraceptive Prevalence Rate is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-						<label class="label-control">{{profile.sectors.health.parameters[0].items[7].description}}</label>
-						<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[7].item_value" ng-disabled="controls.ok.btn">
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group">
-						<label class="label-control">{{profile.sectors.health.parameters[0].items[8].description}}</label>
-						<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[8].item_value" ng-disabled="controls.ok.btn">
-					</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.maternal_mortalityrate.$touched && formHolder.health.maternal_mortalityrate.$invalid}">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[2].description}}</label>
+					<input type="text" class="form-control" name="maternal_mortalityrate" ng-model="profile.sectors.health.parameters[0].items[2].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.health.maternal_mortalityrate.$touched && formHolder.health.maternal_mortalityrate.$invalid">Maternal Mortality Rate is required</span>
 				</div>
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.hospital.$touched && formHolder.health.hospital.$invalid}">
-						<label class="label-control">{{profile.sectors.health.parameters[0].items[9].description}}</label>
-						<input type="text" class="form-control" name="hospital" ng-model="profile.sectors.health.parameters[0].items[9].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.health.hospital.$touched && formHolder.health.hospital.$invalid">Number of Hospital is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.contra_pr.$touched && formHolder.health.clinic.$invalid}">
-						<label class="label-control">{{profile.sectors.health.parameters[0].items[10].description}}</label>
-						<input type="text" class="form-control" name="clinic" ng-model="profile.sectors.health.parameters[0].items[10].item_value" ng-disabled="controls.ok.btn"required>
-						<span class="help-block" ng-show="formHolder.health.clinic.$touched && formHolder.health.clinic.$invalid">Number of Clinics is required</span>
-					</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.infant_mortalityrate.$touched && formHolder.health.infant_mortalityrate.$invalid}">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[3].description}}</label>
+					<input type="text" class="form-control" name="infant_mortalityrate" ng-model="profile.sectors.health.parameters[0].items[3].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.health.infant_mortalityrate.$touched && formHolder.health.infant_mortalityrate.$invalid">Infant Mortality Rate is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.morbidityrate.$touched && formHolder.health.morbidityrate.$invalid}">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[4].description}}</label>
+					<input type="text" class="form-control" name="morbidityrate" ng-model="profile.sectors.health.parameters[0].items[4].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.health.morbidityrate.$touched && formHolder.health.morbidityrate.$invalid">Morbidity Rate is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.mortalityrate.$touched && formHolder.health.mortalityrate.$invalid}">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[5].description}}</label>
+					<input type="text" class="form-control" name="mortalityrate" ng-model="profile.sectors.health.parameters[0].items[5].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.health.mortalityrate.$touched && formHolder.health.mortalityrate.$invalid">Mortality Rate is required</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.contra_pr.$touched && formHolder.health.contra_pr.$invalid}">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[6].description}}</label>
+					<input type="text" class="form-control" name="contra_pr" ng-model="profile.sectors.health.parameters[0].items[6].item_value"" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.health.contra_pr.$touched && formHolder.health.contra_pr.$invalid">Contraceptive Prevalence Rate is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[7].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[7].item_value" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[8].description}}</label>
+					<input type="text" class="form-control" ng-model="profile.sectors.health.parameters[0].items[8].item_value" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.hospital.$touched && formHolder.health.hospital.$invalid}">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[9].description}}</label>
+					<input type="text" class="form-control" name="hospital" ng-model="profile.sectors.health.parameters[0].items[9].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.health.hospital.$touched && formHolder.health.hospital.$invalid">Number of Hospital is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.health.contra_pr.$touched && formHolder.health.clinic.$invalid}">
+					<label class="label-control">{{profile.sectors.health.parameters[0].items[10].description}}</label>
+					<input type="text" class="form-control" name="clinic" ng-model="profile.sectors.health.parameters[0].items[10].item_value" ng-disabled="controls.ok.btn"required>
+					<span class="help-block" ng-show="formHolder.health.clinic.$touched && formHolder.health.clinic.$invalid">Number of Clinics is required</span>
 				</div>
 			</div>
 			<hr>

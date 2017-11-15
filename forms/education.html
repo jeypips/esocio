@@ -16,52 +16,54 @@
 </div>
 </div>
 <hr>
-	<div class="panel-body">
-		<form name="formHolder.education" id="formHolder.education">
-		<div class="card-box">
-			<h5>{{profile.sectors.education.parameters[0].items[0].description}}</h5>
-			<div class="row">
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.college.$touched && formHolder.education.college.$invalid}">
-					<label class="label-control">{{profile.sectors.education.parameters[0].items[0].group_items[0].description}}</label>
-					<input type="text" class="form-control" name="college" ng-model="profile.sectors.education.parameters[0].items[0].group_items[0].item_group_value" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.education.college.$touched && formHolder.education.college.$invalid">College is required</span>
-				</div>
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.university.$touched && formHolder.education.university.$invalid}">
-					<label class="label-control">{{profile.sectors.education.parameters[0].items[0].group_items[1].description}}</label>
-					<input type="text" class="form-control" name="university" ng-model="profile.sectors.education.parameters[0].items[0].group_items[1].item_group_value" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.education.university.$touched && formHolder.education.university.$invalid">University Name is required</span>
-				</div>
+
+<div class="panel-body">
+
+	<form name="formHolder.education" id="formHolder.education">
+	<div class="card-box">
+		<h5>{{profile.sectors.education.parameters[0].items[0].description}}</h5>
+		<div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.college.$touched && formHolder.education.college.$invalid}">
+				<label class="label-control">{{profile.sectors.education.parameters[0].items[0].group_items[0].description}}</label>
+				<input type="text" class="form-control" name="college" ng-model="profile.sectors.education.parameters[0].items[0].group_items[0].item_group_value" ng-disabled="controls.ok.btn" required>
+				<span class="help-block" ng-show="formHolder.education.college.$touched && formHolder.education.college.$invalid">College is required</span>
+			</div>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.university.$touched && formHolder.education.university.$invalid}">
+				<label class="label-control">{{profile.sectors.education.parameters[0].items[0].group_items[1].description}}</label>
+				<input type="text" class="form-control" name="university" ng-model="profile.sectors.education.parameters[0].items[0].group_items[1].item_group_value" ng-disabled="controls.ok.btn" required>
+				<span class="help-block" ng-show="formHolder.education.university.$touched && formHolder.education.university.$invalid">University Name is required</span>
 			</div>
 		</div>
-		
-		<div class="card-box">
-			<h5>{{profile.sectors.education.parameters[0].items[1].description}}</h5>
-			<div class="row">
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.ss_public.$touched && formHolder.education.ss_public.$invalid}">
-					<label class="label-control">{{profile.sectors.education.parameters[0].items[1].group_items[0].description}}</label>
-					<input type="text" class="form-control" name="ss_public" ng-model="profile.sectors.education.parameters[0].items[1].group_items[0].item_group_value" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.education.ss_public.$touched && formHolder.education.ss_public.$invalid">Number of Secondary Schools - Public is required</span>
-				</div>
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.ss_private.$touched && formHolder.education.ss_private.$invalid}">
-					<label class="label-control">{{profile.sectors.education.parameters[0].items[1].group_items[1].description}}</label>
-					<input type="text" class="form-control" name="ss_private" ng-model="profile.sectors.education.parameters[0].items[1].group_items[1].item_group_value" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.education.ss_private.$touched && formHolder.education.ss_private.$invalid">Number of Secondary Schools - Private is required</span>
-				</div>
+	</div>
+	
+	<div class="card-box">
+		<h5>{{profile.sectors.education.parameters[0].items[1].description}}</h5>
+		<div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.ss_public.$touched && formHolder.education.ss_public.$invalid}">
+				<label class="label-control">{{profile.sectors.education.parameters[0].items[1].group_items[0].description}}</label>
+				<input type="text" class="form-control" name="ss_public" ng-model="profile.sectors.education.parameters[0].items[1].group_items[0].item_group_value" ng-disabled="controls.ok.btn" required>
+				<span class="help-block" ng-show="formHolder.education.ss_public.$touched && formHolder.education.ss_public.$invalid">Number of Secondary Schools - Public is required</span>
+			</div>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.ss_private.$touched && formHolder.education.ss_private.$invalid}">
+				<label class="label-control">{{profile.sectors.education.parameters[0].items[1].group_items[1].description}}</label>
+				<input type="text" class="form-control" name="ss_private" ng-model="profile.sectors.education.parameters[0].items[1].group_items[1].item_group_value" ng-disabled="controls.ok.btn" required>
+				<span class="help-block" ng-show="formHolder.education.ss_private.$touched && formHolder.education.ss_private.$invalid">Number of Secondary Schools - Private is required</span>
 			</div>
 		</div>
-		<div class="card-box">
-			<h5>{{profile.sectors.education.parameters[0].items[2].description}}</h5>
-			<div class="row">
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.es_public.$touched && formHolder.education.es_public.$invalid}">
-					<label class="label-control">{{profile.sectors.education.parameters[0].items[2].group_items[0].description}}</label>
-					<input type="text" class="form-control" name="es_public" ng-model="profile.sectors.education.parameters[0].items[2].group_items[0].item_group_value" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.education.es_public.$touched && formHolder.education.es_public.$invalid">Number of Elementary Schools - Public is required</span>
-				</div>
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.es_private.$touched && formHolder.education.es_private.$invalid}">
-					<label class="label-control">{{profile.sectors.education.parameters[0].items[2].group_items[1].description}}</label>
-					<input type="text" class="form-control" name="es_private" ng-model="profile.sectors.education.parameters[0].items[2].group_items[1].item_group_value" ng-disabled="controls.ok.btn" required>
-					<span class="help-block" ng-show="formHolder.education.es_private.$touched && formHolder.education.es_private.$invalid">Number of Elementary Schools - Private is required</span>
-				</div>
+	</div>
+	
+	<div class="card-box">
+		<h5>{{profile.sectors.education.parameters[0].items[2].description}}</h5>
+		<div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.es_public.$touched && formHolder.education.es_public.$invalid}">
+				<label class="label-control">{{profile.sectors.education.parameters[0].items[2].group_items[0].description}}</label>
+				<input type="text" class="form-control" name="es_public" ng-model="profile.sectors.education.parameters[0].items[2].group_items[0].item_group_value" ng-disabled="controls.ok.btn" required>
+				<span class="help-block" ng-show="formHolder.education.es_public.$touched && formHolder.education.es_public.$invalid">Number of Elementary Schools - Public is required</span>
+			</div>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.education.es_private.$touched && formHolder.education.es_private.$invalid}">
+				<label class="label-control">{{profile.sectors.education.parameters[0].items[2].group_items[1].description}}</label>
+				<input type="text" class="form-control" name="es_private" ng-model="profile.sectors.education.parameters[0].items[2].group_items[1].item_group_value" ng-disabled="controls.ok.btn" required>
+				<span class="help-block" ng-show="formHolder.education.es_private.$touched && formHolder.education.es_private.$invalid">Number of Elementary Schools - Private is required</span>
 			</div>
 		</div>
 		<hr>
@@ -70,6 +72,7 @@
 			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'education')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 		</div>
 	</div>
+	
 	</form>
 	</div>
 </div>
