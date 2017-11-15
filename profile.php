@@ -108,7 +108,7 @@
                                      <ul class="dropdown-menu">
                                         <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.groups}}</b></a></li>
 										<hr>
-                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
+                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5 text-danger"></i> Sign out</a></li>
                                     </ul>
                                 </li>
                             </ul>
