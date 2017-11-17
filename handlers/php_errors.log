@@ -1260,3 +1260,63 @@ Stack trace:
 [15-Nov-2017 00:05:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 31
 [15-Nov-2017 00:05:27 UTC] PHP Stack trace:
 [15-Nov-2017 00:05:27 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:47 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:47 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:47 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:47 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:47 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:53 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:53 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:53 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:53 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:53 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:53 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:56 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:56 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:56 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:56 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:56 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:58 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:58 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:58 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:58 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:58 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:58 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:58 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:58 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:58 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:58 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:58 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:58 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:58 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:58 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:58 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:58 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:58 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:58 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:58 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:58 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:58 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:58 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:58 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:58 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:58 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:59 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:59 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:59 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:59 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:59 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:59 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:59 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:59 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[17-Nov-2017 16:53:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
+[17-Nov-2017 16:53:59 UTC] PHP Stack trace:
+[17-Nov-2017 16:53:59 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0

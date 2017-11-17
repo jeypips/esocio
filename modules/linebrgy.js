@@ -1,10 +1,10 @@
-angular.module('lineChart-module',[]).factory('lineChart',function() {
+angular.module('lineBrgy-module',[]).factory('lineBrgy',function() {
 	
-	function line() {
+	function brgy() {
 		
 		var self = this;
 		
-		self.line = function(consolidated) {
+		self.brgy = function(consolidated) {
 			
 			!function($) {
 			"use strict";
@@ -46,20 +46,20 @@ angular.module('lineChart-module',[]).factory('lineChart',function() {
 							strokeColor : "rgba(93, 156, 236, 1)",
 							pointColor : "rgba(93, 156, 236, 1)",
 							pointStrokeColor : "#fff",
-							data : [consolidated.Pugo['2017'].macro.parameters[1].items[0].item_value,consolidated.Pugo['2017'].macro.parameters[1].items[0].item_value,consolidated.Pugo['2017'].macro.parameters[1].items[0].item_value]
+							data : [consolidated.Pugo['2017'].environmental.parameters[1].items[0].item_value,consolidated.Pugo['2017'].environmental.parameters[1].items[0].item_value,consolidated.Pugo['2017'].environmental.parameters[1].items[0].item_value]
 						},
 						{
 							fillColor : "rgba(95, 190, 170, 0.5)",
 							strokeColor : "rgba(95, 190, 170, 1)",
 							pointColor : "rgba(95, 190, 170, 1)",
 							pointStrokeColor : "#fff",                                 
-							data : [consolidated.Pugo['2017'].macro.parameters[1].items[4].item_value,consolidated.Pugo['2017'].macro.parameters[1].items[4].item_value,consolidated.Pugo['2017'].macro.parameters[1].items[4].item_value]
+							data : [consolidated.Pugo['2017'].environmental.parameters[1].items[4].item_value,consolidated.Pugo['2017'].environmental.parameters[1].items[4].item_value,consolidated.Pugo['2017'].environmental.parameters[1].items[4].item_value]
 						}
 						
 					]
 				};
 				
-				this.respChart($("#lineChart"),'Line',LineChart);
+				this.respChart($("#linebrgy"),'Line',linebrgy);
 			},
 			$.ChartJs = new ChartJs, $.ChartJs.Constructor = ChartJs
 
@@ -75,6 +75,6 @@ angular.module('lineChart-module',[]).factory('lineChart',function() {
 		
 	};
 	
-	return new line();
+	return new brgy();
 	
 });
