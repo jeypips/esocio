@@ -108,7 +108,7 @@
                                      <ul class="dropdown-menu">
                                         <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.groups}}</b></a></li>
 										<hr>
-                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
+                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5 text-danger"></i> Sign out</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -154,28 +154,30 @@
 				<div class="col-lg-12">
 					<div id="x_content" class="x_content"></div>
 					<div ng-show="views.menu">
-						<div class="col-lg-3">
-							<div class="panel panel-border panel-success">
+							<div class="col-lg-3">
+							<div class="panel panel-success panel-border">
 								<div class="panel-heading">
 								</div>
-								<ul class="list-group contacts-list">
-								<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile',profile)">
-									<a href="javascript:;">
-										<span class="text text-inverse">Basic Information</span>
-										<i class="icon icon-pin online"></i>
-									</a>
-									<span class="clearfix"></span>
-								</li>
-								<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname,profile)">
-									<a href="javascript:;">
-										<span class="text text-inverse">{{s.sector_description}}</span>
-										<i class="icon icon-pin online"></i>
-									</a>
-									<span class="clearfix"></span>
-								</li>
-								</ul>
+									<ul class="list-group contacts-list">
+									<li class="list-group-item">
+										<h4 class="text text-inverse text-center active"><b>Menu</b></h4>
+									</li>
+									<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList.profile}" ng-click="form.activateForm(this,'profile',profile)">
+										<a href="javascript:;">
+											<span class="text text-inverse">Basic Information</span>
+											<i class="icon icon-pin online"></i>
+										</a>
+									</li>
+									<li class="list-group-item" style="cursor: pointer;" ng-class="{'active': subMenuList[s.sector_shortname]}" ng-repeat="s in sectors" ng-click="form.activateForm(this,s.sector_shortname,profile)">
+										<a href="javascript:;">
+											<span class="text text-inverse">{{s.sector_description}}</span>
+											<i class="icon icon-pin online"></i>
+										</a>
+										<span class="clearfix"></span>
+									</li>
+									</ul>
+								</div>
 							</div>
-						</div>
 						</div>
 					</div>
 				</div>

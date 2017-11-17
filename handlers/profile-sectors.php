@@ -18,6 +18,13 @@ $profile_sectors = [];
 
 
 $profile = $con->getData("SELECT *, (SELECT municipal.municipality FROM municipal WHERE municipal.id = profile.municipality) municipality_name FROM profile WHERE profile_id = $profile_id");
+
+foreach ($profile[0] as $i => $p) {
+	
+	if ($p == null) $profile[0][$i] = ""; // pdf equals null
+	
+}
+
 $profile_sectors['profile'] = $profile[0];
 
 foreach ($sectors as $sector) {

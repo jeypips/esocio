@@ -22,9 +22,9 @@
 			  <td>{{profile.municipality.municipality}}</td>
 			  <td>{{profile.profile_year}}</td>
 			  <td>
-			  <button ng-show="accountProfile.groups == 'user'" class="btn btn-sm btn-white" style="margin-right: 5px;" ng-click="form.activateForm(this,'profile',profile)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
-			  <button class="btn btn-sm btn-white" style="margin-right: 5px;" ng-click="form.print(this,profile);"><i class="glyphicon glyphicon-print"></i></button>			  
-			  <button ng-show="accountProfile.groups == 'user'" class="btn btn-sm btn-white" ng-click="form.delete(this,profile)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
+			  <button ng-show="accountProfile.groups == 'user'" class="btn btn-success waves-light waves-effect" style="margin-right: 5px;" ng-click="form.activateForm(this,'profile',profile)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
+			  <button class="btn btn-primary waves-light waves-effect" style="margin-right: 5px;" ng-click="form.print(this,profile);"><i class="glyphicon glyphicon-print"></i></button>			  
+			  <button ng-show="accountProfile.groups == 'user'" class="btn btn-googleplus waves-light waves-effect ng-click="form.delete(this,profile)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
 			  </td>
 			</tr>
 		  </tbody>
