@@ -1,4 +1,4 @@
-angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-module', 'lineChart-module', 'landcharts-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,flot,lineChart,landcharts) {
+angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl', 'lineChart-module','lineBrgy-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,lineChart,lineBrgy) {
 
 	
 	function form() {
@@ -77,7 +77,7 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 				
 					console.log(scope.sectors);					
 					// pie chart
-					flot.pie(scope.sectors);
+					// flot.pie(scope.sectors);
 				
 				} else {
 					
@@ -85,7 +85,8 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 
 					// pie chart
 					lineChart.line(scope.consolidated);
-					landcharts.pie(scope.consolidated);
+					lineChart.brgy(scope.consolidated);
+					// landcharts.pie(scope.consolidated);
 
 				}
 				
