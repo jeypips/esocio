@@ -1,5 +1,4 @@
-
-angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-module', 'flots-module', 'landcharts-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,flot,flots,landcharts) {
+angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-module', 'lineChart-module', 'landcharts-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,growl,flot,lineChart,landcharts) {
 
 	
 	function form() {
@@ -85,16 +84,13 @@ angular.module('dashboard-module',['bootstrap-modal','bootstrap-growl','flot-mod
 					console.log(scope.consolidated);				
 
 					// pie chart
-					flots.pie(scope.consolidated);
+					lineChart.line(scope.consolidated);
 					landcharts.pie(scope.consolidated);
 
 				}
 				
 			},5000);
 			
-			
-		
-			  
 			$timeout(function() {
 				
 				var form = scope.accountProfile.groups;

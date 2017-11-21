@@ -110,7 +110,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="#" class="not-active">Signed in as <b>{{accountProfile.groups}}</b></a></li>
 										<hr>
-                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Sign out</a></li>
+                                        <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5 text-danger"></i> Sign out</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -214,6 +214,10 @@
         <script src="assets/plugins/flot-chart/jquery.flot.orderBars.min.js"></script>
         <script src="assets/plugins/flot-chart/jquery.flot.crosshair.js"></script>	
 		
+		<!-- Chart JS -->
+        <script src="assets/plugins/Chart.js/Chart.min.js"></script>
+        <script src="assets/pages/chartjs.init.js"></script>
+		
 		<!-- Angular  -->
 		<script src="angular/angular.min.js"></script>
 		<script src="modules/fullscreen.js"></script>
@@ -223,10 +227,8 @@
 		<script src="modules/account.js"></script>
 		<script src="modules/notifications.js"></script>
 		<script src="modules/charts.js"></script>
-		<script src="modules/admincharts.js"></script>
-
+		<script src="modules/linegraph.js"></script>
 		<script src="modules/landcharts.js"></script>
-
 		<script src="modules/dashboard.js"></script>
 		<script src="controllers/dashboard.js"></script>
     </body>
