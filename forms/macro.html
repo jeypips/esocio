@@ -16,89 +16,103 @@
 </div>
 </div>
 <hr>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.climate.$touched && formHolder.macro.climate.$invalid}">
 
-					<label class="label-control">{{profile.sectors.macro.parameters[0].items[2].description}}</label>
-					<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="climate" ng-model="profile.sectors.macro.parameters[0].items[2].item_value" required>
-					<span class="help-block" ng-show="formHolder.macro.climate.$touched && formHolder.macro.climate.$invalid">Climate is required</span>
-				</div>
-				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.barangay.$touched && formHolder.macro.barangay.$invalid}">
-					<label class="label-control">{{profile.sectors.macro.parameters[0].items[3].description}}</label>
-					<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="barangay" ng-model="profile.sectors.macro.parameters[0].items[3].item_value" required>
-					<span class="help-block" ng-show="formHolder.macro.barangay.$touched && formHolder.macro.barangay.$invalid">No. of Barangays is required</span>
-				</div>
-			</div>
-		</div>
-		</div>
-		
-		<br>
-		
-		<div class="panel panel-border panel-inverse card-box">
-		<div class="panel-heading">
-
-		<h5>{{profile.sectors.macro.parameters[1].description}}</h5>
-		<hr>
+<div class="panel-body">
+	<form name="formHolder.macro" id="formHolder.macro">
+	<div class="panel panel-border panel-inverse card-box">
+	<div class="panel-heading">
+	<h5>{{profile.sectors.macro.parameters[0].description}}</h5>
+	<hr>
 		<div class="row">
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.population.$touched && formHolder.macro.population.$invalid}">
-				<label class="label-control">{{profile.sectors.macro.parameters[1].items[0].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="population" ng-model="profile.sectors.macro.parameters[1].items[0].item_value" required>
-				<span class="help-block" ng-show="formHolder.macro.population.$touched && formHolder.macro.population.$invalid">No. of Population is required</span>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.land_area.$touched && formHolder.macro.land_area.$invalid}">
+				<label class="label-control">{{profile.sectors.macro.parameters[0].items[0].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="land_area" ng-model="profile.sectors.macro.parameters[0].items[0].item_value" required>
+				<span class="help-block" ng-show="formHolder.macro.land_area.$touched && formHolder.macro.land_area.$invalid">Land Area is required</span>
 			</div>
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.growth_rate.$touched && formHolder.macro.growth_rate.$invalid}">
-				<label class="label-control">{{profile.sectors.macro.parameters[1].items[1].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="growth_rate" ng-model="profile.sectors.macro.parameters[1].items[1].item_value" required>
-				<span class="help-block" ng-show="formHolder.macro.growth_rate.$touched && formHolder.macro.growth_rate.$invalid">Growth Rate is required</span>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group">
+				<label class="label-control">{{profile.sectors.macro.parameters[0].items[1].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" ng-model="profile.sectors.macro.parameters[0].items[1].item_value">
+
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.population_density.$touched && formHolder.macro.population_density.$invalid}">
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.climate.$touched && formHolder.macro.climate.$invalid}">
 
-				<label class="label-control">{{profile.sectors.macro.parameters[1].items[2].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="population_density" ng-model="profile.sectors.macro.parameters[1].items[2].item_value" required>
-				<span class="help-block" ng-show="formHolder.macro.population_density.$touched && formHolder.macro.population_density.$invalid">Population Density is required</span>
+				<label class="label-control">{{profile.sectors.macro.parameters[0].items[2].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="climate" ng-model="profile.sectors.macro.parameters[0].items[2].item_value" required>
+				<span class="help-block" ng-show="formHolder.macro.climate.$touched && formHolder.macro.climate.$invalid">Climate is required</span>
 			</div>
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.households.$touched && formHolder.macro.households.$invalid}">
-				<label class="label-control">{{profile.sectors.macro.parameters[1].items[3].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="households" ng-model="profile.sectors.macro.parameters[1].items[3].item_value" required>
-				<span class="help-block" ng-show="formHolder.macro.households.$touched && formHolder.macro.households.$invalid">Number of Households is required</span>
+			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.barangay.$touched && formHolder.macro.barangay.$invalid}">
+				<label class="label-control">{{profile.sectors.macro.parameters[0].items[3].description}}</label>
+				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="barangay" ng-model="profile.sectors.macro.parameters[0].items[3].item_value" required>
+				<span class="help-block" ng-show="formHolder.macro.barangay.$touched && formHolder.macro.barangay.$invalid">No. of Barangays is required</span>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.families.$touched && formHolder.macro.families.$invalid}">
+	</div>
+	</div>
+	
+	<br>
+	
+	<div class="panel panel-border panel-inverse card-box">
+	<div class="panel-heading">
 
-				<label class="label-control">{{profile.sectors.macro.parameters[1].items[4].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="families" ng-model="profile.sectors.macro.parameters[1].items[4].item_value" required>
-				<span class="help-block" ng-show="formHolder.macro.families.$touched && formHolder.macro.families.$invalid">Number of Families is required</span>
-			</div>
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.dialects.$touched && formHolder.macro.dialects.$invalid}">
-				<label class="label-control">{{profile.sectors.macro.parameters[1].items[5].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="dialects" ng-model="profile.sectors.macro.parameters[1].items[5].item_value" required>
-				<span class="help-block" ng-show="formHolder.macro.dialects.$touched && formHolder.macro.dialects.$invalid">Major Dialects/Languages is required</span>
-			</div>
+	<h5>{{profile.sectors.macro.parameters[1].description}}</h5>
+	<hr>
+	<div class="row">
+		<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.population.$touched && formHolder.macro.population.$invalid}">
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[0].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="population" ng-model="profile.sectors.macro.parameters[1].items[0].item_value" required>
+			<span class="help-block" ng-show="formHolder.macro.population.$touched && formHolder.macro.population.$invalid">No. of Population is required</span>
 		</div>
-		<div class="row">
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.religion.$touched && formHolder.macro.religion.$invalid}">
+		<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.growth_rate.$touched && formHolder.macro.growth_rate.$invalid}">
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[1].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="growth_rate" ng-model="profile.sectors.macro.parameters[1].items[1].item_value" required>
+			<span class="help-block" ng-show="formHolder.macro.growth_rate.$touched && formHolder.macro.growth_rate.$invalid">Growth Rate is required</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.population_density.$touched && formHolder.macro.population_density.$invalid}">
 
-				<label class="label-control">{{profile.sectors.macro.parameters[1].items[6].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="religion" ng-model="profile.sectors.macro.parameters[1].items[6].item_value" required>
-				<span class="help-block" ng-show="formHolder.macro.religion.$touched && formHolder.macro.religion.$invalid">Religion is required</span>
-			</div>
-			<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.literacy_rate.$touched && formHolder.macro.literacy_rate.$invalid}">
-				<label class="label-control">{{profile.sectors.macro.parameters[1].items[7].description}}</label>
-				<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="literacy_rate" ng-model="profile.sectors.macro.parameters[1].items[7].item_value" required>
-				<span class="help-block" ng-show="formHolder.macro.literacy_rate.$touched && formHolder.macro.literacy_rate.$invalid">Literacy Rate is required</span>
-			</div>
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[2].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="population_density" ng-model="profile.sectors.macro.parameters[1].items[2].item_value" required>
+			<span class="help-block" ng-show="formHolder.macro.population_density.$touched && formHolder.macro.population_density.$invalid">Population Density is required</span>
 		</div>
+		<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.households.$touched && formHolder.macro.households.$invalid}">
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[3].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="households" ng-model="profile.sectors.macro.parameters[1].items[3].item_value" required>
+			<span class="help-block" ng-show="formHolder.macro.households.$touched && formHolder.macro.households.$invalid">Number of Households is required</span>
 		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.families.$touched && formHolder.macro.families.$invalid}">
+
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[4].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="families" ng-model="profile.sectors.macro.parameters[1].items[4].item_value" required>
+			<span class="help-block" ng-show="formHolder.macro.families.$touched && formHolder.macro.families.$invalid">Number of Families is required</span>
+		</div>
+		<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.dialects.$touched && formHolder.macro.dialects.$invalid}">
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[5].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="dialects" ng-model="profile.sectors.macro.parameters[1].items[5].item_value" required>
+			<span class="help-block" ng-show="formHolder.macro.dialects.$touched && formHolder.macro.dialects.$invalid">Major Dialects/Languages is required</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.religion.$touched && formHolder.macro.religion.$invalid}">
+
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[6].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="religion" ng-model="profile.sectors.macro.parameters[1].items[6].item_value" required>
+			<span class="help-block" ng-show="formHolder.macro.religion.$touched && formHolder.macro.religion.$invalid">Religion is required</span>
+		</div>
+		<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.macro.literacy_rate.$touched && formHolder.macro.literacy_rate.$invalid}">
+			<label class="label-control">{{profile.sectors.macro.parameters[1].items[7].description}}</label>
+			<input type="text" class="form-control" ng-disabled="controls.ok.btn" name="literacy_rate" ng-model="profile.sectors.macro.parameters[1].items[7].item_value" required>
+			<span class="help-block" ng-show="formHolder.macro.literacy_rate.$touched && formHolder.macro.literacy_rate.$invalid">Literacy Rate is required</span>
 		</div>
 	</div>
 	<hr>
 	<div class="row">
 			<button class="btn btn-googleplus waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-			<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'macro')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+			<button class="btn btn-success waves-effect waves-light m-l-5" ng-click="form.save(this,'macro')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 	</div>
 	</div>
 	</div>

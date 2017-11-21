@@ -16,69 +16,69 @@
 </div>
 </div>
 <hr>
-	<div class="panel-body">
-		<form name="formHolder.development" id="formHolder.development">
-			<div class="card-box col-lg-12">
-				<h5>{{profile.sectors.development.parameters[0].items[0].description}}</h5>
-				<div class="row">
-					<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.index.$touched && formHolder.development.index.$invalid}">
-						<label class="label-control">{{profile.sectors.development.parameters[0].items[0].group_items[0].description}}</label>
-						<input type="text" class="form-control" name="index" ng-model="profile.sectors.development.parameters[0].items[0].group_items[0].item_group_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.development.index.$touched && formHolder.development.index.$invalid">Index is required</span>
-					</div>
-					<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.non_index.$touched && formHolder.development.non_index.$invalid}">
-						<label class="label-control">{{profile.sectors.development.parameters[0].items[0].group_items[1].description}}</label>
-						<input type="text" class="form-control" name="non_index" ng-model="profile.sectors.development.parameters[0].items[0].group_items[1].item_group_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.development.non_index.$touched && formHolder.development.non_index.$invalid">Non-index is required</span>
-					</div>
+
+<div class="panel-body">
+	<form name="formHolder.development" id="formHolder.development">
+		<div class="card-box col-lg-12">
+			<h5>{{profile.sectors.development.parameters[0].items[0].description}}</h5>
+			<div class="row">
+				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.index.$touched && formHolder.development.index.$invalid}">
+					<label class="label-control">{{profile.sectors.development.parameters[0].items[0].group_items[0].description}}</label>
+					<input type="text" class="form-control" name="index" ng-model="profile.sectors.development.parameters[0].items[0].group_items[0].item_group_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.development.index.$touched && formHolder.development.index.$invalid">Index is required</span>
+				</div>
+				<div class="col-lg-6 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.non_index.$touched && formHolder.development.non_index.$invalid}">
+					<label class="label-control">{{profile.sectors.development.parameters[0].items[0].group_items[1].description}}</label>
+					<input type="text" class="form-control" name="non_index" ng-model="profile.sectors.development.parameters[0].items[0].group_items[1].item_group_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.development.non_index.$touched && formHolder.development.non_index.$invalid">Non-index is required</span>
 				</div>
 			</div>
-			<div class="card-box col-lg-12">
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.cooperatives.$touched && formHolder.development.cooperatives.$invalid}">
-						<label class="label-control">{{profile.sectors.development.parameters[0].items[1].description}}</label>
-						<input type="text" class="form-control" name="cooperatives" ng-model="profile.sectors.development.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.development.cooperatives.$touched && formHolder.development.cooperatives.$invalid">Number of Cooperatives is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.banks.$touched && formHolder.development.banks.$invalid}">
-						<label class="label-control">{{profile.sectors.development.parameters[0].items[2].description}}</label>
-						<input type="text" class="form-control" name="banks" ng-model="profile.sectors.development.parameters[0].items[2].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.development.banks.$touched && formHolder.development.banks.$invalid">Number of Banks is required</span>
-					</div>
-					<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.lending_institutions.$touched && formHolder.development.lending_institutions.$invalid}">
-						<label class="label-control">{{profile.sectors.development.parameters[0].items[3].description}}</label>
-						<input type="text" class="form-control" name="lending_institutions" ng-model="profile.sectors.development.parameters[0].items[3].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.development.lending_institutions.$touched && formHolder.development.lending_institutions.$invalid">Number of Lending Institutions is required</span>
-					</div>
+		</div>
+		<div class="card-box col-lg-12">
+			<div class="row">
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.cooperatives.$touched && formHolder.development.cooperatives.$invalid}">
+					<label class="label-control">{{profile.sectors.development.parameters[0].items[1].description}}</label>
+					<input type="text" class="form-control" name="cooperatives" ng-model="profile.sectors.development.parameters[0].items[1].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.development.cooperatives.$touched && formHolder.development.cooperatives.$invalid">Number of Cooperatives is required</span>
 				</div>
-				<hr>
-				<div class="row">
-					<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.messengerial_office.$touched && formHolder.development.messengerial_office.$invalid}">
-						<label class="label-control">{{profile.sectors.development.parameters[0].items[4].description}}</label>
-						<input type="text" class="form-control" name="messengerial_office" ng-model="profile.sectors.development.parameters[0].items[4].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.development.messengerial_office.$touched && formHolder.development.messengerial_office.$invalid">Number of Messengerial Office is required</span>
-					</div>
-					<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.fire_trucks.$touched && formHolder.development.fire_trucks.$invalid}">
-						<label class="label-control">{{profile.sectors.development.parameters[0].items[5].description}}</label>
-						<input type="text" class="form-control" name="fire_trucks" ng-model="profile.sectors.development.parameters[0].items[5].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.development.fire_trucks.$touched && formHolder.development.fire_trucks.$invalid">Number of Fire Trucks is required</span>
-					</div>
-					<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.radio_stations.$touched && formHolder.development.radio_stations.$invalid}">
-						<label class="label-control">{{profile.sectors.development.parameters[0].items[6].description}}</label>
-						<input type="text" class="form-control" name="radio_stations" ng-model="profile.sectors.development.parameters[0].items[6].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.development.radio_stations.$touched && formHolder.development.radio_stations.$invalid">Number of Radio Stations is required</span>
-					</div>
-					<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.postal_services.$touched && formHolder.development.postal_services.$invalid}">
-						<label class="label-control">{{profile.sectors.development.parameters[0].items[7].description}}</label>
-						<input type="text" class="form-control" name="postal_services" ng-model="profile.sectors.development.parameters[0].items[7].item_value" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.development.postal_services.$touched && formHolder.development.postal_services.$invalid">Number of Postal Services is required</span>
-					</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.banks.$touched && formHolder.development.banks.$invalid}">
+					<label class="label-control">{{profile.sectors.development.parameters[0].items[2].description}}</label>
+					<input type="text" class="form-control" name="banks" ng-model="profile.sectors.development.parameters[0].items[2].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.development.banks.$touched && formHolder.development.banks.$invalid">Number of Banks is required</span>
+				</div>
+				<div class="col-lg-4 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.lending_institutions.$touched && formHolder.development.lending_institutions.$invalid}">
+					<label class="label-control">{{profile.sectors.development.parameters[0].items[3].description}}</label>
+					<input type="text" class="form-control" name="lending_institutions" ng-model="profile.sectors.development.parameters[0].items[3].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.development.lending_institutions.$touched && formHolder.development.lending_institutions.$invalid">Number of Lending Institutions is required</span>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.messengerial_office.$touched && formHolder.development.messengerial_office.$invalid}">
+					<label class="label-control">{{profile.sectors.development.parameters[0].items[4].description}}</label>
+					<input type="text" class="form-control" name="messengerial_office" ng-model="profile.sectors.development.parameters[0].items[4].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.development.messengerial_office.$touched && formHolder.development.messengerial_office.$invalid">Number of Messengerial Office is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.fire_trucks.$touched && formHolder.development.fire_trucks.$invalid}">
+					<label class="label-control">{{profile.sectors.development.parameters[0].items[5].description}}</label>
+					<input type="text" class="form-control" name="fire_trucks" ng-model="profile.sectors.development.parameters[0].items[5].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.development.fire_trucks.$touched && formHolder.development.fire_trucks.$invalid">Number of Fire Trucks is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.radio_stations.$touched && formHolder.development.radio_stations.$invalid}">
+					<label class="label-control">{{profile.sectors.development.parameters[0].items[6].description}}</label>
+					<input type="text" class="form-control" name="radio_stations" ng-model="profile.sectors.development.parameters[0].items[6].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.development.radio_stations.$touched && formHolder.development.radio_stations.$invalid">Number of Radio Stations is required</span>
+				</div>
+				<div class="col-lg-3 col-md-8 col-sm-12 form-group" ng-class="{'has-error': formHolder.development.postal_services.$touched && formHolder.development.postal_services.$invalid}">
+					<label class="label-control">{{profile.sectors.development.parameters[0].items[7].description}}</label>
+					<input type="text" class="form-control" name="postal_services" ng-model="profile.sectors.development.parameters[0].items[7].item_value" ng-disabled="controls.ok.btn" required>
+					<span class="help-block" ng-show="formHolder.development.postal_services.$touched && formHolder.development.postal_services.$invalid">Number of Postal Services is required</span>
 				</div>
 			</div>
 			<hr>
 			<div class="row">
 				<button class="btn btn-googleplus waves-light waves-effect" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
-				<button class="btn btn-twitter waves-effect waves-light m-l-5" ng-click="form.save(this,'development')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+				<button class="btn btn-success waves-effect waves-light m-l-5" ng-click="form.save(this,'development')" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
 			</div>
 		</div>
 	</form>
