@@ -233,6 +233,8 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 				
 				case "profile":
 				
+				var onOk = function (){
+					
 					$http({
 					  method: 'POST',
 					  url: 'handlers/profile-save.php',
@@ -242,8 +244,9 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 						
 						if (scope.profile.profile_id == 0) {
 							scope.profile = angular.copy(response.data);
-							scope.profile.sectors = {};	
+							scope.profile.sectors = {};
 						};
+						
 						
 					}, function myError(response) {
 						 
@@ -251,27 +254,35 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 						
 					});					
 				
+				};
+				
+				bootstrapModal.confirm(scope,'Confirmation','Are you sure you want to save this record?',onOk,function() {});
+				
 				break;
 				
 				default:
 					
+				var onOk = function() {	
+				
 					$http({
 					  method: 'POST',
 					  url: 'handlers/'+form+'-save.php',
 					  data: scope.profile
 					}).then(function mySucces(response) {
-						
+						mode(scope,scope.profile);
+						growl.show('btn btn-success',{from: 'top', amount: 55},' '+form+' successfully updated');
 					}, function myError(response) {
 						 
 					  // error
 						
 					});	
-					
+				};
+				
+				bootstrapModal.confirm(scope,'Confirmation','Are you sure you want to save this record?',onOk,function() {});
+				
 				break;		
 				
 			}
-			
-			mode(scope,scope.profile);			
 			
 		};		
 		

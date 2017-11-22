@@ -105,8 +105,6 @@ angular.module('flots-module',[]).factory('flots',function() {
 				}
 
 				//initializing various charts and components
-
-
 			
 
 				FlotChart.prototype.init = function() {
@@ -114,7 +112,7 @@ angular.module('flots-module',[]).factory('flots',function() {
 					//Pie graph data
 					var pielabels = ['Agoo', 'Aringay', 'Bacnotan','Bagulin','Balaoan','Bangar', 'Bauang', 'Burgos','Caba','Luna','Naguilian','Pugo','Rosario','San Fernando','San Gabriel','San Juan','Santo Tomas','Santol','Sudipen','Tubao'];
 					var datas = [consolidated.Agoo['2017'].macro.parameters[1].items[0].item_value,consolidated.Aringay['2017'].macro.parameters[1].items[0].item_value,consolidated.Bacnotan['2017'].macro.parameters[1].items[0].item_value,consolidated.Bagulin['2017'].macro.parameters[1].items[0].item_value,consolidated.Balaoan['2017'].macro.parameters[1].items[0].item_value,consolidated.Bangar['2017'].macro.parameters[1].items[0].item_value,consolidated.Bauang['2017'].macro.parameters[1].items[0].item_value,consolidated.Burgos['2017'].macro.parameters[1].items[0].item_value,consolidated.Caba['2017'].macro.parameters[1].items[0].item_value,consolidated.Luna['2017'].macro.parameters[1].items[0].item_value,consolidated.Naguilian['2017'].macro.parameters[1].items[0].item_value,consolidated.Pugo['2017'].macro.parameters[1].items[0].item_value,consolidated.Rosario['2017'].macro.parameters[1].items[0].item_value,consolidated['San Fernando']['2017'].macro.parameters[1].items[0].item_value,consolidated['San Gabriel']['2017'].macro.parameters[1].items[0].item_value,consolidated['San Juan']['2017'].macro.parameters[1].items[0].item_value,consolidated['Santo Tomas']['2017'].macro.parameters[1].items[0].item_value,consolidated.Santol['2017'].macro.parameters[1].items[0].item_value,consolidated.Sudipen['2017'].macro.parameters[1].items[0].item_value,consolidated.Tubao['2017'].macro.parameters[1].items[0].item_value];  
-					var colors = ["#5fbeaa","#6c85bd","#34d3eb","#FF7F50", "#ff9999","#DDA0DD","#5fbeaa","#6c85bd","#34d3eb","#FF7F50", "#ff9999", "#DDA0DD","#5fbeaa","#6c85bd","#34d3eb","#FF7F50","#ff9999", "#DDA0DD","#5fbeaa", "#6c85bd"];
+					var colors = ["#5fbeaa","#6c85bd","#34d3eb","#FF7F50", "#ff9999","#DDA0DD","#5fbeaa","#6c85bd","#34d3eb","#FF7F50", "#ff9999", "#DDA0DD","#5fbeaa","#6c85bd","#34d3eb","#FF7F50","#ff9999", "#eb6dff","#5fbeaa", "#f76565"];
 
 					this.createPieGraph("#admin-pie-chart #admin-pie-chart-container", pielabels, datas, colors);
 
