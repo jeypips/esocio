@@ -24,6 +24,8 @@ foreach ($municipalities as $municipality) {
 	foreach ($profiles as $p) {
 		
 		$consolidated[$municipality['municipality']][$p['profile_year']] = [];
+		$consolidated[$municipality['municipality']]['town'] = $municipality['municipality'];
+		$consolidated[$municipality['municipality']]['color'] = randomRgb();
 		
 		$profile_id = $p['profile_id'];
 
@@ -45,6 +47,23 @@ foreach ($municipalities as $municipality) {
 	}
 	
 }
+
+function randomRgb() {
+
+	$r =  rand(1,255);
+	$g =  rand(1,255);
+	$b =  rand(1,255);
+	
+	$hex = sprintf("#%02x%02x%02x", $r, $g, $b);	
+
+	return array(
+		"hex"=>$hex,
+		"r"=>$r,
+		"g"=>$g,
+		"b"=>$b,
+	);
+
+};
 
 header("Content-Type: application/json");
 echo json_encode($consolidated);
