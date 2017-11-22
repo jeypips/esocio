@@ -233,8 +233,13 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 				
 				case "profile":
 				
+<<<<<<< HEAD
 				var onOk = function() {	
 				
+=======
+				var onOk = function (){
+					
+>>>>>>> refs/remotes/origin/jp
 					$http({
 					  method: 'POST',
 					  url: 'handlers/profile-save.php',
@@ -244,10 +249,11 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 						
 						if (scope.profile.profile_id == 0) {
 							scope.profile = angular.copy(response.data);
-							scope.profile.sectors = {};	
+							scope.profile.sectors = {};
 						};
 						mode(scope,scope.profile);
 						growl.show('btn btn-success',{from: 'top', amount: 55},'Info successfully updated');
+						
 						
 					}, function myError(response) {
 						 
@@ -255,6 +261,10 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 						
 					});		
 					
+				};
+				
+				bootstrapModal.confirm(scope,'Confirmation','Are you sure you want to save this record?',onOk,function() {});
+				
 				};
 				
 				bootstrapModal.confirm(scope,'Confirmation','Are you sure you want to save this record?',onOk,function() {});
@@ -270,8 +280,13 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 					  url: 'handlers/'+form+'-save.php',
 					  data: scope.profile
 					}).then(function mySucces(response) {
+<<<<<<< HEAD
 						growl.show('btn btn-success',{from: 'top', amount: 55},'Info successfully updated');
 						mode(scope,scope.profile);
+=======
+						mode(scope,scope.profile);
+						growl.show('btn btn-success',{from: 'top', amount: 55},' '+form+' successfully updated');
+>>>>>>> refs/remotes/origin/jp
 					}, function myError(response) {
 						 
 					  // error
