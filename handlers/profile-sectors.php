@@ -27,17 +27,12 @@ foreach ($profile[0] as $i => $p) {
 
 $profile_sectors['profile'] = $profile[0];
 
+
 foreach ($sectors as $sector) {
 	
 	$profile_sector = $sectorsObj->profileSector($profile_id,$sector['sector_shortname']);
 	
 	$profile_sectors[$sector['sector_shortname']] = $profile_sector;
-	
-}
-
-foreach ($profile_sectors[0] as $i => $p) {
-	
-	if ($p == null) $profile_sectors[0][$i] = ""; // pdf equals null
 	
 }
 

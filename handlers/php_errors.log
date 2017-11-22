@@ -1320,3 +1320,37 @@ Stack trace:
 [17-Nov-2017 16:53:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 38
 [17-Nov-2017 16:53:59 UTC] PHP Stack trace:
 [17-Nov-2017 16:53:59 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[21-Nov-2017 22:43:11 UTC] PHP Notice:  Undefined index: municipality in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php on line 31
+[21-Nov-2017 22:43:11 UTC] PHP Stack trace:
+[21-Nov-2017 22:43:11 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php:0
+[21-Nov-2017 22:43:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM m...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php(31): pdo_db->getData('SELECT * FROM m...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[21-Nov-2017 22:44:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php(57): pdo_db->insertData(Array)
+#2 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\employment-save.php(76): notify(Object(pdo_db), 'add', 14, 2)
+#3 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\employment-save.php(17): addProfile(Object(pdo_db), Array, 14, 2)
+#4 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 82
+[21-Nov-2017 22:45:00 UTC] PHP Notice:  Undefined index: profile_id in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 13
+[21-Nov-2017 22:45:00 UTC] PHP Stack trace:
+[21-Nov-2017 22:45:00 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[21-Nov-2017 22:45:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT *, (SELE...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php(20): pdo_db->getData('SELECT *, (SELE...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[21-Nov-2017 22:45:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:82
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(82): PDOStatement->execute(Array)
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php(57): pdo_db->insertData(Array)
+#2 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\agriculture-save.php(76): notify(Object(pdo_db), 'add', 14, 4)
+#3 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\agriculture-save.php(17): addProfile(Object(pdo_db), Array, 14, 4)
+#4 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 82
