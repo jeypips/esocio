@@ -1,7 +1,5 @@
 <?php
 
-header("Content-Type: application/json");
-
 $_POST = json_decode(file_get_contents('php://input'), true);
 
 include_once '../db.php';
@@ -21,6 +19,7 @@ if (count($profile_sector)) {
 
 $response = array("macro"=>$macro);
 
+header("Content-Type: application/json");
 echo json_encode($response);
 
 ?>

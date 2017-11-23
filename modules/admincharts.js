@@ -105,8 +105,6 @@ angular.module('flots-module',[]).factory('flots',function() {
 				}
 
 				//initializing various charts and components
-
-
 			
 
 				FlotChart.prototype.init = function() {

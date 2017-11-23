@@ -5,7 +5,7 @@ angular.module('lineChart-module',[]).factory('lineChart',function() {
 		var self = this;
 		
 		self.line = function(consolidated) {
-			
+			// console.log(consolidated);
 			!function($) {
 			"use strict";
 
@@ -39,6 +39,7 @@ angular.module('lineChart-module',[]).factory('lineChart',function() {
 			ChartJs.prototype.init = function() {
 				//creating lineChart
 				var LineChart = {
+<<<<<<< HEAD
 					labels : ["2015","2016","2017"],
 					datasets : [
 						{
@@ -58,6 +59,43 @@ angular.module('lineChart-module',[]).factory('lineChart',function() {
 						
 					]
 				};
+=======
+					labels : ["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"],
+					datasets : []
+				};
+				
+				angular.forEach(consolidated, function(item,i) {
+					console.log(item);
+					LineChart.datasets.push(
+						{
+							fillColor : "rgba("+item.color.r+","+item.color.g+","+item.color.b+",0.5)",
+							strokeColor : "rgba("+item.color.r+","+item.color.g+","+item.color.b+",1)",
+							pointColor : "rgba("+item.color.r+","+item.color.g+","+item.color.b+",1)",
+							pointStrokeColor : "#fff",
+							data : [0,4,item['2017'].macro.parameters[1].items[0].item_value]
+						}		
+					);					
+				});
+				// console.log(LineChart.datasets);
+				/* LineChart.datasets.push(
+					{
+						fillColor : "rgba(93, 156, 236, 0.5)",
+						strokeColor : "rgba(93, 156, 236, 1)",
+						pointColor : "rgba(93, 156, 236, 1)",
+						pointStrokeColor : "#fff",
+						data : [0,0,consolidated.Agoo['2017'].macro.parameters[1].items[0].item_value,92,50,53,46,55,22,44,55]
+					}				
+				);
+				LineChart.datasets.push(
+					{
+						fillColor : "rgba(95, 190, 170, 0.5)",
+						strokeColor : "rgba(95, 190, 170, 1)",
+						pointColor : "rgba(95, 190, 170, 1)",
+						pointStrokeColor : "#fff",
+						data : [0,0,30,60,29,25,12,22,20,30,60]
+					}				
+				);	 */			
+>>>>>>> refs/remotes/origin/jp
 				
 				this.respChart($("#lineChart"),'Line',LineChart);
 			},
