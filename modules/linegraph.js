@@ -39,27 +39,7 @@ angular.module('lineChart-module',[]).factory('lineChart',function() {
 			ChartJs.prototype.init = function() {
 				//creating lineChart
 				var LineChart = {
-<<<<<<< HEAD
-					labels : ["2015","2016","2017"],
-					datasets : [
-						{
-							fillColor : "rgba(93, 156, 236, 0.5)",
-							strokeColor : "rgba(93, 156, 236, 1)",
-							pointColor : "rgba(93, 156, 236, 1)",
-							pointStrokeColor : "#fff",
-							data : [consolidated.Pugo['2017'].macro.parameters[1].items[0].item_value,consolidated.Pugo['2017'].macro.parameters[1].items[0].item_value,consolidated.Pugo['2017'].macro.parameters[1].items[0].item_value]
-						},
-						{
-							fillColor : "rgba(95, 190, 170, 0.5)",
-							strokeColor : "rgba(95, 190, 170, 1)",
-							pointColor : "rgba(95, 190, 170, 1)",
-							pointStrokeColor : "#fff",                                 
-							data : [consolidated.Pugo['2017'].macro.parameters[1].items[4].item_value,consolidated.Pugo['2017'].macro.parameters[1].items[4].item_value,consolidated.Pugo['2017'].macro.parameters[1].items[4].item_value]
-						}
-						
-					]
-				};
-=======
+
 					labels : ["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"],
 					datasets : []
 				};
@@ -72,7 +52,7 @@ angular.module('lineChart-module',[]).factory('lineChart',function() {
 							strokeColor : "rgba("+item.color.r+","+item.color.g+","+item.color.b+",1)",
 							pointColor : "rgba("+item.color.r+","+item.color.g+","+item.color.b+",1)",
 							pointStrokeColor : "#fff",
-							data : [0,4,item['2017'].macro.parameters[1].items[0].item_value]
+							data : [0,0,item['2017'].macro.parameters[1].items[0].item_value]
 						}		
 					);					
 				});
@@ -95,7 +75,7 @@ angular.module('lineChart-module',[]).factory('lineChart',function() {
 						data : [0,0,30,60,29,25,12,22,20,30,60]
 					}				
 				);	 */			
->>>>>>> refs/remotes/origin/jp
+
 				
 				this.respChart($("#lineChart"),'Line',LineChart);
 			},
