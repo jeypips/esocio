@@ -118,7 +118,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 		self.activateForm = function(scope,form,row) {
 
 			if (scope.$id > 2) scope = scope.$parent;
-		
+			console.log(scope);
 			if (form != 'profile') {
 				if (scope.profile.profile_id == 0) {
 					growl.show('btn btn-danger',{from: 'top', amount: 55},'Please finish Basic Profile form before proceeding to other forms');
@@ -140,6 +140,36 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 			$('#x_content').load('forms/'+form+'.html',function() {
 				$timeout(function() { $compile($('#x_content')[0])(scope); },200);
 			});
+			
+			if (row == null) { // add
+				
+				switch (form) {
+					
+					case "profile":
+					
+						$http({
+						  method: 'POST',
+						  url: 'handlers/profile-boundaries.php'
+						}).then(function mySucces(response) {
+							
+							scope.profile.municipality = response.data.municipality;
+							scope.profile.pb_north = response.data.pb_north;
+							scope.profile.pb_east = response.data.pb_east;
+							scope.profile.pb_south = response.data.pb_south;
+							scope.profile.pb_west = response.data.pb_west;
+							scope.profile.land_area = response.data.land_area;
+							
+						}, function myError(response) {
+							 
+						  // error
+							
+						});
+					
+					break;
+
+				};
+				
+			};
 			
 			if (row != null) {
 
@@ -240,19 +270,22 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 					  url: 'handlers/profile-save.php',
 					  data: {profile: scope.profile}
 					}).then(function mySucces(response) {
-						
-						
+												
 						if (scope.profile.profile_id == 0) {
-							scope.profile = angular.copy(response.data);
+							scope.profile.profile_id = response.data.profile_id;
 							scope.profile.sectors = {};
-						};
+							growl.show('btn btn-success',{from: 'top', amount: 55},'New profile added');
+						} else{
+							growl.show('btn btn-success',{from: 'top', amount: 55},'Profile updated successfully');
+						}
 						
+						mode(scope,scope.profile.sectors);
 						
 					}, function myError(response) {
 						 
 					  // error
 						
-					});					
+					});
 				
 				};
 				
@@ -297,7 +330,7 @@ angular.module('profile-module',['bootstrap-modal','bootstrap-growl','sector-dat
 				}).then(function mySucces(response) {
 
 					self.list(scope);
-					
+					growl.show('btn btn-danger',{from: 'top', amount: 55},'Profile deleted successfully');
 				}, function myError(response) {
 					 
 				  // error

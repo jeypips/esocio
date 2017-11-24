@@ -19,6 +19,8 @@ if (count($profile_sector)) {
 
 $response = array("macro"=>$macro);
 
+// var_dump($response);
+
 header("Content-Type: application/json");
 echo json_encode($response);
 
