@@ -28,7 +28,7 @@ if ($_POST['profile']['profile_id']) {
 }
 
 $profile = $con->getData("SELECT * FROM profile WHERE profile_id = $profile_id");
-$municipality = $con->getData("SELECT * FROM municipal WHERE id = ".$profile['municipality']);
+$municipality = $con->getData("SELECT * FROM municipal WHERE id = ".$profile[0]['municipality']);
 $profile[0]['municipality'] = $municipality[0];
 
 echo json_encode($profile[0]);
