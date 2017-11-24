@@ -1444,3 +1444,292 @@ Stack trace:
 [24-Nov-2017 17:17:41 UTC] PHP Notice:  Undefined index: is_tabular_multiple in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\parameter-save.php on line 16
 [24-Nov-2017 17:17:41 UTC] PHP Stack trace:
 [24-Nov-2017 17:17:41 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\parameter-save.php:0
+[24-Nov-2017 20:07:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:54 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:07:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:08:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:08:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:08:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:08:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:08:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:08:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:08:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:08:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 20:08:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esocio.notifications' doesn't exist in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT * FROM n...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notif-list.php(11): pdo_db->getData('SELECT * FROM n...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 21:00:41 UTC] PHP Notice:  Undefined variable: municipality in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php on line 5
+[24-Nov-2017 21:00:41 UTC] PHP Stack trace:
+[24-Nov-2017 21:00:41 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php:0
+[24-Nov-2017 21:00:41 UTC] PHP   2. notify() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php:26
+[24-Nov-2017 21:00:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT municipa...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php(5): pdo_db->getData('SELECT municipa...')
+#2 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php(26): notify(Object(pdo_db), 'add', '42', 0)
+#3 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 21:00:59 UTC] PHP Notice:  Undefined variable: municipality in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php on line 5
+[24-Nov-2017 21:00:59 UTC] PHP Stack trace:
+[24-Nov-2017 21:00:59 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php:0
+[24-Nov-2017 21:00:59 UTC] PHP   2. addProfile() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php:17
+[24-Nov-2017 21:00:59 UTC] PHP   3. notify() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php:76
+[24-Nov-2017 21:00:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT municipa...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php(5): pdo_db->getData('SELECT municipa...')
+#2 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php(76): notify(Object(pdo_db), 'add', 42, 1)
+#3 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php(17): addProfile(Object(pdo_db), Array, 42, 1)
+#4 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 21:03:03 UTC] PHP Notice:  Undefined variable: municipality in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php on line 5
+[24-Nov-2017 21:03:03 UTC] PHP Stack trace:
+[24-Nov-2017 21:03:03 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php:0
+[24-Nov-2017 21:03:03 UTC] PHP   2. notify() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php:26
+[24-Nov-2017 21:03:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT municipa...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php(5): pdo_db->getData('SELECT municipa...')
+#2 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-save.php(26): notify(Object(pdo_db), 'add', '42', 0)
+#3 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 21:03:17 UTC] PHP Notice:  Undefined variable: municipality in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php on line 5
+[24-Nov-2017 21:03:17 UTC] PHP Stack trace:
+[24-Nov-2017 21:03:17 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php:0
+[24-Nov-2017 21:03:17 UTC] PHP   2. addProfile() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php:17
+[24-Nov-2017 21:03:17 UTC] PHP   3. notify() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php:76
+[24-Nov-2017 21:03:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT municipa...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php(5): pdo_db->getData('SELECT municipa...')
+#2 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php(76): notify(Object(pdo_db), 'add', 42, 1)
+#3 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php(17): addProfile(Object(pdo_db), Array, 42, 1)
+#4 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[24-Nov-2017 21:05:49 UTC] PHP Notice:  Undefined variable: municipality in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php on line 5
+[24-Nov-2017 21:05:49 UTC] PHP Stack trace:
+[24-Nov-2017 21:05:49 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php:0
+[24-Nov-2017 21:05:49 UTC] PHP   2. updateProfile() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php:16
+[24-Nov-2017 21:05:49 UTC] PHP   3. notify() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php:118
+[24-Nov-2017 21:05:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT municipa...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\notifications.php(5): pdo_db->getData('SELECT municipa...')
+#2 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php(118): notify(Object(pdo_db), 'update', 42, 1)
+#3 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\macro-save.php(16): updateProfile(Object(pdo_db), Array, 42, 1)
+#4 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
