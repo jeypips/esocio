@@ -1354,3 +1354,93 @@ Stack trace:
 #3 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\agriculture-save.php(17): addProfile(Object(pdo_db), Array, 14, 4)
 #4 {main}
   thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 82
+[23-Nov-2017 16:27:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'item_value' in 'field list' in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT *, DATE_...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php(20): pdo_db->getData('SELECT *, DATE_...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[23-Nov-2017 16:27:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'item_value' in 'field list' in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT *, DATE_...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php(20): pdo_db->getData('SELECT *, DATE_...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[23-Nov-2017 16:27:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'item_value' in 'field list' in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT *, DATE_...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php(20): pdo_db->getData('SELECT *, DATE_...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[23-Nov-2017 16:27:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'item_value' in 'field list' in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT *, DATE_...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php(20): pdo_db->getData('SELECT *, DATE_...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[23-Nov-2017 16:27:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'item_value' in 'field list' in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT *, DATE_...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php(20): pdo_db->getData('SELECT *, DATE_...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[23-Nov-2017 16:27:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'item_value' in 'field list' in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php:38
+Stack trace:
+#0 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php(38): PDO->query('SELECT *, DATE_...')
+#1 C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php(20): pdo_db->getData('SELECT *, DATE_...')
+#2 {main}
+  thrown in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\db.php on line 38
+[23-Nov-2017 16:38:21 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:21 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:21 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:24 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:24 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:24 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:24 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:24 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:24 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:25 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:25 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:25 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:25 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:25 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:25 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:25 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:25 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:25 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:25 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:25 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:25 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:25 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:25 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:25 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:26 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:26 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:26 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:26 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:26 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:26 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:26 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:26 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:26 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:26 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:26 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:26 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:26 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:26 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:26 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:27 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:27 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:27 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:27 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:27 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:27 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[23-Nov-2017 16:38:39 UTC] PHP Notice:  Undefined variable: personal_info in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php on line 28
+[23-Nov-2017 16:38:39 UTC] PHP Stack trace:
+[23-Nov-2017 16:38:39 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\profile-sectors.php:0
+[24-Nov-2017 17:17:41 UTC] PHP Notice:  Undefined index: is_tabular in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\parameter-save.php on line 15
+[24-Nov-2017 17:17:41 UTC] PHP Stack trace:
+[24-Nov-2017 17:17:41 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\parameter-save.php:0
+[24-Nov-2017 17:17:41 UTC] PHP Notice:  Undefined index: is_tabular_multiple in C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\parameter-save.php on line 16
+[24-Nov-2017 17:17:41 UTC] PHP Stack trace:
+[24-Nov-2017 17:17:41 UTC] PHP   1. {main}() C:\Users\Dexieee\Desktop\UwAmp\www\esocio\handlers\parameter-save.php:0
