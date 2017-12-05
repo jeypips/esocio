@@ -1,10 +1,11 @@
 <?php
 
-function notify($con,$mode,$municipality,$sector_id) {
-
-	$profiles = $con->getData("SELECT municipality FROM municipal WHERE id = $municipality");
+function notify($con,$mode,$profile_id,$sector_id) {
+	
+	$profiles = $con->getData("SELECT municipality FROM profile WHERE profile_id = $profile_id");
+	$municipality = $con->getData("SELECT municipality FROM municipal WHERE id = ".$profiles[0]['municipality']);
 	$profile = "";
-	foreach ($profiles as $p) {
+	foreach ($municipality as $p) {
 		$profile = $p['municipality'];
 	}
 	$sectors = $con->getData("SELECT sector_description FROM sectors WHERE sector_id = $sector_id");	
@@ -18,15 +19,15 @@ function notify($con,$mode,$municipality,$sector_id) {
 		
 		case "add":
 
-			$description = "$municipality has added new profile";			
+			$description = "$profile has added new profile";			
 
 			if (count($sectors) > 0) {
-				$description = "$municipality has added $sector";
+				$description = "$profile has added $sector";
 			}
 
 			$data = array(
 				"sector_no"=>$sector_id,
-				"account_no"=>$municipality,
+				"account_no"=>$profile_id,
 				"description"=>$description,
 				"system_date"=>"CURRENT_TIMESTAMP",
 				"is_hidden"=>0
@@ -44,7 +45,7 @@ function notify($con,$mode,$municipality,$sector_id) {
 		
 			$data = array(
 				"sector_no"=>$sector_id,
-				"account_no"=>$municipality,
+				"account_no"=>$profile_id,
 				"description"=>$description,
 				"system_date"=>"CURRENT_TIMESTAMP",
 				"is_hidden"=>0
